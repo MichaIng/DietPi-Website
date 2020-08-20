@@ -37,7 +37,7 @@ $(function () {
 		controls: { scope: 'local' },
 		callbacks: {
 			// Close open portfolio project when resorting
-			'onMixStart': function (config) {
+			'onMixStart': function () {
 				$('div.toggleDiv').hide();
 			}
 		}
