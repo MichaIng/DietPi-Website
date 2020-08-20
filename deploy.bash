@@ -9,7 +9,7 @@ G_EXEC curl -sSfLO https://github.com/MichaIng/DietPi-Website/archive/master.tar
 G_EXEC tar xf master.tar.gz
 G_EXEC_NOHALT=1 G_EXEC rm master.tar.gz
 G_EXEC cd DietPi-Website-master
-G_EXEC_NOHALT=1 G_EXEC rm README.md LICENSE
+G_EXEC_NOHALT=1 G_EXEC rm README.md LICENSE deploy.bash
 
 # 3rd party
 G_EXEC curl -sSfL https://raw.githubusercontent.com/jquery/codeorigin.jquery.com/master/cdn/jquery-3.5.1.min.js -o js/jquery.min.js
