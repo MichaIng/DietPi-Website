@@ -26,7 +26,8 @@ G_EXEC curl -sSfL https://raw.githubusercontent.com/Le-Stagiaire/jquery.cslider/
 G_EXEC curl -sSfLO https://use.fontawesome.com/releases/v5.14.0/fontawesome-free-5.14.0-web.zip
 G_EXEC unzip fontawesome-free-5.14.0-web.zip
 G_EXEC rm fontawesome-free-5.14.0-web.zip
-G_EXEC mv fontawesome-free-5.14.0-web/webfonts/fa-solid-900.woff{,2} ../fonts/
+G_EXEC mkdir -p fonts
+G_EXEC mv fontawesome-free-5.14.0-web/webfonts/fa-solid-900.woff{,2} fonts/
 G_EXEC_NOHALT=1 G_EXEC rm -R fontawesome-free-5.14.0-web
 # - Roboto
 G_EXEC cd fonts
@@ -49,7 +50,7 @@ G_EXEC mv minify /usr/local/bin/
 for i in js/*.js
 do
 	[[ $i == *'.min.js' ]] && continue
-	G_EXEC curl -X POST -sSfL --data-urlencode "input@$i.js" https://javascript-minifier.com/raw -o "${i%.js}.min.js"
+	G_EXEC curl -X POST -sSfL --data-urlencode "input@$i" https://javascript-minifier.com/raw -o "${i%.js}.min.js"
 	G_EXEC_NOHALT=1 G_EXEC rm "$i"
 done
 # - Minify CSS
