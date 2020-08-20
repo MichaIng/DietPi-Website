@@ -1,0 +1,1726 @@
+<!DOCTYPE html>
+<!-- https://github.com/MichaIng/DietPi-Website -->
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link rel="home" href="https://dietpi.com/">
+		<link rel="canonical" href="https://dietpi.com/">
+		<title>DietPi - Lightweight justice for your SBC!</title>
+		<meta name="description" content="Optimised | Simplified | For everyone - Easy to install and run optimised software for your SBC - Raspberry Pi, Odroid, PINE64 etc.!">
+		<!-- Google Search Console verification -->
+		<meta name="google-site-verification" content="nu0tbpn3O5SGEOlI95XwFKygnSpHAtmquRT-3gIgyds">
+		<!-- Bing Webmaster verification -->
+		<meta name="msvalidate.01" content="A45B5113AB90AF6F1D557C17B7C3C178">
+		<!-- Twitter meta tags -->
+		<meta name="twitter:site" content="@DietPi_">
+		<meta name="twitter:creator" content="@DietPi_">
+		<meta name="twitter:title" content="Lightweight justice for your SBC!">
+		<meta name="twitter:description" content="Optimised | Simplified | For everyone - Easy to install and run optimised software for your SBC - Raspberry Pi, Odroid, PINE64 etc.!">
+		<!-- Open Graph meta tags -->
+		<meta property="og:locale" content="en_GB">
+		<meta property="og:site_name" content="DietPi">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://dietpi.com/">
+		<meta property="og:title" content="Lightweight justice for your SBC!">
+		<meta property="og:description" content="Optimised | Simplified | For everyone - Backed by community, DietPi is a minimal OS image for SBCs - Raspberry Pi, Odroid, PINE64 etc. Install software optimised for you!">
+		<!-- Adjust width based on screen size -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Favicon and theme: https://realfavicongenerator.net/ -->
+		<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+		<link rel="manifest" href="site.webmanifest">
+		<link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		<!-- Load css styles -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/fonts.min.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery.cslider.min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.min.css">
+		<!-- Include javascript -->
+		<script defer src="js/jquery.min.js"></script>
+		<script defer src="js/bootstrap.min.js"></script>
+		<script defer src="js/jquery.cslider.min.js"></script>
+		<script defer src="js/mixitup.min.js"></script>
+		<script defer src="js/app.min.js"></script>
+		<!-- Matomo -->
+		<script>
+			var _paq = window._paq = window._paq || [];
+			_paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+			_paq.push(["setCookieDomain", "*.dietpi.com"]);
+			_paq.push(["setDomains", ["*.dietpi.com","*.ssh.dietpi.com"]]);
+			_paq.push(["enableCrossDomainLinking"]);
+			_paq.push(["trackPageView"]);
+			_paq.push(["enableLinkTracking"]);
+			(function() {
+				var u="https://dietpi.com/matomo/";
+				_paq.push(["setTrackerUrl", u+"matomo.php"]);
+				_paq.push(["setSiteId", "1"]);
+				var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+				g.defer=true; g.src=u+"matomo.js"; s.parentNode.insertBefore(g,s);
+			})();
+		</script>
+	</head>
+	<body>
+		<noscript><img src="https://dietpi.com/matomo/matomo.php?idsite=1&amp;rec=1" width=0 height=0 style="display:none;border:0;" alt=""></noscript>
+		<nav class="navbar navbar-expand-lg">
+			<div class="container-xl">
+				<img class="scrollup" src="images/logo.png" alt="Logo" loading="lazy">
+				<!-- Navigation button, visible on small resolution -->
+				<button class="navbar-toggler fa fa-bars" data-toggle="collapse" data-target=".navbar-collapse"></button>
+				<!-- Main navigation -->
+				<div class="navbar-nav navbar-collapse collapse">
+					<a class="nav-link" href="#home">Home</a>
+					<a class="nav-link" href="#features">Features</a>
+					<a class="nav-link" href="#download">Download</a>
+					<a class="nav-link" href="#gettingstarted">Getting Started</a>
+					<a class="nav-link" href="#gettingstarted">Community</a>
+					<a class="nav-link" href="#donate">Donate</a>
+					<a class="nav-link" href="#testimonials">Testimonials</a>
+				</div>
+				<!-- End main navigation -->
+			</div>
+		</nav>
+		<!-- Start home section slider: https://github.com/Le-Stagiaire/jquery.cslider -->
+		<div class="da-slider" id="home">
+			<!-- mask element use for masking background image -->
+			<div class="mask"></div>
+			<!-- All slides centred in container element -->
+			<div class="container-xl">
+				<svg class="triangle" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon points="0,0 100,0 50,100"/></svg>
+				<!-- Start slide -->
+				<div class="da-slide da-slide-current">
+					<h2>DietPi</h2>
+					<h4>Lightweight justice for your single-board computer!</h4>
+					<p>Optimised | Simplified | For everyone</p>
+					<div class="da-img"><img class="img-fluid" src="images/logo_transparent_360x360.png" width="300" alt="Logo" loading="lazy"></div>
+				</div>
+				<!-- End slide -->
+				<!-- Start slide -->
+				<div class="da-slide">
+					<h2>DietPi | Minimal image at its core</h2>
+					<h4>Highly optimised minimal Debian OS</h4>
+					<p>DietPi is extremely lightweight at its core, with features of low process/memory footprint and DietPi-RAMlog installed by default, to get the maximum performance from your device.</p>
+					<a href="https://docs.google.com/spreadsheets/d/1mDHGZC-H6tU6_O8kuLTG8d4A8Nt7lV1Q7MXTR_6qw30/edit?usp=sharing" class="da-link" target="_blank" rel="noopener">Learn more</a>
+					<div class="da-img"><img class="img-fluid" src="images/feather.png" alt="Feather" loading="lazy"></div>
+				</div>
+				<!-- End slide -->
+				<!-- Start slide -->
+				<div class="da-slide">
+					<h2>DietPi-Software</h2>
+					<h4>Installs and optimises popular software for you</h4>
+					<p>Quickly and easily install popular software "ready to run" and optimised for your system. Gone are the days of reading 5+ page guides, DietPi does everything for you, giving you more time to enjoy the software you require.</p>
+					<a href="dietpi-software.html" class="da-link" target="_blank" rel="noopener">Learn more</a>
+					<div class="da-img"><img class="img-fluid" src="images/software.png" width="320" alt="Software" loading="lazy"></div>
+				</div>
+				<!-- End slide -->
+				<!-- Start slide -->
+				<div class="da-slide">
+					<h2>DietPi | Benchmarks</h2>
+					<h4>All devices benchmarked (CPU/IO)</h4>
+					<p>Looking to purchase a new SBC device? Curious to see which devices perform best? With thanks to our end users, you can now view and compare DietPi-Benchmark results for all devices.</p>
+					<a href="survey/#benchmark" class="da-link" target="_blank" rel="noopener">Learn more</a>
+					<div class="da-img"><img class="img-fluid" src="images/logo_transparent_360x360.png" width="300" alt="Logo" loading="lazy"></div>
+				</div>
+				<!-- End slide -->
+				<!-- Start slide navigation arrows -->
+				<div class="da-arrows">
+					<span class="da-arrows-prev"></span>
+					<span class="da-arrows-next"></span>
+				</div>
+				<!-- End slide navigation arrows -->
+			</div>
+		</div>
+		<!-- End home section -->
+		<!-- Features section start -->
+		<div class="section primary-section" id="features">
+			<div class="container-xl centered">
+				<svg class="triangle" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon points="0,0 100,0 50,100"/></svg>
+				<!-- Start title section -->
+				<div class="title">
+					<!-- Section's title goes here -->
+					<h1>DietPi - features overview</h1>
+					<!-- Simple description for section goes here. -->
+					<p>DietPi is more than just a minimal image.</p>
+				</div>
+				<div class="row">
+					<div class="col-sm-4 service">
+						<a href="https://docs.google.com/spreadsheets/d/1mDHGZC-H6tU6_O8kuLTG8d4A8Nt7lV1Q7MXTR_6qw30/edit?usp=sharing" target="_blank" rel="noopener">
+							<img class="circle-border zoom-in" src="images/optimized.png" alt="Speed" loading="lazy">
+							<h3>Truly Optimised</h3>
+						</a>
+						<p>DietPi is an extremely lightweight Debian OS, highly optimised for minimal CPU and RAM resource usage, ensuring your SBC always runs at its maximum potential.</p>
+					</div>
+					<div class="col-sm-4 service">
+						<a href="phpbb/viewtopic.php?p=1061#p1061" target="_blank" rel="noopener">
+							<img class="circle-border zoom-in" src="images/interface.png" alt="Whiptail" loading="lazy">
+							<h3>Simple interface</h3>
+						</a>
+						<p>DietPi programs use lightweight Whiptail menus. Spend less time staring at the command line, more time enjoying your Pi.</p>
+					</div>
+					<div class="col-sm-4 service">
+						<a href="dietpi-software.html" target="_blank" rel="noopener">
+							<img class="circle-border zoom-in" src="images/software2.png" alt="Software" loading="lazy">
+							<h3>DietPi-Software</h3>
+						</a>
+						<p>Quickly and easily install popular software "ready to run" and optimised for your system. Only the software you need is installed.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4 service">
+						<a href="phpbb/viewtopic.php?p=218#p218" target="_blank" rel="noopener">
+							<img class="circle-border zoom-in" src="images/dietpi-config.png" alt="Gear" loading="lazy">
+							<h3>DietPi-Config</h3>
+						</a>
+						<p>Customise your device's hardware and software, your way. A tweakers wet dream!</p>
+					</div>
+					<div class="col-sm-4 service">
+						<a href="phpbb/viewtopic.php?p=255#p255" target="_blank" rel="noopener">
+							<img class="circle-border zoom-in" src="images/dietpi-backup.png" alt="Backup" loading="lazy">
+							<h3>DietPi-Backup</h3>
+						</a>
+						<p>Quickly and easily backup or restore your DietPi system.</p>
+					</div>
+					<div class="col-sm-4 service">
+						<a href="phpbb/viewtopic.php?p=68#p68" target="_blank" rel="noopener">
+							<img class="circle-border zoom-in" src="images/logging-choices.png" alt="Log" loading="lazy">
+							<h3>Logging System Choices</h3>
+						</a>
+						<p>You decide how much logging you need. Get a performance boost with DietPi-RAMlog, or, rsyslog and logrotate for log critical servers.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4 service">
+						<a href="phpbb/viewtopic.php?p=279#p279" target="_blank" rel="noopener">
+							<img class="circle-border zoom-in" src="images/process-tool.png" alt="CPU" loading="lazy">
+							<h3>DietPi-Services Control</h3>
+						</a>
+						<p>Control which installed software has higher or lower priority levels: nice, affinity, policy scheduler and more.</p>
+					</div>
+					<div class="col-sm-4 service">
+						<img class="circle-border zoom-in" src="images/update.png" alt="Update" loading="lazy">
+						<h3>DietPi-Update System</h3>
+						<p>DietPi automatically checks for updates and informs you when they are available. Update instantly, without having to write a new image.</p>
+					</div>
+					<div class="col-sm-4 service">
+						<a href="phpbb/viewtopic.php?p=1140#p1140" target="_blank" rel="noopener">
+							<img class="circle-border zoom-in" src="images/dietpi-automation.png" alt="Auto" loading="lazy">
+							<h3>DietPi-Automation</h3>
+						</a>
+						<p>Allows you to completely automate a DietPi installation with no user input. Simply by configuring dietpi.txt before powering on.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Features section end -->
+		<!-- Portfolio section start -->
+		<div class="section secondary-section" id="download">
+			<div class="container-xl">
+				<svg class="triangle" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon points="0,0 100,0 50,100"/></svg>
+				<div class="title">
+					<h1>Download</h1>
+					<p>Give your single-board computer lightweight justice</p>
+					<a href="survey/#benchmark" class="da-link button" target="_blank" rel="noopener">View DietPi-Benchmark scores for all devices</a>
+					<p>username: <b>root</b> password: <b>dietpi</b></p>
+				</div>
+				<nav class="nav nav-pills" id="downloadinfo" style="display:none">
+					<button class="nav-link filter" data-filter="all">[All]</button>
+					<button class="nav-link filter" data-filter=".allo">Allo</button>
+					<button class="nav-link filter" data-filter=".asus">ASUS</button>
+					<button class="nav-link filter" data-filter=".nanopi">NanoPi</button>
+					<button class="nav-link filter" data-filter=".odroid">Odroid</button>
+					<button class="nav-link filter" data-filter=".pine">PINE64</button>
+					<button class="nav-link filter" data-filter=".raspberrypi">Raspberry Pi</button>
+					<button class="nav-link filter" data-filter=".radxa">ROCK Pi</button>
+					<button class="nav-link filter" data-filter=".firefly">Firefly</button>
+					<button class="nav-link filter" data-filter=".x86_64">PC/VM</button>
+					<button class="nav-link filter" data-filter=".other">Other</button>
+				</nav>
+				<!-- Start details for portfolio project 1 -->
+				<div id="slidingDiv1" class="toggleDiv single-project">
+					<div class="row">
+						<div class="col-md-12 project-title clearfix">
+							<h3>Raspberry Pi</h3>
+							<span class="show_hide close"><i class="fa fa-times"></i></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="project-description">
+								<div class="project-info">
+									<div><span>CPU:</span>BCM2835 ARMv6 RPi1 - BCM2711 ARMv8 RPi4</div>
+									<div><span>RAM:</span>256 MiB RPi1 - 8 GiB RPi4</div>
+									<br>
+									<div><a href="downloads/images/DietPi_RPi-ARMv6-Buster.7z"><span>Download 32-bit image:</span> <i class="fa fa-download"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">Download</u></a></div>
+									<div><a href="downloads/images/testing/DietPi_RPi-ARMv8-Buster.7z"><span>Download 64-bit image (beta):</span> <i class="fa fa-download"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">Download</u></a></div>
+									<div><a href="docs/user-guide_install/#how-to-install-dietpi" target="_blank" rel="noopener"><span>How to install / Details:</span> <i class="fa fa-book"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">View</u></a></div>
+								</div>
+								<p>The Raspberry Pi is quite possibily the single SBC that started the IoT era. While the Raspberry Pi may be a few years behind other SBC manufacturers in terms of performance, it's widely available, affordable, has a large community, active kernel development for all models and will always have a place in our hearts.</p>
+							</div>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/raspberrypi3.jpg" alt="Raspberry Pi" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- End details for portfolio project 1 -->
+				<!-- Start details for portfolio project 2 -->
+				<div id="slidingDiv2" class="toggleDiv single-project">
+					<div class="row">
+						<div class="col-md-12 project-title clearfix">
+							<h3>Odroid C1</h3>
+							<span class="show_hide close"><i class="fa fa-times"></i></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="project-description">
+								<div class="project-info">
+									<div><span>CPU:</span>Amlogic 1.5 GHz quad-core</div>
+									<div><span>RAM:</span>1 GiB DDR3</div>
+									<div>
+										<span>Known issues:</span>No HDMI output, serial console only<br>
+										<span></span>No eMMC support, limited USB hotplug support
+									</div>
+									<br>
+									<div><a href="downloads/images/DietPi_OdroidC1-ARMv7-Buster.7z"><span>Download Image:</span> <i class="fa fa-download"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">Download</u></a></div>
+									<div><a href="docs/user-guide_install/#how-to-install-dietpi" target="_blank" rel="noopener"><span>How to install / Details:</span> <i class="fa fa-book"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">View</u></a></div>
+								</div>
+								<p>The Odroid C1 is esteemed to be the most powerful low-cost single board computer available, as well as being an extremely versatile device. Featuring a quad-core Amlogic processor, advanced Mali GPU, and Gigabit Ethernet, it can function as a home theater set-top box, a general purpose computer for web browsing, gaming and socializing, a compact tool for college or office work, a prototyping device for hardware tinkering, a controller for home automation, a workstation for software development, and much more.</p>
+							</div>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/odroidc1.jpg" alt="Odroid C1" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- End details for portfolio project 2 -->
+				<!-- Start details for portfolio project 3 -->
+				<div id="slidingDiv3" class="toggleDiv single-project">
+					<div class="row">
+						<div class="col-md-12 project-title clearfix">
+							<h3>Odroid C2</h3>
+							<span class="show_hide close"><i class="fa fa-times"></i></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="project-description">
+								<div class="project-info">
+									<div><span>CPU:</span>Amlogic 1.54 GHz quad-core (ARMv8)</div>
+									<div><span>RAM:</span>2 GiB DDR3</div>
+									<br>
+									<div><a href="downloads/images/DietPi_OdroidC2-ARMv8-Buster.7z"><span>Download Image:</span> <i class="fa fa-download"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">Download</u></a></div>
+									<div><a href="docs/user-guide_install/#how-to-install-dietpi" target="_blank" rel="noopener"><span>How to install / Details:</span> <i class="fa fa-book"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">View</u></a></div>
+								</div>
+								<p>In our eyes, the Odroid C2 is the best "all round" SBC on the market today. Exceptional CPU and LAN performance which is great for multiple uses. Couple the C2 with an eMMC module and you'll experience next-level SBC filesystem performance at up to 140 MiB/s transfer rates. The C2 is innovative SBC perfection, and, because of its excellent all round performance, we even have a few dedicated to daily DietPi testing.</p>
+							</div>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/odroidc2.jpg" alt="Odroid C2" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- End details for portfolio project 3 -->
+				<!-- Start details for portfolio project 4 -->
+				<div id="slidingDiv4" class="toggleDiv single-project">
+					<div class="row">
+						<div class="col-md-12 project-title clearfix">
+							<h3>Odroid XU3/XU4/MC1/HC1/HC2</h3>
+							<span class="show_hide close"><i class="fa fa-times"></i></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="project-description">
+								<div class="project-info">
+									<div><span>CPU:</span>Samsung Exynos5422 (4x 2GHz 4x 1.4GHz)</div>
+									<div><span>RAM:</span>2 GiB DDR3</div>
+									<br>
+									<div><a href="downloads/images/DietPi_OdroidXU4-ARMv7-Buster.7z"><span>Download Image:</span> <i class="fa fa-download"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">Download</u></a></div>
+									<div><a href="docs/user-guide_install/#how-to-install-dietpi" target="_blank" rel="noopener"><span>How to install / Details:</span> <i class="fa fa-book"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">View</u></a></div>
+								</div>
+								<p>The XU4 is a powerhouse peformance monster SBC and features USB 3.0, which makes it great for a NAS system. However, the XU4 does suffer from excessive heat at full load, you can expect 3-5 seconds at full load, before thermal throttling kicks in @ 95'c and reduces clocks. Aside from this, the XU4 is one of the most powerful SBC on the market today and features a much welcomed USB 3.0 support. It also looks great with Odroid-Cloudshell and DietPi-Cloudshell stats!</p>
+							</div>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/odroidxu4.jpg" alt="Odroid XU4" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- End details for portfolio project 4 -->
+				<!-- Start details for portfolio project 5 -->
+				<div id="slidingDiv5" class="toggleDiv single-project">
+					<div class="row">
+						<div class="col-md-12 project-title clearfix">
+							<h3>PINE A64</h3>
+							<span class="show_hide close"><i class="fa fa-times"></i></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="project-description">
+								<div class="project-info">
+									<div><span>CPU:</span>A64 1.2 GHz | 4 cores | ARMv8</div>
+									<div><span>RAM:</span>512 MiB - 2 GiB DDR3</div>
+									<br>
+									<div><a href="downloads/images/DietPi_PineA64-ARMv8-Buster.7z"><span>Download Image:</span> <i class="fa fa-download"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">Download</u></a></div>
+									<div><a href="docs/user-guide_install/#how-to-install-dietpi" target="_blank" rel="noopener"><span>How to install / Details:</span> <i class="fa fa-book"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">View</u></a></div>
+								</div>
+								<p>PINE A64 was the worlds first "kickstarted" SBC (AFAIK). Featuring a 64bit CPU and up to 2 GiB RAM with 1GBit LAN. The PINE A64 shows promise for future kickstarted SBCs, albeit, the PINE A64 board is somewhat cumbersome.</p>
+								<p><i style="color:grey;font-size:80%;">NB: Full GPU features are not currently available for this device, at this time, e.g. Kodi or accelerated desktop. Ideal for server usage.</i></p>
+							</div>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/pinea64.jpg" alt="PINE A64" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- End details for portfolio project 5 -->
+				<!-- Start details for portfolio project 6 -->
+				<div id="slidingDiv6" class="toggleDiv single-project">
+					<div class="row">
+						<div class="col-md-12 project-title clearfix">
+							<h3>NanoPi NEO</h3>
+							<span class="show_hide close"><i class="fa fa-times"></i></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="project-description">
+								<div class="project-info">
+									<div><span>CPU:</span>Allwinner H3 1.0 GHz | 4 cores | ARMv7</div>
+									<div><span>RAM:</span>256 MiB - 512 MiB DDR3</div>
+									<div><span>NET:</span>Gbit Ethernet</div>
+									<br>
+									<div><a href="downloads/images/DietPi_NanoPiNEO-ARMv7-Buster.7z"><span>Download Image:</span> <i class="fa fa-download"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">Download</u></a></div>
+									<div><a href="docs/user-guide_install/#how-to-install-dietpi" target="_blank" rel="noopener"><span>How to install / Details:</span> <i class="fa fa-book"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">View</u></a></div>
+								</div>
+								<p>Small SBC with lots of features.</p>
+								<p><i style="color:grey;font-size:80%;">NB: Full GPU features are not currently available for this device, at this time, e.g. Kodi or accelerated desktop. Ideal for server usage.</i></p>
+							</div>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/nanopineo.jpg" alt="NanoPi NEO" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- End details for portfolio project 6 -->
+				<!-- Start details for portfolio project 7 -->
+				<div id="slidingDiv7" class="toggleDiv single-project">
+					<div class="row">
+						<div class="col-md-12 project-title clearfix">
+							<h3>NanoPi NEO Air</h3>
+							<span class="show_hide close"><i class="fa fa-times"></i></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="project-description">
+								<div class="project-info">
+									<div><span>CPU:</span>Allwinner H3 1.0 GHz | 4 cores | ARMv7</div>
+									<div><span>RAM:</span>256 MiB - 512 MiB DDR3</div>
+									<div><span>NET:</span>Onboard WiFi</div>
+									<div><span>Storage:</span>8 GiB eMMC</div>
+									<br>
+									<div><a href="downloads/images/DietPi_NanoPiNEOAir-ARMv7-Buster.7z"><span>Download Image:</span> <i class="fa fa-download"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">Download</u></a></div>
+									<div><a href="docs/user-guide_install/#how-to-install-dietpi" target="_blank" rel="noopener"><span>How to install / Details:</span> <i class="fa fa-book"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">View</u></a></div>
+								</div>
+								<p>Small SBC with lots of features.</p>
+								<p><i style="color:grey;font-size:80%;">NB: Full GPU features are not currently available for this device, at this time, e.g. Kodi or accelerated desktop. Ideal for server usage.</i></p>
+							</div>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/nanopineoair.jpg" alt="NanoPi NEO Air" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- End details for portfolio project 7 -->
+				<!-- Start details for portfolio project 8 -->
+				<div id="slidingDiv8" class="toggleDiv single-project">
+					<div class="row">
+						<div class="col-md-12 project-title clearfix">
+							<h3>NanoPi M1/T1</h3>
+							<span class="show_hide close"><i class="fa fa-times"></i></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="project-description">
+								<div class="project-info">
+									<div><span>CPU:</span>Allwinner H3 1.2/1.5 GHz | 4 cores | ARMv7</div>
+									<div><span>RAM:</span>512 MiB - 1 GiB DDR3</div>
+									<div><span>Storage:</span>T1: 8 GiB eMMC</div>
+									<br>
+									<div><a href="downloads/images/DietPi_NanoPiM1-ARMv7-Buster.7z"><span>Download Image:</span> <i class="fa fa-download"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">Download</u></a></div>
+									<div><a href="docs/user-guide_install/#how-to-install-dietpi" target="_blank" rel="noopener"><span>How to install / Details:</span> <i class="fa fa-book"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">View</u></a></div>
+								</div>
+								<p>Small SBC with lots of features.</p>
+								<p><i style="color:grey;font-size:80%;">NB: Full GPU features are not currently available for this device, at this time, e.g. Kodi or accelerated desktop. Ideal for server usage.</i></p>
+							</div>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/nanopim1.jpg" alt="NanoPi M1" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- End details for portfolio project 8 -->
+				<!-- Start details for portfolio project 9 -->
+				<div id="slidingDiv9" class="toggleDiv single-project">
+					<div class="row">
+						<div class="col-md-12 project-title clearfix">
+							<h3>NanoPi M2/T2</h3>
+							<span class="show_hide close"><i class="fa fa-times"></i></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="project-description">
+								<div class="project-info">
+									<div><span>CPU:</span>Samsung S5P4418 1.4 GHz | 4 cores | ARMv7</div>
+									<div><span>RAM:</span>1 GiB DDR3</div>
+									<div><span>NET:</span>Gbit Ethernet</div>
+									<br>
+									<div><a href="downloads/images/DietPi_NanoPiM2-ARMv7-Stretch.7z"><span>Download Image:</span> <i class="fa fa-download"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">Download</u></a></div>
+									<div><a href="docs/user-guide_install/#how-to-install-dietpi" target="_blank" rel="noopener"><span>How to install / Details:</span> <i class="fa fa-book"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">View</u></a></div>
+								</div>
+								<p>Small SBC with lots of features.</p>
+								<p><i style="color:grey;font-size:80%;">NB: Full GPU features are not currently available for this device, at this time, e.g. Kodi or accelerated desktop. Ideal for server usage.</i></p>
+							</div>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/nanopim2.jpg" alt="NanoPi M2" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- End details for portfolio project 9 -->
+				<!-- Start details for portfolio project 10 -->
+				<div id="slidingDiv10" class="toggleDiv single-project">
+					<div class="row">
+						<div class="col-md-12 project-title clearfix">
+							<h3>NanoPi M3/T3</h3>
+							<span class="show_hide close"><i class="fa fa-times"></i></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="project-description">
+								<div class="project-info">
+									<div><span>CPU:</span>Samsung S5P6818 1.4 GHz | 8 cores | ARMv8</div>
+									<div><span>RAM:</span>2 GiB DDR3</div>
+									<div><span>NET:</span>Gbit Ethernet, WiFi, Bluetooth</div>
+									<br>
+									<div><a href="downloads/images/DietPi_NanoPiM3-ARMv8-Buster.7z"><span>Download Image:</span> <i class="fa fa-download"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">Download</u></a></div>
+									<div><a href="docs/user-guide_install/#how-to-install-dietpi" target="_blank" rel="noopener"><span>How to install / Details:</span> <i class="fa fa-book"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">View</u></a></div>
+								</div>
+								<p>Small SBC with lots of features. 8 core powerhouse, great for multithreaded programs like Plex Media Server</p>
+								<p><i style="color:grey;font-size:80%;">NB: Full GPU features are not currently available for this device, at this time, e.g. Kodi or accelerated desktop. Ideal for server usage.</i></p>
+							</div>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/nanopim3.jpg" alt="NanoPi M3" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- End details for portfolio project 10 -->
+				<!-- Start details for portfolio project 11 -->
+				<div id="slidingDiv11" class="toggleDiv single-project">
+					<div class="row">
+						<div class="col-md-12 project-title clearfix">
+							<h3>Odroid N1</h3>
+							<span class="show_hide close"><i class="fa fa-times"></i></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="project-description">
+								<div class="project-info">
+									<div><span>CPU:</span>RK3399 2 GHz/1.5 GHz | 6 cores | ARMv8</div>
+									<div><span>RAM:</span>4 GiB DDR3 1866 MHz (dual channel)</div>
+									<div><span>NET:</span>Gbit Ethernet</div>
+									<div><span>Storage:</span>eMMC socket, 2 SATA connectors</div>
+									<br>
+									<div><a href="downloads/images/DietPi_OdroidN1-ARMv8-Buster.7z"><span>Download Image:</span> <i class="fa fa-download"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">Download</u></a></div>
+									<div><a href="docs/user-guide_install/#how-to-install-dietpi" target="_blank" rel="noopener"><span>How to install / Details:</span> <i class="fa fa-book"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">View</u></a></div>
+								</div>
+								<p>Odroid's next generation SBC was here! No longer being produced, a possible rare item in the future? :D</p>
+							</div>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/odroidn1.jpg" alt="Odroid N1" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- End details for portfolio project 11 -->
+				<!-- Start details for portfolio project 12 -->
+				<div id="slidingDiv12" class="toggleDiv single-project">
+					<div class="row">
+						<div class="col-md-12 project-title clearfix">
+							<h3>Pinebook</h3>
+							<span class="show_hide close"><i class="fa fa-times"></i></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="project-description">
+								<div class="project-info">
+									<div><span>CPU:</span>A64 1.1 GHz | 4 cores | ARMv8</div>
+									<div><span>RAM:</span>2 GiB DDR3</div>
+									<div><span>NET:</span>WiFi</div>
+									<div><span>Storage:</span>eMMC</div>
+									<br>
+									<div><a href="downloads/images/DietPi_Pinebook-ARMv8-Buster.7z"><span>Download Image:</span> <i class="fa fa-download"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">Download</u></a></div>
+									<div><a href="docs/user-guide_install/#how-to-install-dietpi" target="_blank" rel="noopener"><span>How to install / Details:</span> <i class="fa fa-book"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">View</u></a></div>
+								</div>
+								<p>The Pinebook is a phenomenal Linux laptop with exceptional build quality that rivals £300+ laptops. The unit is fitted with an exceptionally bright 1080p IPS screen, eMMC and onboard WiFi.</p>
+								<p>When considering all this only costs $99, you'd be silly not to pick one up. Highly recommended for anyone who loves SBC's with an expected light workload use. An ARM laptop done right, and then some!</p>
+							</div>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/pinebooka64.jpg" alt="Pinebook" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- End details for portfolio project 12 -->
+				<!-- Start details for portfolio project 13 -->
+				<div id="slidingDiv13" class="toggleDiv single-project">
+					<div class="row">
+						<div class="col-md-12 project-title clearfix">
+							<h3>Hyper-V (Community image by @yumiris)</h3>
+							<span class="show_hide close"><i class="fa fa-times"></i></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="project-description">
+								<div class="project-info">
+									<div><span>CPU:</span>Host system dependent</div>
+									<div><span>RAM:</span>1 GiB | Can be changed</div>
+									<br>
+									<div><a href="https://github.com/yumiris/DietPi.Hyper-V/blob/master/README.md" target="_blank" rel="noopener"><span>Download Image:</span> <i class="fa fa-external-link-alt" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">Download</u></a></div>
+									<div><a href="docs/user-guide_install/#how-to-install-dietpi" target="_blank" rel="noopener"><span>How to install / Details:</span> <i class="fa fa-book"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">View</u></a></div>
+								</div>
+								<p>A community provided image with thanks to @yumiris, which brings support for running DietPi on Hyper-V systems. A virtual machine is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience.</p>
+							</div>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/hyperv.jpg" alt="Hyper-V" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- End details for portfolio project 13 -->
+				<!-- Start details for portfolio project 14 -->
+				<div id="slidingDiv14" class="toggleDiv single-project">
+					<div class="row">
+						<div class="col-md-12 project-title clearfix">
+							<h3>Odroid N2</h3>
+							<span class="show_hide close"><i class="fa fa-times"></i></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="project-description">
+								<div class="project-info">
+									<div><span>CPU:</span>S922X 1.8 GHz | 6 cores | ARMv8</div>
+									<div><span>RAM:</span>4 GiB DDR4 1320 Mhz</div>
+									<div><span>NET:</span>Gbit Ethernet</div>
+									<div><span>Storage:</span>eMMC socket</div>
+									<br>
+									<div><a href="downloads/images/DietPi_OdroidN2-ARMv8-Buster.7z"><span>Download Image:</span> <i class="fa fa-download" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">Download</u></a></div>
+									<div><a href="docs/user-guide_install/#how-to-install-dietpi" target="_blank" rel="noopener"><span>How to install / Details:</span> <i class="fa fa-book" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">View</u></a></div>
+								</div>
+								<p>Odroid's next generation "high-end" SBC is finally here! The fastest ARM SBC we have ever tested. Excellent performance and thermals at a reasonable price range.</p>
+							</div>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/odroidn2.jpg" alt="Odroid N2" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- End details for portfolio project 14 -->
+				<!-- Start details for portfolio project 15 -->
+				<div id="slidingDiv15" class="toggleDiv single-project">
+					<div class="row">
+						<div class="col-md-12 project-title clearfix">
+							<h3>VMware</h3>
+							<span class="show_hide close"><i class="fa fa-times"></i></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="project-description">
+								<div class="project-info">
+									<div><span>CPU:</span>Host system dependent</div>
+									<div><span>RAM:</span>1 GiB | Can be changed</div>
+									<br>
+									<div><a href="downloads/images/DietPi_VMware-x86_64-Buster.7z"><span>Download Image:</span> <i class="fa fa-download" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">Download</u></a></div>
+									<div><a href="docs/user-guide_install/#how-to-install-dietpi" target="_blank" rel="noopener"><span>How to install / Details:</span> <i class="fa fa-book" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">View</u></a></div>
+								</div>
+								<p>The VMware virtual machine is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience.</p>
+							</div>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/vmware.jpg" alt="VMware" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- End details for portfolio project 15 -->
+				<!-- Start details for portfolio project 16 -->
+				<div id="slidingDiv16" class="toggleDiv single-project">
+					<div class="row">
+						<div class="col-md-12 project-title clearfix">
+							<h3>VirtualBox</h3>
+							<span class="show_hide close"><i class="fa fa-times"></i></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="project-description">
+								<div class="project-info">
+									<div><span>CPU:</span>Host system dependent</div>
+									<div><span>RAM:</span>1 GiB | Can be changed</div>
+									<br>
+									<div><a href="downloads/images/DietPi_VirtualBox-x86_64-Buster.7z"><span>Download Image:</span> <i class="fa fa-download" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">Download</u></a></div>
+									<div><a href="docs/user-guide_install/#how-to-install-dietpi" target="_blank" rel="noopener"><span>How to install / Details:</span> <i class="fa fa-book" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">View</u></a></div>
+								</div>
+								<p>The VirtualBox virtual machine is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience.</p>
+							</div>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/virtualbox.jpg" alt="VirtualBox" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- End details for portfolio project 16 -->
+				<!-- Start details for portfolio project 17 -->
+				<div id="slidingDiv17" class="toggleDiv single-project">
+					<div class="row">
+						<div class="col-md-12 project-title clearfix">
+							<h3>ROCK Pi 4</h3>
+							<span class="show_hide close"><i class="fa fa-times"></i></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="project-description">
+								<div class="project-info">
+									<div><span>CPU:</span>RK3399 1.8 GHz/1.4 GHz | 6 cores | ARMv8</div>
+									<div><span>RAM:</span>1 GiB - 4 GiB LPDDR4@3200 MiB/s</div>
+									<div><span>NET:</span>Gbit Ethernet</div>
+									<div><span>Storage:</span>eMMC socket</div>
+									<br>
+									<div><a href="downloads/images/DietPi_ROCKPi4-ARMv8-Buster.7z"><span>Download Image:</span> <i class="fa fa-download" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">Download</u></a></div>
+									<div><a href="docs/user-guide_install/#how-to-install-dietpi" target="_blank" rel="noopener"><span>How to install / Details:</span> <i class="fa fa-book" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">View</u></a></div>
+								</div>
+								<p>Compared to other RK3399 SBCs, this one is small sized, like the Raspberry Pi.</p>
+							</div>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/rockpi4.jpg" alt="ROCK Pi 4" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- End details for portfolio project 17 -->
+				<!-- Start details for portfolio project 18 -->
+				<div id="slidingDiv18" class="toggleDiv single-project">
+					<div class="row">
+						<div class="col-md-12 project-title clearfix">
+							<h3>ZeroPi</h3>
+							<span class="show_hide close"><i class="fa fa-times"></i></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="project-description">
+								<div class="project-info">
+									<div><span>CPU:</span>Allwinner H3 Cortex-A7 1.2 GHz | 4 cores | ARMv7</div>
+									<div><span>RAM:</span>256 MiB - 512 MiB DDR3</div>
+									<div><span>NET:</span>Gbit Ethernet</div>
+									<br>
+									<div><a href="downloads/images/DietPi_NanoPiZeroPi-ARMv7-Buster.7z"><span>Download Image:</span> <i class="fa fa-download" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">Download</u></a></div>
+									<div><a href="docs/user-guide_install/#how-to-install-dietpi" target="_blank" rel="noopener"><span>How to install / Details:</span> <i class="fa fa-book" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">View</u></a></div>
+								</div>
+								<p><i style="color:grey;font-size:80%;">NB: Full GPU features are not currently available for this device, at this time, e.g. Kodi or accelerated desktop. Ideal for server usage.</i></p>
+							</div>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/zeropi.jpg" alt="ZeroPi" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- End details for portfolio project 18 -->
+				<!-- Start details for portfolio project 19 -->
+				<div id="slidingDiv19" class="toggleDiv single-project">
+					<div class="row">
+						<div class="col-md-12 project-title clearfix">
+							<h3>Sparky SBC (Allo)</h3>
+							<span class="show_hide close"><i class="fa fa-times"></i></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="project-description">
+								<div class="project-info">
+									<div><span>CPU:</span>Actions semiconductor S500 1.1 GHz | 4 cores | ARMv7</div>
+									<div><span>RAM:</span>1 GiB DDR3</div>
+									<div><span>USB:</span>3.0</div>
+									<div><span>Storage:</span>eMMC socket</div>
+									<br>
+									<div><a href="downloads/images/DietPi_SparkySBC-ARMv7-Stretch.7z"><span>Download Image:</span> <i class="fa fa-download" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">Download</u></a></div>
+									<div><a href="docs/user-guide_install/#how-to-install-dietpi" target="_blank" rel="noopener"><span>How to install / Details:</span> <i class="fa fa-book" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">View</u></a></div>
+								</div>
+								<p>The Allo Sparky SBC is unique, in the way its been designed for Audiophile usage at its core. By attaching a Kali re-clocker, Allo Piano DAC and Volt+, this system becomes the ultimate in high end audio quality and playback. If you love your audio and want the very best in audio quality, Sparky SBC coupled with the available audio HATs, is the complete Audiophile SBC solution.</p>
+								<p><i style="color:grey;font-size:80%;">NB: Full GPU features are not currently available for this device, at this time, e.g. Kodi or accelerated desktop. Ideal for server usage.</i></p>
+							</div>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/sparkysbc.jpg" alt="Sparky SBC" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- End details for portfolio project 19 -->
+				<!-- Start details for portfolio project 20 -->
+				<div id="slidingDiv20" class="toggleDiv single-project">
+					<div class="row">
+						<div class="col-md-12 project-title clearfix">
+							<h3>ASUS Tinker Board</h3>
+							<span class="show_hide close"><i class="fa fa-times"></i></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="project-description">
+								<div class="project-info">
+									<div><span>CPU:</span>Rockchip RK3288 1.8 GHz | 4 cores | ARMv7</div>
+									<div><span>RAM:</span>2 GiB Dual Channel DDR3</div>
+									<div><span>NET:</span>Gbit Ethernet, WiFi, Bluetooth</div>
+									<div><span>Storage:</span>eMMC socket (model S only), SDIO 3.0 (fast)</div>
+									<br>
+									<div><a href="downloads/images/DietPi_ASUSTB-ARMv7-Buster.7z"><span>Download Image:</span> <i class="fa fa-download" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">Download</u></a></div>
+									<div><a href="docs/user-guide_install/#how-to-install-dietpi" target="_blank" rel="noopener"><span>How to install / Details:</span> <i class="fa fa-book" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">View</u></a></div>
+								</div>
+								<p>Here come the giants "ASUS" with their first SBC on the market. It provides excellent performance as a SBC with its 1.8 GHz CPU and SDIO 3.0 for fast SD transfer rates. The S model contains an additional onboard eMMC module with write speeds of 70 MiB/s and read speeds of 150 MiB/s. A highly recommended SBC.</p>
+							</div>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/asustinkerboard.jpg" alt="ASUS Tinker Board" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- End details for portfolio project 20 -->
+				<!-- Start details for portfolio project 21 -->
+				<div id="slidingDiv21" class="toggleDiv single-project">
+					<div class="row">
+						<div class="col-md-12 project-title clearfix">
+							<h3>NanoPi Fire3</h3>
+							<span class="show_hide close"><i class="fa fa-times"></i></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="project-description">
+								<div class="project-info">
+									<div><span>CPU:</span>Samsung S5P6818 1.4 GHz | 8 cores | ARMv8</div>
+									<div><span>RAM:</span>1 GiB DDR3</div>
+									<div><span>NET:</span>Gbit Ethernet</div>
+									<br>
+									<div><a href="downloads/images/DietPi_NanoPiFire3-ARMv8-Buster.7z"><span>Download Image:</span> <i class="fa fa-download" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">Download</u></a></div>
+									<div><a href="docs/user-guide_install/#how-to-install-dietpi" target="_blank" rel="noopener"><span>How to install / Details:</span> <i class="fa fa-book" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">View</u></a></div>
+								</div>
+								<p>The NanoPi M3's "Mini-Me". 8 core powerhouse, great for multithreaded programs like Plex Media Server, all wrapped up into a nano sized SBC device. The CPU runs hot under full CPU load, so if you plan to run this at full load, make sure to obtain an upgraded heatsink (as the default is insufficient).</p>
+								<p><i style="color:grey;font-size:80%;">NB: Full GPU features are not currently available for this device, at this time, e.g. Kodi or accelerated desktop. Ideal for server usage.</i></p>
+							</div>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/nanopifire3.jpg" alt="NanoPi Fire3" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- End details for portfolio project 21 -->
+				<!-- Start details for portfolio project 22 -->
+				<div id="slidingDiv22" class="toggleDiv single-project">
+					<div class="row">
+						<div class="col-md-12 project-title clearfix">
+							<h3>NanoPi M1 Plus</h3>
+							<span class="show_hide close"><i class="fa fa-times"></i></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="project-description">
+								<div class="project-info">
+									<div><span>CPU:</span>Allwinner H3 1.2 GHz | 4 cores | ARMv7</div>
+									<div><span>RAM:</span>512 MiB - 1 GiB DDR3</div>
+									<div><span>NET:</span>WiFi, Bluetooth</div>
+									<div><span>Storage:</span>eMMC socket</div>
+									<br>
+									<div><a href="downloads/images/DietPi_NanoPiM1Plus-ARMv7-Buster.7z"><span>Download Image:</span> <i class="fa fa-download" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">Download</u></a></div>
+									<div><a href="docs/user-guide_install/#how-to-install-dietpi" target="_blank" rel="noopener"><span>How to install / Details:</span> <i class="fa fa-book" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">View</u></a></div>
+								</div>
+								<p>Small SBC with lots of features.</p>
+								<p><i style="color:grey;font-size:80%;">NB: Full GPU features are not currently available for this device, at this time, e.g. Kodi or accelerated desktop. Ideal for server usage.</i></p>
+							</div>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/nanopim1plus.jpg" alt="NanoPi M1 Plus" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- End details for portfolio project 22 -->
+				<!-- Start details for portfolio project 23 -->
+				<div id="slidingDiv23" class="toggleDiv single-project">
+					<div class="row">
+						<div class="col-md-12 project-title clearfix">
+							<h3>NanoPi NEO2</h3>
+							<span class="show_hide close"><i class="fa fa-times"></i></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="project-description">
+								<div class="project-info">
+									<div><span>CPU:</span>Allwinner H5 1.2 GHz | 4 cores | ARMv8</div>
+									<div><span>RAM:</span>512 MiB DDR3</div>
+									<div><span>NET:</span>Gbit Ethernet</div>
+									<br>
+									<div><a href="downloads/images/DietPi_NanoPiNEO2-ARMv8-Buster.7z"><span>Download Image:</span> <i class="fa fa-download" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">Download</u></a></div>
+									<div><a href="docs/user-guide_install/#how-to-install-dietpi" target="_blank" rel="noopener"><span>How to install / Details:</span> <i class="fa fa-book" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">View</u></a></div>
+								</div>
+								<p>An upgrade to the original Nano NEO, now features H5 64-bit CPU and Gbit LAN. Quite possibily the smallest (and cutest) SBC on the market. Great for headless/IoT/NAS/server/HiFi projects and showing old friends how small computers have become.</p>
+								<p><i style="color:grey;font-size:80%;">NB: Full GPU features are not currently available for this device, at this time, e.g. Kodi or accelerated desktop. Ideal for server usage.</i></p>
+							</div>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/nanopineo2.jpg" alt="NanoPi NEO2" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- End details for portfolio project 23 -->
+				<!-- Start details for portfolio project 24 -->
+				<div id="slidingDiv24" class="toggleDiv single-project">
+					<div class="row">
+						<div class="col-md-12 project-title clearfix">
+							<h3>NanoPi K1 Plus</h3>
+							<span class="show_hide close"><i class="fa fa-times"></i></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="project-description">
+								<div class="project-info">
+									<div><span>CPU:</span>Allwinner H5 1.4 GHz | 4 cores | ARMv8</div>
+									<div><span>RAM:</span>2 GiB DDR3</div>
+									<div><span>NET:</span>Gbit Ethernet, WiFi</div>
+									<br>
+									<div><a href="downloads/images/DietPi_NanoPiK1Plus-ARMv8-Buster.7z"><span>Download Image:</span> <i class="fa fa-download" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">Download</u></a></div>
+									<div><a href="docs/user-guide_install/#how-to-install-dietpi" target="_blank" rel="noopener"><span>How to install / Details:</span> <i class="fa fa-book" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">View</u></a></div>
+								</div>
+								<p>A direct competitor to the RPi 3+. Features excellent and stable onboard WiFi, 64-bit CPU. A great all round board, utilizing the H5 ARM CPU. A good alternative to the RPi 3+, with increased performance at a similar price range.</p>
+								<p><i style="color:grey;font-size:80%;">NB: Full GPU features are not currently available for this device, at this time, e.g. Kodi or accelerated desktop. Ideal for server usage.</i></p>
+							</div>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/nanopik1plus.jpg" alt="NanoPi K1 Plus" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- End details for portfolio project 24 -->
+				<!-- Start details for portfolio project 25 -->
+				<div id="slidingDiv25" class="toggleDiv single-project">
+					<div class="row">
+						<div class="col-md-12 project-title clearfix">
+							<h3>FireFly RK3399 (beta)</h3>
+							<span class="show_hide close"><i class="fa fa-times"></i></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="project-description">
+								<div class="project-info">
+									<div><span>CPU:</span>Rockchip RK3399 1.8 GHz/1.4 GHz | 6 cores | ARMv8</div>
+									<div><span>RAM:</span>2 GiB - 4 GiB DDR3</div>
+									<div><span>NET:</span>Gbit Ethernet, WiFi, Bluetooth</div>
+									<div><span>Storage:</span>eMMC socket</div>
+									<br>
+									<div><a href="downloads/images/DietPi_FireflyRK3399-ARMv8-Buster.7z"><span>Download Image:</span> <i class="fa fa-download" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">Download</u></a></div>
+									<div><a href="docs/user-guide_install/#how-to-install-dietpi" target="_blank" rel="noopener"><span>How to install / Details:</span> <i class="fa fa-book" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">View</u></a></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/fireflyrk3399.jpg" alt="FireFly RK3399" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- End details for portfolio project 25 -->
+				<!-- Start details for portfolio project 26 -->
+				<div id="slidingDiv26" class="toggleDiv single-project">
+					<div class="row">
+						<div class="col-md-12 project-title clearfix">
+							<h3>NanoPi NEO2 Black (beta)</h3>
+							<span class="show_hide close"><i class="fa fa-times"></i></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="project-description">
+								<div class="project-info">
+									<div><span>CPU:</span>Allwinner H5 1.2 GHz | 4 cores | ARMv8</div>
+									<div><span>RAM:</span>512 MiB - 1 GiB DDR3</div>
+									<div><span>NET:</span>Gbit Ethernet</div>
+									<div><span>Storage:</span>eMMC socket</div>
+									<br>
+									<div><a href="https://github.com/MichaIng/DietPi/issues/3333" target="_blank" rel="noopener"><span>Download Image:</span> <i class="fa fa-external-link-alt" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">Download</u></a></div>
+									<div><a href="docs/user-guide_install/#how-to-install-dietpi" target="_blank" rel="noopener"><span>How to install / Details:</span> <i class="fa fa-book" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">View</u></a></div>
+								</div>
+								<p>A NEO2 upgrade with some additional features like eMMC and available with 1 GiB RAM</p>
+								<p><i style="color:grey;font-size:80%;">NB: Full GPU features are not currently available for this device, at this time, e.g. Kodi or accelerated desktop. Ideal for server usage.</i></p>
+							</div>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/nanopineo2black.jpg" alt="NanoPi NEO2 Black" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- End details for portfolio project 26 -->
+				<!-- Start details for portfolio project 27 -->
+				<div id="slidingDiv27" class="toggleDiv single-project">
+					<div class="row">
+						<div class="col-md-12 project-title clearfix">
+							<h3>NanoPi M4V2</h3>
+							<span class="show_hide close"><i class="fa fa-times"></i></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="project-description">
+								<div class="project-info">
+									<div><span>CPU:</span>Rockchip RK3399 1.8 Ghz/1.4 Ghz | 6 cores | ARMv8</div>
+									<div><span>RAM:</span>4 GiB LPDDR4</div>
+									<div><span>NET:</span>Gbit Ethernet, WiFi, Bluetooth</div>
+									<div><span>Storage:</span>eMMC socket</div>
+									<br>
+									<div><a href="downloads/images/DietPi_NanoPiM4v2-ARMv8-Buster.7z"><span>Download Image:</span> <i class="fa fa-download" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">Download</u></a></div>
+									<div><a href="docs/user-guide_install/#how-to-install-dietpi" target="_blank" rel="noopener"><span>How to install / Details:</span> <i class="fa fa-book" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">View</u></a></div>
+								</div>
+								<p>New build of the NanoPi M4 with DDR4 instead of DDR3 RAM.</p>
+							</div>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/nanopim4v2.jpg" alt="NanoPi M4V2" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- End details for portfolio project 27 -->
+				<!-- Start details for portfolio project 28 -->
+				<div id="slidingDiv28" class="toggleDiv single-project">
+					<div class="row">
+						<div class="col-md-12 project-title clearfix">
+							<h3>PINE H64 (beta)</h3>
+							<span class="show_hide close"><i class="fa fa-times"></i></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="project-description">
+								<div class="project-info">
+									<div><span>CPU:</span>Allwinner H6 Cortex-A53 1.488 GHz | 4 cores | ARMv8</div>
+									<div><span>RAM:</span>1 GiB - 3 GiB LPDDR3</div>
+									<div><span>NET:</span>Gbit Ethernet, WiFi*</div>
+									<div><span>Storage:</span>eMMC socket, PCIe (Model A only)</div>
+									<br>
+									<div><a href="downloads/images/DietPi_PineH64-ARMv8-Buster.7z"><span>Download Image:</span> <i class="fa fa-download" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">Download</u></a></div>
+									<div><a href="docs/user-guide_install/#how-to-install-dietpi" target="_blank" rel="noopener"><span>How to install / Details:</span> <i class="fa fa-book" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">View</u></a></div>
+								</div>
+								<p>The PINE H64 is available in two variants, Model A with larger PCB, PCIe slot and optional WiFi, and Model B with ROCK64-size PCB, without PCIe slot and fixed onboard WiFi.</p>
+								<p><i style="color:grey;font-size:80%;">NB: Full GPU features are not currently available for this device, at this time, e.g. Kodi or accelerated desktop. Ideal for server usage.</i></p>
+							</div>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/pineh64.jpg" alt="PINE H64" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- End details for portfolio project 28 -->
+				<!-- Start details for portfolio project 29 -->
+				<div id="slidingDiv29" class="toggleDiv single-project">
+					<div class="row">
+						<div class="col-md-12 project-title clearfix">
+							<h3>ROCKPro64</h3>
+							<span class="show_hide close"><i class="fa fa-times"></i></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="project-description">
+								<div class="project-info">
+									<div><span>CPU:</span>Rockchip RK3399 1.8 GHz/1.4 GHz | 6 cores | ARMv8</div>
+									<div><span>RAM:</span>4 GiB LPDDR4</div>
+									<div><span>NET:</span>Gbit Ethernet</div>
+									<div><span>Storage:</span>eMMC socket, PCIe 4x</div>
+									<br>
+									<div><a href="downloads/images/DietPi_RockPro64-ARMv8-Buster.7z"><span>Download Image:</span> <i class="fa fa-download" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">Download</u></a></div>
+									<div><a href="docs/user-guide_install/#how-to-install-dietpi" target="_blank" rel="noopener"><span>How to install / Details:</span> <i class="fa fa-book" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">View</u></a></div>
+								</div>
+								<p>The ROCK64's big brother is here! One of the fastest ARM SBC (RK3399) on the market today, with 2x1.8 GHz A72 cores and 4x1.4 GHz A53 cores. Onboard full size PCIe 4x with excellent throughput compliments a NAS/Server setup, and, endless opportunities. A great addition to your SBC lineup that provides next gen SBC performance. Bottom line: "it's a little chunky, but it ain't no monkey", we love it!</p>
+							</div>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/rockpro64.jpg" alt="ROCKPro64" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- End details for portfolio project 29 -->
+				<!-- Start details for portfolio project 30 -->
+				<div id="slidingDiv30" class="toggleDiv single-project">
+					<div class="row">
+						<div class="col-md-12 project-title clearfix">
+							<h3>Native PC for BIOS/CSM</h3>
+							<span class="show_hide close"><i class="fa fa-times"></i></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="project-description">
+								<div class="project-info">
+									<div><span>CPU:</span>Host system dependent</div>
+									<div><span>RAM:</span>Host system dependent</div>
+									<br>
+									<div>
+										<a href="downloads/images/DietPi_NativePC-BIOS-x86_64-Buster.7z"><span>Direct flash Image:</span> <i class="fa fa-download" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">Download</u></a>
+										<br>Choose this to flash directly to the root disk of the target system.
+									</div>
+									<div>
+										<a href="downloads/images/DietPi_NativePC-BIOS-x86_64-Buster_Installer.7z"><span>Installer Image:</span> <i class="fa fa-download" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">Download</u></a>
+										<br>Choose this to flash to e.g. a USB stick to boot and install DietPi to internal drive.
+									</div>
+									<div><a href="docs/user-guide_install/#how-to-install-dietpi" target="_blank" rel="noopener"><span>How to install / Details:</span> <i class="fa fa-book" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">View</u></a></div>
+								</div>
+								<p>The Native PC is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience. This image is for motherboards with BIOS and/or CSM boot support.</p>
+							</div>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/nativepc.jpg" alt="PC" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- End details for portfolio project 30 -->
+				<!-- Start details for portfolio project 31 -->
+				<div id="slidingDiv31" class="toggleDiv single-project">
+					<div class="row">
+						<div class="col-md-12 project-title clearfix">
+							<h3>ROCK64</h3>
+							<span class="show_hide close"><i class="fa fa-times"></i></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="project-description">
+								<div class="project-info">
+									<div><span>CPU:</span>Rockchip RK3328 1.3 GHz | 4 cores | ARMv8</div>
+									<div><span>RAM:</span>1 GiB - 4 GiB DDR3</div>
+									<div><span>NET:</span>Gbit Ethernet</div>
+									<div><span>USB:</span>3.0</div>
+									<div><span>Storage:</span>eMMC socket</div>
+									<br>
+									<div><a href="downloads/images/DietPi_Rock64-ARMv8-Buster.7z"><span>Download Image:</span> <i class="fa fa-download" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">Download</u></a></div>
+									<div><a href="docs/user-guide_install/#how-to-install-dietpi" target="_blank" rel="noopener"><span>How to install / Details:</span> <i class="fa fa-book" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">View</u></a></div>
+								</div>
+								<p>A welcomed evolution of the PINE64 is finally here. Reduced PCB size, low cost, USB 3.0, GBit LAN and eMMC option. A worthy SBC for any server/NAS project.</p>
+								<p><i style="color:grey;font-size:80%;">NB: Full GPU features are not currently available for this device, at this time, e.g. Kodi or accelerated desktop. Ideal for server usage.</i></p>
+							</div>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/rock64.jpg" alt="ROCK64" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- End details for portfolio project 31 -->
+				<!-- Start details for portfolio project 32 -->
+				<div id="slidingDiv32" class="toggleDiv single-project">
+					<div class="row">
+						<div class="col-md-12 project-title clearfix">
+							<h3>Native PC for UEFI</h3>
+							<span class="show_hide close"><i class="fa fa-times"></i></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="project-description">
+								<div class="project-info">
+									<div><span>CPU:</span>Host system dependent</div>
+									<div><span>RAM:</span>Host system dependent</div>
+									<br>
+									<div>
+										<a href="downloads/images/DietPi_NativePC-UEFI-x86_64-Buster.7z"><span>Installer Image:</span> <i class="fa fa-download" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">Download</u></a>
+										<br>Flash to e.g. a USB stick to boot and install DietPi to internal drive.
+									</div>
+									<div><a href="docs/user-guide_install/#how-to-install-dietpi" target="_blank" rel="noopener"><span>How to install / Details:</span> <i class="fa fa-book" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">View</u></a></div>
+								</div>
+								<p>The Native PC is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience. This image is for motherboards with UEFI boot support and onboard EMMC (eg: Z83-II, Beelink AP32 and other Intel NUC/SBC devices with onboard eMMC).</p>
+							</div>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/nativepc.jpg" alt="PC" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- End details for portfolio project 32 -->
+				<!-- Start details for portfolio project 33 -->
+				<div id="slidingDiv33" class="toggleDiv single-project">
+					<div class="row">
+						<div class="col-md-12 project-title clearfix">
+							<h3>Other device (beta)</h3>
+							<span class="show_hide close"><i class="fa fa-times"></i></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="project-description">
+								<div class="project-info">
+									<span>DietPi-PREP:</span>Convert any Debian image, into a DietPi system.
+									<br>
+									<div><a href="https://github.com/MichaIng/DietPi/issues/1285#issue-280771944" target="_blank" rel="noopener"><span>Install Guide:</span> <i class="fa fa-book" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">View</u></a></div>
+								</div>
+								<p>Unable to find an available image for your device? No worries, DietPi can be easily installed on any device!</p>
+								<p>Simply run the DietPi-PREP script in the above link and follow the onscreen instructions.</p>
+								<p><i style="color:grey;font-size: 80%;">NB: End user support will be limited to issues that are DietPi specific (which excludes Kernel/GPU/onboard BT+WiFi+Audio etc from our support). GPU features are disabled for other devices (eg: Kodi, Desktop), ideal for server usage.</i></p>
+							</div>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/otherdevice.jpg" alt="Other" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- End details for portfolio project 33 -->
+				<!-- Start details for portfolio project 34 -->
+				<div id="slidingDiv34" class="toggleDiv single-project">
+					<div class="row">
+						<div class="col-md-12 project-title clearfix">
+							<h3>NanoPC T4</h3>
+							<span class="show_hide close"><i class="fa fa-times"></i></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="project-description">
+								<div class="project-info">
+									<div><span>CPU:</span>Rockchip RK3399 1.8 GHz/1.4 GHz | 6 cores | ARMv8</div>
+									<div><span>RAM:</span>4 GiB LPDDR3-1866</div>
+									<div><span>NET:</span>Gbit Ethernet, WiFi, Bluetooth</div>
+									<div><span>Storage:</span>16 GiB eMMC, M.2 socket, PCIe 4x</div>
+									<br>
+									<div><a href="downloads/images/DietPi_NanoPCT4-ARMv8-Buster.7z"><span>Download Image:</span> <i class="fa fa-download" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">Download</u></a></div>
+									<div><a href="docs/user-guide_install/#how-to-install-dietpi" target="_blank" rel="noopener"><span>How to install / Details:</span> <i class="fa fa-book" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">View</u></a></div>
+								</div>
+								<p>FriendlyARM's next generation SBC is finally here! One of the fastest ARM SBC (RK3399) on the market today, with 2x1.8 GHz A72 cores and 4x1.4 GHz A53 cores. Onboard M.2/PCIe 4x with excellent throughput compliments a NAS/Server setup. Bottom line, we love it!</p>
+							</div>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/nanopct4.jpg" alt="NanoPC T4" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- End details for portfolio project 34 -->
+				<!-- Start details for portfolio project 35 -->
+				<div id="slidingDiv35" class="toggleDiv single-project">
+					<div class="row">
+						<div class="col-md-12 project-title clearfix">
+							<h3>ROCK Pi S (beta)</h3>
+							<span class="show_hide close"><i class="fa fa-times"></i></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="project-description">
+								<div class="project-info">
+									<div><span>CPU:</span>Rockchip RK3308 Cortex-A35 | 4 cores | ARMv8</div>
+									<div><span>RAM:</span>256 MiB - 512 MiB DDR3</div>
+									<div><span>NET:</span>Gbit Ethernet, WiFi, Blutooth</div>
+									<div><span>Storage:</span>Optional onboard SD NAND</div>
+									<br>
+									<div><a href="downloads/images/DietPi_ROCKPiS-ARMv8-Buster.7z"><span>Download Image:</span> <i class="fa fa-download" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">Download</u></a></div>
+									<div><a href="docs/user-guide_install/#how-to-install-dietpi" target="_blank" rel="noopener"><span>How to install / Details:</span> <i class="fa fa-book" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">View</u></a></div>
+								</div>
+								<p>Little brother of the ROCK Pi 4, headless but with voice detection engine, for IoT and voice applications.</p>
+							</div>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/rockpis.jpg" alt="ROCK Pi S" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- End details for portfolio project 35 -->
+				<!-- Start details for portfolio project 36 -->
+				<div id="slidingDiv36" class="toggleDiv single-project">
+					<div class="row">
+						<div class="col-md-12 project-title clearfix">
+							<h3>NanoPi NEO Plus2</h3>
+							<span class="show_hide close"><i class="fa fa-times"></i></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="project-description">
+								<div class="project-info">
+									<div><span>CPU:</span>Allwinner H5 1.2 GHz | 4 cores | ARMv8</div>
+									<div><span>RAM:</span>1 GiB DDR3</div>
+									<div><span>NET:</span>Gbit Ethernet, WiFi, Bluetooth</div>
+									<div><span>Storage:</span>8 GiB eMMC</div>
+									<br>
+									<div><a href="downloads/images/DietPi_NanoPiNEOPlus2-ARMv8-Buster.7z"><span>Download Image:</span> <i class="fa fa-download" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">Download</u></a></div>
+									<div><a href="docs/user-guide_install/#how-to-install-dietpi" target="_blank" rel="noopener"><span>How to install / Details:</span> <i class="fa fa-book" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">View</u></a></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/nanopineoplus2.jpg" alt="NanoPi NEO Plus2" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- End details for portfolio project 36 -->
+				<!-- Start details for portfolio project 37 -->
+				<div id="slidingDiv37" class="toggleDiv single-project">
+					<div class="row">
+						<div class="col-md-12 project-title clearfix">
+							<h3>NanoPC M4</h3>
+							<span class="show_hide close"><i class="fa fa-times"></i></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="project-description">
+								<div class="project-info">
+									<div><span>CPU:</span>Rockchip RK3399 1.8 GHz/1.4 GHz | 6 cores | ARMv8</div>
+									<div><span>RAM:</span>2 GiB - 4 GiB LPDDR3-1866</div>
+									<div><span>NET:</span>Gbit Ethernet, WiFi, Bluetooth</div>
+									<div><span>Storage:</span>eMMC socket</div>
+									<br>
+									<div><a href="downloads/images/DietPi_NanoPCT4-ARMv8-Buster.7z"><span>Download Image:</span> <i class="fa fa-download" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">Download</u></a></div>
+									<div><a href="docs/user-guide_install/#how-to-install-dietpi" target="_blank" rel="noopener"><span>How to install / Details:</span> <i class="fa fa-book" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">View</u></a></div>
+								</div>
+								<p>Little brother of the NanoPC T4 with same SoC (RK3399) performance but a few less features, like no onboard eMMC chip (but socket) and no M.2 socket. However the form factor is RPi-like which might suite certain use-cases.</p>
+							</div>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/nanopim4.jpg" alt="NanoPC M4" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- End details for portfolio project 37 -->
+				<!-- Start details for portfolio project 38 -->
+				<div id="slidingDiv38" class="toggleDiv single-project">
+					<div class="row">
+						<div class="col-md-12 project-title clearfix">
+							<h3>NanoPi NEO4</h3>
+							<span class="show_hide close"><i class="fa fa-times"></i></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="project-description">
+								<div class="project-info">
+									<div><span>CPU:</span>Rockchip RK3399 1.8 GHz/1.4 GHz | 6 cores | ARMv8</div>
+									<div><span>RAM:</span>1 GiB DDR3-1866</div>
+									<div><span>NET:</span>Gbit Ethernet, WiFi, Bluetooth</div>
+									<div><span>Storage:</span>eMMC socket</div>
+									<br>
+									<div><a href="downloads/images/DietPi_NanoPCT4-ARMv8-Buster.7z"><span>Download Image:</span> <i class="fa fa-download" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">Download</u></a></div>
+									<div><a href="docs/user-guide_install/#how-to-install-dietpi" target="_blank" rel="noopener"><span>How to install / Details:</span> <i class="fa fa-book" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<u style="font-size:133%;">View</u></a></div>
+								</div>
+								<p>The smallest board of the M4/T4/NEO4 RK3399 family. One gets full RK3399 SoC power on a tiny form factor but pays this with only 1 GB RAM and the loss of the 3.5mm audio jack (HDMI audio only) compared to the M4.</p>
+							</div>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/nanopineo4.jpg" alt="NanoPi NEO4" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- End details for portfolio project 38 -->
+				<div id="portfolio-grid" class="row" style="display:none">
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix raspberrypi">
+						<div class="thumbnail">
+							<img src="images/sbc_images/raspberrypi3.jpg" alt="Raspberry Pi" loading="lazy">
+							<a href="#downloadinfo" class="more show_hide" rel="#slidingDiv1"><i class="fa fa-plus"></i></a>
+							<h3>Raspberry Pi</h3>
+							<p>All models</p>
+							<div class="mask"></div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix odroid">
+						<div class="thumbnail">
+							<img src="images/sbc_images/odroidc1.jpg" alt="Odroid C1" loading="lazy">
+							<a href="#downloadinfo" class="more show_hide" rel="#slidingDiv2"><i class="fa fa-plus"></i></a>
+							<h3>Odroid C1</h3>
+							<p>S805 1.5GHz | 4 cores | ARMv7</p>
+							<div class="mask"></div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix odroid">
+						<div class="thumbnail">
+							<img src="images/sbc_images/odroidc2.jpg" alt="Odroid C2" loading="lazy">
+							<a href="#downloadinfo" class="more show_hide" rel="#slidingDiv3"><i class="fa fa-plus"></i></a>
+							<h3>Odroid C2</h3>
+							<p>S905 1.5GHz | 4 cores | ARMv8</p>
+							<div class="mask"></div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix odroid">
+						<div class="thumbnail">
+							<img src="images/sbc_images/odroidn1.jpg" alt="Odroid N1" loading="lazy">
+							<a href="#downloadinfo" class="more show_hide" rel="#slidingDiv11"><i class="fa fa-plus"></i></a>
+							<h3>Odroid N1</h3>
+							<p>RK3399 2GHz | 6 cores | ARMv8</p>
+							<div class="mask"></div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix odroid">
+						<div class="thumbnail">
+							<img src="images/sbc_images/odroidn2.jpg" alt="Odroid N2" loading="lazy">
+							<a href="#downloadinfo" class="more show_hide" rel="#slidingDiv14"><i class="fa fa-plus"></i></a>
+							<h3>Odroid N2</h3>
+							<p>S922X 1.8GHz | 6 cores | ARMv8</p>
+							<div class="mask"></div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix odroid">
+						<div class="thumbnail">
+							<img src="images/sbc_images/odroidxu4.jpg" alt="Odroid XU4" loading="lazy">
+							<a href="#downloadinfo" class="more show_hide" rel="#slidingDiv4"><i class="fa fa-plus"></i></a>
+							<h3>Odroid XU3/XU4/MC1/HC1/HC2</h3>
+							<p>Exynos5422 | 4 cores | ARMv7</p>
+							<div class="mask"></div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix pine">
+						<div class="thumbnail">
+							<img src="images/sbc_images/pinea64.jpg" alt="PINE A64" loading="lazy">
+							<a href="#downloadinfo" class="more show_hide" rel="#slidingDiv5"><i class="fa fa-plus"></i></a>
+							<h3>PINE A64</h3>
+							<p>A64 1.2 GHz | 4 cores | ARMv8</p>
+							<div class="mask"></div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix pine">
+						<div class="thumbnail">
+							<img src="images/sbc_images/pineh64.jpg" alt="PINE H64" loading="lazy">
+							<a href="#downloadinfo" class="more show_hide" rel="#slidingDiv28"><i class="fa fa-plus"></i></a>
+							<h3>PINE H64 (beta)</h3>
+							<p>H6 1.488 GHz | 4 cores | ARMv8</p>
+							<div class="mask"></div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix pine">
+						<div class="thumbnail">
+							<img src="images/sbc_images/pinebooka64.jpg" alt="Pinebook" loading="lazy">
+							<a href="#downloadinfo" class="more show_hide" rel="#slidingDiv12"><i class="fa fa-plus"></i></a>
+							<h3>Pinebook</h3>
+							<p>A64 1.1 GHz | 4 cores | ARMv8</p>
+							<div class="mask"></div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix pine">
+						<div class="thumbnail">
+							<img src="images/sbc_images/rock64.jpg" alt="ROCK64" loading="lazy">
+							<a href="#downloadinfo" class="more show_hide" rel="#slidingDiv31"><i class="fa fa-plus"></i></a>
+							<h3>ROCK64</h3>
+							<p>RK3328 1.3GHz | 4 cores | ARMv8</p>
+							<div class="mask"></div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix pine">
+						<div class="thumbnail">
+							<img src="images/sbc_images/rockpro64.jpg" alt="ROCKPro64" loading="lazy">
+							<a href="#downloadinfo" class="more show_hide" rel="#slidingDiv29"><i class="fa fa-plus"></i></a>
+							<h3>ROCKPro64</h3>
+							<p>RK3399 1.8GHz | 6 cores | ARMv8</p>
+							<div class="mask"></div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix radxa">
+						<div class="thumbnail">
+							<img src="images/sbc_images/rockpi4.jpg" alt="ROCK Pi 4" loading="lazy">
+							<a href="#downloadinfo" class="more show_hide" rel="#slidingDiv17"><i class="fa fa-plus"></i></a>
+							<h3>ROCK Pi 4</h3>
+							<p>RK3399 1.8GHz | 6 cores | ARMv8</p>
+							<div class="mask"></div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix radxa">
+						<div class="thumbnail">
+							<img src="images/sbc_images/rockpis.jpg" alt="ROCK Pi S" loading="lazy">
+							<a href="#downloadinfo" class="more show_hide" rel="#slidingDiv35"><i class="fa fa-plus"></i></a>
+							<h3>ROCK Pi S (beta)</h3>
+							<p>RK3308 | 4 cores | ARMv8</p>
+							<div class="mask"></div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix firefly">
+						<div class="thumbnail">
+							<img src="images/sbc_images/fireflyrk3399.jpg" alt="Firefly RK3399" loading="lazy">
+							<a href="#downloadinfo" class="more show_hide" rel="#slidingDiv25"><i class="fa fa-plus"></i></a>
+							<h3>Firefly RK3399 (beta)</h3>
+							<p>RK3399 1.8GHz | 6 cores | ARMv8</p>
+							<div class="mask"></div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix allo">
+						<div class="thumbnail">
+							<img src="images/sbc_images/sparkysbc.jpg" alt="Sparky SBC" loading="lazy">
+							<a href="#downloadinfo" class="more show_hide" rel="#slidingDiv19"><i class="fa fa-plus"></i></a>
+							<h3>Sparky SBC (Allo)</h3>
+							<p>1.1GHz | 4 cores | ARMv7</p>
+							<div class="mask"></div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix asus">
+						<div class="thumbnail">
+							<img src="images/sbc_images/asustinkerboard.jpg" alt="ASUS Tinker Board" loading="lazy">
+							<a href="#downloadinfo" class="more show_hide" rel="#slidingDiv20"><i class="fa fa-plus"></i></a>
+							<h3>ASUS Tinker Board</h3>
+							<p>RK3288 1.8GHz | 4 cores | ARMv7</p>
+							<div class="mask"></div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix x86_64">
+						<div class="thumbnail">
+							<img src="images/sbc_images/nativepc.jpg" alt="Native PC" loading="lazy">
+							<a href="#downloadinfo" class="more show_hide" rel="#slidingDiv30"><i class="fa fa-plus"></i></a>
+							<h3>Native PC (BIOS/CSM)</h3>
+							<p>x86_64</p>
+							<div class="mask"></div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix x86_64">
+						<div class="thumbnail">
+							<img src="images/sbc_images/nativepc.jpg" alt="Native PC" loading="lazy">
+							<a href="#downloadinfo" class="more show_hide" rel="#slidingDiv32"><i class="fa fa-plus"></i></a>
+							<h3>Native PC (UEFI)</h3>
+							<p>x86_64</p>
+							<div class="mask"></div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix x86_64">
+						<div class="thumbnail">
+							<img src="images/sbc_images/vmware.jpg" alt="VMware" loading="lazy">
+							<a href="#downloadinfo" class="more show_hide" rel="#slidingDiv15"><i class="fa fa-plus"></i></a>
+							<h3>VMware</h3>
+							<p>Virtual Machine x86_64</p>
+							<div class="mask"></div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix x86_64">
+						<div class="thumbnail">
+							<img src="images/sbc_images/virtualbox.jpg" alt="VirtualBox" loading="lazy">
+							<a href="#downloadinfo" class="more show_hide" rel="#slidingDiv16"><i class="fa fa-plus"></i></a>
+							<h3>VirtualBox</h3>
+							<p>Virtual Machine x86_64</p>
+							<div class="mask"></div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix x86_64">
+						<div class="thumbnail">
+							<img src="images/sbc_images/hyperv.jpg" alt="Hyper-V" loading="lazy">
+							<a href="#downloadinfo" class="more show_hide" rel="#slidingDiv13"><i class="fa fa-plus"></i></a>
+							<h3>Hyper-V (Community img)</h3>
+							<p>Virtual Machine x86_64</p>
+							<div class="mask"></div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix nanopi">
+						<div class="thumbnail">
+							<img src="images/sbc_images/nanopct4.jpg" alt="NanoPC T4" loading="lazy">
+							<a href="#downloadinfo" class="more show_hide" rel="#slidingDiv34"><i class="fa fa-plus"></i></a>
+							<h3>NanoPC T4</h3>
+							<p>RK3399 1.8GHz | 6 cores | ARMv8</p>
+							<div class="mask"></div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix nanopi">
+						<div class="thumbnail">
+							<img src="images/sbc_images/nanopim4.jpg" alt="NanoPi M4" loading="lazy">
+							<a href="#downloadinfo" class="more show_hide" rel="#slidingDiv37"><i class="fa fa-plus"></i></a>
+							<h3>NanoPi M4</h3>
+							<p>RK3399 1.8GHz | 6 cores | ARMv8</p>
+							<div class="mask"></div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix nanopi">
+						<div class="thumbnail">
+							<img src="images/sbc_images/nanopineo4.jpg" alt="NanoPi NEO4" loading="lazy">
+							<a href="#downloadinfo" class="more show_hide" rel="#slidingDiv38"><i class="fa fa-plus"></i></a>
+							<h3>NanoPi NEO4</h3>
+							<p>RK3399 1.8GHz | 6 cores | ARMv8</p>
+							<div class="mask"></div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix nanopi">
+						<div class="thumbnail">
+							<img src="images/sbc_images/nanopim4v2.jpg" alt="NanoPi M4V2" loading="lazy">
+							<a href="#downloadinfo" class="more show_hide" rel="#slidingDiv27"><i class="fa fa-plus"></i></a>
+							<h3>NanoPi M4V2</h3>
+							<p>RK3399 1.8GHz | 6 cores | ARMv8</p>
+							<div class="mask"></div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix nanopi">
+						<div class="thumbnail">
+							<img src="images/sbc_images/zeropi.jpg" alt="ZeroPi" loading="lazy">
+							<a href="#downloadinfo" class="more show_hide" rel="#slidingDiv18"><i class="fa fa-plus"></i></a>
+							<h3>ZeroPi</h3>
+							<p>H3 1.2 GHz | 4 cores | ARMv7</p>
+							<div class="mask"></div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix nanopi">
+						<div class="thumbnail">
+							<img src="images/sbc_images/nanopineo.jpg" alt="NanoPi NEO" loading="lazy">
+							<a href="#downloadinfo" class="more show_hide" rel="#slidingDiv6"><i class="fa fa-plus"></i></a>
+							<h3>NanoPi NEO</h3>
+							<p>H3 1.0 GHz | 4 cores | ARMv7</p>
+							<div class="mask"></div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix nanopi">
+						<div class="thumbnail">
+							<img src="images/sbc_images/nanopineoair.jpg" alt="NanoPi NEO Air" loading="lazy">
+							<a href="#downloadinfo" class="more show_hide" rel="#slidingDiv7"><i class="fa fa-plus"></i></a>
+							<h3>NanoPi NEO Air</h3>
+							<p>H3 1.0 GHz | 4 cores | ARMv7</p>
+							<div class="mask"></div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix nanopi">
+						<div class="thumbnail">
+							<img src="images/sbc_images/nanopineo2.jpg" alt="NanoPi NEO2" loading="lazy">
+							<a href="#downloadinfo" class="more show_hide" rel="#slidingDiv23"><i class="fa fa-plus"></i></a>
+							<h3>NanoPi NEO2</h3>
+							<p>H5 1.2 GHz | 4 cores | ARMv8</p>
+							<div class="mask"></div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix nanopi">
+						<div class="thumbnail">
+							<img src="images/sbc_images/nanopineo2black.jpg" alt="NanoPi NEO2 Black" loading="lazy">
+							<a href="#downloadinfo" class="more show_hide" rel="#slidingDiv26"><i class="fa fa-plus"></i></a>
+							<h3>NanoPi NEO2 Black (beta)</h3>
+							<p>H5 1.2 GHz | 4 cores | ARMv8</p>
+							<div class="mask"></div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix nanopi">
+						<div class="thumbnail">
+							<img src="images/sbc_images/nanopineoplus2.jpg" alt="NanoPi NEO Plus2" loading="lazy">
+							<a href="#downloadinfo" class="more show_hide" rel="#slidingDiv36"><i class="fa fa-plus"></i></a>
+							<h3>NanoPi NEO Plus2</h3>
+							<p>H5 1.2 GHz | 4 cores | ARMv8</p>
+							<div class="mask"></div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix nanopi">
+						<div class="thumbnail">
+							<img src="images/sbc_images/nanopik1plus.jpg" alt="NanoPi K1 Plus" loading="lazy">
+							<a href="#downloadinfo" class="more show_hide" rel="#slidingDiv24"><i class="fa fa-plus"></i></a>
+							<h3>NanoPi K1 Plus</h3>
+							<p>H5 1.4 GHz | 4 cores | ARMv8</p>
+							<div class="mask"></div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix nanopi">
+						<div class="thumbnail">
+							<img src="images/sbc_images/nanopim1.jpg" alt="NanoPi M1" loading="lazy">
+							<a href="#downloadinfo" class="more show_hide" rel="#slidingDiv8"><i class="fa fa-plus"></i></a>
+							<h3>NanoPi M1/T1</h3>
+							<p>H3 1.2 GHz | 4 cores | ARMv7</p>
+							<div class="mask"></div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix nanopi">
+						<div class="thumbnail">
+							<img src="images/sbc_images/nanopim1plus.jpg" alt="NanoPi M1 Plus" loading="lazy">
+							<a href="#downloadinfo" class="more show_hide" rel="#slidingDiv22"><i class="fa fa-plus"></i></a>
+							<h3>NanoPi M1 Plus</h3>
+							<p>H3 1.2 GHz | 4 cores | ARMv7</p>
+							<div class="mask"></div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix nanopi">
+						<div class="thumbnail">
+							<img src="images/sbc_images/nanopim2.jpg" alt="NanoPi M2" loading="lazy">
+							<a href="#downloadinfo" class="more show_hide" rel="#slidingDiv9"><i class="fa fa-plus"></i></a>
+							<h3>NanoPi M2/T2</h3>
+							<p>Samsung 1.4 GHz | 4 cores | ARMv7</p>
+							<div class="mask"></div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix nanopi">
+						<div class="thumbnail">
+							<img src="images/sbc_images/nanopim3.jpg" alt="NanoPi M3" loading="lazy">
+							<a href="#downloadinfo" class="more show_hide" rel="#slidingDiv10"><i class="fa fa-plus"></i></a>
+							<h3>NanoPi M3/T3</h3>
+							<p>Samsung 1.4 GHz | 8 cores | ARMv8</p>
+							<div class="mask"></div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix nanopi">
+						<div class="thumbnail">
+							<img src="images/sbc_images/nanopifire3.jpg" alt="NanoPi Fire3" loading="lazy">
+							<a href="#downloadinfo" class="more show_hide" rel="#slidingDiv21"><i class="fa fa-plus"></i></a>
+							<h3>NanoPi Fire3</h3>
+							<p>Samsung 1.4 GHz | 8 cores | ARMv8</p>
+							<div class="mask"></div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix other">
+						<div class="thumbnail">
+							<img src="images/sbc_images/otherdevice.jpg" alt="Other" loading="lazy">
+							<a href="#downloadinfo" class="more show_hide" rel="#slidingDiv33"><i class="fa fa-plus"></i></a>
+							<h3>Other device?</h3>
+							<p>Convert into DietPi system</p>
+							<div class="mask"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Portfolio section end -->
+		<!-- Getting started section start -->
+		<div class="section primary-section" id="gettingstarted">
+			<div class="container-xl centered">
+				<svg class="triangle" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon points="0,0 100,0 50,100"/></svg>
+				<!-- Start title section -->
+				<div class="title">
+					<h1>Getting Started / Community</h1>
+					<p>Everything you need to start and share your DietPi experience.</p>
+				</div>
+				<div class="row">
+					<div class="col-sm-4 service">
+						<a href="docs/" target="_blank" rel="noopener">
+							<img class="circle-border zoom-in" src="images/gettingstarted.png" alt="Getting started" loading="lazy">
+							<h3>Getting started</h3>
+							<p>Step by step guides to help kickstart your DietPi experience</p>
+						</a>
+					</div>
+					<div class="col-sm-4 service">
+						<a href="phpbb/viewforum.php?f=5" target="_blank" rel="noopener">
+							<img class="circle-border zoom-in" src="images/forum.png" alt="Forums" loading="lazy">
+							<h3>Forums</h3>
+							<p>Join our growing community and share your DietPi experience</p>
+						</a>
+					</div>
+					<div class="col-sm-4 service">
+						<a href="https://github.com/MichaIng/DietPi" target="_blank" rel="noopener">
+							<svg class="circle-border zoom-in" viewBox="0 0 16 16">
+								<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+							</svg>
+							<h3>GitHub</h3>
+							<p>Join us on GitHub: see the source code and create tickets.</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Getting started section end -->
+		<!-- Donate section start -->
+		<div class="section secondary-section" id="donate">
+			<div class="container-xl centered">
+				<svg class="triangle" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon points="0,0 100,0 50,100"/></svg>
+				<p class="large-text">DietPi is a free and open source product. We rely solely on your donations for funding.</p>
+				<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6DVBECXRW3TAA" class="button" target="_blank" rel="noopener">Donate via PayPal</a>
+				<a href="https://www.patreon.com/bePatron?u=12464530" class="button" target="_blank" rel="noopener">Become a Patron</a>
+			</div>
+		</div>
+		<!-- Donate section end -->
+		<!-- Feedback section start -->
+		<div class="section primary-section" id="testimonials">
+			<div class="container-xl">
+				<svg class="triangle" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon points="0,0 100,0 50,100"/></svg>
+				<div class="title">
+					<h1>User Testimonials</h1>
+					<p>We value our users and their feedback on DietPi, here are just a few testimonials.</p>
+				</div>
+				<div class="row">
+					<div class="col-md-4 testimonial">
+						<p>
+							"My first Raspberry Pi experience, installed DietPi and it works like charm. Many thanks and my compliments to the makers/developers !!
+							<br>This is a fantastic piece of work !
+							<br>I have build a music streamer: Raspberry Zero W (headless), Justboom Digi Zero pHat, Sandisk 400 GB MicroSD, MPD/O!MPD"
+						</p>
+						<div class="whopic"><div class="arrow"></div><strong>maarten, DietPi Forum</strong></div>
+					</div>
+					<div class="col-md-4 testimonial">
+						<p>"Pretty much the best OS for a small board computer such as a Raspberry Pi or Odroid, etc. Very easy to use and excellent community support. If you have a RPI or other small board computer this is a must. It is excellent for beginners."</p>
+						<div class="whopic"><div class="arrow"></div><strong>DistroWatch review</strong></div>
+					</div>
+					<div class="col-md-4 testimonial">
+						<p>
+							"Phenomenal!
+							<br>I appreciate all the hard work put into this. You know, it's funny... I wanted my 6 pi's each to run a different distro. And originally they were. But time after time I find reasons to make my life easier by putting DietPi on them. Now of them run DietPi because it just makes sense for their purposes!
+							<br>Thanks for all the hard work guys! :-D"
+						</p>
+						<div class="whopic"><div class="arrow"></div><strong>DistroWatch review</strong></div>
+					</div>
+				</div>
+				<div class="testimonial-text">
+					<p>"Just wanted to say thank you for DietPi. As someone who's intermediate at best with Linux and SBCs in general, its made everything so much more accessible. I don't have that much time to tinker and I need things to generally work out of the box with little fuss. Dietpi has made it possible for me to be running Nextcloud, PiHole, NZBGet and more on a Pi4 with minimal effort. Sure Docker could do the same but there is something about running things natively that I like.
+					<br>Automation features like Dietpi Backup and Drive Manager are just the icing on the cake to a great eco-system.
+					<br>Thank you for Dietpi."</p>
+					<div class="whopic"><div class="arrow"></div><strong>Reds, DietPi Forum</strong></div>
+				</div>
+			</div>
+		</div>
+		<!-- Feedback section end -->
+		<!-- Footer section start -->
+		<div class="section primary-section footer" id="contact">
+			<div class="container-xl">
+				<svg class="triangle" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon points="0,0 100,0 50,100"/></svg>
+				<div class="social">
+					<a href="https://twitter.com/DietPi_" target="_blank" rel="noopener">
+						<svg viewBox="0 0 400 400" aria-hidden="true">
+							<path d="M400,200c0,110.5-89.5,200-200,200S0,310.5,0,200S89.5,0,200,0S400,89.5,400,200z M163.4,305.5c88.7,0,137.2-73.5,137.2-137.2c0-2.1,0-4.2-0.1-6.2c9.4-6.8,17.6-15.3,24.1-25c-8.6,3.8-17.9,6.4-27.7,7.6c10-6,17.6-15.4,21.2-26.7c-9.3,5.5-19.6,9.5-30.6,11.7c-8.8-9.4-21.3-15.2-35.2-15.2c-26.6,0-48.2,21.6-48.2,48.2c0,3.8,0.4,7.5,1.3,11c-40.1-2-75.6-21.2-99.4-50.4c-4.1,7.1-6.5,15.4-6.5,24.2c0,16.7,8.5,31.5,21.5,40.1c-7.9-0.2-15.3-2.4-21.8-6c0,0.2,0,0.4,0,0.6c0,23.4,16.6,42.8,38.7,47.3c-4,1.1-8.3,1.7-12.7,1.7c-3.1,0-6.1-0.3-9.1-0.9c6.1,19.2,23.9,33.1,45,33.5c-16.5,12.9-37.3,20.6-59.9,20.6c-3.9,0-7.7-0.2-11.5-0.7C110.8,297.5,136.2,305.5,163.4,305.5"></path>
+						</svg>
+					</a>
+					<a href="https://github.com/MichaIng/DietPi" target="_blank" rel="noopener">
+						<svg viewBox="0 0 16 16" aria-hidden="true">
+							<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+						</svg>
+					</a>
+				</div>
+				<br>
+				<p>&copy; 2020 DietPi created by <a href="/">Daniel Knight</a></p>
+				<p>&copy; 2013 Website theme by <a href="https://www.graphberry.com/" target="_blank" rel="noopener">Graphberry</a></p>
+				<p>DietPi web hosting is powered by <a href="https://myvirtualserver.com" target="_blank" rel="noopener">myVirtualserver.com
+				<br><br><img src="images/myvirtualserver_logo.png" alt="myVirtualserver" width="200" loading="lazy"></a></p>
+			</div>
+		</div>
+		<!-- Footer section end -->
+		<!-- ScrollUp button start -->
+		<a class="scrollup fa fa-chevron-up" href="#"></a>
+		<!-- ScrollUp button end -->
+	</body>
+</html>
