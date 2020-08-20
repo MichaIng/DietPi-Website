@@ -52,7 +52,7 @@ p {
 	width:120px;
 	height:40px;
 	padding:0;
-	margin:5.5px 0px;
+	margin:5.5px 0;
 	cursor:pointer;
 	transition:filter 1s;
 }
@@ -109,7 +109,7 @@ p {
 	margin-bottom:30px;
 }
 .nav.nav-pills > button {
-	margin:2px 5px 2px 0px;
+	margin:2px 5px 2px 0;
 	background:#C5FF00;
 	border:1px solid #181A1C;
 }
@@ -161,7 +161,7 @@ p {
 	animation-duration:1s;
 }
 @keyframes fadeIn {
-	0% {opacity:0;}	
+	0% {opacity:0;}
 	100% {opacity:1;}
 }
 .fadeIn {
@@ -245,7 +245,7 @@ p {
 .thumbnail h3,
 .thumbnail p {
 	margin:0;
-	padding:3px 0px;
+	padding:3px 0;
 	white-space:nowrap;
 	position:relative;
 	z-index:4;
@@ -496,7 +496,7 @@ p {
 	padding-top:10px;
 }
 .service p {
-	padding:0px 10px;
+	padding:0 10px;
 }
 .service img,
 .service svg {
