@@ -12,5 +12,20 @@ This is the official repository for hosting collaborative development of the off
 - [Bootstrap](https://github.com/twbs/bootstrap) v4.5.2
 - [Mixitup](https://github.com/patrickkunka/mixitup) v3.3.1
 - [jquery.cslider](https://github.com/Le-Stagiaire/jquery.cslider) with a slight modification to allow wrapping slides into a container element
-- [Roboto](https://fonts.google.com/specimen/Roboto) font
-- [Font Awesome Free](https://fontawesome.com/) font v5.14.0
+- [Font Awesome Free](https://fontawesome.com/) v5.14.0
+- [Roboto](https://fonts.google.com/specimen/Roboto)
+- [google-font-download](https://github.com/neverpanic/google-font-download) for Roboto download
+- [minify](https://github.com/tdewolff/minify) to minify all HTML and CSS files
+- [JavaScript Minifier](https://javascript-minifier.com/api) to minify JavaScript files
+
+## Deploy instructions
+Deploy to `/tmp/DietPi-Website-master` (no input argument):
+```
+bash -c "$(curl -sSfL https://raw.githubusercontent.com/MichaIng/DietPi-Website/master/deploy.bash)"
+```
+Deploy to `/var/www` (target path as input argument):
+```
+curl -sSfLO https://raw.githubusercontent.com/MichaIng/DietPi-Website/master/deploy.bash
+chmod +x deploy.bash
+./deploy.bash /var/www
+```
