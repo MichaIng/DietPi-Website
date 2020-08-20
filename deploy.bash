@@ -1,5 +1,8 @@
 #!/bin/bash
 {
+# Optional target directory input
+TARGET_DIR=$1
+
 # Load DietPi-Globals
 . /boot/dietpi/func/dietpi-globals
 
@@ -35,7 +38,7 @@ G_EXEC cd ..
 
 # Minify
 # - Install/update
-G_EXEC curl -sSfL "$(curl -sSfL https://api.github.com/repos/tdewolff/minify/releases/latest | mawk -F\" '/\"browser_download_url\".*linux_amd64\.tar\.gz\"$/{p$
+G_EXEC curl -sSfL "$(curl -sSfL https://api.github.com/repos/tdewolff/minify/releases/latest | mawk -F\" '/\"browser_download_url\".*linux_amd64\.tar\.gz\"$/{print $4}')" -o minify.tar.gz
 G_EXEC tar xf minify.tar.gz
 G_EXEC_NOHALT=1 G_EXEC rm minify.tar.gz README.md LICENSE
 G_EXEC mkdir -p /usr/local/share/bash-completion/completions
@@ -62,4 +65,14 @@ do
 	G_EXEC minify -o "${i%.html}.min.html" "$i"
 	G_EXEC mv "${i%.html}.min.html" "$i"
 done
+
+# Move/Merge into target directory
+if [[ $TARGET_DIR ]]; then
+	if [[ -d $TARGET_DIR ]]; then
+		G_EXEC cp -R . "${TARGET_DIR%/}/"
+	else
+		cd ..
+		G_EXEC mv DietPi-Website-master "$TARGET_DIR"
+	fi
+fi
 }
