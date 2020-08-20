@@ -1,0 +1,657 @@
+/* https://github.com/MichaIng/DietPi-Website
+
+ * Table of content
+1 General - This is created general styles and override some bootstrap classes.
+2 Layout
+ 2.1 Animations
+ 2.2 Buttons
+ 2.3 Thumbnail - override bootstrap thumbnail and add masked effect
+3 Sections - definition for section and subsection
+ 3.1 Services
+ 3.2 Portfolio
+ 3.3 Testimonials
+ 3.4 Footer
+4 Responsive
+**********************************************************************/
+/*
+1. General
+**********************************************************************/
+body {
+	font-family:'Roboto', sans-serif;
+	color:#fff;
+	background:#181A1C;
+	font-size:17px;
+	line-height:20px;
+}
+a {
+	color:#181A1C;
+}
+a:hover {
+	color:#C5FF00;
+	text-decoration:none;
+}
+h1 {
+	margin:10px;
+}
+p {
+	padding:10px;
+	font-weight:100;
+	color:#fff;
+}
+.navbar {
+	background:#181A1C;
+	min-height:60px;
+	padding-top:4.5px;
+	padding-bottom:4.5px;
+	z-index:2001;
+}
+.navbar > .container-xl {
+	padding:0;
+}
+.navbar > .container-xl > img.scrollup {
+	width:120px;
+	height:40px;
+	padding:0;
+	margin:5.5px 0px;
+	cursor:pointer;
+	transition:filter 1s;
+}
+.navbar > .container-xl > img.scrollup:hover,
+.navbar > .container-xl > img.scrollup:focus,
+.navbar > .container-xl > img.scrollup:active {
+	filter:brightness(2);
+}
+.navbar > .container-xl > .navbar-toggler {
+	height:40px;
+	padding-left:10.25px;
+	padding-right:10.25px;
+	color:#181A1C;
+	background:#C5FF00;
+	border-color:#181A1C;
+	transition:color 0.5s, background 0.5s, border-color 0.5s;
+}
+.navbar > .container-xl > .navbar-toggler:hover,
+.navbar > .container-xl > .navbar-toggler:focus,
+.navbar > .container-xl > .navbar-toggler:active {
+	color:#C5FF00;
+	background:#181A1C;
+	border-color:#C5FF00;
+}
+.navbar > .container-xl > .navbar-collapse {
+	align-items:stretch;
+}
+@media (min-width:992px) {
+	.navbar > .container-xl > .navbar-collapse {
+		place-content:flex-end;
+	}
+}
+.navbar > .container-xl > .navbar-collapse.collapsing {
+	transition:height 0.35s !important;
+}
+.navbar > .container-xl > .navbar-collapse > a {
+	color:#fff;
+	background-color:#181A1C;
+	text-transform:uppercase;
+	font-size:15px;
+	margin:4.5px 0;
+	padding:10px 15px;
+	border:1px solid #181A1C;
+	border-radius:5px;
+	transition:border-color 1s;
+}
+.navbar > .container-xl > .navbar-collapse > a:hover,
+.navbar > .container-xl > .navbar-collapse > a:focus,
+.navbar > .container-xl > .navbar-collapse > a:active,
+.navbar > .container-xl > .navbar-collapse > a.active {
+	border-color:#C5FF00;
+}
+.nav.nav-pills {
+	margin-bottom:30px;
+}
+.nav.nav-pills > button {
+	margin:2px 5px 2px 0px;
+	background:#C5FF00;
+	border:1px solid #181A1C;
+}
+.nav.nav-pills > button:hover,
+.nav.nav-pills > button:focus,
+.nav.nav-pills > button:active,
+.nav.nav-pills > button.mixitup-control-active {
+	color:#fff;
+	background:#181A1C;
+}
+.da-slider > .container-xl > .da-slide > .da-img {
+	width:30%;
+}
+/*
+2. Layout
+**********************************************************************/
+.centered {
+	text-align:center;
+}
+.large-text {
+	line-height:1.2em;
+	font-size: 30px;
+	color:#181A1C;
+	padding:20px;
+	margin-bottom:20px;
+}
+.circle-border {
+	display:inline-block;
+	border-radius:500px;
+	border:3px solid #fff;
+}
+.triangle {
+	fill:#181A1C;
+	width:100%;
+	height:30px;
+}
+/*
+2.1 Animations
+**********************************************************************/
+.zoom-in {
+	transform:scale(1, 1);
+	transition:all 0.25s;
+}
+.zoom-in:hover {
+	transform:scale(1.1, 1.1);
+}
+.animated {
+	animation-fill-mode:both;
+	animation-duration:1s;
+}
+@keyframes fadeIn {
+	0% {opacity:0;}	
+	100% {opacity:1;}
+}
+.fadeIn {
+	animation-name:fadeIn;
+}
+@keyframes fadeInDown {
+	0% {opacity:0;transform:translateY(-20px);}
+	100% {opacity:1;transform:translateY(0);}
+}
+.fadeInDown {
+	animation-name:fadeInDown;
+}
+@keyframes fadeOut {
+	0% {opacity:1;}
+	100% {opacity:0;}
+}
+.fadeOut {
+	animation-name:fadeOut;
+}
+/*
+2.2 Buttons - There are buttons on a transparent background, primary and secondary color background.
+**********************************************************************/
+.button,
+.button:visited {
+	display:inline-block;
+	margin-top:2px;
+	margin-bottom:2px;
+	border:1px solid #181A1C;
+	padding:15px 30px;
+	background-color:transparent;
+}
+.button:hover,
+.button:focus,
+.button:active {
+	background-color:#181A1C;
+	color:#fff;
+}
+/* .button-ps,
+.button-ps:visited {
+	border:none;
+	background-color:#181A1C;
+	color:#C5FF00;
+}
+.button-ps:hover,
+.button-ps:focus,
+.button-ps:active {
+	background-color:#C5FF00;
+	color:#181A1C;
+}
+.button-sp,
+.button-sp:visited {
+	border:none;
+	background-color:#C5FF00;
+	color:#181A1C;
+}
+.button-sp:hover,
+.button-sp:focus,
+.button-sp:active {
+	background-color:#181A1C;
+	color:#C5FF00;
+} */
+/*
+2.3 Thumbnails
+**********************************************************************/
+#portfolio-grid {
+	margin-left:-5px;
+}
+.thumbnail {
+	overflow:hidden;
+	position:relative;
+	padding:4px;
+	margin-bottom: 20px;
+	margin-left:-10px;
+	text-align:center;
+	background:#191a1c;
+}
+.thumbnail img {
+	display:block;
+	max-width:100%;
+}
+.thumbnail h3,
+.thumbnail p {
+	margin:0;
+	padding:3px 0px;
+	white-space:nowrap;
+	position:relative;
+	z-index:4;
+}
+.thumbnail h3 {
+	color:#C5FF00;
+	font-size:14px;
+	margin-top:5px
+}
+.thumbnail p {
+	font-size:10px;
+}
+.thumbnail .more {
+	position:absolute;
+	z-index:4;
+	top:-100px;
+	margin-left:-18px;
+	font-size:40px;
+	color:white;
+}
+.thumbnail:hover .more {
+	top:45%;
+	margin-top:-40px;
+	transition:all 0.3s ease-out;
+}
+.thumbnail .mask {
+	opacity:0.85;
+	filter:alpha(opacity=85);
+	top:100%;
+	left:0;
+	width:100%;
+	height:100%;
+	background:#181A1C;
+	position:absolute;
+	transition:all 0.2s ease-out;
+}
+.thumbnail:hover .mask {
+	top:0;
+}
+/*
+3. Sections
+***************************************************************************/
+.section {
+	overflow-x:hidden;
+	padding-bottom:50px;
+}
+.section .triangle {
+	margin-bottom:50px;
+}
+.section .title {
+	text-align:center;
+	padding:10px;
+	margin-bottom:30px;
+}
+.section .title h1 {
+	font-weight:normal;
+	margin-bottom:20px;
+	padding:0;
+}
+.section .title > p {
+	color:#fff;
+	font-weight:lighter;
+}
+.primary-section {
+	background:#181A1C;
+}
+.primary-section .triangle {
+	fill:#C5FF00;
+}
+.primary-section .title {
+	border-bottom:1px solid #fff;
+}
+.primary-section,
+.primary-section .title p,
+.primary-section h3 {
+	color:#C5FF00;
+}
+.primary-section h1 {
+	color:#fff;
+}
+.secondary-section {
+	background:#C5FF00;
+}
+.secondary-section .title {
+	border-bottom:1px solid #181A1C;
+}
+.secondary-section h1,
+.secondary-section .title p {
+	color:#181A1C;
+}
+/* Slider: https://github.com/Le-Stagiaire/jquery.cslider */
+.da-slider {
+	min-width:unset;
+	height:45vw;
+	max-height:450px;
+	margin:0;
+	border:0;
+	box-shadow:none;
+	background:transparent url(../images/slider_background.png);
+	background-size:auto 100%;
+}
+.da-slider .mask {
+	position:absolute;
+	top:0;
+	width:100%;
+	height:100%;
+	background:#C5FF00;
+	opacity:0.85;
+}
+.da-slider .container-xl {
+	position:relative;
+	height:100%
+}
+.da-slide h2,
+.da-slide h4,
+.da-slide p,
+.da-slide .da-link {
+	color:#181A1C;
+}
+.da-slide h2 {
+	top:100px;
+	font-size:33px;
+	text-shadow:none;
+}
+.da-slide h4 {
+	position:absolute;
+	top:155px;
+	opacity:0;
+	left:110%;
+	font-size:22px;
+	width:50%;
+	white-space:nowrap;
+	z-index:10;
+	font-weight:400;
+}
+.da-slide-current h4 {
+	left:10%;
+	opacity:1;
+}
+.da-slide-fromright h4 {
+	animation:fromRightAnim1 0.6s ease-in 0.8s both;
+}
+.da-slide-fromleft h4 {
+	animation:fromLeftAnim1 0.6s ease-in 0.6s both;
+}
+.da-slide-toright h4 {
+	animation:toRightAnim1 0.6s ease-in 0.45s both;
+}
+.da-slide-toleft h4 {
+	animation:toLeftAnim1 0.6s ease-in 0.15s both;
+}
+.da-slide p {
+	top:210px;
+	padding:0;
+	font-size:unset;
+	font-style:unset;
+	line-height:unset;
+	height:unset;
+}
+.da-slide .da-link {
+	top:320px;
+	width:unset;
+	border-color:rgb(24, 26, 28, 0.8);
+}
+.da-slide .da-link:hover,
+.da-slide .da-link:active,
+.da-slide .da-link:focus {
+	color:#fff;
+	background:#181A1C;
+}
+.da-slide .da-img img {
+	vertical-align:unset;
+}
+.da-arrows span {
+	width:45px;
+	height:100%;
+	top:0;
+	box-shadow:none;
+}
+.da-arrows span:after {
+	content:none;
+}
+.da-arrows span.da-arrows-next {
+	background:transparent url(../images/slider_right.png) no-repeat center center;
+}
+.da-arrows span.da-arrows-prev {
+	background:transparent url(../images/slider_left.png) no-repeat center center;
+}
+.da-dots span {
+	width:50px;
+	height:3px;
+	background:#fff;
+	border-radius:0;
+	box-shadow:none;
+}
+.da-dots span.da-dots-current {
+	background:#181A1C;
+}
+.da-dots span.da-dots-current:after {
+	content:none;
+}
+@media (max-width:991px) {
+	.da-slide h2 {
+		top:50px;
+	}
+	.da-slide h4 {
+		top:105px;
+		white-space:unset;
+	}
+	.da-slide p {
+		top:160px;
+	}
+	.da-slide .da-link {
+		top:270px;
+	}
+}
+@media (max-width:767px) {
+	.da-slide p {
+		display:none;
+	}
+	.da-slide .da-link {
+		top:190px;
+	}
+}
+@media (max-width:575px) {
+	.da-slide h2 {
+		font-size:22px;
+		width:80%;
+	}
+	.da-slide h4 {
+		font-size:18px;
+		width:80%;
+		top:90px;
+	}
+	.da-slide .da-img,
+	.da-slide .da-link {
+		display:none;
+	}
+}
+/*
+3.1 Services
+**********************************************************************/
+.service {
+	margin-top:20px;
+}
+.service,
+.service h3 {
+	padding-top:10px;
+}
+.service p {
+	padding:0px 10px;
+}
+.service img,
+.service svg {
+	width:131px;
+	height:131px;
+	background:#fff;
+}
+/*
+3.2 Portfolio
+**********************************************************************/
+.single-project {
+	margin-bottom:30px;
+	background:#181A1C;
+}
+.single-project img {
+	width:100%;
+	padding:15px;
+}
+.project-description {
+	font-size:14px;
+}
+.project-description p {
+	padding-left:20px;
+}
+.project-title {
+	border-bottom:1px solid #C5FF00;
+}
+.project-title h3 {
+	float:left;
+	width:80%;
+	line-height:30px;
+	margin-top:10px;
+	margin-left:20px;
+	color:#C5FF00;
+}
+.project-title .close {
+	float:right;
+	width:40px;
+	height:40px;
+	margin-top:10px;
+	text-align:center;
+	color:#FFFFFF;
+}
+.project-info {
+	font-weight:1;
+	padding:10px 20px;
+}
+.project-info span {
+	display:inline-block;
+	width:150px;
+	color:#C5FF00;
+}
+.project-info div {
+	margin-bottom:5px;
+}
+.project-info .fa {
+	font-size:180%;
+	color:white;
+}
+/*
+3.3 Testimonials
+**********************************************************************/
+.testimonial {
+	margin-bottom:30px;
+}
+.testimonial p {
+	color:#181A1C;
+	background:#C5FF00;
+	padding:15px;
+	margin:0;
+}
+.testimonial .arrow,
+.testimonial-text .arrow {
+	margin-left:10px;
+	width:0;
+	border-top:10px solid #C5FF00;
+	border-left:20px outset transparent;
+	border-right:20px outset transparent;
+}
+.whopic {
+	display:inline-block;
+}
+.whopic strong {
+	float:left;
+	margin-top:10px;
+	padding-left:10px;
+}
+/* .whopic small {
+	display:block;
+	font-size:12px;
+}
+.whopic img {
+	margin-top:10px;
+	width:50px;
+	height:50px;
+	float:left;
+} */
+.testimonial-text {
+	display:block;
+	font-size:22px;
+	text-align:center;
+	margin:0 auto;
+	width:70%;
+	line-height:1.3em;
+}
+/*
+3.4 Footer
+**********************************************************************/
+.footer {
+	text-align:center;
+}
+.footer p {
+	margin:0;
+}
+.footer a {
+	color:#C5FF00;
+	padding:5px;
+}
+.social a > svg {
+	width:48px;
+	height:48px;
+	fill:#C5FF00;
+	transition:all 0.5s;
+}
+.social a:hover > svg,
+.social a:focus > svg {
+	fill:#ffffff;
+}
+.footer .social a:hover,
+.footer .social a:focus {
+	text-decoration:none;
+}
+.footer a:hover,
+.footer a:focus {
+	text-decoration:underline;
+}
+a.scrollup {
+	width:40px;
+	height:40px;
+	text-align:center;
+	font-size:20px;
+	line-height: 35px;
+	position:fixed;
+	bottom:15px;
+	right:15px;
+	color:#181A1C;
+	background:#C5FF00;
+	border:1px solid #181A1C;
+	border-radius:5px;
+	transition:color 0.5s, background 0.5s, border-color 0.5s;
+}
+a.scrollup:hover,
+a.scrollup:focus,
+a.scrollup:active {
+	color:#C5FF00;
+	background:#181A1C;
+	border-color:#C5FF00;
+}
