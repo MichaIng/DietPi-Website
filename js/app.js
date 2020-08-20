@@ -33,7 +33,7 @@ $(function () {
 	document.getElementById('portfolio-grid').removeAttribute('style');
 
 	// Initial mixitup for animated portfolio filtering
-	var mixer = mixitup('#download', {
+	mixitup('#download', {
 		controls: { scope: 'local' },
 		callbacks: {
 			// Close open portfolio project when resorting
