@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>https://dietpi.com/</loc>
+		<lastmod>2020-08-19T00:00:00+00:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://dietpi.com/survey/</loc>
+		<lastmod>2020-08-20T00:00:00+00:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://dietpi.com/dietpi-software.html</loc>
+		<lastmod>2020-08-19T00:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
+	</url>
+</urlset>
