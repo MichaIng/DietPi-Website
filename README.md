@@ -17,7 +17,7 @@ This is the official repository for hosting collaborative development of the off
 - [Font Awesome Free](https://fontawesome.com/) v5.14.0
 - [Roboto](https://fonts.google.com/specimen/Roboto)
 - [google-font-download](https://github.com/neverpanic/google-font-download) for Roboto download
-- [minify](https://github.com/tdewolff/minify) to minify all HTML and CSS files
+- [minify](https://github.com/tdewolff/minify) to minify HTML and CSS files
 - [JavaScript Minifier](https://javascript-minifier.com/api) to minify JavaScript files
 
 ## Deploy instructions
@@ -25,9 +25,7 @@ Deploy to `/tmp/DietPi-Website-master` (no input argument):
 ```
 bash -c "$(curl -sSfL https://raw.githubusercontent.com/MichaIng/DietPi-Website/master/deploy.bash)"
 ```
-Deploy to `/var/www` (target path as input argument):
+Deploy to `/var/www` (target path as input argument $1):
 ```
-curl -sSfLO https://raw.githubusercontent.com/MichaIng/DietPi-Website/master/deploy.bash
-chmod +x deploy.bash
-./deploy.bash /var/www
+bash -c "$(curl -sSfL https://raw.githubusercontent.com/MichaIng/DietPi-Website/master/deploy.bash)" bash '/var/www'
 ```
