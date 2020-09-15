@@ -1,6 +1,8 @@
 # DietPi Website
 This is the official repository for hosting collaborative development of the official DietPi OS home page https://dietpi.com/ as well as the DietPi-Software overview page https://dietpi.com/dietpi-software.html.
 
+[![CodeFactor](https://www.codefactor.io/repository/github/michaing/dietpi-website/badge)](https://www.codefactor.io/repository/github/michaing/dietpi-website)
+
 ## License
 <a rel="cc:attributionURL" property="dct:title" href="https://dietpi.com/">DietPi-Website</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://dietpi.com/">DietPi</a> is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License - <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
 
