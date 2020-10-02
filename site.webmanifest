@@ -1,6 +1,7 @@
 {
     "name": "DietPi",
-    "short_name": "DietPi - Lightweight justice for your SBC!",
+    "short_name": "DietPi",
+    "description": "Lightweight justice for your SBC!",
     "icons": [
         {
             "src": "images/dietpi-logo_192x192.png",
@@ -13,7 +14,6 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
-    "display": "standalone"
+    "theme_color": "#000000",
+    "background_color": "#000000"
 }
