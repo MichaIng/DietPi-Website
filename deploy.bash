@@ -25,12 +25,14 @@ G_EXEC curl -sSfL https://raw.githubusercontent.com/Le-Stagiaire/jquery.cslider/
 
 # Fonts
 # - Font Awesome
-G_EXEC curl -sSfLO https://use.fontawesome.com/releases/v5.14.0/fontawesome-free-5.14.0-web.zip
-G_EXEC unzip fontawesome-free-5.14.0-web.zip
-G_EXEC rm fontawesome-free-5.14.0-web.zip
+version='5.15.0'
+G_EXEC curl -sSfLO https://use.fontawesome.com/releases/v$version/fontawesome-free-$version-web.zip
+G_EXEC unzip fontawesome-free-$version-web.zip
+G_EXEC rm fontawesome-free-$version-web.zip
 G_EXEC mkdir -p fonts
-G_EXEC mv fontawesome-free-5.14.0-web/webfonts/fa-solid-900.woff{,2} fonts/
-G_EXEC_NOHALT=1 G_EXEC rm -R fontawesome-free-5.14.0-web
+G_EXEC mv fontawesome-free-$version-web/webfonts/fa-solid-900.woff{,2} fonts/
+G_EXEC_NOHALT=1 G_EXEC rm -R fontawesome-free-$version-web
+unset -v version
 # - Roboto
 G_EXEC cd fonts
 G_EXEC curl -sSfLO https://raw.githubusercontent.com/neverpanic/google-font-download/master/google-font-download
