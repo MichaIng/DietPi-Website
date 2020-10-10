@@ -25,7 +25,7 @@ G_EXEC curl -sSfL https://raw.githubusercontent.com/Le-Stagiaire/jquery.cslider/
 
 # Fonts
 # - Font Awesome
-version='5.15.0'
+version='5.15.1'
 G_EXEC curl -sSfLO https://use.fontawesome.com/releases/v$version/fontawesome-free-$version-web.zip
 G_EXEC unzip fontawesome-free-$version-web.zip
 G_EXEC rm fontawesome-free-$version-web.zip
