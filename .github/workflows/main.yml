@@ -10,12 +10,11 @@ jobs:
       - name: Check HTML5 syntax
         uses: Cyb3r-Jak3/html5validator-action@v0.4.2
         with:
-          root: .
           css: true
       - name: Deploy DietPi-Website locally
         if: always() && steps.clone.outcome == 'success'
         id: deploy
-        run: bash deplay.bash site
+        run: bash deploy.bash site
       - name: Check links in HTML files
         id: check_links
         if: always() && steps.deploy.outcome == 'success'
