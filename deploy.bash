@@ -1,7 +1,15 @@
 #!/bin/bash
 {
 # Optional target directory input
-TARGET_DIR=$1
+if [[ $1 == '/'* ]]
+then
+	TARGET_DIR=$1
+elif [[ $1 ]]
+then
+	TARGET_DIR="$PWD/$1"
+else
+	TARGET_DIR=
+fi
 
 # Load DietPi-Globals
 if [[ -f '/boot/dietpi/func/dietpi-globals' ]]
@@ -79,8 +87,10 @@ do
 done
 
 # Move/Merge into target directory
-if [[ $TARGET_DIR ]]; then
-	if [[ -d $TARGET_DIR ]]; then
+if [[ $TARGET_DIR ]]
+then
+	if [[ -d $TARGET_DIR ]]
+	then
 		G_EXEC cp -R . "${TARGET_DIR%/}/"
 	else
 		cd ..
