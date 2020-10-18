@@ -4,7 +4,14 @@
 TARGET_DIR=$1
 
 # Load DietPi-Globals
-. /boot/dietpi/func/dietpi-globals
+if [[ -f '/boot/dietpi/func/dietpi-globals' ]]
+then
+	. /boot/dietpi/func/dietpi-globals
+else
+	curl -sSfL https://raw.githubusercontent.com/MichaIng/DietPi/master/dietpi/func/dietpi-globals -o /tmp/dietpi-globals || exit 1
+	. /tmp/dietpi-globals
+	G_EXEC_NOHALT=1 G_EXEC rm /tmp/dietpi-globals
+fi
 
 # Main
 G_EXEC cd /tmp
