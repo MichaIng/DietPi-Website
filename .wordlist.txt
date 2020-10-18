@@ -27,6 +27,7 @@ Bazarr
 bazarr
 BCM
 Beelink
+benchmarked
 Bing
 Bitcoin
 Blynk
@@ -169,6 +170,7 @@ LPDDR
 LTS
 LXDE
 LXQt
+maarten
 macOS
 mangas
 Mbit
@@ -223,6 +225,7 @@ occ
 OctoPrint
 Odroid
 Odroids
+Odroid's
 Ok
 OpenBazaar
 OpenGL
@@ -233,6 +236,7 @@ OpenVPN
 ownCloud
 passwd
 PCIe
+pHAT
 php
 phpBB
 phpbb
@@ -264,6 +268,7 @@ RealVNC
 Remot
 RK
 renderer
+repo
 Rockchip
 ROCKPro
 Roon
