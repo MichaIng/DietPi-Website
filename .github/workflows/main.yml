@@ -20,7 +20,7 @@ jobs:
         if: always() && steps.deploy.outcome == 'success'
         uses: peter-evans/link-checker@v1
         with:
-          args: -x '^/?(docs|downloads|phpbb|survey)/' -d site -r README.md site
+          args: -x '^phpbb/' -d site -r README.md site
       - name: Check link check result
         if: always() && steps.deploy.outcome == 'success'
         run: exit ${{ steps.check_links.outputs.exit_code }}
