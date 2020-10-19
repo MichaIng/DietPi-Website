@@ -14,7 +14,7 @@ jobs:
       - name: Deploy DietPi-Website locally
         if: always() && steps.clone.outcome == 'success'
         id: deploy
-        run: sudo bash deploy.bash site ${GITHUB_REF#refs/heads}
+        run: sudo bash deploy.bash site ${GITHUB_REF#refs/heads/}
       - name: Check links in HTML files
         id: check_links
         if: always() && steps.deploy.outcome == 'success'
