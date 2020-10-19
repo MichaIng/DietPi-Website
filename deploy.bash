@@ -11,6 +11,9 @@ else
 	TARGET_DIR=
 fi
 
+# Optional custom branch
+BRANCH=${2:-master}
+
 # Load DietPi-Globals
 if [[ -f '/boot/dietpi/func/dietpi-globals' ]]
 then
@@ -23,10 +26,10 @@ fi
 
 # Main
 G_EXEC cd /tmp
-G_EXEC curl -sSfLO https://github.com/MichaIng/DietPi-Website/archive/master.tar.gz
-G_EXEC tar xf master.tar.gz
-G_EXEC_NOHALT=1 G_EXEC rm master.tar.gz
-G_EXEC cd DietPi-Website-master
+G_EXEC curl -sSfLO https://github.com/MichaIng/DietPi-Website/archive/$BRANCH.tar.gz
+G_EXEC tar xf $BRANCH.tar.gz
+G_EXEC_NOHALT=1 G_EXEC rm $BRANCH.tar.gz
+G_EXEC cd DietPi-Website-$BRANCH
 G_EXEC_NOHALT=1 G_EXEC rm README.md LICENSE deploy.bash
 
 # 3rd party
@@ -94,7 +97,7 @@ then
 		G_EXEC cp -R . "${TARGET_DIR%/}/"
 	else
 		cd ..
-		G_EXEC mv DietPi-Website-master "$TARGET_DIR"
+		G_EXEC mv DietPi-Website-$BRANCH "$TARGET_DIR"
 	fi
 fi
 }
