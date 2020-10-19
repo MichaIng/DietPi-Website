@@ -14,13 +14,13 @@ jobs:
       - name: Deploy DietPi-Website locally
         if: always() && steps.clone.outcome == 'success'
         id: deploy
-        run: sudo bash deploy.bash site
+        run: sudo bash deploy.bash site ${GITHUB_REF#refs/heads}
       - name: Check links in HTML files
         id: check_links
         if: always() && steps.deploy.outcome == 'success'
         uses: peter-evans/link-checker@v1
         with:
-          args: -x 'phpbb' -d site -r README.md site
+          args: -d site -r README.md site
       - name: Check link check result
         if: always() && steps.deploy.outcome == 'success'
         run: exit ${{ steps.check_links.outputs.exit_code }}
