@@ -22,7 +22,6 @@ BaiKal
 balancer
 Balena
 balenaEtcher
-barebone
 Bazarr
 bazarr
 BCM
@@ -30,9 +29,11 @@ Beelink
 benchmarked
 Bing
 Bitcoin
+blazingly
 Blynk
 bootable
 Bticino
+BubbleUPnP
 Bugreport
 CalDAV
 CardDAV
@@ -74,6 +75,7 @@ DL
 DLNA
 DNS
 Domoticz
+downloader
 DPMS
 DRC
 DRM
@@ -93,6 +95,8 @@ fanless
 favicon
 FHS
 filesystem
+Flexbox
+forked-daapd
 FOSS
 Fourdee
 FreshRSS
@@ -119,12 +123,14 @@ harddisk
 Hardkernel
 HC
 hexa
+Hi-Fi
 Hotfix
 hotspot
 Hotspot
 HotSpot
 Hotspots
 hostname
+HQPlayer
 HTPC
 HTTPS
 https
@@ -142,6 +148,7 @@ Joulinar
 journalctl
 journald
 jRiver
+JSON
 JustBoom
 Kbit
 KiB
@@ -151,6 +158,7 @@ Koel
 Komga
 kickstart
 kickstarted
+Laravel
 LASP
 LEDs
 LEMP
@@ -178,6 +186,7 @@ Meveric
 MiB
 MichaIng
 microcontroller
+microSD
 Minecraft
 MineOS
 MiniDLNA
@@ -263,6 +272,7 @@ RAMlog
 Raspbian
 Raspcontrol
 RDP
+Reclocker
 ReadyMedia
 RealVNC
 Remot
@@ -288,6 +298,7 @@ SATA
 SBC
 SBCs
 SCP
+scroller
 SDIO
 SDL
 servlet
@@ -320,10 +331,12 @@ Tasmota
 Tautulli
 TCP
 TigerVNC
+TLDR
 Tonido
 transcoding
 tweakers
 txt
+Tyrian
 uae
 UART
 Ubooquity
@@ -334,6 +347,7 @@ upgradable
 UPnP
 upvote
 UrBackup
+Usenet
 userdata
 UUID
 VirtualBox
@@ -349,11 +363,10 @@ vncserver
 VNCSERVER
 VPN
 vsFTPD
+Vue
 WebIOPi
 Webmin
-webserver
-Webservers
-Webserves
+webui-aria2
 Whiptail
 Widevine
 Wifi
