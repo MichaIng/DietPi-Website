@@ -26,4 +26,4 @@ jobs:
         if: always() && steps.workaround_links.outcome == 'success'
         run: |
           GO111MODULE=on go get -u github.com/raviqqe/liche
-          $(go env GOPATH)/bin/liche -d . -r .
+          $(go env GOPATH)/bin/liche -v -d . -r .
