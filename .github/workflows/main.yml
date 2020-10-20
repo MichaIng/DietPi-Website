@@ -7,11 +7,12 @@ jobs:
       - name: Deploy DietPi-Website locally
         id: deploy
         run: sudo -E bash -c "$(curl -sSfL https://raw.githubusercontent.com/MichaIng/DietPi-Website${GITHUB_REF#refs/heads}/deploy.bash)" bash .
-      - name: Check HTML5 syntax
+      - name: Check HTML and CSS syntax
         uses: Cyb3r-Jak3/html5validator-action@v0.4.3
         with:
           root: .
           css: true
+          extra: --ignore 'text-decoration-skip-ink' 'color-adjust' 'overflow-anchor' 'break-word'
       - name: Check links in HTML files
         id: check_links
         if: always() && steps.deploy.outcome == 'success'
