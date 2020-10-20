@@ -1,18 +1,32 @@
 #!/bin/bash
 {
-# Optional target directory input
+# Inputs
+# - Optional target directory
 if [[ $1 == '/'* ]]
 then
-	TARGET_DIR=$1
+	TARGET_DIR=${1%/}
+
+elif [[ $1 == '.' ]]
+then
+	TARGET_DIR=$PWD
+
 elif [[ $1 ]]
 then
-	TARGET_DIR="$PWD/$1"
+	TARGET_DIR="$PWD/${1%/}"
 else
 	TARGET_DIR=
 fi
+# - Optional branch
+if [[ $2 ]]
+then
+	BRANCH=$2
 
-# Optional custom branch
-BRANCH=${2:-master}
+elif [[ $GITHUB_REF ]]
+then
+	BRANCH=${GITHUB_REF#refs/heads/}
+else
+	BRANCH='master'
+fi
 
 # Load DietPi-Globals
 if [[ -f '/boot/dietpi/func/dietpi-globals' ]]
@@ -30,7 +44,8 @@ G_EXEC curl -sSfLO https://github.com/MichaIng/DietPi-Website/archive/$BRANCH.ta
 G_EXEC tar xf $BRANCH.tar.gz
 G_EXEC_NOHALT=1 G_EXEC rm $BRANCH.tar.gz
 G_EXEC cd DietPi-Website-$BRANCH
-G_EXEC_NOHALT=1 G_EXEC rm README.md LICENSE deploy.bash
+# Cleanup
+[[ $GITHUB_ACTIONS == 1 ]] || G_EXEC_NOHALT=1 G_EXEC rm -R README.md LICENSE deploy.bash .??*
 
 # 3rd party
 G_EXEC curl -sSfL https://raw.githubusercontent.com/jquery/codeorigin.jquery.com/master/cdn/jquery-3.5.1.min.js -o js/jquery.min.js
@@ -60,14 +75,10 @@ G_EXEC_NOHALT=1 G_EXEC rm google-font-download roboto.css
 G_EXEC cd ..
 
 # Minify
-# - Install/update
+# - Download
 G_EXEC curl -sSfL "$(curl -sSfL https://api.github.com/repos/tdewolff/minify/releases/latest | mawk -F\" '/\"browser_download_url\".*linux_amd64\.tar\.gz\"$/{print $4}')" -o minify.tar.gz
-G_EXEC tar xf minify.tar.gz
-G_EXEC_NOHALT=1 G_EXEC rm minify.tar.gz README.md LICENSE
-G_EXEC mkdir -p /usr/local/share/bash-completion/completions
-G_EXEC mv bash_completion /usr/local/share/bash-completion/completions/minify
-G_EXEC mkdir -p /usr/local/bin
-G_EXEC mv minify /usr/local/bin/
+G_EXEC tar xf minify.tar.gz minify
+G_EXEC_NOHALT=1 G_EXEC rm minify.tar.gz
 # - Minify js: Use web API since "minify" does not minify internal function and variable names.
 for i in js/*.js
 do
@@ -79,24 +90,25 @@ done
 for i in css/*.css
 do
 	[[ $i == *'.min.css' ]] && continue
-	G_EXEC minify -o "${i%.css}.min.css" "$i"
+	G_EXEC ./minify -o "${i%.css}.min.css" "$i"
 	G_EXEC_NOHALT=1 G_EXEC rm "$i"
 done
 # - Minify HTML: Override original file afterwards
 for i in ./*.html
 do
-	G_EXEC minify -o "${i%.html}.min.html" "$i"
+	G_EXEC ./minify -o "${i%.html}.min.html" "$i"
 	G_EXEC mv "${i%.html}.min.html" "$i"
 done
+G_EXEC_NOHALT=1 G_EXEC rm minify
 
 # Move/Merge into target directory
 if [[ $TARGET_DIR ]]
 then
 	if [[ -d $TARGET_DIR ]]
 	then
-		G_EXEC cp -R . "${TARGET_DIR%/}/"
+		G_EXEC cp -R . "$TARGET_DIR/"
 	else
-		cd ..
+		G_EXEC cd ..
 		G_EXEC mv DietPi-Website-$BRANCH "$TARGET_DIR"
 	fi
 fi
