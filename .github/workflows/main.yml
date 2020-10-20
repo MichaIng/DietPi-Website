@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: Deploy DietPi-Website locally
         id: deploy
-        run: sudo bash -c "$(curl -sSfL https://raw.githubusercontent.com/MichaIng/DietPi-Website${GITHUB_REF#refs/heads}/deploy.bash)" bash .
+        run: sudo -E bash -c "$(curl -sSfL https://raw.githubusercontent.com/MichaIng/DietPi-Website${GITHUB_REF#refs/heads}/deploy.bash)" bash .
       - name: Check HTML5 syntax
         uses: Cyb3r-Jak3/html5validator-action@v0.4.2
         with:
