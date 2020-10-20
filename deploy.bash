@@ -54,7 +54,6 @@ G_EXEC sed -i '\|^/\*# sourceMappingURL=bootstrap.min.css.map \*/$|d' css/bootst
 G_EXEC curl -sSfL https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js -o js/bootstrap.min.js
 G_EXEC sed -i '\|^//# sourceMappingURL=bootstrap.min.js.map$|d' js/bootstrap.min.js # Suppress browser console warning about missing map file
 G_EXEC curl -sSfL https://raw.githubusercontent.com/patrickkunka/mixitup/61dac0554ab2b69fca3c927a173b0a000e4f6896/dist/mixitup.min.js -o js/mixitup.min.js
-G_EXEC curl -sSfL https://raw.githubusercontent.com/Le-Stagiaire/jquery.cslider/4707d29f6501c2dd84a4aa33808b1efbfd0e083f/src/style.css -o css/jquery.cslider.css
 
 # Fonts
 # - Font Awesome
