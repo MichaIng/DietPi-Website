@@ -131,6 +131,7 @@ Hotspot
 HotSpot
 Hotspots
 hostname
+HowTo
 HQPlayer
 HTPC
 HTTPS
