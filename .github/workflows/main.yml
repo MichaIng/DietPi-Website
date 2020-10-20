@@ -21,7 +21,7 @@ jobs:
       - name: Apply workaround for local links
         id: workaround_links
         if: always() && steps.deploy.outcome == 'success'
-        run: sed -Ei 's@href=/?(phpbb|docs|downloads|survey)@href=https://dietpi.com/\1@g' **.html
+        run: find -type f -name '*.html' -exec sed -Ei 's@href=/?(phpbb|docs|downloads|survey)@href=https://dietpi.com/\1@g' {} +
       - name: Check links in HTML and Markdown files
         id: check_links
         if: always() && steps.workaround_links.outcome == 'success'
