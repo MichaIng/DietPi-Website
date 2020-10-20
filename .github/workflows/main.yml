@@ -6,18 +6,15 @@ jobs:
     steps:
       - name: Deploy DietPi-Website locally
         id: deploy
-        run: sudo bash -c "$(curl -sSfL https://raw.githubusercontent.com/MichaIng/DietPi-Website${GITHUB_REF#refs/heads}/deploy.bash)" bash site ${GITHUB_REF#refs/heads/}
+        run: sudo bash -c "$(curl -sSfL https://raw.githubusercontent.com/MichaIng/DietPi-Website${GITHUB_REF#refs/heads}/deploy.bash)" bash .
       - name: Check HTML5 syntax
         uses: Cyb3r-Jak3/html5validator-action@v0.4.2
         with:
-          root: site
           css: true
       - name: Check links in HTML files
         id: check_links
         if: always() && steps.deploy.outcome == 'success'
         uses: peter-evans/link-checker@v1
-        with:
-          args: -d site -r README.md site
       - name: Check link check result
         if: always() && steps.check_links.outcome == 'success'
         run: exit ${{ steps.check_links.outputs.exit_code }}
