@@ -8,12 +8,12 @@ matrix:
     encoding: utf-8
   pipeline:
   - pyspelling.filters.html:
-    attributes:
-    - title
-    - alt
-    ignores:
-    - code
-    - pre
+      attributes:
+      - title
+      - alt
+      ignores:
+      - code
+      - pre
   - pyspelling.filters.url:
   sources:
   - '**/*.html'
