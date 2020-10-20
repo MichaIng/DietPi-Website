@@ -16,7 +16,6 @@ Audiophonics
 Autostart
 autostart
 AutoStart
-aWIFI
 backend
 BaiKal
 balancer
@@ -44,8 +43,7 @@ CIFS
 CLI
 Clonezilla
 Cloudflare
-CloudPrint
-Cloudshell
+CloudShell
 config
 configs
 containerd
@@ -56,6 +54,7 @@ cron
 CSI
 CSM
 Cuberite
+customisable
 DAC
 DarkBetter
 DarkIce
@@ -85,10 +84,12 @@ DVFS
 DXX
 ebooks
 eco
+EDL
 EEPROM
 Emby
 eMMC
 EmonPi
+EPL
 exFAT
 Exynos
 fanless
@@ -96,7 +97,7 @@ favicon
 FHS
 filesystem
 Flexbox
-forked-daapd
+daapd
 FOSS
 Fourdee
 FreshRSS
@@ -123,7 +124,7 @@ harddisk
 Hardkernel
 HC
 hexa
-Hi-Fi
+HiFi
 Hotfix
 hotspot
 Hotspot
@@ -149,6 +150,7 @@ journalctl
 journald
 jRiver
 JSON
+JSP
 JustBoom
 Kbit
 KiB
@@ -181,11 +183,14 @@ LXQt
 maarten
 macOS
 mangas
+marcobrianza
 Mbit
+Metalink
 Meveric
 MiB
 MichaIng
 microcontroller
+microcontrollers
 microSD
 Minecraft
 MineOS
@@ -204,6 +209,7 @@ MPD
 MQTT
 MTA
 multiroom
+multithreading
 Mycroft
 MyHome
 myMPD
@@ -235,6 +241,7 @@ OctoPrint
 Odroid
 Odroids
 Odroid's
+oldschool
 Ok
 OpenBazaar
 OpenGL
@@ -340,6 +347,7 @@ Tyrian
 uae
 UART
 Ubooquity
+UDP
 UEFI
 UI
 Unarchiver
@@ -364,9 +372,11 @@ VNCSERVER
 VPN
 vsFTPD
 Vue
+Waveshare
 WebIOPi
 Webmin
-webui-aria2
+webpage
+webui
 Whiptail
 Widevine
 Wifi
