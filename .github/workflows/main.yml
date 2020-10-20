@@ -4,17 +4,14 @@ jobs:
   Actions:
     runs-on: ubuntu-20.04
     steps:
-      - name: Clone DietPi-Website repository
-        id: clone
-        uses: actions/checkout@v2
+      - name: Deploy DietPi-Website locally
+        id: deploy
+        run: sudo bash -c "$(curl -sSfL https://raw.githubusercontent.com/MichaIng/DietPi-Website${GITHUB_REF#refs/heads}/deploy.bash)" bash site ${GITHUB_REF#refs/heads/}
       - name: Check HTML5 syntax
         uses: Cyb3r-Jak3/html5validator-action@v0.4.2
         with:
+          root: site
           css: true
-      - name: Deploy DietPi-Website locally
-        if: always() && steps.clone.outcome == 'success'
-        id: deploy
-        run: sudo bash deploy.bash site ${GITHUB_REF#refs/heads/}
       - name: Check links in HTML files
         id: check_links
         if: always() && steps.deploy.outcome == 'success'
@@ -22,7 +19,7 @@ jobs:
         with:
           args: -d site -r README.md site
       - name: Check link check result
-        if: always() && steps.deploy.outcome == 'success'
+        if: always() && steps.check_links.outcome == 'success'
         run: exit ${{ steps.check_links.outputs.exit_code }}
       - name: Check spelling in HTML files
         if: always() && steps.deploy.outcome == 'success'
