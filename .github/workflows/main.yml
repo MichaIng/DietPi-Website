@@ -12,7 +12,7 @@ jobs:
         with:
           root: .
           css: true
-          extra: --ignore 'text-decoration-skip-ink' 'color-adjust' 'overflow-anchor' 'break-word'
+          extra: '--ignore text-decoration-skip-ink color-adjust overflow-anchor break-word'
       - name: Check links in HTML files
         id: check_links
         if: always() && steps.deploy.outcome == 'success'
