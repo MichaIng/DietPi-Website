@@ -1,0 +1,33 @@
+name: Build test and quality checks
+on: push
+jobs:
+  Actions:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Deploy DietPi-Website locally
+        id: deploy
+        run: sudo -E bash -c "$(curl -sSfL https://raw.githubusercontent.com/MichaIng/DietPi-Website${GITHUB_REF#refs/heads}/deploy.bash)" bash .
+      - name: Check HTML and CSS syntax
+        uses: Cyb3r-Jak3/html5validator-action@v0.4.3
+        with:
+          root: .
+          css: true
+          extra: '--ignore text-decoration-skip-ink color-adjust overflow-anchor break-word'
+      - name: Check spelling in HTML files
+        if: always() && steps.deploy.outcome == 'success'
+        # .spellcheck.yml: https://github.com/marketplace/actions/github-spellcheck-action#spellcheck-configuration-file
+        # .wordlist.txt
+        uses: rojopolis/spellcheck-github-actions@0.5.0
+      - name: Apply workaround for local links
+        id: workaround_links
+        if: always() && steps.deploy.outcome == 'success'
+        run: find -type f -name '*.html' -exec sed -Ei 's@href=(["'\'']?)/?(phpbb|docs|downloads|survey)@href=\1https://dietpi.com/\2@g' {} +
+      - name: Check links in HTML and Markdown files
+        id: check_links
+        if: always() && steps.workaround_links.outcome == 'success'
+        uses: peter-evans/link-checker@v1
+        with:
+          args: -d . -r .
+      - name: Check link check result
+        if: always() && steps.check_links.outcome == 'success'
+        run: exit ${{ steps.check_links.outputs.exit_code }}

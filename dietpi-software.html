@@ -32,11 +32,11 @@
 		<link rel="mask-icon" href="images/dietpi-logo_mask_720x720.svg" color="#c5ff00">
 		<meta name="msapplication-TileColor" content="#da532c">
 		<meta name="theme-color" content="#000000">
-		<!-- Load css styles -->
+		<!-- Load CSS styles -->
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="css/fonts.min.css">
 		<link rel="stylesheet" type="text/css" href="css/style.min.css">
-		<!-- Include javascript -->
+		<!-- Include JavaScript -->
 		<script defer src="js/jquery.min.js"></script>
 		<script defer src="js/bootstrap.min.js"></script>
 		<script defer src="js/mixitup.min.js"></script>
@@ -67,7 +67,7 @@
 				<svg class="triangle" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon points="0,0 100,0 50,100"/></svg>
 				<div class="title">
 					<h1>DietPi-Software</h1>
-					<p>Easily install optional "ready to run" and optimized software for your device. As well as automating the linux installation and configuration process for you, DietPi-Software also applies specific optimizations unique to your hardware model, ensuring you get the maximum performance from your device.</p>
+					<p>Easily install optional "ready to run" and optimized software for your device. As well as automating the Linux installation and configuration process for you, DietPi-Software also applies specific optimizations unique to your hardware model, ensuring you get the maximum performance from your device.</p>
 					<p><i>NB: Available software is dependent on the device and CPU architecture, some software titles may be unavailable. You can run the following command to list disabled items:</i> <i style="color:orange">dietpi-software list | grep disabled</i></p>
 				</div>
 				<nav class="nav nav-pills" id="downloadinfo" style="display:none">
@@ -88,7 +88,7 @@
  					<button class="nav-link filter" data-filter=".RemoteAccess">Remote Access</button>
  					<button class="nav-link filter" data-filter=".Stats">Stats</button>
  					<button class="nav-link filter" data-filter=".Security">Security</button>
- 					<button class="nav-link filter" data-filter=".WebserverStacks">Webserver Stacks</button>
+ 					<button class="nav-link filter" data-filter=".WebserverStacks">Web Server Stacks</button>
  					<button class="nav-link filter" data-filter=".FileServers">File Servers</button>
  					<button class="nav-link filter" data-filter=".VPNServer">VPN</button>
  					<button class="nav-link filter" data-filter=".DNS">DNS Server</button>
@@ -116,11 +116,10 @@
 							<div class="project-title clearfix">
 								<h3></h3>
 							</div>
+							<br>
 							<ul>
-								<p>
-									<li>Desktop can be run by typing <b style="color:orange">startx</b></li>
-									<li>You can also have DietPi boot directly to the desktop by using <b style="color:orange">dietpi-autostart</b> and selecting <b style="color:orange">Desktop</b>.</li>
-								</p>
+								<li>Desktop can be run by typing <b style="color:orange">startx</b></li>
+								<li>You can also have DietPi boot directly to the desktop by using <b style="color:orange">dietpi-autostart</b> and selecting <b style="color:orange">Desktop</b>.</li>
 							</ul>
 						</div>
 					</div>
@@ -147,11 +146,10 @@
 							<div class="project-title clearfix">
 								<h3></h3>
 							</div>
+							<br>
 							<ul>
-								<p>
 								<li>Desktop can be run by typing <b style="color:orange">startx</b></li>
 								<li>You can also have DietPi boot directly to the desktop by using <b style="color:orange">dietpi-autostart</b> and selecting <b style="color:orange">Desktop</b>.</li>
-								</p>
 							</ul>
 						</div>
 					</div>
@@ -177,11 +175,10 @@
 							<div class="project-title clearfix">
 								<h3></h3>
 							</div>
+							<br>
 							<ul>
-								<p>
-									<li>Desktop can be run by typing <b style="color:orange">startx</b></li>
-									<li>You can also have DietPi boot directly to the desktop by using <b style="color:orange">dietpi-autostart</b> and selecting <b style="color:orange">Desktop</b>.</li>
-								</p>
+								<li>Desktop can be run by typing <b style="color:orange">startx</b></li>
+								<li>You can also have DietPi boot directly to the desktop by using <b style="color:orange">dietpi-autostart</b> and selecting <b style="color:orange">Desktop</b>.</li>
 							</ul>
 						</div>
 					</div>
@@ -207,11 +204,10 @@
 							<div class="project-title clearfix">
 								<h3></h3>
 							</div>
+							<br>
 							<ul>
-								<p>
 								<li>Desktop can be run by typing <b style="color:orange">startx</b></li>
 								<li>You can also have DietPi boot directly to the desktop by using <b style="color:orange">dietpi-autostart</b> and selecting <b style="color:orange">Desktop</b>.</li>
-								</p>
 							</ul>
 						</div>
 					</div>
@@ -236,20 +232,18 @@
 							<div class="project-title clearfix">
 								<h3></h3>
 							</div>
-							<p>
-								<b>Does my device support HW GPU acceleration?:</b>
-								<ul>
-									<li>RPi 2+ supports native OpenGL and will be configured during installation.</li>
-									<li>Odroid's support OpenGLES and will be configured during installation.</li>
-									<li>Other devices will most likely be limited to software rendering.</li>
-									<li>You can check the status of HW GPU acceleration by accessing the following URL in Chromium <b style="color:orange">chrome://gpu</b>.</li>
-								</ul>
-								<b>Launch options?:</b>
-								<ul>
-									<li>Chromium can be launched from any desktop environment.</li>
-									<li>You can also run Chromium in kiosk mode (no desktop required), by running <b style="color:orange">dietpi-autostart</b> and selecting <b style="color:orange">Chromium</b>.</li>
-								</ul>
-							</p>
+							<p><b>Does my device support HW GPU acceleration?</b></p>
+							<ul>
+								<li>RPi 2+ supports native OpenGL and will be configured during installation.</li>
+								<li>Odroid's support OpenGLES and will be configured during installation.</li>
+								<li>Other devices will most likely be limited to software rendering.</li>
+								<li>You can check the status of HW GPU acceleration by accessing the following URL in Chromium <b style="color:orange">chrome://gpu</b>.</li>
+							</ul>
+							<p><b>Launch options?</b></p>
+							<ul>
+								<li>Chromium can be launched from any desktop environment.</li>
+								<li>You can also run Chromium in kiosk mode (no desktop required), by running <b style="color:orange">dietpi-autostart</b> and selecting <b style="color:orange">Chromium</b>.</li>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -398,10 +392,10 @@
 									<span>Pros:</span>Lightweight, efficient, no frills.
 								</div>
 								<div>
-									<span>Cons:</span>Lacks library features, offered by others (eg: LMS/Mopidy/O!MPD etc).
+									<span>Cons:</span>Lacks library features, offered by others (e.g.: LMS/Mopidy/O!MPD etc).
 								</div>
 							</div>
-							<p>A lightweight, bare-bones, no frills Hifi music player with a web based interface. Select or search for a song and play it, simple and effective. If you are seeking the highest raw performance audio playback, without bloatware and additional processing, YMPD is highly recommended. YMPD is a front end for MPD.</p>
+							<p>A lightweight, bare-bones, no frills HiFi music player with a web based interface. Select or search for a song and play it, simple and effective. If you are seeking the highest raw performance audio playback, without bloatware and additional processing, YMPD is highly recommended. YMPD is a front end for MPD.</p>
 						</div>
 					</div>
 				</div>
@@ -472,13 +466,13 @@
 								</div>
 								<div>
 									<br>
-									<span>Pros:</span>Feature-rich, highly customizable.
+									<span>Pros:</span>Feature-rich, highly customisable.
 								</div>
 								<div>
 									<span>Cons:</span>N/A.
 								</div>
 							</div>
-							<p>A feature-rich python based music player with a web based interface. Mopidy is also highly customizable and supports various extensions from Web extensions to Backend extensions.</p>
+							<p>A feature-rich python based music player with a web based interface. Mopidy is also highly customisable and supports various extensions from web extensions to backend extensions.</p>
 						</div>
 					</div>
 				</div>
@@ -540,7 +534,7 @@
 					<div class="col-md-8">
 						<div class="project-description">
 							<div class="project-title clearfix">
-								<h3>Logitech Media Server & SqueezeLite</h3>
+								<h3>Logitech Media Server & Squeezelite</h3>
 								<span class="show_hide close"><i class="fa fa-times"></i></span>
 							</div>
 							<div class="project-info">
@@ -549,14 +543,14 @@
 								</div>
 								<div>
 									<br>
-									<span>Pros:</span>Feature rich music server with web interface (SqueezeBox) and audio playback (Squeezelite)
+									<span>Pros:</span>Feature rich music server with web interface (Squeezebox) and audio playback (Squeezelite)
 								</div>
 								<div>
 									<span>Cons:</span>TBA
 								</div>
 							</div>
-							<p>SqueezeBox is the server software that enables web interface control of software audio players (SqueezeLite), and, hardware based audio players from Logitech (formerly known as SlimDevices).</p>
-							<p>SqueezeLite is the audio software that allows you to turn your DietPi device, into a audio playback capable player for SqueezeBox, and, other supported software.</p>
+							<p>Squeezebox is the server software that enables web interface control of software audio players (Squeezelite), and, hardware based audio players from Logitech (formerly known as Slim Devices).</p>
+							<p>Squeezelite is the audio software that allows you to turn your DietPi device, into a audio playback capable player for Squeezebox, and, other supported software.</p>
 						</div>
 					</div>
 				</div>
@@ -576,7 +570,7 @@
 								</div>
 								<div>
 									<br>
-									<span>Pros:</span>Barebones, minimal high performance DLNA/UPnP server.
+									<span>Pros:</span>Minimal high performance DLNA/UPnP server.
 								</div>
 								<div>
 									<span>Cons:</span>TBA
@@ -608,7 +602,7 @@
 									<span>Cons:</span>TBA
 								</div>
 							</div>
-							<p>Shairport Sync is an AirPlay audio player which plays audio streamed from iTunes, iOS devices and third-party AirPlay sources such as ForkedDaapd and Airfoil. Audio played by a Shairport Sync-powered device stays synchronised with the source and hence with similar devices playing the same source. This allows for synchronised multi-room audio on multiple devices.</p>
+							<p>Shairport Sync is an AirPlay audio player which plays audio streamed from iTunes, iOS devices and third-party AirPlay sources such as forked-daapd and Airfoil. Audio played by a Shairport Sync-powered device stays synchronised with the source and hence with similar devices playing the same source. This allows for synchronised multi-room audio on multiple devices.</p>
 						</div>
 					</div>
 				</div>
@@ -631,7 +625,7 @@
 									<span>Pros:</span>Feature rich audio/video media streaming server.
 								</div>
 								<div>
-									<span>Cons:</span>Coded in PHP, Webserver pre-req (which DietPi will automatically install).
+									<span>Cons:</span>Coded in PHP, web server required (which DietPi will automatically install).
 								</div>
 							</div>
 							<p>A web based audio/video streaming application and file manager allowing you to access your music & videos from anywhere, using almost any internet enabled device.</p>
@@ -758,7 +752,7 @@
 								</div>
 								<div>
 									<br>
-									<span>Pros:</span>The pinicle in lightweight accurate music playback.
+									<span>Pros:</span>The pinnacle in lightweight accurate music playback.
 								</div>
 								<div>
 									<span>Cons:</span>Subscription model required.
@@ -784,13 +778,13 @@
 								</div>
 								<div>
 									<br>
-									<span>Pros:</span>The pinicle in lightweight accurate music playback & library experience.
+									<span>Pros:</span>The pinnacle in lightweight accurate music playback & library experience.
 								</div>
 								<div>
 									<span>Cons:</span>Subscription model required.
 								</div>
 							</div>
-							<p>Turns your device into a Roon capable audio player and core server. Roon looks at your music and finds photos, bios, reviews, lyrics, and concert dates, and makes connections between artists, composers, performers, conductors, and producers. What you get is a searchable, surfable magazine about your music.</p>
+							<p>Turns your device into a Roon capable audio player and core server. Roon looks at your music and finds photos, bios, reviews, lyrics, and concert dates, and makes connections between artists, composers, performers, conductors, and producers. What you get is a searchable, surf-able magazine about your music.</p>
 						</div>
 					</div>
 				</div>
@@ -816,7 +810,7 @@
 									<span>Cons:</span>Purchase required to unlock full version.
 								</div>
 							</div>
-							<p>Allows you to stream music from a HQPlayer source (eg: Windows) and output directly from your DietPi device. Features DRC, high quality up-sampling (eg: 192Khz) and more.</p>
+							<p>Allows you to stream music from a HQPlayer source (e.g.: Windows) and output directly from your DietPi device. Features DRC, high quality up-sampling (e.g.: 192 KHz) and more.</p>
 						</div>
 					</div>
 				</div>
@@ -827,7 +821,7 @@
 					<div class="col-md-8">
 						<div class="project-description">
 							<div class="project-title clearfix">
-								<h3>IceCast & Darkice</h3>
+								<h3>IceCast & DarkIce</h3>
 								<span class="show_hide close"><i class="fa fa-times"></i></span>
 							</div>
 							<div class="project-info">
@@ -842,7 +836,7 @@
 									<span>Cons:</span>Not everyone will listen :D
 								</div>
 							</div>
-							<p>Shoutcast streaming server. Our installation includes DarkIce for audio input (eg: mic).</p>
+							<p>Shoutcast streaming server. Our installation includes DarkIce for audio input (e.g.: mic).</p>
 						</div>
 					</div>
 				</div>
@@ -865,10 +859,10 @@
 									<span>Pros:</span>Simple web interface media streaming server.
 								</div>
 								<div>
-									<span>Cons:</span>Vast number of pre-req's resulting in bulky installation, sub-par performance.
+									<span>Cons:</span>Vast number of requirements resulting in bulky installation, sub-par performance.
 								</div>
 							</div>
-							<p>Koel is a simple web-based personal audio streaming service written in Vue on the client side and Laravel on the server side. Targeting web developers, Koel embraces some of the more modern web technologies – flexbox, audio, and drag-and-drop API to name a few – to do its job.</p>
+							<p>Koel is a simple web-based personal audio streaming service written in Vue on the client side and Laravel on the server side. Targeting web developers, Koel embraces some of the more modern web technologies – Flexbox, audio, and drag-and-drop API to name a few – to do its job.</p>
 						</div>
 					</div>
 				</div>
@@ -894,7 +888,7 @@
 									<span>Cons:</span>TBA
 								</div>
 							</div>
-							<p>A DLNA audio render/endpoint. Allows you to stream and play music, from another device, such as BubbleUPNP.</p>
+							<p>A DLNA audio render/endpoint. Allows you to stream and play music, from another device, such as BubbleUPnP.</p>
 						</div>
 					</div>
 				</div>
@@ -920,7 +914,7 @@
 									<span>Cons:</span>TBA
 								</div>
 							</div>
-							<p>Transmission, the lightweight web interface BitTorrent server that allows you to download bittorrent files. Simple and highly efficient.</p>
+							<p>Transmission, the lightweight web interface BitTorrent server that allows you to download BitTorrent files. Simple and highly efficient.</p>
 						</div>
 					</div>
 				</div>
@@ -972,7 +966,7 @@
 									<span>Cons:</span>TBA
 								</div>
 							</div>
-							<p>qBitTorrent is a lightweight BitTorrent server with a slick web interface. As its coded in C++ (Qt), it offers excellent performance on any device.</p>
+							<p>qBittorrent is a lightweight BitTorrent server with a slick web interface. As its coded in C++ (Qt), it offers excellent performance on any device.</p>
 						</div>
 					</div>
 				</div>
@@ -1018,7 +1012,7 @@
 								</div>
 								<div>
 									<br>
-									<span>Pros:</span>Supports various file types and protocols (eg: BitTorrent).
+									<span>Pros:</span>Supports various file types and protocols (e.g.: BitTorrent).
 								</div>
 								<div>
 									<span>Cons:</span>TBA
@@ -1051,8 +1045,8 @@
 									<span>Cons:</span>Not all news is good news ;)
 								</div>
 							</div>
-							<p>You can access and manage SABnzbd from any device with a webbrowser, including iOS and Android phones and tablets.</p>
-							<p>Apps like Sonarr, Sickrage, Radarr, Headphones and more can integrate with SABnzbd and automate your download process. SABnzbd can also read and process RSS feeds, activate custom scripts and notify you.</p>
+							<p>You can access and manage SABnzbd from any device with a web browser, including iOS and Android phones and tablets.</p>
+							<p>Apps like Sonarr, Medusa, Radarr, Headphones and more can integrate with SABnzbd and automate your download process. SABnzbd can also read and process RSS feeds, activate custom scripts and notify you.</p>
 						</div>
 					</div>
 				</div>
@@ -1156,7 +1150,7 @@
 									<span>Cons:</span>TBA
 								</div>
 							</div>
-							<p>PVR for usenet and torrents. Just fill in what you want to see and CouchPotato will add it to your "want to watch"-list. Every day it will search through multiple NZBs & Torrents sites, looking for the best possible match. If available, it will download it using your favorite download software.</p>
+							<p>PVR for Usenet and torrents. Just fill in what you want to see and CouchPotato will add it to your "want to watch"-list. Every day it will search through multiple NZB & torrent sites, looking for the best possible match. If available, it will download it using your favorite download software.</p>
 						</div>
 					</div>
 				</div>
@@ -1182,18 +1176,18 @@
 									<span>Cons:</span>TBA
 								</div>
 							</div>
-							<p>Jackett works as a proxy server: it translates queries from apps (Sonarr, Radarr, SiCKRAGE, CouchPotato) into tracker-site-specific http queries, parses the html response, then sends results back to the requesting software. This allows for getting recent uploads (like RSS) and performing searches.</p>
+							<p>Jackett works as a proxy server: it translates queries from apps (Sonarr, Radarr, Lidarr, Medusa, CouchPotato) into tracker-site-specific HTTP queries, parses the HTML response, then sends results back to the requesting software. This allows for getting recent uploads (like RSS) and performing searches.</p>
 						</div>
 					</div>
 				</div>
 				<!-- End details for portfolio project 41 -->
 				<!-- Start details for portfolio project 42 -->
 				<div id="slidingdiv42" class="toggleDiv row single-project">
-					<div class="col-md-4"><a href="images/dietpi-software/nzbget_1.jpg" target="_blank" rel="noopener"><img src="images/dietpi-software/nzbget_1.jpg" alt="NZBget" loading="lazy"></a></div>
+					<div class="col-md-4"><a href="images/dietpi-software/nzbget_1.jpg" target="_blank" rel="noopener"><img src="images/dietpi-software/nzbget_1.jpg" alt="NZBGet" loading="lazy"></a></div>
 					<div class="col-md-8">
 						<div class="project-description">
 							<div class="project-title clearfix">
-								<h3>NZBget</h3>
+								<h3>NZBGet</h3>
 								<span class="show_hide close"><i class="fa fa-times"></i></span>
 							</div>
 							<div class="project-info">
@@ -1260,9 +1254,9 @@
 									<span>Cons:</span>TBA
 								</div>
 							</div>
-							<p>Tyrian (OpenTyrian) if not the best game in the world, is the best topdown shooter/scroller game ever created.
+							<p>Tyrian (OpenTyrian) if not the best game in the world, is the best top-down shooter/scroller game ever created.
 OpenTyrian is best experienced by using a mouse and the Enter key to change rear fire mode.
-Its old, retro, and a classic etc, but i doubt you'll to find a recent and similar game thats anywhere close to OpenTyrian addictiveness.</p>
+Its old, retro, and a classic etc, but I doubt you'll to find a recent and similar game that's anywhere close addictive as OpenTyrian.</p>
 						</div>
 					</div>
 				</div>
@@ -1356,7 +1350,7 @@ Its old, retro, and a classic etc, but i doubt you'll to find a recent and simil
 								</div>
 								<div>
 									<br>
-									<span>Pros:</span>Highly optimized Amiga emulator for SBC's
+									<span>Pros:</span>Highly optimised Amiga emulator for SBCs
 								</div>
 								<div>
 									<span>Cons:</span>TBA
@@ -1438,7 +1432,7 @@ Its old, retro, and a classic etc, but i doubt you'll to find a recent and simil
 								</div>
 							</div>
 							<p>Got a RPi camera module?
-Want to record paint drying using timelapse, or, start your own neighbourhood watch surveillance system? Want full control of your RPi camera in a web based interface. This is all you need!</p>
+Want to record paint drying using time lapse, or, start your own neighbourhood watch surveillance system? Want full control of your RPi camera in a web based interface. This is all you need!</p>
 						</div>
 					</div>
 				</div>
@@ -1488,7 +1482,7 @@ Want to record paint drying using timelapse, or, start your own neighbourhood wa
 									<span>Cons:</span>TBA
 								</div>
 							</div>
-							<p>Your very own personal cloud based backup/data storage system (eg: Dropbox) with ownCloud.</p>
+							<p>Your very own personal cloud based backup/data storage system (e.g.: Dropbox) with ownCloud.</p>
 						</div>
 					</div>
 				</div>
@@ -1513,7 +1507,7 @@ Want to record paint drying using timelapse, or, start your own neighbourhood wa
 									<span>Cons:</span>TBA
 								</div>
 							</div>
-							<p>Your very own personal cloud based backup/data storage system (eg: Dropbox), with a slick and simple web interface.</p>
+							<p>Your very own personal cloud based backup/data storage system (e.g.: Dropbox), with a slick and simple web interface.</p>
 						</div>
 					</div>
 				</div>
@@ -1535,10 +1529,10 @@ Want to record paint drying using timelapse, or, start your own neighbourhood wa
 									<span>Pros:</span>Feature-rich
 								</div>
 								<div>
-									<span>Cons:</span>Webserver pre-req
+									<span>Cons:</span>Web server required
 								</div>
 							</div>
-							<p>Feature-rich backup and sync server with web interface. Similar to Owncloud with vast configuration options to meet your "cloud" needs.</p>
+							<p>Feature-rich backup and sync server with web interface. Similar to ownCloud with vast configuration options to meet your "cloud" needs.</p>
 						</div>
 					</div>
 				</div>
@@ -1620,7 +1614,7 @@ TLDR: Basically, it allows you to create a complete system backup, using a simpl
 				</div>
 				<!-- Start details for portfolio project 59 -->
 				<div id="slidingdiv59" class="toggleDiv row single-project">
-					<div class="col-md-4"><a href="images/dietpi-software/syncthing_2.jpg" target="_blank" rel="noopener"><img src="images/dietpi-software/syncthing_1.jpg" alt="Synthing" loading="lazy"></a></div>
+					<div class="col-md-4"><a href="images/dietpi-software/syncthing_2.jpg" target="_blank" rel="noopener"><img src="images/dietpi-software/syncthing_1.jpg" alt="Syncthing" loading="lazy"></a></div>
 					<div class="col-md-8">
 						<div class="project-description">
 							<div class="project-title clearfix">
@@ -1639,7 +1633,7 @@ TLDR: Basically, it allows you to create a complete system backup, using a simpl
 									<span>Cons:</span>None
 								</div>
 							</div>
-							<p>Backup and sync server with web interface. Extremely lightweight and efficient as no webserver is required.</p>
+							<p>Backup and sync server with web interface. Extremely lightweight and efficient as no web server is required.</p>
 						</div>
 					</div>
 				</div>
@@ -1658,10 +1652,10 @@ TLDR: Basically, it allows you to create a complete system backup, using a simpl
 								</div>
 								<div>
 									<br>
-									<span>Pros:</span>Lightweight, due to no web server pre-reqs
+									<span>Pros:</span>Lightweight install, due to no web server requirement
 								</div>
 								<div>
-									<span>Cons:</span>Lacks popularity, compared to Owncloud/NextCloud
+									<span>Cons:</span>Lacks popularity, compared to ownCloud/Nextcloud
 								</div>
 							</div>
 							<p>Lightweight backup and sync server, includes web interface and external cloud access.</p>
@@ -1711,7 +1705,7 @@ TLDR: Basically, it allows you to create a complete system backup, using a simpl
 									<span>Pros:</span>Well established and stable forum server
 								</div>
 								<div>
-									<span>Cons:</span>Somewhat bulky installation, due to webserver pre-req
+									<span>Cons:</span>Somewhat bulky installation, due to web server requirement
 								</div>
 							</div>
 							<p>If you always wanted your very own forum, PHPBB3 is all you need.</p>
@@ -1736,7 +1730,7 @@ TLDR: Basically, it allows you to create a complete system backup, using a simpl
 									<span>Pros:</span>Go go gadget website!
 								</div>
 								<div>
-									<span>Cons:</span>Somewhat bulky installation, due to webserver pre-req
+									<span>Cons:</span>Somewhat bulky installation, due to web server requirement
 								</div>
 							</div>
 							<p>WordPress is a state-of-the-art semantic personal publishing platform with a focus on aesthetics, web standards, and usability. Allowing you to create your own website.</p>
@@ -1815,7 +1809,7 @@ TLDR: Basically, it allows you to create a complete system backup, using a simpl
 								</div>
 							</div>
 							<p>A free decentralized peer to peer market server for all. No fees. Using Bitcoin.
-Oldschool: Think Napster, but for buying and selling stuff using your BitCoins </p>
+Oldschool: Think Napster, but for buying and selling stuff using your Bitcoins </p>
 						</div>
 					</div>
 				</div>
@@ -2116,17 +2110,17 @@ Perfect for users requiring anonymity and privacy.</p>
 									<span>Cons:</span>TBA
 								</div>
 							</div>
-							<p>Platform with iOs and Android apps to control Arduino, ESP8266, Raspberry Pi and similar microcontroller boards over the Internet.</p>
+							<p>Platform with iOS and Android apps to control Arduino, ESP8266, Raspberry Pi and similar microcontroller boards over the Internet.</p>
 						</div>
 					</div>
 				</div>
 				<!-- Start details for portfolio project 79 -->
 				<div id="slidingdiv79" class="toggleDiv row single-project">
-					<div class="col-md-4"><a href="images/dietpi-software/pispc_0.jpg" target="_blank" rel="noopener"><img src="images/dietpi-software/pispc_0.jpg" alt="AudioPhonics Pi-SPC" loading="lazy"></a></div>
+					<div class="col-md-4"><a href="images/dietpi-software/pispc_0.jpg" target="_blank" rel="noopener"><img src="images/dietpi-software/pispc_0.jpg" alt="Audiophonics Pi-SPC" loading="lazy"></a></div>
 					<div class="col-md-8">
 						<div class="project-description">
 							<div class="project-title clearfix">
-								<h3>AudioPhonics Pi-SPC</h3>
+								<h3>Audiophonics Pi-SPC</h3>
 								<span class="show_hide close"><i class="fa fa-times"></i></span>
 							</div>
 							<div class="project-info">
@@ -2141,7 +2135,7 @@ Perfect for users requiring anonymity and privacy.</p>
 									<span>Cons:</span>TBA
 								</div>
 							</div>
-							<p>Power control module for Raspberry Pi which allows you to physically power on/off the system, without the need to run "poweroff".</p>
+							<p>Power control module for Raspberry Pi which allows you to physically power on/off the system, without the need to run <code>poweroff</code>.</p>
 						</div>
 					</div>
 				</div>
@@ -2166,8 +2160,8 @@ Perfect for users requiring anonymity and privacy.</p>
 									<span>Cons:</span>TBA
 								</div>
 							</div>
-							<p>InfluxDB is a database optimized to save time based data as logs or data from a sensor. The main interface to the database for management and data transfert is http requests that are handled directly by influxdb service (default port being 8086).</p>
-							<p>The data can be nicely viewed with Grafana. This installation and documentation was possible, thanks to @marcobrianza</p>
+							<p>InfluxDB is a database optimised to save time based data as logs or data from a sensor. The main interface to the database for management and data transfer is HTTP requests that are handled directly by the InfluxDB system service (default port being 8086).</p>
+							<p>The data can be nicely viewed with Grafana. This installation and documentation was possible, thanks to <a href="https://github.com/marcobrianza" target="_blank" rel="noopener" style="color:#c5ff00;">@marcobrianza</a></p>
 						</div>
 					</div>
 				</div>
@@ -2193,7 +2187,7 @@ Perfect for users requiring anonymity and privacy.</p>
 								</div>
 							</div>
 							<p>The open platform for beautiful analytics and monitoring.</p>
-							<p>This installation and documentation was possible, thanks to @marcobrianza</p>
+							<p>This installation and documentation was possible, thanks to <a href="https://github.com/marcobrianza" target="_blank" rel="noopener" style="color:#c5ff00;">@marcobrianza</a></p>
 						</div>
 					</div>
 				</div>
@@ -2268,7 +2262,7 @@ Perfect for users requiring anonymity and privacy.</p>
 									<span>Cons:</span>None
 								</div>
 							</div>
-							<p>Turn your Odroid Cloudshell, Odroid 3.5 LCD Touchscreen Shield, Waveshare32, or monitor into a dedicated lightweight system stats display.</p>
+							<p>Turn your Odroid CloudShell, Odroid 3.5 LCD Touchscreen Shield, Waveshare32, or monitor into a dedicated lightweight system stats display.</p>
 						</div>
 					</div>
 				</div>
@@ -2290,7 +2284,7 @@ Perfect for users requiring anonymity and privacy.</p>
 									<span>Pros:</span>None
 								</div>
 								<div>
-									<span>Cons:</span>Bulky install due to webserver Pre-req
+									<span>Cons:</span>Bulky install due to web server requirement
 								</div>
 							</div>
 							<p>Linux Dash allows you to monitor your system stats from a webpage.</p>
@@ -2315,7 +2309,7 @@ Perfect for users requiring anonymity and privacy.</p>
 									<span>Pros:</span>None
 								</div>
 								<div>
-									<span>Cons:</span>Bulky install due to webserver Pre-req
+									<span>Cons:</span>Bulky install due to web server requirement
 								</div>
 							</div>
 							<p>Allows you to monitor your system stats from a webpage.</p>
@@ -2349,7 +2343,7 @@ Perfect for users requiring anonymity and privacy.</p>
 				</div>
 				<!-- Start details for portfolio project 88 -->
 				<div id="slidingdiv88" class="toggleDiv row single-project">
-					<div class="col-md-4"><a href="images/dietpi-software/netdata_2.jpg" target="_blank" rel="noopener"><img src="images/dietpi-software/netdata_1.jpg" alt="Netdada" loading="lazy"></a></div>
+					<div class="col-md-4"><a href="images/dietpi-software/netdata_2.jpg" target="_blank" rel="noopener"><img src="images/dietpi-software/netdata_1.jpg" alt="Netdata" loading="lazy"></a></div>
 					<div class="col-md-8">
 						<div class="project-description">
 							<div class="project-title clearfix">
@@ -2437,14 +2431,14 @@ Perfect for users requiring anonymity and privacy.</p>
 								</div>
 								<div>
 									<br>
-									<span>Pros:</span>A well known, used and documented Linux webserver
+									<span>Pros:</span>A well known, used and documented Linux web server
 								</div>
 								<div>
 									<span>Cons:</span>Can be somewhat bulky, if light web traffic is solely expected
 								</div>
 							</div>
 							<p>Host your own website!</p>
-							<p>NB: DietPi will automatically install a webserver stack if any software requires it. For most users, you should never need to manually install one. By default this is Lighttpd, however, you can change this in the DietPi-Software menu.</p>
+							<p>NB: DietPi will automatically install a web server stack if any software requires it. For most users, you should never need to manually install one. By default this is Lighttpd, however, you can change this in the DietPi-Software menu.</p>
 						</div>
 					</div>
 				</div>
@@ -2469,8 +2463,8 @@ Perfect for users requiring anonymity and privacy.</p>
 									<span>Cons:</span>Not as light as Lighttpd
 								</div>
 							</div>
-							<p>Host your own website! Nginx is the middle ground between performance (lighttpd) and bulk (apache2), whilst keeping many features available in Apache2. Ideal for general use, regardless of expected web traffic load.</p>
-							<p>NB: DietPi will automatically install a webserver stack if any software requires it. For most users, you should never need to manually install one. By default this is Lighttpd, however, you can change this in the DietPi-Software menu.</p>
+							<p>Host your own website! Nginx is the middle ground between performance (Lighttpd) and bulk (Apache2), whilst keeping many features available in Apache2. Ideal for general use, regardless of expected web traffic load.</p>
+							<p>NB: DietPi will automatically install a web server stack if any software requires it. For most users, you should never need to manually install one. By default this is Lighttpd, however, you can change this in the DietPi-Software menu.</p>
 						</div>
 					</div>
 				</div>
@@ -2489,14 +2483,14 @@ Perfect for users requiring anonymity and privacy.</p>
 								</div>
 								<div>
 									<br>
-									<span>Pros:</span>The lightest webserver of the bunch
+									<span>Pros:</span>The lightest web server of the bunch
 								</div>
 								<div>
 									<span>Cons:</span>Lacks multithreading support and popularity of the others
 								</div>
 							</div>
 							<p>Host your own website, without breaking the resource bank. Lighttpd is ideal for low expected web traffic, and/or local use.</p>
-							<p>NB: DietPi will automatically install a webserver stack if any software requires it. For most users, you should never need to manually install one. By default this is Lighttpd, however, you can change this in the DietPi-Software menu.</p>
+							<p>NB: DietPi will automatically install a web server stack if any software requires it. For most users, you should never need to manually install one. By default this is Lighttpd, however, you can change this in the DietPi-Software menu.</p>
 						</div>
 					</div>
 				</div>
@@ -2521,7 +2515,7 @@ Perfect for users requiring anonymity and privacy.</p>
 									<span>Cons:</span>TBA
 								</div>
 							</div>
-							<p>Web interface SQL admin tool for webserver installations. </p>
+							<p>Web interface SQL admin tool for web server installations. </p>
 						</div>
 					</div>
 				</div>
@@ -2540,13 +2534,13 @@ Perfect for users requiring anonymity and privacy.</p>
 								</div>
 								<div>
 									<br>
-									<span>Pros:</span>Free and automated SSL cert installation for your Webserver
+									<span>Pros:</span>Free and automated SSL cert installation for your web server
 								</div>
 								<div>
 									<span>Cons:</span>None
 								</div>
 							</div>
-							<p>A free and automated SSL cert installation for your Webserver. This will allow you to have https:// (secure) access to your site.</p>
+							<p>A free and automated SSL cert installation for your web server. This will allow you to have https:// (secure) access to your site.</p>
 						</div>
 					</div>
 				</div>
@@ -2571,7 +2565,7 @@ Perfect for users requiring anonymity and privacy.</p>
 									<span>Cons:</span>TBA
 								</div>
 							</div>
-							<p>Tomcat is a Servlet and JSP Server serving Java technologies. In your Java project you can build your WAR (short for Web ARchive) file, and simply drop it in the deploy directory in Tomcat. </p>
+							<p>Tomcat is a Servlet and JSP Server serving Java technologies. In your Java project you can build your WAR (short for <code>Web ARchive</code>) file, and simply drop it in the deploy directory in Tomcat. </p>
 						</div>
 					</div>
 				</div>
@@ -2615,7 +2609,7 @@ Perfect for users requiring anonymity and privacy.</p>
 								</div>
 								<div>
 									<br>
-									<span>Pros:</span>One the fastest fileservers we have available
+									<span>Pros:</span>One the fastest files servers we have available
 								</div>
 								<div>
 									<span>Cons:</span>May not meet security needs. However, ideal for home LAN in most cases.
@@ -2746,17 +2740,17 @@ Perfect for users requiring anonymity and privacy.</p>
 									<span>Cons:</span>TBA
 								</div>
 							</div>
-							<p>OpenVPN installer & management tool. It also has a command pivpn which allows for simple creation of additional user OpenVPN profiles.</p>
+							<p>OpenVPN installer & management tool. It also has a command <code>pivpn</code> which allows for simple creation of additional user OpenVPN profiles.</p>
 						</div>
 					</div>
 				</div>
 				<!-- Start details for portfolio project 104 -->
 				<div id="slidingdiv104" class="toggleDiv row single-project">
-					<div class="col-md-4"><a href="images/dietpi-software/cloudprint_0.jpg" target="_blank" rel="noopener"><img src="images/dietpi-software/cloudprint_0.jpg" alt="Cloudprint" loading="lazy"></a></div>
+					<div class="col-md-4"><a href="images/dietpi-software/cloudprint_0.jpg" target="_blank" rel="noopener"><img src="images/dietpi-software/cloudprint_0.jpg" alt="Cloud Print" loading="lazy"></a></div>
 					<div class="col-md-8">
 						<div class="project-description">
 							<div class="project-title clearfix">
-								<h3>Cloudprint</h3>
+								<h3>Cloud Print</h3>
 								<span class="show_hide close"><i class="fa fa-times"></i></span>
 							</div>
 							<div class="project-info">
@@ -2846,7 +2840,7 @@ Perfect for users requiring anonymity and privacy.</p>
 									<span>Cons:</span>None
 								</div>
 							</div>
-							<p>Use your NoIp account and website URL address to always have it pointing to your DietPi System. Essential if your hosting a website.</p>
+							<p>Use your No-IP account and website URL address to always have it pointing to your DietPi System. Essential if your hosting a website.</p>
 						</div>
 					</div>
 				</div>
@@ -3068,7 +3062,7 @@ Perfect for users requiring anonymity and privacy.</p>
 									<span>Pros:</span>Simple, slick web interface for RSS.
 								</div>
 								<div>
-									<span>Cons:</span>Web-server pre-req.
+									<span>Cons:</span>Web server required.
 								</div>
 							</div>
 							<p>A self-hosted RSS feed aggregator.</p>
@@ -3096,7 +3090,7 @@ Perfect for users requiring anonymity and privacy.</p>
 									<span>Cons:</span>None
 								</div>
 							</div>
-							<p>A lightweight, bare-bones, no frills Hifi music player with a web based interface. myMPD is a front end for MPD, and a recent fork of YMPD. myMPD provides a reworked UI based on Bootstrap 4, and, a modernized backend including many new features, whilst having the same small footprint as ympd.</p>
+							<p>A lightweight, bare-bones, no frills HiFi music player with a web based interface. myMPD is a front end for MPD, and a recent fork of YMPD. myMPD provides a reworked UI based on Bootstrap 4, and, a modernized backend including many new features, whilst having the same small footprint as ympd.</p>
 						</div>
 					</div>
 				</div>
@@ -3146,11 +3140,10 @@ Perfect for users requiring anonymity and privacy.</p>
 							<div class="project-title clearfix">
 								<h3></h3>
 							</div>
+							<br>
 							<ul>
-								<p>
 								<li>Desktop can be run by typing <b style="color:orange">startx</b></li>
 								<li>You can also have DietPi boot directly to the desktop by using <b style="color:orange">dietpi-autostart</b> and selecting <b style="color:orange">Desktop</b>.</li>
-								</p>
 							</ul>
 						</div>
 					</div>
@@ -3472,7 +3465,7 @@ Perfect for users requiring anonymity and privacy.</p>
 							<img src="images/dietpi-software/transmission_0.jpg" alt="project 31" loading="lazy">
 							<a href="#downloadinfo" class="more show_hide" rel="#slidingdiv31"><i class="fa fa-plus"></i></a>
 							<h3>Transmission</h3>
-							<p>Lightweight BT server & web interface</p>
+							<p>Lightweight BitTorrent server & web interface</p>
 							<div class="mask"></div>
 						</div>
 					</div>
@@ -3481,7 +3474,7 @@ Perfect for users requiring anonymity and privacy.</p>
 							<img src="images/dietpi-software/deluge_0.jpg" alt="project 32" loading="lazy">
 							<a href="#downloadinfo" class="more show_hide" rel="#slidingdiv32"><i class="fa fa-plus"></i></a>
 							<h3>Deluge</h3>
-							<p>BT server & web interface</p>
+							<p>BitTorrent server & web interface</p>
 							<div class="mask"></div>
 						</div>
 					</div>
@@ -3490,7 +3483,7 @@ Perfect for users requiring anonymity and privacy.</p>
 							<img src="images/dietpi-software/qbittorrent_0.jpg" alt="project 33" loading="lazy">
 							<a href="#downloadinfo" class="more show_hide" rel="#slidingdiv33"><i class="fa fa-plus"></i></a>
 							<h3>qBittorrent</h3>
-							<p>BT server & web interface</p>
+							<p>BitTorrent server & web interface</p>
 							<div class="mask"></div>
 						</div>
 					</div>
@@ -3499,7 +3492,7 @@ Perfect for users requiring anonymity and privacy.</p>
 							<img src="images/dietpi-software/rtorrent_0.jpg" alt="project 34" loading="lazy">
 							<a href="#downloadinfo" class="more show_hide" rel="#slidingdiv34"><i class="fa fa-plus"></i></a>
 							<h3>rTorrent</h3>
-							<p>BT server & web interface</p>
+							<p>BitTorrent server & web interface</p>
 							<div class="mask"></div>
 						</div>
 					</div>
@@ -3579,7 +3572,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						<div class="thumbnail">
 							<img src="images/dietpi-software/nzbget_0.jpg" alt="project 42" loading="lazy">
 							<a href="#downloadinfo" class="more show_hide" rel="#slidingdiv42"><i class="fa fa-plus"></i></a>
-							<h3>NZBget</h3>
+							<h3>NZBGet</h3>
 							<p>Web interface NZB download manager</p>
 							<div class="mask"></div>
 						</div>
@@ -3805,7 +3798,7 @@ Perfect for users requiring anonymity and privacy.</p>
 							<img src="images/dietpi-software/openbazaar_0.jpg" alt="project 66" loading="lazy">
 							<a href="#downloadinfo" class="more show_hide" rel="#slidingdiv66"><i class="fa fa-plus"></i></a>
 							<h3>OpenBazaar</h3>
-							<p>Market server for BitCoin</p>
+							<p>Market server for Bitcoin</p>
 							<div class="mask"></div>
 						</div>
 					</div>
@@ -3921,7 +3914,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						<div class="thumbnail">
 							<img src="images/dietpi-software/pispc_0.jpg" alt="project 79" loading="lazy">
 							<a href="#downloadinfo" class="more show_hide" rel="#slidingdiv79"><i class="fa fa-plus"></i></a>
-							<h3>AudioPhonics Pi-SPC</h3>
+							<h3>Audiophonics Pi-SPC</h3>
 							<p>Power control module for RPi</p>
 							<div class="mask"></div>
 						</div>
@@ -3966,7 +3959,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						<div class="thumbnail">
 							<img src="images/dietpi-software/dietpi-cloudshell_0.jpg" alt="project 84" loading="lazy">
 							<a href="#downloadinfo" class="more show_hide" rel="#slidingdiv84"><i class="fa fa-plus"></i></a>
-							<h3>DietPi-Cloudshell</h3>
+							<h3>DietPi-CloudShell</h3>
 							<p>Lightweight system stats</p>
 							<div class="mask"></div>
 						</div>
@@ -4030,7 +4023,7 @@ Perfect for users requiring anonymity and privacy.</p>
 							<img src="images/dietpi-software/apache2_0.jpg" alt="project 91" loading="lazy">
 							<a href="#downloadinfo" class="more show_hide" rel="#slidingdiv91"><i class="fa fa-plus"></i></a>
 							<h3>Apache2</h3>
-							<p>LAMP / LAAP / LASP</p>
+							<p>LAMP / LASP</p>
 							<div class="mask"></div>
 						</div>
 					</div>
@@ -4039,7 +4032,7 @@ Perfect for users requiring anonymity and privacy.</p>
 							<img src="images/dietpi-software/nginx_0.jpg" alt="project 92" loading="lazy">
 							<a href="#downloadinfo" class="more show_hide" rel="#slidingdiv92"><i class="fa fa-plus"></i></a>
 							<h3>Nginx</h3>
-							<p>LEMP / LESP / LEAP</p>
+							<p>LEMP / LESP</p>
 							<div class="mask"></div>
 						</div>
 					</div>
@@ -4048,7 +4041,7 @@ Perfect for users requiring anonymity and privacy.</p>
 							<img src="images/dietpi-software/lighttpd_0.jpg" alt="project 93" loading="lazy">
 							<a href="#downloadinfo" class="more show_hide" rel="#slidingdiv93"><i class="fa fa-plus"></i></a>
 							<h3>Lighttpd</h3>
-							<p>LLMP / LLSP / LLAP</p>
+							<p>LLMP / LLSP</p>
 							<div class="mask"></div>
 						</div>
 					</div>
@@ -4155,7 +4148,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						<div class="thumbnail">
 							<img src="images/dietpi-software/cloudprint_0.jpg" alt="project 104" loading="lazy">
 							<a href="#downloadinfo" class="more show_hide" rel="#slidingdiv104"><i class="fa fa-plus"></i></a>
-							<h3>CloudPrint</h3>
+							<h3>Cloud Print</h3>
 							<p>CUPS & Google cloud printing</p>
 							<div class="mask"></div>
 						</div>
@@ -4219,7 +4212,7 @@ Perfect for users requiring anonymity and privacy.</p>
 							<img src="images/dietpi-software/fulllogging_0.jpg" alt="project 111" loading="lazy">
 							<a href="#downloadinfo" class="more show_hide" rel="#slidingdiv111"><i class="fa fa-plus"></i></a>
 							<h3>Full Logging</h3>
-							<p>Rsyslog & LogRotate</p>
+							<p>Rsyslog & Logrotate</p>
 							<div class="mask"></div>
 						</div>
 					</div>
@@ -4260,8 +4253,8 @@ Perfect for users requiring anonymity and privacy.</p>
 			</div>
 		</div>
 		<!-- Footer section end -->
-		<!-- ScrollUp button start -->
+		<!-- Scroll up button start -->
 		<a class="scrollup fa fa-chevron-up" href="#"></a>
-		<!-- ScrollUp button end -->
+		<!-- Scroll up button end -->
 	</body>
 </html>
