@@ -13,17 +13,21 @@ jobs:
           root: .
           css: true
           extra: '--ignore text-decoration-skip-ink color-adjust overflow-anchor break-word'
-      - name: Check links in HTML files
-        id: check_links
+      - name: Check spelling in HTML files
         if: always() && steps.deploy.outcome == 'success'
+        # .spellcheck.yml: https://github.com/marketplace/actions/github-spellcheck-action#spellcheck-configuration-file
+        # .wordlist.txt
+        uses: rojopolis/spellcheck-github-actions@0.5.0
+      - name: Apply workaround for local links
+        id: workaround_links
+        if: always() && steps.deploy.outcome == 'success'
+        run: sed -Ei 's@href=/?(phpbb|docs|downloads|survey)@href=https://dietpi.com/\1@g' **.html
+      - name: Check links in HTML and Markdown files
+        id: check_links
+        if: always() && steps.workaround_links.outcome == 'success'
         uses: peter-evans/link-checker@v1
         with:
           args: -d . -r .
       - name: Check link check result
         if: always() && steps.check_links.outcome == 'success'
         run: exit ${{ steps.check_links.outputs.exit_code }}
-      - name: Check spelling in HTML files
-        if: always() && steps.deploy.outcome == 'success'
-        # .spellcheck.yml: https://github.com/marketplace/actions/github-spellcheck-action#spellcheck-configuration-file
-        # .wordlist.txt
-        uses: rojopolis/spellcheck-github-actions@0.5.0
