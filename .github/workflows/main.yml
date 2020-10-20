@@ -25,5 +25,5 @@ jobs:
       - name: Check links in HTML and Markdown files
         if: always() && steps.workaround_links.outcome == 'success'
         run: |
-          go get -u github.com/raviqqe/liche
+          GO111MODULE=on go get -u github.com/raviqqe/liche
           liche -d . -r .
