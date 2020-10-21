@@ -23,22 +23,22 @@ jobs:
         id: pyspelling
         if: always() && steps.python.outcome == 'success'
         run: |
-          pip3 install -U pip setuptools
+          pip3 install -U pip setuptools wheel
           pip3 install -U pyspelling
-          sudo apt-get update
-          sudo apt-get install -y --no-install-recommends aspell aspell-en
+          sudo apt-get -q update
+          sudo apt-get install -qq --no-install-recommends aspell aspell-en
       - name: Check spelling in HTML files
         if: always() && steps.pyspelling.outcome == 'success'
         # .spellcheck.yml: https://github.com/marketplace/actions/github-spellcheck-action#spellcheck-configuration-file
         # .wordlist.txt
-        run: pyspelling -c .spellcheck.yml
+        run: pyspelling -vc .spellcheck.yml
       - name: Apply workaround for local links
-        id: workaround_links
+        id: workaround
         if: always() && steps.deploy.outcome == 'success'
         run: find -type f -name '*.html' -exec sed -Ei 's@href=(["'\'']?)/?(phpbb|docs|downloads|survey)@href=\1https://dietpi.com/\2@g' {} +
       - name: Install liche
         id: liche
-        if: always() && steps.workaround_links.outcome == 'success'
+        if: always() && steps.workaround.outcome == 'success'
         run: GO111MODULE=on go get -u github.com/raviqqe/liche
       - name: Check links in HTML and Markdown files
         if: always() && steps.liche.outcome == 'success'
