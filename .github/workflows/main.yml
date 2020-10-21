@@ -17,7 +17,7 @@ jobs:
         if: always() && steps.python.outcome == 'success'
         run: |
           pip3 install -U pip setuptools wheel
-          pip3 install -U html5validator
+          pip3 install -U https://github.com/svenkreiss/html5validator/archive/master.tar.gz
       - name: Check HTML, CSS and SVG syntax
         if: always() && steps.html5validator.outcome == 'success'
         run: html5validator --also-check-css --also-check-svg --show-warnings --ignore text-decoration-skip-ink color-adjust overflow-anchor break-word
