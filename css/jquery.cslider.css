@@ -184,7 +184,7 @@
 
 /* Animation classes and animations */
 
-/* Slide in from the right*/
+/* Slide in from the right */
 .da-slide-fromright h2 {
     animation: fromRightAnim1 0.6s ease-in 0.8s both;
 }
@@ -199,54 +199,6 @@
 
 .da-slide-fromright .da-img {
     animation: fromRightAnim4 0.6s ease-in 0.8s both;
-}
-
-@-webkit-keyframes fromRightAnim1 {
-    0% {
-        left: 110%;
-        opacity: 0;
-    }
-    100% {
-        left: 10%;
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes fromRightAnim2 {
-    0% {
-        left: 110%;
-        opacity: 0;
-    }
-    100% {
-        left: 10%;
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes fromRightAnim3 {
-    0% {
-        left: 110%;
-        opacity: 0;
-    }
-    1% {
-        left: 10%;
-        opacity: 0;
-    }
-    100% {
-        left: 10%;
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes fromRightAnim4 {
-    0% {
-        left: 110%;
-        opacity: 0;
-    }
-    100% {
-        left: 60%;
-        opacity: 1;
-    }
 }
 
 @keyframes fromRightAnim1 {
@@ -297,7 +249,7 @@
     }
 }
 
-/* Slide in from the left*/
+/* Slide in from the left */
 .da-slide-fromleft h2 {
     animation: fromLeftAnim1 0.6s ease-in 0.6s both;
 }
@@ -312,54 +264,6 @@
 
 .da-slide-fromleft .da-img {
     animation: fromLeftAnim4 0.6s ease-in 0.6s both;
-}
-
-@-webkit-keyframes fromLeftAnim1 {
-    0% {
-        left: -110%;
-        opacity: 0;
-    }
-    100% {
-        left: 10%;
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes fromLeftAnim2 {
-    0% {
-        left: -110%;
-        opacity: 0;
-    }
-    100% {
-        left: 10%;
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes fromLeftAnim3 {
-    0% {
-        left: -110%;
-        opacity: 0;
-    }
-    1% {
-        left: 10%;
-        opacity: 0;
-    }
-    100% {
-        left: 10%;
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes fromLeftAnim4 {
-    0% {
-        left: -110%;
-        opacity: 0;
-    }
-    100% {
-        left: 60%;
-        opacity: 1;
-    }
 }
 
 @keyframes fromLeftAnim1 {
@@ -427,58 +331,6 @@
     animation: toRightAnim4 0.6s ease-in both;
 }
 
-@-webkit-keyframes toRightAnim1 {
-    0% {
-        left: 10%;
-        opacity: 1;
-    }
-    100% {
-        left: 100%;
-        opacity: 0;
-    }
-}
-
-@-webkit-keyframes toRightAnim2 {
-    0% {
-        left: 10%;
-        opacity: 1;
-    }
-    100% {
-        left: 100%;
-        opacity: 0;
-    }
-}
-
-@-webkit-keyframes toRightAnim3 {
-    0% {
-        left: 10%;
-        opacity: 1;
-    }
-    99% {
-        left: 10%;
-        opacity: 0;
-    }
-    100% {
-        left: 100%;
-        opacity: 0;
-    }
-}
-
-@-webkit-keyframes toRightAnim4 {
-    0% {
-        left: 60%;
-        opacity: 1;
-    }
-    30% {
-        left: 55%;
-        opacity: 1;
-    }
-    100% {
-        left: 100%;
-        opacity: 0;
-    }
-}
-
 @keyframes toRightAnim1 {
     0% {
         left: 10%;
@@ -531,7 +383,7 @@
     }
 }
 
-/* Slide out to the left*/
+/* Slide out to the left */
 .da-slide-toleft h2 {
     animation: toLeftAnim1 0.6s ease-in both;
 }
@@ -546,70 +398,6 @@
 
 .da-slide-toleft .da-img {
     animation: toLeftAnim4 0.6s ease-in 0.6s both;
-}
-
-@-webkit-keyframes toLeftAnim1 {
-    0% {
-        left: 10%;
-        opacity: 1;
-    }
-    30% {
-        left: 15%;
-        opacity: 1;
-    }
-    100% {
-        left: -50%;
-        opacity: 0;
-    }
-}
-
-@-webkit-keyframes toLeftAnim2 {
-    0% {
-        left: 10%;
-        opacity: 1;
-    }
-    30% {
-        left: 15%;
-        opacity: 1;
-    }
-    100% {
-        left: -50%;
-        opacity: 0;
-    }
-}
-
-@-webkit-keyframes toLeftAnim3 {
-    0% {
-        left: 10%;
-        opacity: 1;
-    }
-    99% {
-        left: 10%;
-        opacity: 0;
-    }
-    100% {
-        left: -50%;
-        opacity: 0;
-    }
-}
-
-@-webkit-keyframes toLeftAnim4 {
-    0% {
-        left: 60%;
-        opacity: 1;
-    }
-    40% {
-        left: 70%;
-        opacity: 1;
-    }
-    90% {
-        left: 0;
-        opacity: 0;
-    }
-    100% {
-        left: -50%;
-        opacity: 0;
-    }
 }
 
 @keyframes toLeftAnim1 {
