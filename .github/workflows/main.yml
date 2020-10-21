@@ -7,23 +7,23 @@ jobs:
       - name: Deploy DietPi-Website locally
         id: deploy
         run: bash -c "$(curl -sSfL https://raw.githubusercontent.com/MichaIng/DietPi-Website${GITHUB_REF#refs/heads}/deploy.bash)" bash .
-      - name: Check HTML and CSS syntax
-        uses: Cyb3r-Jak3/html5validator-action@v0.4.3
-        with:
-          root: .
-          css: true
-          extra: '--ignore text-decoration-skip-ink color-adjust overflow-anchor break-word'
-      - name: Setup Python 3.9 for PySpelling
+      - name: Setup Python 3.9 for html5validator and PySpelling
         id: python
-        if: always() && steps.deploy.outcome == 'success'
         uses: actions/setup-python@v2
         with:
           python-version: 3.9
+      - name: Install html5validator
+        id: html5validator
+        run: |
+          pip3 install -U pip setuptools wheel
+          pip3 install -U https://github.com/svenkreiss/html5validator/archive/master.tar.gz
+      - name: Check HTML, CSS and SVG syntax
+        if: always() && steps.html5validator.outcome == 'success'
+        run: html5validator --also-check-css --also-check-svg --show-warnings --ignore text-decoration-skip-ink color-adjust overflow-anchor break-word
       - name: Install PySpelling
         id: pyspelling
         if: always() && steps.python.outcome == 'success'
         run: |
-          pip3 install -U pip setuptools wheel
           pip3 install -U pyspelling
           sudo apt-get -q update
           sudo apt-get -qq --no-install-recommends install aspell aspell-en
