@@ -26,7 +26,7 @@ jobs:
           pip3 install -U pip setuptools wheel
           pip3 install -U pyspelling
           sudo apt-get -q update
-          sudo apt-get install -qq --no-install-recommends aspell aspell-en
+          sudo apt-get -qq --no-install-recommends install aspell aspell-en
       - name: Check spelling in HTML files
         if: always() && steps.pyspelling.outcome == 'success'
         # .spellcheck.yml: https://github.com/marketplace/actions/github-spellcheck-action#spellcheck-configuration-file
