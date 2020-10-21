@@ -7,14 +7,13 @@ jobs:
       - name: Deploy DietPi-Website locally
         id: deploy
         run: bash -c "$(curl -sSfL https://raw.githubusercontent.com/MichaIng/DietPi-Website${GITHUB_REF#refs/heads}/deploy.bash)" bash .
-      - name: Setup Python 3.9 for PySpelling
+      - name: Setup Python 3.9 for html5validator and PySpelling
         id: python
         uses: actions/setup-python@v2
         with:
           python-version: 3.9
       - name: Install html5validator
         id: html5validator
-        if: always() && steps.python.outcome == 'success'
         run: |
           pip3 install -U pip setuptools wheel
           pip3 install -U https://github.com/svenkreiss/html5validator/archive/master.tar.gz
