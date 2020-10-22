@@ -185,12 +185,9 @@
 /* Animation classes and animations */
 
 /* Slide in from the right */
-.da-slide-fromright h2 {
-    animation: fromRightAnim1 0.6s ease-in 0.8s both;
-}
-
+.da-slide-fromright h2,
 .da-slide-fromright p {
-    animation: fromRightAnim2 0.6s ease-in 0.8s both;
+    animation: fromRightAnim1 0.6s ease-in 0.8s both;
 }
 
 .da-slide-fromright .da-link {
@@ -202,17 +199,6 @@
 }
 
 @keyframes fromRightAnim1 {
-    0% {
-        left: 110%;
-        opacity: 0;
-    }
-    100% {
-        left: 10%;
-        opacity: 1;
-    }
-}
-
-@keyframes fromRightAnim2 {
     0% {
         left: 110%;
         opacity: 0;
@@ -250,12 +236,9 @@
 }
 
 /* Slide in from the left */
-.da-slide-fromleft h2 {
-    animation: fromLeftAnim1 0.6s ease-in 0.6s both;
-}
-
+.da-slide-fromleft h2,
 .da-slide-fromleft p {
-    animation: fromLeftAnim2 0.6s ease-in 0.6s both;
+    animation: fromLeftAnim1 0.6s ease-in 0.6s both;
 }
 
 .da-slide-fromleft .da-link {
@@ -267,17 +250,6 @@
 }
 
 @keyframes fromLeftAnim1 {
-    0% {
-        left: -110%;
-        opacity: 0;
-    }
-    100% {
-        left: 10%;
-        opacity: 1;
-    }
-}
-
-@keyframes fromLeftAnim2 {
     0% {
         left: -110%;
         opacity: 0;
@@ -320,7 +292,7 @@
 }
 
 .da-slide-toright p {
-    animation: toRightAnim2 0.6s ease-in 0.3s both;
+    animation: toRightAnim1 0.6s ease-in 0.3s both;
 }
 
 .da-slide-toright .da-link {
@@ -332,17 +304,6 @@
 }
 
 @keyframes toRightAnim1 {
-    0% {
-        left: 10%;
-        opacity: 1;
-    }
-    100% {
-        left: 100%;
-        opacity: 0;
-    }
-}
-
-@keyframes toRightAnim2 {
     0% {
         left: 10%;
         opacity: 1;
@@ -389,7 +350,7 @@
 }
 
 .da-slide-toleft p {
-    animation: toLeftAnim2 0.6s ease-in 0.3s both;
+    animation: toLeftAnim1 0.6s ease-in 0.3s both;
 }
 
 .da-slide-toleft .da-link {
@@ -401,21 +362,6 @@
 }
 
 @keyframes toLeftAnim1 {
-    0% {
-        left: 10%;
-        opacity: 1;
-    }
-    30% {
-        left: 15%;
-        opacity: 1;
-    }
-    100% {
-        left: -50%;
-        opacity: 0;
-    }
-}
-
-@keyframes toLeftAnim2 {
     0% {
         left: 10%;
         opacity: 1;
