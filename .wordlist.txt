@@ -13,7 +13,6 @@ Armbian
 ARMv
 ASUS
 Audiophonics
-Autostart
 autostart
 AutoStart
 backend
@@ -127,9 +126,8 @@ hexa
 HiFi
 Hotfix
 hotspot
-Hotspot
 HotSpot
-Hotspots
+hotspots
 hostname
 HowTo
 HQPlayer
@@ -258,7 +256,7 @@ php
 phpBB
 phpbb
 phpMyAdmin
-PhpSysInfo
+phpSysInfo
 Pi-hole
 PiJuice
 Pinebook
@@ -266,7 +264,6 @@ PiSupply
 PiVPN
 Plex
 pre
-ProFTP
 ProFTPD
 PVR
 Pydio
@@ -371,7 +368,7 @@ vncpasswd
 vncserver
 VNCSERVER
 VPN
-vsFTPD
+vsftpd
 Vue
 Waveshare
 WebIOPi
