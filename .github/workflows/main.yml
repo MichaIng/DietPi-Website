@@ -32,9 +32,15 @@ jobs:
         # .spellcheck.yml: https://github.com/marketplace/actions/github-spellcheck-action#spellcheck-configuration-file
         # .wordlist.txt
         run: pyspelling -vc .spellcheck.yml
+      - name: Setup Go 1.15 for liche
+        id: go
+        if: always() && steps.deploy.outcome == 'success'
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.15
       - name: Apply workaround for local links
         id: workaround
-        if: always() && steps.deploy.outcome == 'success'
+        if: always() && steps.go.outcome == 'success'
         run: find -type f -name '*.html' -exec sed -Ei 's@href=(["'\'']?)/?(phpbb|docs|downloads|survey)@href=\1https://dietpi.com/\2@g' {} +
       - name: Install liche
         id: liche
@@ -42,4 +48,4 @@ jobs:
         run: GO111MODULE=on go get -u github.com/raviqqe/liche
       - name: Check links in HTML and Markdown files
         if: always() && steps.liche.outcome == 'success'
-        run: $(go env GOPATH)/bin/liche -v -d . -r .
+        run: liche -d . -r .
