@@ -29,8 +29,6 @@ jobs:
           sudo apt-get -qq --no-install-recommends install aspell aspell-en
       - name: Check spelling in HTML files
         if: always() && steps.pyspelling.outcome == 'success'
-        # .spellcheck.yml: https://github.com/marketplace/actions/github-spellcheck-action#spellcheck-configuration-file
-        # .wordlist.txt
         run: pyspelling -vc .spellcheck.yml
       - name: Setup Go 1.15 for liche
         id: go
