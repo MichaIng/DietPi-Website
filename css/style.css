@@ -139,7 +139,7 @@ p {
 .circle-border {
 	display:inline-block;
 	border-radius:500px;
-	border:3px solid #fff;
+	border:3px solid #ffffff;
 }
 .triangle {
 	fill:#181A1C;
@@ -199,30 +199,6 @@ p {
 	background-color:#181A1C;
 	color:#ffffff;
 }
-/* .button-ps,
-.button-ps:visited {
-	border:none;
-	background-color:#181A1C;
-	color:#C5FF00;
-}
-.button-ps:hover,
-.button-ps:focus,
-.button-ps:active {
-	background-color:#C5FF00;
-	color:#181A1C;
-}
-.button-sp,
-.button-sp:visited {
-	border:none;
-	background-color:#C5FF00;
-	color:#181A1C;
-}
-.button-sp:hover,
-.button-sp:focus,
-.button-sp:active {
-	background-color:#181A1C;
-	color:#C5FF00;
-} */
 /*
 2.3 Thumbnails
 **********************************************************************/
@@ -240,7 +216,8 @@ p {
 }
 .thumbnail img {
 	display:block;
-	max-width:100%;
+	width:100%;
+	aspect-ratio:1.6;
 }
 .thumbnail h3,
 .thumbnail p {
@@ -264,7 +241,7 @@ p {
 	top:-100px;
 	margin-left:-18px;
 	font-size:40px;
-	color:white;
+	color:#ffffff;
 }
 .thumbnail:hover .more {
 	top:45%;
@@ -554,7 +531,7 @@ p {
 }
 .project-info .fa {
 	font-size:180%;
-	color:white;
+	color:#ffffff;
 }
 /*
 3.3 Testimonials
@@ -584,16 +561,6 @@ p {
 	margin-top:10px;
 	padding-left:10px;
 }
-/* .whopic small {
-	display:block;
-	font-size:12px;
-}
-.whopic img {
-	margin-top:10px;
-	width:50px;
-	height:50px;
-	float:left;
-} */
 .testimonial-text {
 	display:block;
 	font-size:22px;
