@@ -217,7 +217,7 @@ p {
 .thumbnail img {
 	display:block;
 	width:100%;
-	aspect-ratio:1.6;
+	aspect-ratio:8/5;
 }
 .thumbnail h3,
 .thumbnail p {
