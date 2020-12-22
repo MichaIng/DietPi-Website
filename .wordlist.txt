@@ -194,7 +194,7 @@ microSD
 Minecraft
 MineOS
 MiniDLNA
-Minio
+MinIO
 MIPI
 MkDocs
 NAS
@@ -377,7 +377,6 @@ webpage
 webui
 Whiptail
 Widevine
-Wifi
 wifi
 WireGuard
 WiringPi
