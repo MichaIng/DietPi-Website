@@ -7,27 +7,32 @@ jobs:
       - name: Deploy DietPi-Website locally
         id: deploy
         run: bash -c "$(curl -sSfL https://raw.githubusercontent.com/MichaIng/DietPi-Website${GITHUB_REF#refs/heads}/deploy.bash)" bash .
-      - name: Setup Python 3.9 for html5validator and PySpelling
+      - name: Setup Java 15 for Nu Html Checker
+        uses: actions/setup-java@v1
+        with:
+          java-version: 15
+          java-package: jre
+      - name: Download Nu Html Checker
+        run: |
+          curl -sSfL "$(curl -sSfL https://api.github.com/repos/validator/validator/releases/latest | mawk -F\" '/\"browser_download_url.*vnu\.jar.*\.zip\"/{print $4}')" -o download.zip
+          unzip -jo download.zip dist/vnu.jar
+      - name: Run Nu Html Checker to check HTML, CSS and SVG files
+        run: find . -type f \( -name '*.html' -o -name '*.css' -o -name '*.svg' \) -exec java -jar vnu.jar --verbose --also-check-css --also-check-svg --filterpattern '.*“(text-decoration-skip-ink|color-adjust|overflow-anchor|break-word|aspect-ratio|html)”.*' {} +
+      - name: Setup Python 3.9 for PySpelling
         id: python
+        if: always() && steps.deploy.outcome == 'success'
         uses: actions/setup-python@v2
         with:
           python-version: 3.9
-      - name: Install html5validator
-        id: html5validator
-        run: |
-          pip3 install -U pip setuptools wheel
-          pip3 install -U https://github.com/svenkreiss/html5validator/archive/master.tar.gz
-      - name: Check HTML, CSS and SVG syntax
-        if: always() && steps.html5validator.outcome == 'success'
-        run: html5validator --also-check-css --also-check-svg --show-warnings --ignore text-decoration-skip-ink color-adjust overflow-anchor break-word aspect-ratio
       - name: Install PySpelling
         id: pyspelling
         if: always() && steps.python.outcome == 'success'
         run: |
+          pip3 install -U pip setuptools wheel
           pip3 install -U pyspelling
           sudo apt-get -q update
-          sudo apt-get -qq --no-install-recommends install aspell aspell-en
-      - name: Check spelling in HTML files
+          sudo apt-get -qq --no-install-recommends install aspell-en
+      - name: Run PySpelling to check HTML files
         if: always() && steps.pyspelling.outcome == 'success'
         run: pyspelling -vc .spellcheck.yml
       - name: Setup Go 1.15 for liche
@@ -36,7 +41,7 @@ jobs:
         uses: actions/setup-go@v2
         with:
           go-version: 1.15
-      - name: Apply workaround for local links
+      - name: Turn local links into canonical URLs
         id: workaround
         if: always() && steps.go.outcome == 'success'
         run: find -type f -name '*.html' -exec sed -Ei 's@href=(["'\'']?)/?(phpbb|docs|downloads|survey)@href=\1https://dietpi.com/\2@g' {} +
@@ -44,6 +49,6 @@ jobs:
         id: liche
         if: always() && steps.workaround.outcome == 'success'
         run: GO111MODULE=on go get -u github.com/raviqqe/liche
-      - name: Check links in HTML and Markdown files
+      - name: Run liche to check HTML and Markdown files
         if: always() && steps.liche.outcome == 'success'
         run: liche -x 'https://twitter.com' -d . -r .
