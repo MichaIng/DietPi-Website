@@ -206,6 +206,7 @@ p {
 	margin-left:-5px;
 }
 .thumbnail {
+	display:block;
 	overflow:hidden;
 	position:relative;
 	padding:4px;
@@ -249,14 +250,12 @@ p {
 	transition:all 0.3s ease-out;
 }
 .thumbnail .mask {
-	opacity:0.85;
-	filter:alpha(opacity=85);
-	top:100%;
-	left:0;
 	width:100%;
 	height:100%;
 	background-color:#181A1C;
+	opacity:0.85;
 	position:absolute;
+	top:100%;
 	transition:all 0.2s ease-out;
 }
 .thumbnail:hover .mask {
