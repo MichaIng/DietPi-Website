@@ -106,8 +106,10 @@ then
 	if [[ -d $TARGET_DIR ]]
 	then
 		G_EXEC cp -R . "$TARGET_DIR/"
+		G_EXEC cd /tmp
+		G_EXEC rm -R DietPi-Website-$BRANCH
 	else
-		G_EXEC cd ..
+		G_EXEC cd /tmp
 		G_EXEC mv DietPi-Website-$BRANCH "$TARGET_DIR"
 	fi
 fi
