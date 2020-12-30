@@ -467,8 +467,8 @@ p {
 **********************************************************************/
 .service {
 	margin-top:20px;
+	padding-top:10px;
 }
-.service,
 .service h3 {
 	padding-top:10px;
 }
@@ -515,6 +515,7 @@ p {
 	margin-top:10px;
 	text-align:center;
 	color:#ffffff;
+	cursor:pointer;
 }
 .project-info {
 	font-weight:100;
