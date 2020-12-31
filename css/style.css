@@ -23,20 +23,21 @@ body {
 	font-size:17px;
 	line-height:20px;
 }
+h1 {
+	font-weight:400;
+	margin:10px 10px 20px;
+}
+p {
+	padding:10px;
+	font-weight:300;
+	color:#ffffff;
+}
 a {
 	color:#181A1C;
 }
 a:hover {
 	color:#C5FF00;
 	text-decoration:none;
-}
-h1 {
-	margin:10px;
-}
-p {
-	padding:10px;
-	font-weight:100;
-	color:#ffffff;
 }
 .navbar {
 	background-color:#181A1C;
@@ -151,7 +152,7 @@ p {
 **********************************************************************/
 .zoom-in {
 	transform:scale(1, 1);
-	transition:all 0.25s;
+	transition:transform 0.25s;
 }
 .zoom-in:hover {
 	transform:scale(1.1, 1.1);
@@ -265,7 +266,6 @@ p {
 3. Sections
 ***************************************************************************/
 .section {
-	overflow-x:hidden;
 	padding-bottom:50px;
 }
 .section .triangle {
@@ -274,16 +274,8 @@ p {
 .section .title {
 	text-align:center;
 	padding:10px;
+	border-bottom:1px solid #ffffff;
 	margin-bottom:30px;
-}
-.section .title h1 {
-	font-weight:normal;
-	margin-bottom:20px;
-	padding:0;
-}
-.section .title > p {
-	color:#ffffff;
-	font-weight:lighter;
 }
 .primary-section {
 	background-color:#181A1C;
@@ -291,22 +283,15 @@ p {
 .primary-section .triangle {
 	fill:#C5FF00;
 }
-.primary-section .title {
-	border-bottom:1px solid #ffffff;
-}
-.primary-section,
 .primary-section .title p,
 .primary-section h3 {
 	color:#C5FF00;
-}
-.primary-section h1 {
-	color:#ffffff;
 }
 .secondary-section {
 	background-color:#C5FF00;
 }
 .secondary-section .title {
-	border-bottom:1px solid #181A1C;
+	border-bottom-color:#181A1C;
 }
 .secondary-section h1,
 .secondary-section .title p {
@@ -354,8 +339,6 @@ p {
 	font-size:22px;
 	width:50%;
 	white-space:nowrap;
-	z-index:10;
-	font-weight:400;
 }
 .da-slide-current h4 {
 	left:10%;
@@ -464,21 +447,18 @@ p {
 /*
 3.1 Services
 **********************************************************************/
-.service {
-	margin-top:20px;
-	padding-top:10px;
-}
-.service h3 {
-	padding-top:10px;
-}
-.service p {
-	padding:0 10px;
-}
 .service img,
 .service svg {
+	margin-top:30px;
 	width:131px;
 	height:131px;
 	background-color:#ffffff;
+}
+.service h3 {
+	margin-top:10px;
+}
+.service p {
+	padding:0 10px;
 }
 /*
 3.2 Portfolio
@@ -535,38 +515,30 @@ p {
 /*
 3.3 Testimonials
 **********************************************************************/
-.testimonial {
-	margin-bottom:30px;
-}
 .testimonial p {
 	color:#181A1C;
 	background-color:#C5FF00;
 	padding:15px;
 	margin:0;
 }
-.testimonial .arrow,
-.testimonial-text .arrow {
-	margin-left:10px;
-	width:0;
-	border-top:10px solid #C5FF00;
-	border-left:20px outset transparent;
-	border-right:20px outset transparent;
+.testimonial-text {
+	text-align:center;
+	margin:30px auto 0;
+	width:70%;
+	font-size:22px;
+	line-height:1.3em;
 }
 .whopic {
 	display:inline-block;
+	margin-left:10px;
+	color:#C5FF00;
 }
-.whopic strong {
-	float:left;
-	margin-top:10px;
-	padding-left:10px;
-}
-.testimonial-text {
-	display:block;
-	font-size:22px;
-	text-align:center;
-	margin:0 auto;
-	width:70%;
-	line-height:1.3em;
+.whopic > .arrow {
+	width:0;
+	border-top:10px solid;
+	border-left:20px outset transparent;
+	border-right:20px outset transparent;
+	margin-bottom:10px;
 }
 /*
 3.4 Footer
