@@ -484,6 +484,10 @@ a:hover {
 .project-description p {
 	padding-left:20px;
 }
+.project-description a {
+	color:#C5FF00;
+	padding:5px;
+}
 .project-title {
 	border-bottom:1px solid #C5FF00;
 }
