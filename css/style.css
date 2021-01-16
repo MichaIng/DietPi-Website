@@ -500,7 +500,7 @@ a:hover {
 .project-info div {
 	margin-bottom: 5px;
 }
-.project-info > div > a > span {
+.project-info > div span {
 	display: inline-block;
 	width: 150px;
 	color: #c5ff00;
