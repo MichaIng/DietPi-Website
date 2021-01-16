@@ -55,4 +55,4 @@ jobs:
       run: GO111MODULE=on go get -u github.com/raviqqe/liche
     - name: Run liche to check HTML and Markdown files
       if: always() && steps.liche.outcome == 'success'
-      run: liche liche -c 64 -x 'https://twitter.com' -d . -r .
+      run: liche -c 64 -x 'https://twitter.com' -d . -r .
