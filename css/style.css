@@ -62,13 +62,18 @@ a:hover {
 	filter: brightness(2);
 }
 .navbar > .container-xl > .navbar-toggler {
+	display: flex;
+	width: 40px;
 	height: 40px;
-	padding-left: 10.25px;
-	padding-right: 10.25px;
+	padding: 10.25px;
 	color: #181a1c;
 	background-color: #c5ff00;
 	border-color: #181a1c;
-	transition: color 0.5s, background-color 0.5s, border-color 0.5s;
+	stroke: #181a1c;
+	stroke-width: 2;
+	stroke-linecap: round;
+	fill: none;
+	transition: color 0.5s, background-color 0.5s, border-color 0.5s, stroke 0.5s;
 }
 .navbar > .container-xl > .navbar-toggler:hover,
 .navbar > .container-xl > .navbar-toggler:focus,
@@ -76,6 +81,7 @@ a:hover {
 	color: #c5ff00;
 	background-color: #181a1c;
 	border-color: #c5ff00;
+	stroke: #c5ff00;
 }
 .navbar > .container-xl > .navbar-collapse {
 	align-items: stretch;
@@ -576,19 +582,23 @@ a:hover {
 	fill: #ffffff;
 }
 a.scrollup {
-	width: 40px;
-	height: 40px;
-	text-align: center;
-	font-size: 20px;
-	line-height: 35px;
 	position: fixed;
 	bottom: 15px;
 	right: 15px;
+	display: flex;
+	width: 40px;
+	height: 40px;
+	padding: 10.25px;
+	font-size: 20px;
 	color: #181a1c;
 	background-color: #c5ff00;
 	border: 1px solid #181a1c;
-	border-radius: 5px;
-	transition: color 0.5s, background-color 0.5s, border-color 0.5s;
+	border-radius: 4px;
+	stroke: #181a1c;
+	stroke-width: 2;
+	stroke-linecap: round;
+	fill: none;
+	transition: color 0.5s, background-color 0.5s, border-color 0.5s, stroke 0.5s;
 }
 a.scrollup:hover,
 a.scrollup:focus,
@@ -596,4 +606,5 @@ a.scrollup:active {
 	color: #c5ff00;
 	background-color: #181a1c;
 	border-color: #c5ff00;
+	stroke: #c5ff00;
 }
