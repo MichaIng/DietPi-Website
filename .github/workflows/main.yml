@@ -45,13 +45,9 @@ jobs:
       uses: actions/setup-go@v2
       with:
         go-version: '1.15'
-    - name: Turn local links into canonical URLs
-      id: workaround
-      if: always() && steps.go.outcome == 'success'
-      run: find -type f -name '*.html' -exec sed -Ei 's@href=(["'\'']?)/?(phpbb|docs|downloads|survey)@href=\1https://dietpi.com/\2@g' {} +
     - name: Install liche
       id: liche
-      if: always() && steps.workaround.outcome == 'success'
+      if: always() && steps.go.outcome == 'success'
       run: GO111MODULE=on go get -u github.com/raviqqe/liche
     - name: Run liche to check HTML and Markdown files
       if: always() && steps.liche.outcome == 'success'
