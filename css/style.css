@@ -243,16 +243,17 @@ a:hover {
 }
 .thumbnail .more {
 	position: absolute;
+	top: -40px;
 	z-index: 4;
-	top: -100px;
-	margin-left: -18px;
-	font-size: 40px;
-	color: #ffffff;
+	width: 40px;
+	height: 40px;
+	margin-left: -20px;
+	margin-top: -45px;
+	content: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'><path fill='none' stroke='white' stroke-width='2' stroke-linecap='round' d='M5 1v8M1 5h8'/></svg>")
 }
 .thumbnail:hover .more {
-	top: 45%;
-	margin-top: -40px;
-	transition: all 0.3s ease-out;
+	top: 50%;
+	transition: top 0.3s ease-out;
 }
 .thumbnail .mask {
 	width: 100%;
@@ -261,7 +262,7 @@ a:hover {
 	opacity: 0.85;
 	position: absolute;
 	top: 100%;
-	transition: all 0.2s ease-out;
+	transition: top 0.2s ease-out;
 }
 .thumbnail:hover .mask {
 	top: 0;
@@ -476,19 +477,17 @@ a:hover {
 }
 .project-title h3 {
 	float: left;
-	width: 80%;
 	line-height: 30px;
 	margin-top: 10px;
 	margin-left: 20px;
 	color: #c5ff00;
 }
 .project-title .close {
-	width: 40px;
-	height: 40px;
-	margin-top: 10px;
-	text-align: center;
-	color: #ffffff;
+	width: 50px;
+	height: 50px;
+	padding: 10px;
 	cursor: pointer;
+	content: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 5 5'><path fill='none' stroke='white' stroke-width='1' stroke-linecap='round' d='M1 1l3 3M1 4l3-3'/></svg>")
 }
 .project-description {
 	font-size: 14px;
