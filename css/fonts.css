@@ -1,8 +1,8 @@
 /* https://github.com/neverpanic/google-font-download */
 @font-face {
-	font-family:'Roboto';
-	font-style:normal;
-	font-weight:400;
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
 	src:
 		local('Roboto'),
 		local('Roboto-Regular'),
@@ -12,9 +12,9 @@
 		url('../fonts/Roboto_400.woff') format('woff');
 }
 @font-face {
-	font-family:'Roboto';
-	font-style:normal;
-	font-weight:300;
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 300;
 	src:
 		local('Roboto Light'),
 		local('Roboto-Light'),
@@ -24,9 +24,9 @@
 		url('../fonts/Roboto_300.woff') format('woff');
 }
 @font-face {
-	font-family:'Roboto';
-	font-style:normal;
-	font-weight:700;
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 700;
 	src:
 		local('Roboto Bold'),
 		local('Roboto-Bold'),
@@ -36,33 +36,28 @@
 		url('../fonts/Roboto_700.woff') format('woff');
 }
 /*!
- * Font Awesome Free 5.14.0 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 @font-face {
-	font-family:'Font Awesome 5 Free';
-	font-style:normal;
-	font-weight:900;
-	font-display:block;
-	src:url('../fonts/fa-solid-900.woff2') format('woff2'),
-	    url('../fonts/fa-solid-900.woff') format('woff');
+	font-family: 'Font Awesome 5 Free';
+	font-style: normal;
+	font-weight: 900;
+	font-display: block;
+	src:
+		url('../fonts/fa-solid-900.woff2') format('woff2'),
+		url('../fonts/fa-solid-900.woff') format('woff');
 }
 .fa {
-	font-family:'Font Awesome 5 Free';
-	font-style:normal;
-	font-weight:900;
-	font-variant:normal;
-	display:inline-block;
-	line-height:1;
-	-moz-osx-font-smoothing:grayscale;
-	-webkit-font-smoothing:antialiased;
-	text-rendering:auto;
+	font-family: 'Font Awesome 5 Free';
+	font-style: normal;
+	font-weight: 900;
+	font-variant: normal;
+	display: inline-block;
+	line-height: 1;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: auto;
 }
-.fa-download:before { content:'\f019'; }
-.fa-book:before { content:'\f02d'; }
-.fa-info:before { content:'\f129'; }
-.fa-external-link-alt:before { content:'\f35d'; }
-.fa-plus:before { content:'\f067'; }
-.fa-times:before { content:'\f00d'; }
-.fa-chevron-up:before { content:'\f077'; }
-.fa-bars:before { content:'\f0c9'; }
+.fa-chevron-up:before { content: '\f077'; }
+.fa-bars:before { content: '\f0c9'; }
