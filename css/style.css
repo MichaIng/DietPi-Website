@@ -63,7 +63,6 @@ a:hover {
 	filter: brightness(2);
 }
 .navbar > .container-xl > .navbar-toggler {
-	display: flex;
 	width: 40px;
 	height: 40px;
 	padding: 10.25px;
@@ -75,6 +74,11 @@ a:hover {
 	stroke-linecap: round;
 	fill: none;
 	transition: color 0.5s, background-color 0.5s, border-color 0.5s, stroke 0.5s;
+}
+@media (max-width: 991px) {
+	.navbar > .container-xl > .navbar-toggler {
+		display: flex;
+	}
 }
 .navbar > .container-xl > .navbar-toggler:hover,
 .navbar > .container-xl > .navbar-toggler:focus,
