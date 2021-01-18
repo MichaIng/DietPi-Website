@@ -18,19 +18,17 @@
 1. General
 **********************************************************************/
 body {
-	font-family: 'Roboto', sans-serif;
+	font-family: Arial, sans-serif;
 	color: #ffffff;
 	background-color: #181a1c;
 	font-size: 17px;
 	line-height: 20px;
 }
 h1 {
-	font-weight: 400;
 	margin: 10px 10px 20px;
 }
 p {
 	padding: 10px;
-	font-weight: 300;
 	color: #ffffff;
 }
 a {
@@ -105,7 +103,7 @@ a:hover {
 	text-transform: uppercase;
 	font-size: 15px;
 	margin: 4.5px 0;
-	padding: 10px 15px;
+	padding: 10px 14px;
 	border: 1px solid #181a1c;
 	border-radius: 5px;
 	transition: border-color 1s;
@@ -284,7 +282,6 @@ a:hover {
 .fa-external-link-alt {
 	content: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='white' d='M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z'/></svg>")
 }
-
 /*
 3. Sections
 ***************************************************************************/
@@ -517,7 +514,6 @@ a:hover {
 	color: #c5ff00;
 }
 .project-info {
-	font-weight: 300;
 	padding: 10px 20px;
 }
 .project-info div {
@@ -529,8 +525,6 @@ a:hover {
 	color: #c5ff00;
 }
 .project-info > div > a > .fa {
-	font-size: 180%;
-	color: #ffffff;
 	width: 25px;
 	height: 25px;
 	vertical-align: text-bottom;
