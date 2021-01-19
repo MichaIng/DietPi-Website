@@ -457,7 +457,6 @@ a:hover {
 /*
 3.1 Features
 **********************************************************************/
-.service img,
 .service svg {
 	display: inline-block;
 	margin-top: 30px;
@@ -469,7 +468,6 @@ a:hover {
 	border-radius: 50%;
 	transition: transform 0.25s;
 }
-.service img:hover,
 .service svg:hover {
 	transform: scale(1.1, 1.1);
 	border-color: #c5ff00;
