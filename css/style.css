@@ -39,10 +39,14 @@ a:hover {
 	text-decoration-line: none;
 }
 .navbar {
-	background-color: #181a1c;
-	min-height: 60px;
-	padding: 4.5px 15px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
 	z-index: 2001;
+	min-height: 60px;
+	background-color: #181a1c;
+	padding: 4.5px 15px;
 }
 .navbar > .container-xl {
 	padding: 0;
@@ -142,11 +146,6 @@ a:hover {
 	color: #181a1c;
 	padding: 20px;
 }
-.circle-border {
-	display: inline-block;
-	border-radius: 50%;
-	border: 3px solid #ffffff;
-}
 .triangle {
 	fill: #181a1c;
 	width: 100%;
@@ -155,13 +154,6 @@ a:hover {
 /*
 2.1 Animations
 **********************************************************************/
-.zoom-in {
-	transform: scale(1, 1);
-	transition: transform 0.25s;
-}
-.zoom-in:hover {
-	transform: scale(1.1, 1.1);
-}
 .animated {
 	animation-fill-mode: both;
 	animation-duration: 1s;
@@ -317,10 +309,10 @@ a:hover {
 }
 /* Slider: https://github.com/Le-Stagiaire/jquery.cslider */
 .da-slider {
-	min-width: unset;
+	margin: 60px 0 0;
 	height: 45vw;
 	max-height: 450px;
-	margin: 0;
+	min-width: unset;
 	border: 0;
 	box-shadow: none;
 	background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 15'><path fill='%23edf3f7' d='M0 0h8v5H0zm48 0h8v5h-8zM8 10h8v5H8zm24 0h8v5h-8z'/><path fill='%23747c89' d='M8 0h8v5H8zm32 0h8v5h-8zM0 5h8v5H0zm16 5h8v5h-8z'/><path fill='%238b95a5' d='M16 0h8v5h-8zm8 5h8v5h-8zm24 0h8v5h-8zM0 10h8v5H0z'/><path fill='white' d='M24 0h8v5h-8zm8 5h8v5h-8zm-8 5h8v5h-8zm24 0h8v5h-8z'/><path fill='%23d1d7db' d='M32 0h8v5h-8zM8 5h8v5H8zm32 0h8v5h-8z'/><path fill='%234e555e' d='M16 5h8v5h-8zm24 5h8v5h-8z'/></svg>");
@@ -467,10 +459,18 @@ a:hover {
 **********************************************************************/
 .service img,
 .service svg {
+	display: inline-block;
 	margin-top: 30px;
 	width: 131px;
 	height: 131px;
 	background-color: #ffffff;
+	border: 3px solid #ffffff;
+	border-radius: 50%;
+	transition: transform 0.25s;
+}
+.service img:hover,
+.service svg:hover {
+	transform: scale(1.1, 1.1);
 }
 .service h3 {
 	margin-top: 10px;
