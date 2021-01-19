@@ -55,24 +55,6 @@ G_EXEC curl -sSfL https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap
 G_EXEC sed -i '\|^//# sourceMappingURL=bootstrap.min.js.map$|d' js/bootstrap.min.js # Suppress browser console warning about missing map file
 G_EXEC curl -sSfL https://raw.githubusercontent.com/patrickkunka/mixitup/61dac0554ab2b69fca3c927a173b0a000e4f6896/dist/mixitup.min.js -o js/mixitup.min.js
 
-# Fonts
-# - Font Awesome
-version='5.15.1'
-G_EXEC curl -sSfLO https://use.fontawesome.com/releases/v$version/fontawesome-free-$version-web.zip
-G_EXEC unzip fontawesome-free-$version-web.zip
-G_EXEC rm fontawesome-free-$version-web.zip
-G_EXEC mkdir -p fonts
-G_EXEC mv fontawesome-free-$version-web/webfonts/fa-solid-900.woff{,2} fonts/
-G_EXEC_NOHALT=1 G_EXEC rm -R fontawesome-free-$version-web
-unset -v version
-# - Roboto
-G_EXEC cd fonts
-G_EXEC curl -sSfLO https://raw.githubusercontent.com/neverpanic/google-font-download/master/google-font-download
-G_EXEC chmod +x google-font-download
-G_EXEC_OUTPUT=1 G_EXEC ./google-font-download -l 'latin,latin-ext' -o roboto.css 'Roboto:'{300,400,700} -f woff2,woff
-G_EXEC_NOHALT=1 G_EXEC rm google-font-download roboto.css
-G_EXEC cd ..
-
 # Minify
 # - Download
 G_EXEC curl -sSfL "$(curl -sSfL https://api.github.com/repos/tdewolff/minify/releases/latest | mawk -F\" '/\"browser_download_url\".*linux_amd64\.tar\.gz\"$/{print $4}')" -o minify.tar.gz
