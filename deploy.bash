@@ -49,9 +49,9 @@ G_EXEC cd DietPi-Website-$BRANCH
 
 # 3rd party
 G_EXEC curl -sSfL https://raw.githubusercontent.com/jquery/codeorigin.jquery.com/master/cdn/jquery-3.5.1.min.js -o js/jquery.min.js
-G_EXEC curl -sSfL https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css -o css/bootstrap.min.css
+G_EXEC curl -sSfL https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css -o css/bootstrap.min.css
 G_EXEC sed -i '\|^/\*# sourceMappingURL=bootstrap.min.css.map \*/$|d' css/bootstrap.min.css # Suppress browser console warning about missing map file
-G_EXEC curl -sSfL https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js -o js/bootstrap.min.js
+G_EXEC curl -sSfL https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js -o js/bootstrap.min.js
 G_EXEC sed -i '\|^//# sourceMappingURL=bootstrap.min.js.map$|d' js/bootstrap.min.js # Suppress browser console warning about missing map file
 G_EXEC curl -sSfL https://raw.githubusercontent.com/patrickkunka/mixitup/61dac0554ab2b69fca3c927a173b0a000e4f6896/dist/mixitup.min.js -o js/mixitup.min.js
 
