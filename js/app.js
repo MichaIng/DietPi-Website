@@ -73,17 +73,10 @@ $(function () {
 			menuItems.filter('[href="#' + id + '"]').addClass('active');
 		}
 
-		// Animate triangles, thumbnails and testimonials whenever they come in view
-		$('.thumbnail, .triangle, .testimonial').each(function () {
-			// Element has been animated
-			if ($(this).hasClass('animated')) {
-				// Element is out of view
-				if (($(window).scrollTop() + $(window).innerHeight() < $(this).offset().top) || ($(window).scrollTop() > $(this).offset().top + $(this).outerHeight())) {
-					// Remove animate classes
-					$(this).removeClass('animated fadeInDown');
-				}
-			// Element has not been animated or out of view
-			} else {
+		// Animate triangles once, when they come in view
+		$('.triangle').each(function () {
+			// Element has not been animated yet
+			if (!$(this).hasClass('animated')) {
 				// Element is in view
 				if (($(window).scrollTop() + $(window).innerHeight() > $(this).offset().top) && ($(window).scrollTop() < $(this).offset().top + $(this).outerHeight())) {
 					// Add animate classes
