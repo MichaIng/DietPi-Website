@@ -17,8 +17,6 @@ This is the official repository for hosting collaborative development of the off
 - [Mixitup](https://github.com/patrickkunka/mixitup) v3.3.1
 - [jquery.cslider](https://github.com/Le-Stagiaire/jquery.cslider) with a slight modification to allow wrapping slides into a container element
 - [Font Awesome Free](https://fontawesome.com/) v5.15.1
-- [Roboto](https://fonts.google.com/specimen/Roboto)
-- [google-font-download](https://github.com/neverpanic/google-font-download) for Roboto download
 - [minify](https://github.com/tdewolff/minify) to minify HTML and CSS files
 - [JavaScript Minifier](https://javascript-minifier.com/api) to minify JavaScript files
 
