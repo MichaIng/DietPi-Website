@@ -544,6 +544,9 @@ a:hover {
 /*
 3.3 Testimonials
 **********************************************************************/
+div.testimonial {
+	margin-bottom: 30px;
+}
 .testimonial p {
 	color: #181a1c;
 	background-color: #c5ff00;
@@ -551,11 +554,12 @@ a:hover {
 	margin: 0;
 }
 .testimonial-text {
-	text-align: center;
-	margin: 30px auto 0;
-	width: 70%;
 	font-size: 22px;
 	line-height: 1.3em;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
 }
 .whopic {
 	display: inline-block;
