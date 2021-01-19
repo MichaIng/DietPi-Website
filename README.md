@@ -13,7 +13,7 @@ This is the official repository for hosting collaborative development of the off
 
 ## 3rd party resources
 - [jQuery](https://github.com/jquery/jquery) v3.5.1
-- [Bootstrap](https://github.com/twbs/bootstrap) v4.5.3
+- [Bootstrap](https://github.com/twbs/bootstrap) v4.6.0
 - [Mixitup](https://github.com/patrickkunka/mixitup) v3.3.1
 - [jquery.cslider](https://github.com/Le-Stagiaire/jquery.cslider) with a slight modification to allow wrapping slides into a container element
 - [Font Awesome Free](https://fontawesome.com/) v5.15.1 individual glyphs: fa-download, fa-book and fa-external-link-alt
