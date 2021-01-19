@@ -16,7 +16,7 @@ This is the official repository for hosting collaborative development of the off
 - [Bootstrap](https://github.com/twbs/bootstrap) v4.5.3
 - [Mixitup](https://github.com/patrickkunka/mixitup) v3.3.1
 - [jquery.cslider](https://github.com/Le-Stagiaire/jquery.cslider) with a slight modification to allow wrapping slides into a container element
-- [Font Awesome Free](https://fontawesome.com/) v5.15.1
+- [Font Awesome Free](https://fontawesome.com/) v5.15.1 individual glyphs: fa-download, fa-book and fa-external-link-alt
 - [minify](https://github.com/tdewolff/minify) to minify HTML and CSS files
 - [JavaScript Minifier](https://javascript-minifier.com/api) to minify JavaScript files
 
