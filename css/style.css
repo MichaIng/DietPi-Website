@@ -566,8 +566,8 @@ div.testimonial {
 	color: #c5ff00;
 	padding: 5px;
 }
-.footer a:hover,
-.footer a:focus {
+.footer p > a:hover,
+.footer p > a:focus {
 	text-decoration-line: underline;
 }
 .social a > svg {
