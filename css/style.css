@@ -152,32 +152,14 @@ a:hover {
 	height: 30px;
 }
 /*
-2.1 Animations
+2.1 Animations: Class is applied via app.js
 **********************************************************************/
-.animated {
-	animation-fill-mode: both;
-	animation-duration: 1s;
-}
-@keyframes fadeIn {
-	0% { opacity: 0; }
-	100% { opacity: 1; }
-}
-.fadeIn {
-	animation-name: fadeIn;
-}
 @keyframes fadeInDown {
-	0% { opacity:0; transform:translateY(-20px); }
-	100% { opacity:1; transform:translateY(0); }
+	0% { opacity: 0; transform: translateY(-20px); }
+	100% { opacity: 1; transform: translateY(0); }
 }
 .fadeInDown {
-	animation-name: fadeInDown;
-}
-@keyframes fadeOut {
-	0% { opacity:1; }
-	100% { opacity:0; }
-}
-.fadeOut {
-	animation-name: fadeOut;
+	animation: fadeInDown 1s forwards;
 }
 /*
 2.2 Buttons: For green background
@@ -457,7 +439,6 @@ a:hover {
 /*
 3.1 Features
 **********************************************************************/
-.service img,
 .service svg {
 	display: inline-block;
 	margin-top: 30px;
@@ -469,7 +450,6 @@ a:hover {
 	border-radius: 50%;
 	transition: transform 0.25s;
 }
-.service img:hover,
 .service svg:hover {
 	transform: scale(1.1, 1.1);
 	border-color: #c5ff00;
@@ -586,8 +566,8 @@ div.testimonial {
 	color: #c5ff00;
 	padding: 5px;
 }
-.footer a:hover,
-.footer a:focus {
+.footer p > a:hover,
+.footer p > a:focus {
 	text-decoration-line: underline;
 }
 .social a > svg {
