@@ -3,12 +3,12 @@
 $(function () {
 	// Map navigation bar scroll locations
 	var lastId,
-	topMenu = $('.navbar-collapse'),
-	topMenuHeight = 60, //topMenu.outerHeight(),
-	// All list items
-	menuItems = topMenu.find('a'),
-	// Anchors corresponding to menu items
-	scrollItems = menuItems.map(function () {
+	    topMenu = $('.navbar-collapse'),
+	    topMenuHeight = 60, //topMenu.outerHeight(),
+	    // All list items
+	    menuItems = topMenu.find('a'),
+	    // Anchors corresponding to menu items
+	    scrollItems = menuItems.map(function () {
 		var href = $(this).attr('href');
 		if (href.indexOf('#') === 0) {
 			var item = $(href);
@@ -46,13 +46,11 @@ $(function () {
 	// Bind to scroll
 	$(window).on('scroll', function () {
 
-		// Display or hide scroll to top button and toggle navbar type
+		// Display or hide scroll to top button
 		if ($(this).scrollTop() > 80) {
 			$('a.scrollup').fadeIn();
-			$('.navbar').addClass('fixed-top animated fadeInDown');
 		} else {
 			$('a.scrollup').fadeOut();
-			$('.navbar.fixed-top').removeClass('fixed-top animated fadeInDown');
 		}
 
 		// Mark navbar link, related to scroll item, as active
@@ -75,13 +73,10 @@ $(function () {
 
 		// Animate triangles once, when they come in view
 		$('.triangle').each(function () {
-			// Element has not been animated yet
-			if (!$(this).hasClass('animated')) {
-				// Element is in view
-				if (($(window).scrollTop() + $(window).innerHeight() > $(this).offset().top) && ($(window).scrollTop() < $(this).offset().top + $(this).outerHeight())) {
-					// Add animate classes
-					$(this).addClass('animated fadeInDown');
-				}
+			// Element has not been animated yet and is in view
+			if (!$(this).hasClass('animated') && ($(window).scrollTop() + $(window).innerHeight() > $(this).offset().top) && ($(window).scrollTop() < $(this).offset().top + $(this).outerHeight())) {
+				// Add animate classes
+				$(this).addClass('animated fadeInDown');
 			}
 		});
 	});
@@ -98,32 +93,18 @@ $(function () {
 	});
 
 	// Function for scrolling to sections
-	// EDIT: Do not wrap into "load", since this can fire before "ready".
-	// $(window).on('load', function () {
-		function filterPath(string) {
-			return string.replace(/^\//, '').replace(/(index|default).[a-zA-Z]{3,4}$/, '').replace(/\/$/, '');
-		}
-		$('a[href*="#"]').each(function () {
-			if (filterPath(location.pathname) == filterPath(this.pathname) && location.hostname == this.hostname && this.hash.replace(/#/, '')) {
-				var $targetId = $(this.hash),
-				$targetAnchor = $('[name=' + this.hash.slice(1) + ']');
-				var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+	$('div.navbar-nav>a.nav-link[href^=#]').each(function () {
+		var targetOffset = $(this.hash).offset().top - topMenuHeight;
+		$(this).on('click', function () {
+ 			// Hack collapse top navigation after clicking
+			topMenu.removeClass('show');
 
-				if ($target) {
-					$(this).on('click', function () {
- 						// Hack collapse top navigation after clicking
-						topMenu.removeClass('show');
-
-						var targetOffset = $target.offset().top - topMenuHeight;
-						$('html, body').animate({
-							scrollTop: targetOffset
-						}, 800);
-						return false;
-					});
-				}
-			}
+			$('html, body').animate({
+				scrollTop: targetOffset
+			}, 800);
+			return false;
 		});
-	// });
+	});
 
 	// Initially hide portfolio description
 	$('div.toggleDiv').hide();
