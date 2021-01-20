@@ -93,12 +93,13 @@ $(function () {
 	});
 
 	// Function for scrolling to sections
-	$('div.navbar-nav>a.nav-link[href^=#]').each(function () {
-		var targetOffset = $(this.hash).offset().top - topMenuHeight;
+	$('div.navbar-nav>a.nav-link[href^="#"]').each(function () {
+		var $target = $(this.hash)
 		$(this).on('click', function () {
  			// Hack collapse top navigation after clicking
 			topMenu.removeClass('show');
 
+			var targetOffset = $target.offset().top - topMenuHeight;
 			$('html, body').animate({
 				scrollTop: targetOffset
 			}, 800);
