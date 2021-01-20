@@ -1,24 +1,10 @@
 'use strict';
 // https://github.com/MichaIng/DietPi-Website
 $(function () {
-	// Map navigation bar scroll locations
-	var lastId,
-	    topMenu = $('.navbar-collapse'),
-	    topMenuHeight = 60, //topMenu.outerHeight(),
-	    // All list items
-	    menuItems = topMenu.find('a'),
-	    // Anchors corresponding to menu items
-	    scrollItems = menuItems.map(function () {
-		var href = $(this).attr('href');
-		if (href.indexOf('#') === 0) {
-			var item = $(href);
-			if (item.length) {
-				return item;
-			}
-		}
-	});
+	// Hide triangles to match animation start
+	$('svg.triangle').css('opacity', '0');
 
-	// Initialize home slider: https://github.com/Le-Stagiaire/jquery.cslider
+	// Initialise home slider: https://github.com/Le-Stagiaire/jquery.cslider
 	// Check first if function exist to allow skipping it on dietpi-software site
 	if (typeof $.fn.cslider === 'function') {
 		$('#home').cslider({
@@ -28,11 +14,66 @@ $(function () {
 		});
 	}
 
-	// Show portfolio navigation, now that js is enabled
+	// Hide portfolio descriptions
+	$('div.toggleDiv').hide();
+
+	// Show portfolio filter buttons and tiles
 	document.getElementById('downloadinfo').removeAttribute('style');
 	document.getElementById('portfolio-grid').removeAttribute('style');
 
-	// Initial mixitup for animated portfolio filtering
+	// Map navigation bar scroll links and targets
+	var lastId,
+	    $navbar = $('div.navbar-collapse'),
+	    navbarHeight = 60, //$navbar.outerHeight() leads to wrong scroll offset when menu is expanded
+	    // Navigation bar links
+	    $navbarLinks = $navbar.find('a[href^="#"]'),
+	    // Navigation bar targets
+	    $navbarTargets = $navbarLinks.map(function () {
+		return $(this.hash);
+	    });
+
+	// Bind to scroll
+	$(window).on('scroll', function () {
+		// Get current scroll offset
+		var scrollTop = $(this).scrollTop();
+
+		// Mark navbar link, related to scroll position, as active
+		// - Get targets until current scroll position
+		var cur = $navbarTargets.map(function () {
+			if ($(this).offset().top < scrollTop + navbarHeight + 50)
+				return this;
+		});
+		// - Get id of the current target
+		cur = cur[cur.length - 1];
+		var id = cur && cur.length ? cur[0].id : '';
+		// - If id changed, change links active class accordingly
+		if (lastId !== id) {
+			lastId = id;
+			$navbarLinks.removeClass('active');
+			$navbarLinks.filter('[href="#' + id + '"]').addClass('active');
+		}
+
+		// Animate triangles once, when they come in view
+		$('svg.triangle').each(function () {
+			// Element has not been animated yet and is in view
+			if (!$(this).hasClass('fadeInDown') && (scrollTop + $(window).innerHeight() > $(this).offset().top) && (scrollTop < $(this).offset().top + $(this).outerHeight())) {
+				// Add animate classes
+				$(this).addClass('animated fadeInDown');
+			}
+		});
+
+		// Display or hide scroll to top button
+		if (scrollTop > 80) {
+			$('a.scrollup').fadeIn();
+		} else {
+			$('a.scrollup').fadeOut();
+		}
+	});
+
+	// Trigger scroll event once to set initial element states
+	$(window).trigger('scroll');
+
+	// Initialise MixItUp for animated portfolio tile filtering
 	mixitup('#download', {
 		controls: { scope: 'local' },
 		callbacks: {
@@ -43,78 +84,34 @@ $(function () {
 		}
 	});
 
-	// Bind to scroll
-	$(window).on('scroll', function () {
+	// Show or hide portfolio description on click
+	$('.show_hide').on('click', function () {
+		$('div.toggleDiv').slideUp(500, '');
+		$($(this).attr('rel')).slideToggle(500, '');
+	});
 
-		// Display or hide scroll to top button
-		if ($(this).scrollTop() > 80) {
-			$('a.scrollup').fadeIn();
+	// Function for smooth scrolling links
+	$('a[href^="#"]').each(function () {
+		// Scroll to top offset
+		var targetOffset;
+		if (this.hash === '') {
+			targetOffset = 0;
+		// Scroll target
 		} else {
-			$('a.scrollup').fadeOut();
+			var $target = $(this.hash);
 		}
-
-		// Mark navbar link, related to scroll item, as active
-		// - Get container scroll position
-		var fromTop = $(this).scrollTop() + topMenuHeight + 50;
-		// - Get items until scroll position
-		var cur = scrollItems.map(function () {
-			if ($(this).offset().top < fromTop)
-				return this;
-		});
-		// - Get id of the current element
-		cur = cur[cur.length - 1];
-		var id = cur && cur.length ? cur[0].id : '';
-		// - If id changed, reset active class
-		if (lastId !== id) {
-			lastId = id;
-			menuItems.removeClass('active');
-			menuItems.filter('[href="#' + id + '"]').addClass('active');
-		}
-
-		// Animate triangles once, when they come in view
-		$('.triangle').each(function () {
-			// Element has not been animated yet and is in view
-			if (!$(this).hasClass('animated') && ($(window).scrollTop() + $(window).innerHeight() > $(this).offset().top) && ($(window).scrollTop() < $(this).offset().top + $(this).outerHeight())) {
-				// Add animate classes
-				$(this).addClass('animated fadeInDown');
-			}
-		});
-	});
-
-	// Trigger scroll event once to set initial element states
-	$(window).trigger('scroll');
-
-	// Function for scrolling to top
-	$('.scrollup').on('click', function () {
-		$('html, body').animate({
-			scrollTop: 0
-		}, 600);
-		return false;
-	});
-
-	// Function for scrolling to sections
-	$('div.navbar-nav>a.nav-link[href^="#"]').each(function () {
-		var $target = $(this.hash)
 		$(this).on('click', function () {
- 			// Hack collapse top navigation after clicking
-			topMenu.removeClass('show');
-
-			var targetOffset = $target.offset().top - topMenuHeight;
+ 			// Collapse navbar when scrolling
+			$navbar.removeClass('show');
+			// Get section offset
+			if (targetOffset !== 0)
+				targetOffset = $target.offset().top - navbarHeight;
+			// Scroll in 0.8 seconds
 			$('html, body').animate({
 				scrollTop: targetOffset
 			}, 800);
+			// Omit browser link processing
 			return false;
 		});
-	});
-
-	// Initially hide portfolio description
-	$('div.toggleDiv').hide();
-
-	// Show or hide portfolio description on click
-	$('.show_hide').on('click', function () {
-		$('.toggleDiv').slideUp(500, '');
-		var target = $(this).attr('rel')
-		$(target).slideToggle(500, '');
-		return false;
 	});
 });
