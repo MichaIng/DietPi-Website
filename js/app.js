@@ -58,7 +58,7 @@ $(function () {
 			// Element has not been animated yet and is in view
 			if (!$(this).hasClass('fadeInDown') && (scrollTop + $(window).innerHeight() > $(this).offset().top) && (scrollTop < $(this).offset().top + $(this).outerHeight())) {
 				// Add animate classes
-				$(this).addClass('animated fadeInDown');
+				$(this).addClass('fadeInDown');
 			}
 		});
 
@@ -109,7 +109,7 @@ $(function () {
 			// Scroll in 0.8 seconds
 			$('html, body').animate({
 				scrollTop: targetOffset
-			}, 800);
+			}, 750);
 			// Omit browser link processing
 			return false;
 		});
