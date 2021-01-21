@@ -46,6 +46,8 @@ G_EXEC_NOHALT=1 G_EXEC rm $BRANCH.tar.gz
 G_EXEC cd DietPi-Website-$BRANCH
 # Cleanup
 [[ $GITHUB_ACTIONS ]] || G_EXEC_NOHALT=1 G_EXEC rm -R README.md LICENSE deploy.bash .??*
+# Update sitemap timestamps
+G_EXEC sed -i "s|<lastmod>.*</lastmod>|<lastmod>$(date '+%Y-%m-%dT%T%:z')</lastmod>" sitemap.xml
 
 # 3rd party
 G_EXEC curl -sSfL https://raw.githubusercontent.com/jquery/codeorigin.jquery.com/master/cdn/jquery-3.5.1.min.js -o js/jquery.min.js
