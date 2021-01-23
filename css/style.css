@@ -51,18 +51,9 @@ a:hover {
 .navbar > .container-xl {
 	padding: 0;
 }
-.navbar > .container-xl > img.scrollup {
+.navbar > .container-xl > img {
 	width: 120px;
 	height: 40px;
-	padding: 0;
-	margin: 5.5px 0;
-	cursor: pointer;
-	transition: filter 1s;
-}
-.navbar > .container-xl > img.scrollup:hover,
-.navbar > .container-xl > img.scrollup:focus,
-.navbar > .container-xl > img.scrollup:active {
-	filter: brightness(2);
 }
 .navbar > .container-xl > .navbar-toggler {
 	width: 40px;
