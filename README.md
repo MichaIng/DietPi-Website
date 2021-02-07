@@ -29,3 +29,16 @@ Deploy to `/var/www` (target path as input argument $1):
 ```
 bash -c "$(curl -sSfL https://raw.githubusercontent.com/MichaIng/DietPi-Website/master/deploy.bash)" bash '/var/www'
 ```
+
+## Contributing
+
+There are many ways you could contribute to DietPi project. You could work on the DietPi project, website design, extend the documentation, or just run tests. To see the full list of possibilities, please check first the [Contribution](https://dietpi.com/contribute.html) page.
+
+If you have experience with GitHub, you could either look for existent issue to start with or report a new one. Website code updates should be done directly on GitHub, using the development branch: [dev](https://github.com/MichaIng/DietPi-Website/tree/dev), creating a Pull Request (PR).
+
+If you need help:
+- Send an email: micha@dietpi.com
+- Join our forums: <https://dietpi.com/phpbb/>
+- Read the documentation: <https://dietpi.com/docs>
+- Website: <https://dietpi.com>
+- GitHub: <https://github.com/MichaIng/DietPi-Website>
