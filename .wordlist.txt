@@ -280,6 +280,7 @@ RDP
 Reclocker
 ReadyMedia
 RealVNC
+Reddit
 Remot
 RK
 renderer
@@ -372,6 +373,7 @@ vsftpd
 Vue
 Waveshare
 WebIOPi
+webhosting
 Webmin
 webpage
 webui
@@ -387,6 +389,7 @@ XRDP
 XU
 YaCy
 ympd
+YouTube
 yumiris
 ZeroPi
 zr
