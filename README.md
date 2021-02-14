@@ -35,13 +35,12 @@ bash -c "$(curl -sSfL https://raw.githubusercontent.com/MichaIng/DietPi-Website/
 
 ## Contributing
 
-There are many ways you could contribute to DietPi project. You could work on the DietPi project, website design, extend the documentation, or just run tests. To see the full list of possibilities, please check first the [Contribution](https://dietpi.com/contribute.html) page.
+There are many ways you could contribute to DietPi project. You could work on the DietPi project, website design, extend the documentation, or just run tests.
 
 If you have experience with GitHub, you could either look for existent issue to start with or report a new one. Website code updates should be done directly on GitHub, using the development branch: **[dev](https://github.com/MichaIng/DietPi-Website/tree/dev)**, creating a Pull Request (PR).
 
 If you need help:
 - Send an email: micha@dietpi.com
-- Contribute page: <https://dietpi.com/contribute.html>
 - Read the documentation: <https://dietpi.com/docs>
 - Join our forums: <https://dietpi.com/phpbb/>
 - GitHub: <https://github.com/MichaIng/DietPi-Website>
