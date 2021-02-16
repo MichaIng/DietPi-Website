@@ -53,6 +53,7 @@ If you need help:
 
 - Original website theme: [Pluton](https://www.graphberry.com/item/pluton-single-page-bootstrap-html-template) by [Graphberry](https://www.graphberry.com/)
 - Initial content author and webmaster until 2019: [Daniel Knight (Fourdee)](https://github.com/Fourdee)
+- This website shows logos of 3rd party software and providers which are excluded from the above license. They may only be used related to their product, for details, check individual trademark rules and licenses.
 
 ## 3rd party resources
 
