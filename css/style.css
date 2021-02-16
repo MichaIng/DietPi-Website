@@ -131,6 +131,13 @@ a:hover {
 .centered {
 	text-align: center;
 }
+.medium-text {
+	line-height:1.2em;
+	font-size:22px;
+	color:#181A1C;
+	padding:20px;
+	margin-bottom:20px;
+}
 .large-text {
 	line-height: 1.2em;
 	font-size: 30px;
@@ -277,6 +284,7 @@ a:hover {
 	border-bottom-color: #181a1c;
 }
 .secondary-section h1,
+.secondary-section h2,
 .secondary-section .title p {
 	color: #181a1c;
 }
