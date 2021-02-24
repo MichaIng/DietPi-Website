@@ -54,10 +54,12 @@ a:hover {
 .navbar > .container-xl > img {
 	width: 120px;
 	height: 40px;
+	margin: 5.5px 0;
 }
 .navbar > .container-xl > .navbar-toggler {
 	width: 40px;
 	height: 40px;
+	margin: 5.5px 0;
 	padding: 10px;
 	background-color: #c5ff00;
 	border-color: #181a1c;
@@ -196,6 +198,8 @@ a:hover {
 .thumbnail img {
 	display: block;
 	width: 100%;
+	/* "height: auto" in combination with inline width and height allows to keep aspect ratio while loading for non-bleeding edge browsers, which do not support "aspect-ratio" yet. */
+	height: auto;
 	aspect-ratio: 8/5;
 }
 .thumbnail h3,
@@ -518,6 +522,8 @@ a:hover {
 }
 .single-project img {
 	width: 100%;
+	/* "height: auto" in combination with inline width and height allows to keep aspect ratio while loading for non-bleeding edge browsers, which do not support "aspect-ratio" yet. */
+	height: auto;
 	padding: 15px;
 }
 /*
