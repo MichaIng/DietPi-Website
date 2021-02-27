@@ -12,6 +12,7 @@ jobs:
       # https://github.com/actions/setup-java/releases
       uses: actions/setup-java@v1
       with:
+        # http://static.azul.com/zulu/bin/
         java-version: '15'
         java-package: jre
     - name: Download Nu Html Checker
@@ -26,6 +27,7 @@ jobs:
       # https://github.com/actions/setup-python/releases
       uses: actions/setup-python@v2
       with:
+        # https://github.com/actions/python-versions/releases
         python-version: '3.9'
     - name: Install PySpelling
       id: pyspelling
@@ -44,7 +46,8 @@ jobs:
       # https://github.com/actions/setup-go/releases
       uses: actions/setup-go@v2
       with:
-        go-version: '1.15'
+        # https://github.com/actions/go-versions/releases
+        go-version: '1.16'
     - name: Install liche
       id: liche
       if: always() && steps.go.outcome == 'success'
