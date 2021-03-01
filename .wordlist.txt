@@ -196,6 +196,7 @@ MineOS
 MiniDLNA
 MinIO
 MIPI
+MJPEG
 MkDocs
 NAS
 mnt
