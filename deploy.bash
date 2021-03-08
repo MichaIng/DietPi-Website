@@ -50,7 +50,7 @@ G_EXEC cd DietPi-Website-$BRANCH
 G_EXEC sed -i "s|<lastmod>.*</lastmod>|<lastmod>$(date '+%Y-%m-%dT%T%:z')</lastmod>|" sitemap.xml
 
 # 3rd party
-G_EXEC curl -sSfL https://raw.githubusercontent.com/jquery/codeorigin.jquery.com/main/cdn/jquery-3.5.1.min.js -o js/jquery.min.js
+G_EXEC curl -sSfL https://raw.githubusercontent.com/jquery/codeorigin.jquery.com/main/cdn/jquery-3.6.0.min.js -o js/jquery.min.js
 G_EXEC curl -sSfL https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css -o css/bootstrap.min.css
 G_EXEC sed -i '\|^/\*# sourceMappingURL=bootstrap.min.css.map \*/$|d' css/bootstrap.min.css # Suppress browser console warning about missing map file
 G_EXEC curl -sSfL https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js -o js/bootstrap.min.js
