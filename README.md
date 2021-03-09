@@ -53,7 +53,7 @@ If you need help:
 
 ## 3rd party resources
 
-- [jQuery](https://github.com/jquery/jquery) v3.5.1
+- [jQuery](https://github.com/jquery/jquery) v3.6.0
 - [Bootstrap](https://github.com/twbs/bootstrap) v4.6.0
 - [Mixitup](https://github.com/patrickkunka/mixitup) v3.3.1
 - [jquery.cslider](https://github.com/Le-Stagiaire/jquery.cslider) with a slight modification to allow wrapping slides into a container element

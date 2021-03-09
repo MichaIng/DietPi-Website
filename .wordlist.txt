@@ -21,7 +21,6 @@ balancer
 Balena
 balenaEtcher
 Bazarr
-bazarr
 BCM
 Beelink
 benchmarked
@@ -174,7 +173,6 @@ LMS
 LogClear
 Logitech
 logrotate
-Logrotate
 LPDDR
 LTS
 LXDE
@@ -196,6 +194,7 @@ MineOS
 MiniDLNA
 MinIO
 MIPI
+MJPEG
 MkDocs
 NAS
 mnt
@@ -223,11 +222,8 @@ ncc
 Netdata
 nm
 Nextcloud
-nextcloud
 NFS
 Nginx
-Nmap
-nmap
 NoMachine
 NordVPN
 NTFS
@@ -294,7 +290,6 @@ RPi
 RPis
 RSS
 rsyslog
-Rsyslog
 rTorrent
 runtime
 ruTorrent
@@ -383,6 +378,7 @@ wifi
 WireGuard
 WiringPi
 Wordpress
+WPA
 www
 Xfce
 XRDP
