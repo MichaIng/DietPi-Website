@@ -230,7 +230,6 @@
 					<button class="nav-link filter" data-filter=".odroid">Odroid</button>
 					<button class="nav-link filter" data-filter=".pine">PINE64</button>
 					<button class="nav-link filter" data-filter=".radxa">ROCK Pi</button>
-					<button class="nav-link filter" data-filter=".firefly">Firefly</button>
 					<button class="nav-link filter" data-filter=".allo">Allo</button>
 					<button class="nav-link filter" data-filter=".asus">ASUS</button>
 					<button class="nav-link filter" data-filter=".nanopi">NanoPi</button>
@@ -726,25 +725,6 @@
 					</div>
 				</div>
 				<!-- End details for portfolio project 24 -->
-				<!-- Start details for portfolio project 25 -->
-				<div id="slidingdiv25" class="toggleDiv single-project">
-					<div class="row"><div class="col-md-12 project-title"><h3>Firefly RK3399</h3><span class="show_hide close"></span></div></div>
-					<div class="row">
-						<div class="col-md-6 project-description">
-							<div class="project-info">
-								<div><span>CPU:</span>Rockchip RK3399 1.8 GHz/1.4 GHz | 6 cores | ARMv8</div>
-								<div><span>RAM:</span>2 GiB - 4 GiB DDR3</div>
-								<div><span>NET:</span>Gbit Ethernet, WiFi, Bluetooth</div>
-								<div><span>Storage:</span>eMMC socket</div>
-								<br>
-								<div><a href="https://dietpi.com/downloads/images/DietPi_FireflyRK3399-ARMv8-Buster.7z"><span>Download Image:</span><i class="fa fa-download" aria-hidden="true"></i><u>Download</u></a></div>
-								<div><a href="https://dietpi.com/docs/install/" target="_blank" rel="noopener"><span>How to install / Details:</span><i class="fa fa-book" aria-hidden="true"></i><u>View</u></a></div>
-							</div>
-						</div>
-						<div class="col-md-6"><img src="images/sbc_images/fireflyrk3399.jpg" alt="Firefly RK3399 photo" width="8" height="5" loading="lazy"></div>
-					</div>
-				</div>
-				<!-- End details for portfolio project 25 -->
 				<!-- Start details for portfolio project 26 -->
 				<div id="slidingdiv26" class="toggleDiv single-project">
 					<div class="row"><div class="col-md-12 project-title"><h3>NanoPi NEO2 Black</h3><span class="show_hide close"></span></div></div>
@@ -1219,15 +1199,6 @@
 							<div class="mask"></div>
 						</a>
 					</div>
-					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix firefly">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv25">
-							<img src="images/sbc_images/fireflyrk3399.jpg" alt="Firefly RK3399 photo" width="8" height="5" loading="lazy">
-							<i class="more"></i>
-							<h3>Firefly RK3399</h3>
-							<p>RK3399 1.8GHz | 6 cores | ARMv8</p>
-							<div class="mask"></div>
-						</a>
-					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix allo">
 						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv19">
 							<img src="images/sbc_images/sparkysbc.jpg" alt="Sparky SBC photo" width="8" height="5" loading="lazy">
@@ -1591,5 +1562,12 @@
 		<!-- Scroll up button start -->
 		<a class="scrollup" href="#"><svg viewBox="0 0 12 12"><path d="M1 8l5-5l5 5"/></svg></a>
 		<!-- Scroll up button end -->
+		<!-- Inline JavaScript to quickly show/hide elements if browser loads scripts -->
+		<script>
+			document.querySelectorAll('div.toggleDiv').forEach(function(e){e.setAttribute("style","display:none");});
+			document.getElementById("downloadinfo").removeAttribute("style");
+			document.getElementById("portfolio-grid").removeAttribute("style");
+			document.querySelectorAll('svg.triangle').forEach(function(e){e.setAttribute("opacity","0");});
+		</script>
 	</body>
 </html>

@@ -4,6 +4,13 @@ $(function () {
 	// Hide triangles to match animation start
 	$('svg.triangle').css('opacity', '0');
 
+	// Hide portfolio descriptions
+	$('div.toggleDiv').hide();
+
+	// Show portfolio filter buttons and tiles
+	document.getElementById('downloadinfo').removeAttribute('style');
+	document.getElementById('portfolio-grid').removeAttribute('style');
+
 	// Initialise home slider: https://github.com/Le-Stagiaire/jquery.cslider
 	// Check first if function exist to allow skipping it on dietpi-software site
 	if (typeof $.fn.cslider === 'function') {
@@ -13,13 +20,6 @@ $(function () {
 			interval: 6000
 		});
 	}
-
-	// Hide portfolio descriptions
-	$('div.toggleDiv').hide();
-
-	// Show portfolio filter buttons and tiles
-	document.getElementById('downloadinfo').removeAttribute('style');
-	document.getElementById('portfolio-grid').removeAttribute('style');
 
 	// Map navigation bar scroll links and targets
 	var lastId,
@@ -74,7 +74,7 @@ $(function () {
 	$(window).trigger('scroll');
 
 	// Initialise MixItUp for animated portfolio tile filtering
-	mixitup('#download', {
+	mixitup('div.mixitup', {
 		controls: { scope: 'local' },
 		callbacks: {
 			// Close open portfolio project when resorting
