@@ -3,7 +3,6 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<link rel="home" href="https://dietpi.com/">
 		<link rel="canonical" href="https://dietpi.com/dietpi-software.html">
 		<title>DietPi-Software - Lightweight justice for your SBC!</title>
 		<meta name="description" content="Optimised | Simplified | For everyone - Easy to install and run optimised software for your SBC - Raspberry Pi, Odroid, PINE64 etc.!">
@@ -49,7 +48,7 @@
 				<button class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse"><svg viewBox="0 0 12 12"><path d="M1 1h10M1 6h10M1 11h10"/></svg></button>
 				<!-- Main navigation -->
 				<div class="navbar-nav navbar-collapse collapse">
-					<a class="nav-link" rel="home" href="/">Home</a>
+					<a class="nav-link" href="/">Home</a>
 					<a class="nav-link" href="/#features">Features</a>
 					<a class="nav-link" href="/#download">Download</a>
 					<a class="nav-link" href="/#gettingstarted">Getting Started</a>
@@ -60,15 +59,15 @@
 			</div>
 		</nav>
 		<!-- Portfolio section start -->
-		<div class="section secondary-section" id="download">
+		<div class="section secondary-section mixitup" id="software">
 			<div class="container-xl software">
 				<svg class="triangle" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0h100l-50 100"/></svg>
 				<div class="title">
 					<h1>DietPi-Software</h1>
 					<p>Easily install optional "ready to run" and optimized software for your device. As well as automating the Linux installation and configuration process for you, DietPi-Software also applies specific optimizations unique to your hardware model, ensuring you get the maximum performance from your device.</p>
-					<p><i>NB: Available software is dependent on the device and CPU architecture, some software titles may be unavailable. You can run the following command to list disabled items:</i> <i style="color:orange">dietpi-software list | grep disabled</i></p>
+					<p><i>NB: Available software is dependent on the device and CPU architecture, some software titles may be unavailable. You can run the following command to list disabled items:</i> <i style="color:#0059ff">dietpi-software list | grep disabled</i></p>
 				</div>
-				<nav class="nav nav-pills" id="downloadinfo" style="display:none">
+				<nav class="nav nav-pills" id="softwareinfo" style="display:none">
 					<button class="nav-link filter" data-filter="all">[All]</button>
 					<button class="nav-link filter" data-filter=".SSH">SSH Servers</button>
 					<button class="nav-link filter" data-filter=".LOG">Logging systems</button>
@@ -998,9 +997,7 @@
 								<div><span>Pros:</span>Classic Retro Gaming</div>
 								<div><span>Cons:</span>TBA</div>
 							</div>
-							<p>Tyrian (OpenTyrian) if not the best game in the world, is the best top-down shooter/scroller game ever created.
-OpenTyrian is best experienced by using a mouse and the Enter key to change rear fire mode.
-Its old, retro, and a classic etc, but I doubt you'll to find a recent and similar game that's anywhere close addictive as OpenTyrian.</p>
+							<p>Tyrian (OpenTyrian) if not the best game in the world, is the best top-down shooter/scroller game ever created. OpenTyrian is best experienced by using a mouse and the Enter key to change rear fire mode. It's old, retro, and a classic etc, but I doubt you'll to find a recent and similar game that's anywhere close addictive as OpenTyrian.</p>
 						</div>
 					</div>
 				</div>
@@ -1133,8 +1130,7 @@ Its old, retro, and a classic etc, but I doubt you'll to find a recent and simil
 								<div><span>Pros:</span>Web interface to view and control your RPi camera</div>
 								<div><span>Cons:</span>TBA</div>
 							</div>
-							<p>Got a RPi camera module?
-Want to record paint drying using time lapse, or, start your own neighbourhood watch surveillance system? Want full control of your RPi camera in a web based interface. This is all you need!</p>
+							<p>Got a RPi camera module? Want to record paint drying using time lapse, or, start your own neighbourhood watch surveillance system? Want full control of your RPi camera in a web based interface. This is all you need!</p>
 						</div>
 					</div>
 				</div>
@@ -1229,8 +1225,7 @@ Want to record paint drying using time lapse, or, start your own neighbourhood w
 								<div><span>Pros:</span>Remote network backup system</div>
 								<div><span>Cons:</span>None</div>
 							</div>
-							<p>Open Source client/server backup system, that through a combination of image and file backups accomplishes both data safety and a fast restoration time.
-TLDR: Basically, it allows you to create a complete system backup, using a simple web interface, for systems on your network.</p>
+							<p>Open Source client/server backup system, that through a combination of image and file backups accomplishes both data safety and a fast restoration time. TLDR: Basically, it allows you to create a complete system backup, using a simple web interface, for systems on your network.</p>
 						</div>
 					</div>
 				</div>
@@ -1459,8 +1454,7 @@ Oldschool: Think Napster, but for buying and selling stuff using your Bitcoins <
 								<div><span>Pros:</span>Share the love! (the other internet)</div>
 								<div><span>Cons:</span>Don't share it too much!</div>
 							</div>
-							<p>Turn your device into a WiFi HotSpot/Access Point with Tor routing. All WiFi HotSpot traffic will be routed through the Tor network, for all connected WiFi devices.
-Perfect for users requiring anonymity and privacy.</p>
+							<p>Turn your device into a WiFi HotSpot/Access Point with Tor routing. All WiFi HotSpot traffic will be routed through the Tor network, for all connected WiFi devices. Perfect for users requiring anonymity and privacy.</p>
 						</div>
 					</div>
 				</div>
@@ -1875,16 +1869,10 @@ Perfect for users requiring anonymity and privacy.</p>
 								<span class="show_hide close"></span>
 							</div>
 							<div class="project-info">
-								<div>
-									<a href="https://dietpi.com/docs/software/webserver_stack/#apache2" target="_blank" rel="noopener"><span>How to Setup / Details:</span><i class="fa fa-book"></i><u>View</u></a>
-								</div>
-								<div>
-									<br>
-									<span>Pros:</span>A well known, used and documented Linux web server
-								</div>
-								<div>
-									<span>Cons:</span>Can be somewhat bulky, if light web traffic is solely expected
-								</div>
+								<div><a href="https://dietpi.com/docs/software/webserver_stack/#apache2" target="_blank" rel="noopener"><span>How to Setup / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
+								<br>
+								<div><span>Pros:</span>A well known, used and documented Linux web server</div>
+								<div><span>Cons:</span>Can be somewhat bulky, if light web traffic is solely expected</div>
 							</div>
 							<p>Host your own website!</p>
 							<p>NB: DietPi will automatically install a web server stack if any software requires it. For most users, you should never need to manually install one. By default this is Lighttpd, however, you can change this in the DietPi-Software menu.</p>
@@ -1901,16 +1889,10 @@ Perfect for users requiring anonymity and privacy.</p>
 								<span class="show_hide close"></span>
 							</div>
 							<div class="project-info">
-								<div>
-									<a href="https://dietpi.com/docs/software/webserver_stack/#nginx" target="_blank" rel="noopener"><span>How to Setup / Details:</span><i class="fa fa-book"></i><u>View</u></a>
-								</div>
-								<div>
-									<br>
-									<span>Pros:</span>Good performance and functionality in a lightweight package
-								</div>
-								<div>
-									<span>Cons:</span>Not as light as Lighttpd
-								</div>
+								<div><a href="https://dietpi.com/docs/software/webserver_stack/#nginx" target="_blank" rel="noopener"><span>How to Setup / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
+								<br>
+								<div><span>Pros:</span>Good performance and functionality in a lightweight package</div>
+								<div><span>Cons:</span>Not as light as Lighttpd</div>
 							</div>
 							<p>Host your own website! Nginx is the middle ground between performance (Lighttpd) and bulk (Apache2), whilst keeping many features available in Apache2. Ideal for general use, regardless of expected web traffic load.</p>
 							<p>NB: DietPi will automatically install a web server stack if any software requires it. For most users, you should never need to manually install one. By default this is Lighttpd, however, you can change this in the DietPi-Software menu.</p>
@@ -1927,16 +1909,10 @@ Perfect for users requiring anonymity and privacy.</p>
 								<span class="show_hide close"></span>
 							</div>
 							<div class="project-info">
-								<div>
-									<a href="https://dietpi.com/docs/software/webserver_stack/#lighttpd" target="_blank" rel="noopener"><span>How to Setup / Details:</span><i class="fa fa-book"></i><u>View</u></a>
-								</div>
-								<div>
-									<br>
-									<span>Pros:</span>The lightest web server of the bunch
-								</div>
-								<div>
-									<span>Cons:</span>Lacks multithreading support and popularity of the others
-								</div>
+								<div><a href="https://dietpi.com/docs/software/webserver_stack/#lighttpd" target="_blank" rel="noopener"><span>How to Setup / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
+								<br>
+								<div><span>Pros:</span>The lightest web server of the bunch</div>
+								<div><span>Cons:</span>Lacks multithreading support and popularity of the others</div>
 							</div>
 							<p>Host your own website, without breaking the resource bank. Lighttpd is ideal for low expected web traffic, and/or local use.</p>
 							<p>NB: DietPi will automatically install a web server stack if any software requires it. For most users, you should never need to manually install one. By default this is Lighttpd, however, you can change this in the DietPi-Software menu.</p>
@@ -1953,9 +1929,7 @@ Perfect for users requiring anonymity and privacy.</p>
 								<span class="show_hide close"></span>
 							</div>
 							<div class="project-info">
-								<div>
-									<a href="https://dietpi.com/docs/software/webserver_stack/#phpmyadmin" target="_blank" rel="noopener"><span>How to Setup / Details:</span><i class="fa fa-book"></i><u>View</u></a>
-								</div>
+								<div><a href="https://dietpi.com/docs/software/webserver_stack/#phpmyadmin" target="_blank" rel="noopener"><span>How to Setup / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
 							</div>
 							<p>Web interface SQL admin tool for web server installations. </p>
 						</div>
@@ -1971,16 +1945,10 @@ Perfect for users requiring anonymity and privacy.</p>
 								<span class="show_hide close"></span>
 							</div>
 							<div class="project-info">
-								<div>
-									<a href="https://dietpi.com/docs/software/system_security/#lets-encrypt" target="_blank" rel="noopener"><span>How to Setup / Details:</span><i class="fa fa-book"></i><u>View</u></a>
-								</div>
-								<div>
-									<br>
-									<span>Pros:</span>Free and automated SSL cert installation for your web server
-								</div>
-								<div>
-									<span>Cons:</span>None
-								</div>
+								<div><a href="https://dietpi.com/docs/software/system_security/#lets-encrypt" target="_blank" rel="noopener"><span>How to Setup / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
+								<br>
+								<div><span>Pros:</span>Free and automated SSL cert installation for your web server</div>
+								<div><span>Cons:</span>None</div>
 							</div>
 							<p>A free and automated SSL cert installation for your web server. This will allow you to have https:// (secure) access to your site.</p>
 						</div>
@@ -1996,9 +1964,7 @@ Perfect for users requiring anonymity and privacy.</p>
 								<span class="show_hide close"></span>
 							</div>
 							<div class="project-info">
-								<div>
-									<a href="https://dietpi.com/docs/software/webserver_stack/#tomcat" target="_blank" rel="noopener"><span>How to Setup / Details:</span><i class="fa fa-book"></i><u>View</u></a>
-								</div>
+								<div><a href="https://dietpi.com/docs/software/webserver_stack/#tomcat" target="_blank" rel="noopener"><span>How to Setup / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
 							</div>
 							<p>Tomcat is a Servlet and JSP Server serving Java technologies. In your Java project you can build your WAR (short for <code>Web ARchive</code>) file, and simply drop it in the deploy directory in Tomcat. </p>
 						</div>
@@ -2429,10 +2395,10 @@ Perfect for users requiring anonymity and privacy.</p>
 					</div>
 				</div>
 				<!-- END details for portfolio -->
-				<div id="portfolio-grid" class="row">
+				<div id="portfolio-grid" class="row" style="display:none">
 					<!-- Desktops -->
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Desktops">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv1">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv1">
 							<img src="images/dietpi-software/lxde_0.jpg" alt="LXDE" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>LXDE</h3>
@@ -2441,7 +2407,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Desktops">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv119">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv119">
 							<img src="images/dietpi-software/lxqt_0.jpg" alt="LXQt" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>LXQt</h3>
@@ -2450,7 +2416,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Desktops">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv2">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv2">
 							<img src="images/dietpi-software/mate_0.jpg" alt="project 2" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>MATE</h3>
@@ -2459,7 +2425,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Desktops">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv3">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv3">
 							<img src="images/dietpi-software/xfce_0.jpg" alt="project 3" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Xfce</h3>
@@ -2468,7 +2434,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Desktops">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv4">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv4">
 							<img src="images/dietpi-software/gnustep_0.jpg" alt="project 4" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>GNUstep</h3>
@@ -2477,7 +2443,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Desktops">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv5">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv5">
 							<img src="images/dietpi-software/chromium_0.jpg" alt="project 5" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Chromium</h3>
@@ -2487,7 +2453,7 @@ Perfect for users requiring anonymity and privacy.</p>
 					</div>
 					<!-- Remote desktop -->
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix RDesktops">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv6">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv6">
 							<img src="images/dietpi-software/vnc_0.jpg" alt="project 6" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>TigerVNC</h3>
@@ -2496,7 +2462,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix RDesktops">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv7">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv7">
 							<img src="images/dietpi-software/nomachine_0.jpg" alt="project 7" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>NoMachine</h3>
@@ -2505,7 +2471,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix RDesktops">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv8">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv8">
 							<img src="images/dietpi-software/xrdp_0.jpg" alt="project 8" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>XRDP</h3>
@@ -2514,7 +2480,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix RDesktops">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv9">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv9">
 							<img src="images/dietpi-software/realvnc_0.jpg" alt="project 9" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>RealVNC</h3>
@@ -2524,7 +2490,7 @@ Perfect for users requiring anonymity and privacy.</p>
 					</div>
 					<!-- Media -->
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Media">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv10">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv10">
 							<img src="images/dietpi-software/kodi_0.jpg" alt="project 10" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Kodi</h3>
@@ -2533,7 +2499,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Media">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv11">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv11">
 							<img src="images/dietpi-software/ympd_0.jpg" alt="project 11" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>ympd</h3>
@@ -2542,7 +2508,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Media">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv117">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv117">
 							<img src="images/dietpi-software/mympd_0.jpg" alt="project 117" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>myMPD</h3>
@@ -2551,7 +2517,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Media">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv12">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv12">
 							<img src="images/dietpi-software/ompd_0.jpg" alt="project 12" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>O!MPD</h3>
@@ -2560,7 +2526,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Media">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv13">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv13">
 							<img src="images/dietpi-software/cava_0.jpg" alt="project 13" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>CAVA</h3>
@@ -2569,7 +2535,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Media">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv14">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv14">
 							<img src="images/dietpi-software/mopidy_0.jpg" alt="project 14" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Mopidy</h3>
@@ -2578,7 +2544,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Media">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv15">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv15">
 							<img src="images/dietpi-software/airsonic_0.jpg" alt="project 15" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Airsonic</h3>
@@ -2587,7 +2553,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Media">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv16">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv16">
 							<img src="images/dietpi-software/subsonic_0.jpg" alt="project 16" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Subsonic</h3>
@@ -2596,7 +2562,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Media">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv17">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv17">
 							<img src="images/dietpi-software/squeezebox_0.jpg" alt="project 17" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Logitech Media Server</h3>
@@ -2605,7 +2571,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Media">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv18">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv18">
 							<img src="images/dietpi-software/readymedia_0.jpg" alt="project 18" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>ReadyMedia (MiniDLNA)</h3>
@@ -2614,7 +2580,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Media">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv19">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv19">
 							<img src="images/dietpi-software/shairportsync_0.jpg" alt="project 19" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Shairport Sync</h3>
@@ -2623,7 +2589,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Media">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv20">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv20">
 							<img src="images/dietpi-software/ampache_0.jpg" alt="project 20" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Ampache</h3>
@@ -2632,7 +2598,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Media">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv21">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv21">
 							<img src="images/dietpi-software/emby_0.jpg" alt="project 21" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Emby</h3>
@@ -2641,7 +2607,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Media">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv22">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv22">
 							<img src="images/dietpi-software/plex_0.jpg" alt="project 22" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Plex</h3>
@@ -2650,7 +2616,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Media">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv23">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv23">
 							<img src="images/dietpi-software/plexpy_0.jpg" alt="project 23" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Tautulli</h3>
@@ -2659,7 +2625,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Media">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv24">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv24">
 							<img src="images/dietpi-software/mumble_0.jpg" alt="project 24" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Murmur/Mumble VoIP</h3>
@@ -2668,7 +2634,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Media">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv25">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv25">
 							<img src="images/dietpi-software/roon_0.jpg" alt="project 25" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Roon Bridge</h3>
@@ -2677,7 +2643,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Media">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv26">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv26">
 							<img src="images/dietpi-software/roon_0.jpg" alt="project 26" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Roon Server</h3>
@@ -2686,7 +2652,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Media">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv112">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv112">
 							<img src="images/dietpi-software/roon_0.jpg" alt="project 112" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Roon Extension Manager</h3>
@@ -2695,7 +2661,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Media">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv27">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv27">
 							<img src="images/dietpi-software/naa_0.jpg" alt="project 27" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>NAA Daemon</h3>
@@ -2704,7 +2670,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Media">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv28">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv28">
 							<img src="images/dietpi-software/icecast_0.jpg" alt="project 28" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>IceCast & DarkIce</h3>
@@ -2713,7 +2679,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Media">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv29">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv29">
 							<img src="images/dietpi-software/koel_0.jpg" alt="project 29" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Koel</h3>
@@ -2722,7 +2688,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Media">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv30">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv30">
 							<img src="images/dietpi-software/gmrender_0.jpg" alt="project 30" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>GMediaRender</h3>
@@ -2731,7 +2697,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Media">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv113">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv113">
 							<img src="images/dietpi-software/ubooquity_0.jpg" alt="project 113" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Ubooquity</h3>
@@ -2741,7 +2707,7 @@ Perfect for users requiring anonymity and privacy.</p>
 					</div>
 					<!-- Downloads -->
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Download">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv31">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv31">
 							<img src="images/dietpi-software/transmission_0.jpg" alt="project 31" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Transmission</h3>
@@ -2750,7 +2716,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Download">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv32">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv32">
 							<img src="images/dietpi-software/deluge_0.jpg" alt="project 32" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Deluge</h3>
@@ -2759,7 +2725,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Download">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv33">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv33">
 							<img src="images/dietpi-software/qbittorrent_0.jpg" alt="project 33" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>qBittorrent</h3>
@@ -2768,7 +2734,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Download">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv34">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv34">
 							<img src="images/dietpi-software/rtorrent_0.jpg" alt="project 34" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>rTorrent</h3>
@@ -2777,7 +2743,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Download">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv35">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv35">
 							<img src="images/dietpi-software/aria2_0.jpg" alt="project 35" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Aria2</h3>
@@ -2786,7 +2752,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Download">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv36">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv36">
 							<img src="images/dietpi-software/sabnzbd_0.jpg" alt="project 36" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>SABnzbd</h3>
@@ -2795,7 +2761,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Download">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv37">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv37">
 							<img src="images/dietpi-software/medusa_0.jpg" alt="project 37" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Medusa</h3>
@@ -2804,7 +2770,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Download">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv38">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv38">
 							<img src="images/dietpi-software/sonarr_0.jpg" alt="project 38" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Sonarr</h3>
@@ -2813,7 +2779,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Download">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv39">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv39">
 							<img src="images/dietpi-software/radarr_0.jpg" alt="project 39" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Radarr</h3>
@@ -2822,7 +2788,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Download">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv114">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv114">
 							<img src="images/dietpi-software/lidarr_0.jpg" alt="project 114" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Lidarr</h3>
@@ -2831,7 +2797,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Download">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv40">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv40">
 							<img src="images/dietpi-software/couchpotato_0.jpg" alt="project 40" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>CouchPotato</h3>
@@ -2840,7 +2806,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Download">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv41">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv41">
 							<img src="images/dietpi-software/jackett_0.jpg" alt="project 41" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Jackett</h3>
@@ -2849,7 +2815,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Download">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv42">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv42">
 							<img src="images/dietpi-software/nzbget_0.jpg" alt="project 42" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>NZBGet</h3>
@@ -2858,7 +2824,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Download">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv43">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv43">
 							<img src="images/dietpi-software/htpcmanager_0.jpg" alt="project 43" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>HTPC Manager</h3>
@@ -2867,7 +2833,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Gaming">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv44">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv44">
 							<img src="images/dietpi-software/opentyrian_0.jpg" alt="project 44" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>OpenTyrian</h3>
@@ -2876,7 +2842,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Gaming">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv45">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv45">
 							<img src="images/dietpi-software/cuberite_0.jpg" alt="project 45" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Cuberite</h3>
@@ -2885,7 +2851,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Gaming">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv46">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv46">
 							<img src="images/dietpi-software/mineos_0.jpg" alt="project 46" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>MineOS</h3>
@@ -2894,7 +2860,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Gaming">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv47">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv47">
 							<img src="images/dietpi-software/nukkit_0.jpg" alt="project 47" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Nukkit</h3>
@@ -2903,7 +2869,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Gaming">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv48">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv48">
 							<img src="images/dietpi-software/amiberry_0.jpg" alt="project 48" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Amiberry</h3>
@@ -2912,7 +2878,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Gaming">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv49">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv49">
 							<img src="images/dietpi-software/dxxrebirth_0.jpg" alt="project 49" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>DXX-Rebirth</h3>
@@ -2921,7 +2887,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Gaming">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv50">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv50">
 							<img src="images/dietpi-software/steam_0.jpg" alt="project 50" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Steam</h3>
@@ -2930,7 +2896,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Camera">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv51">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv51">
 							<img src="images/dietpi-software/rpicamcontrol_0.jpg" alt="project 51" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>RPi Cam Control</h3>
@@ -2939,7 +2905,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Camera">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv52">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv52">
 							<img src="images/dietpi-software/motioneye_0.jpg" alt="project 52" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>MotionEye</h3>
@@ -2948,7 +2914,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Cloud">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv53">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv53">
 							<img src="images/dietpi-software/owncloud_0.jpg" alt="project 53" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>ownCloud</h3>
@@ -2957,7 +2923,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Cloud">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv54">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv54">
 							<img src="images/dietpi-software/nextcloud_0.jpg" alt="project 54" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Nextcloud</h3>
@@ -2966,7 +2932,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Cloud">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv55">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv55">
 							<img src="images/dietpi-software/pydio_0.jpg" alt="project 55" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Pydio</h3>
@@ -2975,7 +2941,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Cloud">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv56">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv56">
 							<img src="images/dietpi-software/urbackup_0.jpg" alt="project 56" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>UrBackup Server</h3>
@@ -2984,7 +2950,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Cloud">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv57">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv57">
 							<img src="images/dietpi-software/gogs_0.jpg" alt="project 57" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Gogs</h3>
@@ -2993,7 +2959,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Cloud">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv58">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv58">
 							<img src="images/dietpi-software/gitea_0.jpg" alt="project 58" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Gitea</h3>
@@ -3002,7 +2968,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Cloud">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv59">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv59">
 							<img src="images/dietpi-software/syncthing_0.jpg" alt="project 59" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Syncthing</h3>
@@ -3011,7 +2977,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Cloud">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv61">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv61">
 							<img src="images/dietpi-software/minio_0.jpg" alt="project 61" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>MinIO</h3>
@@ -3020,7 +2986,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Social">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv116">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv116">
 							<img src="images/dietpi-software/freshrss_0.jpg" alt="project 116" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>FreshRSS</h3>
@@ -3029,7 +2995,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Social">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv62">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv62">
 							<img src="images/dietpi-software/phpbb3_0.jpg" alt="project 62" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>phpBB</h3>
@@ -3038,7 +3004,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Social">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv63">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv63">
 							<img src="images/dietpi-software/wordpress_0.jpg" alt="project 63" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Wordpress</h3>
@@ -3047,7 +3013,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Social">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv64">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv64">
 							<img src="images/dietpi-software/imageallery_0.jpg" alt="project 64" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Single File PHP Gallery</h3>
@@ -3056,7 +3022,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Social">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv65">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv65">
 							<img src="images/dietpi-software/baikal_0.jpg" alt="project 65" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>BaiKal</h3>
@@ -3065,7 +3031,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Social">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv66">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv66">
 							<img src="images/dietpi-software/openbazaar_0.jpg" alt="project 66" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>OpenBazaar</h3>
@@ -3074,7 +3040,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Social">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv67">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv67">
 							<img src="images/dietpi-software/yacy_0.jpg" alt="project 67" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>YaCy</h3>
@@ -3083,16 +3049,16 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix WiFi">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv68">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv68">
 							<img src="images/dietpi-software/wifihotspot_0.jpg" alt="project 68" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>WiFi HotSpot</h3>
-							<p></p>
+							<p>Regular WPA WiFi HotSpot</p>
 							<div class="mask"></div>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix WiFi">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv69">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv69">
 							<img src="images/dietpi-software/torwifihotspot_0.jpg" alt="Tor WiFi logo" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Tor HotSpot</h3>
@@ -3101,7 +3067,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Automation">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv70">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv70">
 							<img src="images/dietpi-software/homeassistant_0.jpg" alt="project 70" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Home Assistant</h3>
@@ -3110,7 +3076,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix HardwareProjects">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv71">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv71">
 							<img src="images/dietpi-software/googleaiy_0.jpg" alt="project 71" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Google AIY</h3>
@@ -3119,7 +3085,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix HardwareProjects">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv72">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv72">
 							<img src="images/dietpi-software/pijuice_0.jpg" alt="project 72" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>PiJuice</h3>
@@ -3128,7 +3094,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix HardwareProjects">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv73">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv73">
 							<img src="images/dietpi-software/rpigpio_0.jpg" alt="project 73" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>RPi.GPIO</h3>
@@ -3137,7 +3103,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix HardwareProjects">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv74">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv74">
 							<img src="images/dietpi-software/rpigpio_0.jpg" alt="project 74" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>WiringPi</h3>
@@ -3146,7 +3112,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix HardwareProjects">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv75">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv75">
 							<img src="images/dietpi-software/webiopi_0.jpg" alt="project 75" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>WebIOPi</h3>
@@ -3155,7 +3121,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix HardwareProjects">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv76">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv76">
 							<img src="images/dietpi-software/nodered_0.jpg" alt="project 76" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Node-RED</h3>
@@ -3164,7 +3130,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix HardwareProjects">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv77">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv77">
 							<img src="images/dietpi-software/mosquitto_0.jpg" alt="project 77" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Mosquitto</h3>
@@ -3173,16 +3139,16 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix HardwareProjects">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv78">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv78">
 							<img src="images/dietpi-software/blynkserver_0.jpg" alt="project 78" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Blynk Server</h3>
-							<p></p>
+							<p>SBC remote control server</p>
 							<div class="mask"></div>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix HardwareProjects">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv79">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv79">
 							<img src="images/dietpi-software/pispc_0.jpg" alt="project 79" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Audiophonics Pi-SPC</h3>
@@ -3191,7 +3157,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix HardwareProjects">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv80">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv80">
 							<img src="images/dietpi-software/influxdb_0.jpg" alt="project 80" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>InfluxDB</h3>
@@ -3200,7 +3166,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix HardwareProjects">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv81">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv81">
 							<img src="images/dietpi-software/grafana_0.jpg" alt="project 81" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Grafana</h3>
@@ -3209,7 +3175,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix RemoteAccess">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv82">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv82">
 							<img src="images/dietpi-software/remot3it_0.jpg" alt="project 82" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Remot3.it</h3>
@@ -3218,7 +3184,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix RemoteAccess">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv83">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv83">
 							<img src="images/dietpi-software/virtualhere_0.jpg" alt="project 83" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>VirtualHere</h3>
@@ -3227,7 +3193,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Stats">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv84">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv84">
 							<img src="images/dietpi-software/dietpi-cloudshell_0.jpg" alt="project 84" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>DietPi-CloudShell</h3>
@@ -3236,7 +3202,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Stats">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv85">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv85">
 							<img src="images/dietpi-software/linuxdash_0.jpg" alt="project 85" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Linux Dash</h3>
@@ -3245,7 +3211,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Stats">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv86">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv86">
 							<img src="images/dietpi-software/phpsysinfo_0.jpg" alt="project 86" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>phpSysInfo</h3>
@@ -3254,7 +3220,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Stats">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv87">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv87">
 							<img src="images/dietpi-software/rpimonitor_0.jpg" alt="project 87" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>RPi Monitor</h3>
@@ -3263,7 +3229,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Stats">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv88">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv88">
 							<img src="images/dietpi-software/netdata_0.jpg" alt="project 88" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Netdata</h3>
@@ -3272,7 +3238,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Stats">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv89">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv89">
 							<img src="images/dietpi-software/webmin_0.jpg" alt="project 89" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Webmin</h3>
@@ -3281,7 +3247,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Security">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv90">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv90">
 							<img src="images/dietpi-software/fail2ban_0.jpg" alt="project 90" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Fail2Ban</h3>
@@ -3290,7 +3256,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix WebserverStacks">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv91">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv91">
 							<img src="images/dietpi-software/apache2_0.jpg" alt="project 91" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Apache2</h3>
@@ -3299,7 +3265,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix WebserverStacks">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv92">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv92">
 							<img src="images/dietpi-software/nginx_0.jpg" alt="project 92" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Nginx</h3>
@@ -3308,7 +3274,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix WebserverStacks">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv93">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv93">
 							<img src="images/dietpi-software/lighttpd_0.jpg" alt="project 93" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Lighttpd</h3>
@@ -3317,7 +3283,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix WebserverStacks">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv94">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv94">
 							<img src="images/dietpi-software/phpmyadmin_0.jpg" alt="project 94" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>phpMyAdmin</h3>
@@ -3326,7 +3292,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix WebserverStacks">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv95">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv95">
 							<img src="images/dietpi-software/certbot_0.jpg" alt="project 95" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Certbot</h3>
@@ -3335,7 +3301,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix WebserverStacks">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv96">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv96">
 							<img src="images/dietpi-software/tomcat8_0.jpg" alt="project 96" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Tomcat8</h3>
@@ -3344,7 +3310,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix DNS">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv97">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv97">
 							<img src="images/dietpi-software/pihole_0.jpg" alt="project 97" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Pi-hole</h3>
@@ -3353,7 +3319,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix FileServers">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv98">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv98">
 							<img src="images/dietpi-software/proftp_0.jpg" alt="project 98" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>ProFTPD</h3>
@@ -3362,7 +3328,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix FileServers">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv99">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv99">
 							<img src="images/dietpi-software/samba_0.jpg" alt="project 99" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Samba Server</h3>
@@ -3371,7 +3337,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix FileServers">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv100">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv100">
 							<img src="images/dietpi-software/vsftpd_0.jpg" alt="project 100" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>vsftpd</h3>
@@ -3380,7 +3346,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix FileServers">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv101">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv101">
 							<img src="images/dietpi-software/nfs_0.jpg" alt="project 101" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>NFS</h3>
@@ -3389,7 +3355,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix VPNServer">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv118">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv118">
 							<img src="images/dietpi-software/dietpi-nordvpn_0.jpg" alt="project 118" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>DietPi-NordVPN</h3>
@@ -3398,7 +3364,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix VPNServer">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv102">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv102">
 							<img src="images/dietpi-software/openvpn_0.jpg" alt="project 102" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>OpenVPN</h3>
@@ -3407,7 +3373,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix VPNServer">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv103">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv103">
 							<img src="images/dietpi-software/pivpn_0.jpg" alt="project 103" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>PiVPN</h3>
@@ -3416,7 +3382,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Printing">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv105">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv105">
 							<img src="images/dietpi-software/octoprint_0.jpg" alt="project 105" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>OctoPrint</h3>
@@ -3425,7 +3391,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Misc">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv106">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv106">
 							<img src="images/dietpi-software/haproxy_0.jpg" alt="project 106" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>HAProxy</h3>
@@ -3434,7 +3400,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Misc">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv107">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv107">
 							<img src="images/dietpi-software/noip_0.jpg" alt="project 107" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>No-IP</h3>
@@ -3443,7 +3409,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix SSH">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv108">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv108">
 							<img src="images/dietpi-software/dropbear_0.jpg" alt="project 108" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Dropbear</h3>
@@ -3452,7 +3418,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix SSH">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv109">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv109">
 							<img src="images/dietpi-software/opensshserver_0.jpg" alt="project 109" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>OpenSSH Server</h3>
@@ -3461,7 +3427,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix LOG">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv110">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv110">
 							<img src="images/dietpi-software/dietpiramlog_0.jpg" alt="project 110" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>DietPi-RAMlog</h3>
@@ -3470,7 +3436,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix LOG">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv111">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv111">
 							<img src="images/dietpi-software/fulllogging_0.jpg" alt="project 111" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Full Logging</h3>
@@ -3479,7 +3445,7 @@ Perfect for users requiring anonymity and privacy.</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Misc">
-						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv115">
+						<a href="#softwareinfo" class="thumbnail show_hide" rel="#slidingdiv115">
 							<img src="images/dietpi-software/foldingathome_0.jpg" alt="project 115" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>Folding@Home</h3>
@@ -3518,5 +3484,12 @@ Perfect for users requiring anonymity and privacy.</p>
 		<!-- Scroll up button start -->
 		<a class="scrollup" href="#"><svg viewBox="0 0 12 12"><path d="M1 8l5-5l5 5"/></svg></a>
 		<!-- Scroll up button end -->
+		<!-- Inline JavaScript to quickly show/hide elements if browser loads scripts -->
+		<script>
+			document.querySelectorAll('div.toggleDiv').forEach(function(e){e.setAttribute("style","display:none");});
+			document.getElementById("softwareinfo").removeAttribute("style");
+			document.getElementById("portfolio-grid").removeAttribute("style");
+			document.querySelectorAll('svg.triangle').forEach(function(e){e.setAttribute("opacity","0");});
+		</script>
 	</body>
 </html>

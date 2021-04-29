@@ -1,4 +1,4 @@
-<h1 align="center"><img src="https://raw.githubusercontent.com/MichaIng/DietPi-Website/master/images/dietpi-logo_180x180.png" alt="DietPi Logo"></h1>
+<h1 align="center"><img src="https://raw.githubusercontent.com/MichaIng/DietPi-Website/master/images/dietpi-logo_180x180.png" alt="DietPi logo"></h1>
 <p align="center">
 	<b>Lightweight justice for your single-board computer!</b>
 	<br><br>
@@ -26,7 +26,7 @@ bash -c "$(curl -sSfL https://raw.githubusercontent.com/MichaIng/DietPi-Website/
 ```
 Deploy to `/var/www` (target path as input argument $1):
 ```
-bash -c "$(curl -sSfL https://raw.githubusercontent.com/MichaIng/DietPi-Website/master/deploy.bash)" bash '/var/www'
+bash -c "$(curl -sSfL https://raw.githubusercontent.com/MichaIng/DietPi-Website/master/deploy.bash)" bash /var/www
 ```
 
 ## Contributing
@@ -37,7 +37,7 @@ If you have experience with GitHub, you could either look for existent issue to 
 
 If you need help:
 - Send an email: micha@dietpi.com
-- Read the documentation: <https://dietpi.com/docs>
+- Read the documentation: <https://dietpi.com/docs/>
 - Join our forums: <https://dietpi.com/phpbb/>
 - GitHub: <https://github.com/MichaIng/DietPi-Website>
 
@@ -53,10 +53,10 @@ If you need help:
 
 ## 3rd party resources
 
-- [jQuery](https://github.com/jquery/jquery) v3.5.1
+- [jQuery](https://github.com/jquery/jquery) v3.6.0
 - [Bootstrap](https://github.com/twbs/bootstrap) v4.6.0
 - [Mixitup](https://github.com/patrickkunka/mixitup) v3.3.1
 - [jquery.cslider](https://github.com/Le-Stagiaire/jquery.cslider) with a slight modification to allow wrapping slides into a container element
-- [Font Awesome Free](https://fontawesome.com/) v5.15.1 individual glyphs: fa-download, fa-book and fa-external-link-alt
+- [Font Awesome Free](https://fontawesome.com/) v5.15.3 individual glyphs: fa-download, fa-book and fa-external-link-alt
 - [minify](https://github.com/tdewolff/minify) to minify HTML and CSS files
 - [JavaScript Minifier](https://javascript-minifier.com/api) to minify JavaScript files
