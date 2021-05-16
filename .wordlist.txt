@@ -140,6 +140,7 @@ img
 InfluxDB
 ini
 IoT
+IPFS
 IPS
 Jackett
 Jellyfin
@@ -364,6 +365,7 @@ vncpasswd
 vncserver
 VNCSERVER
 VPN
+VSCodium
 vsftpd
 Vue
 Waveshare
