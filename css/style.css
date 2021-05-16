@@ -46,7 +46,7 @@ a:hover {
 	left: 0;
 	z-index: 2001;
 	min-height: 60px;
-	background-color: #181a1c;
+	background-color: #164046; /* #99 - change colors */
 	padding: 4.5px 15px;
 }
 .navbar > .container-xl {
@@ -63,8 +63,8 @@ a:hover {
 	margin: 5.5px 0;
 	padding: 10px;
 	background-color: #c5ff00;
-	border-color: #181a1c;
-	stroke: #181a1c;
+	border-color: #164046; /* #99 - change colors */
+	stroke: #164046; /* #99 - change colors */
 	stroke-width: 2;
 	stroke-linecap: round;
 	fill: none;
@@ -148,7 +148,7 @@ a:hover {
 	padding: 20px;
 }
 .triangle {
-	fill: #181a1c;
+	fill: #164046; /* #99 - change colors */
 	width: 100%;
 	height: 30px;
 }
@@ -273,17 +273,17 @@ a:hover {
 	margin-bottom: 30px;
 }
 .primary-section {
-	background-color: #181a1c;
+	background-color: #164046; /* #99 - change colors */
 }
 .primary-section .triangle {
-	fill: #c5ff00;
+	fill: #9CCC00; /* #99 - change colors */
 }
 .primary-section .title p,
 .primary-section h3 {
-	color: #c5ff00;
+	color: #9CCC00; /* #99 - change colors */
 }
 .secondary-section {
-	background-color: #c5ff00;
+	background-color: #9CCC00; /* #99 - change colors */
 }
 .secondary-section .title {
 	border-bottom-color: #181a1c;
