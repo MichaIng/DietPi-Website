@@ -1,0 +1,680 @@
+/* ---------------------------------------------- 
+    https://github.com/MichaIng/DietPi-Website
+  
+	Table of content
+    1 General: Base style and bootstrap overrides.
+    2 Layout
+        2.1 Animations
+        2.2 Buttons
+        2.3 Thumbnail: Override bootstrap thumbnail and add hover effect
+        2.4 Icons
+    3 Sections: Definition for sections and subsections
+        3.1 Features
+        3.2 Details frame
+        3.3 Testimonials
+        3.4 Footer
+    4 Responsive
+---------------------------------------------- */
+
+/*  1. General  */
+body {
+    font-family: Arial,sans-serif;
+    color: #fff;
+    background-color: #181a1c;
+    font-size: 17px;
+    line-height: 20px;
+    margin-top: 60px
+}
+
+h1 {
+    margin: 10px 10px 20px
+}
+
+p {
+    padding: 10px;
+    color: #fff
+}
+
+a {
+    color: #fff;
+}
+
+a:hover {
+    color: #c5ff00;
+    text-decoration-line: none
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2001;
+    min-height: 60px;
+    background-color: #164046;
+    padding: 4.5px 15px
+}
+
+.navbar>.container-xl {
+    padding: 0
+}
+
+.navbar>.container-xl>img {
+    width: 120px;
+    height: 40px;
+    margin: 5.5px 0
+}
+
+.navbar>.container-xl>.navbar-toggler {
+    width: 40px;
+    height: 40px;
+    margin: 5.5px 0;
+    padding: 10px;
+    background-color: #c5ff00;
+    border-color: #164046;
+    stroke: #164046;
+    stroke-width: 2;
+    stroke-linecap: round;
+    fill: none;
+    transition: background-color .5s,border-color .5s,stroke .5s
+}
+
+@media(max-width: 991px) {
+    .navbar>.container-xl>.navbar-toggler {
+        display:inline-grid
+    }
+}
+
+.navbar>.container-xl>.navbar-toggler:hover,.navbar>.container-xl>.navbar-toggler:focus,.navbar>.container-xl>.navbar-toggler:active {
+    background-color: #164046;
+    border-color: #c5ff00;
+    stroke: #c5ff00
+}
+
+.navbar>.container-xl>.navbar-collapse {
+    align-items: stretch
+}
+
+@media(min-width: 992px) {
+    .navbar>.container-xl>.navbar-collapse {
+        place-content:flex-end
+    }
+}
+
+.navbar>.container-xl>.navbar-collapse.collapsing {
+    transition: height .35s!important
+}
+
+.navbar>.container-xl>.navbar-collapse>a {
+    color: #fff;
+    background-color: #164046;
+    text-transform: uppercase;
+    font-size: 15px;
+    margin: 4.5px 0;
+    padding: 10px 14px;
+    border: 1px solid #164046;
+    border-radius: 5px;
+    transition: border-color 1s
+}
+
+.navbar>.container-xl>.navbar-collapse>a:hover,.navbar>.container-xl>.navbar-collapse>a:focus,.navbar>.container-xl>.navbar-collapse>a:active,.navbar>.container-xl>.navbar-collapse>a.active {
+    border-color: #c5ff00
+}
+
+.nav.nav-pills {
+    margin-bottom: 30px
+}
+
+.nav.nav-pills>button {
+    margin: 2px 5px 2px 0;
+    background-color: #164046;
+    border: 1px solid #181a1c;
+    color: #fff;
+}
+
+.nav.nav-pills>button:hover,.nav.nav-pills>button:focus,.nav.nav-pills>button:active,.nav.nav-pills>button.mixitup-control-active {
+    color: #000;
+    background-color: #c5ff00;
+}
+
+.da-slider>.container-xl>.da-slide>.da-img {
+    width: 30%
+}
+
+/*
+2. Layout
+**********************************************************************/
+
+.centered {
+    text-align: center
+}
+
+.medium-text {
+    line-height: 1.2em;
+    font-size: 22px;
+    color: #181a1c;
+    padding: 20px;
+    margin-bottom: 20px
+}
+
+.large-text {
+    line-height: 1.2em;
+    font-size: 30px;
+    color: #181a1c;
+    padding: 20px
+}
+
+.triangle {
+    fill: #164046;
+    width: 100%;
+    height: 30px
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+.fadeInDown {
+    animation: fadeInDown 1s forwards
+}
+
+/*
+2.2 Buttons: For green background
+**********************************************************************/
+
+.button,.button:visited {
+    display: inline-block;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border: 1px solid #164046;
+    padding: 15px 30px;
+    background-color: #164046;
+}
+
+.button:hover,.button:focus,.button:active {
+    background-color: #c5ff00;
+    color: #000;
+}
+
+#portfolio-grid {
+    margin-left: -5px
+}
+
+.thumbnail {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    padding: 4px;
+    margin-bottom: 20px;
+    margin-left: -10px;
+    text-align: center;
+    background-color: #164046;
+}
+
+.thumbnail img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 8/5
+}
+
+.thumbnail h3,.thumbnail p {
+    margin: 0;
+    padding: 3px 0;
+    white-space: nowrap;
+    position: relative;
+    z-index: 4
+}
+
+.thumbnail h3 {
+    color: #fff;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.thumbnail p {
+    font-size: 10px
+}
+
+.thumbnail .more {
+    position: absolute;
+    top: -40px;
+    z-index: 4;
+    width: 40px;
+    height: 40px;
+    margin-left: -20px;
+    margin-top: -45px;
+    content: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'><path fill='none' stroke='white' stroke-width='2' stroke-linecap='round' d='M5 1v8M1 5h8'/></svg>")
+}
+
+.thumbnail:hover .more {
+    top: 50%;
+    transition: top .3s ease-out
+}
+
+.thumbnail .mask {
+    width: 100%;
+    height: 100%;
+    background-color: #181a1c;
+    opacity: .85;
+    position: absolute;
+    top: 100%;
+    transition: top .2s ease-out
+}
+
+.thumbnail:hover .mask {
+    top: 0
+}
+
+.fa-download {
+    content: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='white' d='M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 8-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z'/></svg>")
+}
+
+.fa-book {
+    content: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'><path fill='white' d='M448 360V24c0-13.3-10.7-24-24-24H96C43 0 0 43 0 96v320c0 53 43 96 96 96h328c13.3 0 24-10.7 24-24v-16c0-7.5-3.5-14.3-8.9-18.7-4.2-15.4-4.2-59.3 0-74.7 5.4-4.3 8.9-11.1 8.9-18.6zM128 134c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm0 64c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm253.4 250H96c-17.7 0-32-14.3-32-32 0-17.6 14.4-32 32-32h285.4c-1.9 17.1-1.9 46.9 0 64z'/></svg>")
+}
+
+.fa-external-link-alt {
+    content: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 512 512%22%3E%3Cpath fill=%22%23fff%22 d=%22M432 320H4e2a16 16 0 00-16 16V448H64V128H208a16 16 0 0016-16V80a16 16 0 00-16-16H48A48 48 0 000 112V464a48 48 0 0048 48H4e2a48 48 0 0048-48V336a16 16 0 00-16-16zM488 0H360c-21.37.0-32.05 25.91-17 41l35.73 35.73L135 320.37a24 24 0 000 34L157.67 377a24 24 0 0034 0L435.28 133.32 471 169c15 15 41 4.5 41-17V24A24 24 0 00488 0z%22/%3E%3C/svg%3E")
+}
+
+.section {
+    padding-bottom: 50px
+}
+
+.section .triangle {
+    margin-bottom: 50px
+}
+
+.section .title {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 30px
+}
+
+.primary-section {
+    background-color: #164046
+}
+
+.primary-section .triangle {
+    fill: #9ccc00
+}
+
+.primary-section .title p,.primary-section h3 {
+    color: #9ccc00
+}
+
+.secondary-section {
+    background-color: #9ccc00
+}
+
+.secondary-section .title {
+    border-bottom-color: #181a1c
+}
+
+.secondary-section h1,.secondary-section h2,.secondary-section .title p {
+    color: #181a1c
+}
+
+.da-slider {
+    margin: 0;
+    height: 45vw;
+    max-height: 450px;
+    min-width: unset;
+    border: 0;
+    box-shadow: none;
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 15'><path fill='%23edf3f7' d='M0 0h8v5H0zm48 0h8v5h-8zM8 10h8v5H8zm24 0h8v5h-8z'/><path fill='%23747c89' d='M8 0h8v5H8zm32 0h8v5h-8zM0 5h8v5H0zm16 5h8v5h-8z'/><path fill='%238b95a5' d='M16 0h8v5h-8zm8 5h8v5h-8zm24 0h8v5h-8zM0 10h8v5H0z'/><path fill='white' d='M24 0h8v5h-8zm8 5h8v5h-8zm-8 5h8v5h-8zm24 0h8v5h-8z'/><path fill='%23d1d7db' d='M32 0h8v5h-8zM8 5h8v5H8zm32 0h8v5h-8z'/><path fill='%234e555e' d='M16 5h8v5h-8zm24 5h8v5h-8z'/></svg>");
+    background-size: auto 100%
+}
+
+.da-slider .mask {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #c5ff00;
+    opacity: .85
+}
+
+.da-slider .container-xl {
+    position: relative;
+    height: 100%
+}
+
+.da-slide h2,.da-slide h4,.da-slide p,.da-slide .da-link {
+    color: #181a1c
+}
+
+.da-slide h2 {
+    top: 100px;
+    font-size: 33px;
+    text-shadow: none
+}
+
+.da-slide h4 {
+    position: absolute;
+    top: 155px;
+    opacity: 0;
+    left: 110%;
+    font-size: 22px;
+    width: 50%;
+    white-space: nowrap
+}
+
+.da-slide-current h4 {
+    left: 10%;
+    opacity: 1
+}
+
+.da-slide-fromright h4 {
+    animation: fromRightAnim1 .6s ease-in .8s both
+}
+
+.da-slide-fromleft h4 {
+    animation: fromLeftAnim1 .6s ease-in .6s both
+}
+
+.da-slide-toright h4 {
+    animation: toRightAnim1 .6s ease-in .45s both
+}
+
+.da-slide-toleft h4 {
+    animation: toLeftAnim1 .6s ease-in .15s both
+}
+
+.da-slide p {
+    top: 210px;
+    padding: 0;
+    font-size: unset;
+    font-style: unset;
+    line-height: unset;
+    height: unset
+}
+
+.da-slide .da-link {
+    top: 320px;
+    width: unset;
+    border-color: rgb(24,26,28,.8)
+}
+
+.da-slide .da-link:hover,.da-slide .da-link:active,.da-slide .da-link:focus {
+    color: #fff;
+    background-color: #181a1c
+}
+
+.da-slide .da-img img {
+    vertical-align: unset
+}
+
+.da-arrows span {
+    width: 45px;
+    height: 100%;
+    top: 0;
+    box-shadow: none
+}
+
+.da-arrows span:after {
+    content: none
+}
+
+.da-arrows span.da-arrows-next {
+    background: no-repeat 50% url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='45' height='130'><path fill='none' stroke='white' stroke-width='2' d='M2 0l40 65-40 65'/></svg>")
+}
+
+.da-arrows span.da-arrows-prev {
+    background: no-repeat 50% url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='45' height='130'><path fill='none' stroke='white' stroke-width='2' d='M42 0l-40 65 40 65'/></svg>")
+}
+
+.da-dots span {
+    width: 50px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 0;
+    box-shadow: none
+}
+
+.da-dots span.da-dots-current {
+    background-color: #181a1c
+}
+
+.da-dots span.da-dots-current:after {
+    content: none
+}
+
+@media(max-width: 991px) {
+    .da-slide h2 {
+        top:50px
+    }
+
+    .da-slide h4 {
+        top: 105px;
+        white-space: unset
+    }
+
+    .da-slide p {
+        top: 160px
+    }
+
+    .da-slide .da-link {
+        top: 270px
+    }
+}
+
+@media(max-width: 767px) {
+    .da-slide p {
+        display:none
+    }
+
+    .da-slide .da-link {
+        top: 190px
+    }
+}
+
+@media(max-width: 575px) {
+    .da-slide h2 {
+        font-size:22px;
+        width: 80%
+    }
+
+    .da-slide h4 {
+        font-size: 18px;
+        width: 80%;
+        top: 90px
+    }
+
+    .da-slide .da-img,.da-slide .da-link {
+        display: none
+    }
+}
+
+.service svg {
+    display: inline-block;
+    margin-top: 30px;
+    width: 131px;
+    height: 131px;
+    background-color: #000;
+    fill: #fff;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    transition: transform .25s
+}
+
+.service svg:hover {
+    transform: scale(1.1,1.1);
+    border-color: #c5ff00
+}
+
+.service h3 {
+    margin-top: 10px
+}
+
+.service p {
+    padding: 0 10px
+}
+
+.single-project {
+    margin-bottom: 30px;
+    background-color: #181a1c
+}
+
+.project-title {
+    border-bottom: 1px solid #c5ff00
+}
+
+.project-title h3 {
+    float: left;
+    line-height: 30;
+    margin-top: 10;
+    margin-left: 20px;
+    color: #c5ff00
+}
+
+.project-title .close {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    cursor: pointer;
+    content: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 5 5'><path fill='none' stroke='white' stroke-width='1' stroke-linecap='round' d='M1 1l3 3M1 4l3-3'/></svg>")
+}
+
+.project-description {
+    font-size: 14px
+}
+
+.project-description p {
+    padding-left: 20px
+}
+
+.project-description a {
+    color: #c5ff00
+}
+
+.project-info {
+    padding: 10px 20px
+}
+
+.project-info div {
+    margin-bottom: 5px
+}
+
+.project-info>div span {
+    display: inline-block;
+    width: 150px;
+    color: #c5ff00
+}
+
+.project-info>div>a>.fa {
+    width: 25px;
+    height: 25px;
+    vertical-align: text-bottom
+}
+
+.project-info>div>a>u {
+    margin-left: 10px;
+    font-size: 133%;
+    color: #181a1c
+}
+
+.project-info>div>a:hover>u {
+    color: #c5ff00
+}
+
+.single-project img {
+    width: 100%;
+    height: auto;
+    padding: 15px
+}
+
+div.testimonial {
+    margin-bottom: 30px
+}
+
+.testimonial p {
+    color: #181a1c;
+    background-color: #c5ff00;
+    padding: 15px;
+    margin: 0
+}
+
+.testimonial-text {
+    font-size: 22px;
+    line-height: 1.3em;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%
+}
+
+.whopic {
+    display: inline-block;
+    margin-left: 10px;
+    color: #c5ff00
+}
+
+.whopic>.arrow {
+    width: 0;
+    border-top: 10px solid;
+    border-left: 20px outset transparent;
+    border-right: 20px outset transparent;
+    margin-bottom: 10px
+}
+
+.footer {
+    text-align: center
+}
+
+.footer p {
+    margin: 0
+}
+
+.footer a {
+    color: #c5ff00;
+    padding: 5px
+}
+
+.footer p>a:hover,.footer p>a:focus {
+    text-decoration-line: underline
+}
+
+.social a>svg {
+    width: 48px;
+    height: 48px;
+    fill: #c5ff00
+}
+
+.social a:hover>svg,.social a:focus>svg {
+    fill: #fff
+}
+
+a.scrollup {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    display: inline-grid;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    background-color: #c5ff00;
+    border: 1px solid #181a1c;
+    border-radius: 4px;
+    stroke: #181a1c;
+    stroke-width: 2;
+    stroke-linecap: round;
+    fill: none;
+    transition: background-color .5s,border-color .5s,stroke .5s
+}
+
+a.scrollup:hover,a.scrollup:focus,a.scrollup:active {
+    background-color: #181a1c;
+    border-color: #c5ff00;
+    stroke: #c5ff00
+}
