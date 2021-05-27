@@ -86,7 +86,7 @@ a:hover {
 }
 
 .navbar>.container-xl>.navbar-toggler:hover,.navbar>.container-xl>.navbar-toggler:focus,.navbar>.container-xl>.navbar-toggler:active {
-    background-color: #181a1c;
+    background-color: #164046;
     border-color: #c5ff00;
     stroke: #c5ff00
 }
@@ -107,12 +107,12 @@ a:hover {
 
 .navbar>.container-xl>.navbar-collapse>a {
     color: #fff;
-    background-color: #181a1c;
+    background-color: #164046;
     text-transform: uppercase;
     font-size: 15px;
     margin: 4.5px 0;
     padding: 10px 14px;
-    border: 1px solid #181a1c;
+    border: 1px solid #164046;
     border-radius: 5px;
     transition: border-color 1s
 }
@@ -200,8 +200,8 @@ a:hover {
 }
 
 .button:hover,.button:focus,.button:active {
-    background-color: #181a1c;
-    color: #fff
+    background-color: #c5ff00;
+    color: #000;
 }
 
 #portfolio-grid {
