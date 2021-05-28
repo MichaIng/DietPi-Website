@@ -13,6 +13,7 @@ Armbian
 ARMv
 ASUS
 Audiophonics
+autologin
 autostart
 AutoStart
 backend
@@ -56,6 +57,7 @@ customisable
 DAC
 DarkBetter
 DarkIce
+DDNS
 DDR
 deinstallation
 DHCP
