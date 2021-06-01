@@ -54,7 +54,7 @@
 					<a class="nav-link" href="#features">Features</a>
 					<a class="nav-link" href="#download">Download</a>
 					<a class="nav-link" href="#gettingstarted">Getting Started</a>
-					<a class="nav-link" href="/contribute.html">Contribute</a>
+					<a class="nav-link" href="contribute.html">Contribute</a>
 					<a class="nav-link" href="#testimonials">Testimonials</a>
 				</div>
 				<!-- End main navigation -->
@@ -1067,7 +1067,62 @@
 						<div class="col-md-6"><img src="images/sbc_images/odroidc4.jpg" alt="NanoPi C4 photo" width="8" height="5" loading="lazy"></div>
 					</div>
 				</div>
-				<!-- End details for portfolio project 42 -->
+				<!-- NanoPi R4S -->
+				<div id="nanopir4s" class="toggleDiv single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>NanoPi R4S</h3><span class="show_hide close"></span></div></div>
+					<div class="row">
+						<div class="col-md-6 project-description">
+							<div class="project-info">
+								<div><span>CPU:</span>Rockchip RK3399 1.8 GHz/1.4 GHz | 6 cores | ARMv8</div>
+								<div><span>RAM:</span>1 GiB DDR3 - 4 GiB DDR4</div>
+								<div><span>NET:</span>2x Gbit Ethernet</div>
+								<br>
+								<div><a href="https://dietpi.com/downloads/images/DietPi_NanoPiR4S-ARMv8-Buster.7z"><span>Download Image:</span><i class="fa fa-download" aria-hidden="true"></i><u>Download</u></a></div>
+								<div><a href="https://dietpi.com/docs/install/" target="_blank" rel="noopener"><span>How to install / Details:</span><i class="fa fa-book" aria-hidden="true"></i><u>View</u></a></div>
+							</div>
+							<p>FriendlyARM's RK3399 dual-Ethernet/router board. When using the optionally shipped metal case, the CPU temperature stays in moderate range without a fan, as long as you do not run long-term full-load processes. It is purely headless but has a serial/UART debug port, so if you use it for important services, we recommend to have a serial terminal or adapter cable available, to allow console access even in case of boot issues of failing network (no SSH).</p>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/nanopir4s.jpg" alt="NanoPi R4S photo" width="8" height="5" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- Pinebook Pro -->
+				<div id="pinebookpro" class="toggleDiv single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>Pinebook Pro</h3><span class="show_hide close"></span></div></div>
+					<div class="row">
+						<div class="col-md-6 project-description">
+							<div class="project-info">
+								<div><span>CPU:</span>Rockchip RK3399 1.8 GHz/1.4 GHz | 6 cores | ARMv8</div>
+								<div><span>RAM:</span>4 GiB DDR4</div>
+								<div><span>NET:</span>Gbit Ethernet</div>
+								<div><span>Storage:</span>64/128 GiB eMMC</div>
+								<br>
+								<div><a href="https://dietpi.com/downloads/images/DietPi_PinebookPro-ARMv8-Buster.7z"><span>Download Image:</span><i class="fa fa-download" aria-hidden="true"></i><u>Download</u></a></div>
+								<div><a href="https://dietpi.com/docs/install/" target="_blank" rel="noopener"><span>How to install / Details:</span><i class="fa fa-book" aria-hidden="true"></i><u>View</u></a></div>
+							</div>
+							<p>The RK3399-based successor of the previous A64-based Pinebook.</p>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/pinebookpro.jpg" alt="Pinebook Pro photo" width="8" height="5" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- NanoPi R1 -->
+				<div id="nanopir1" class="toggleDiv single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>NanoPi R1</h3><span class="show_hide close"></span></div></div>
+					<div class="row">
+						<div class="col-md-6 project-description">
+							<div class="project-info">
+								<div><span>CPU:</span>Allwinner H3 1.2 GHz | 4 cores | ARMv7</div>
+								<div><span>RAM:</span>512 MiB - 1 GiB DDR3</div>
+								<div><span>NET:</span>1x GiB Ethernet + 1x 100 MiB Ethernet</div>
+								<div><span>Storage:</span>8 GiB eMMC</div>
+								<br>
+								<div><a href="https://dietpi.com/downloads/images/DietPi_NanoPiR1-ARMv7-Buster.7z"><span>Download Image:</span><i class="fa fa-download" aria-hidden="true"></i><u>Download</u></a></div>
+								<div><a href="https://dietpi.com/docs/install/" target="_blank" rel="noopener"><span>How to install / Details:</span><i class="fa fa-book" aria-hidden="true"></i><u>View</u></a></div>
+							</div>
+							<p>The smallest dual-Ethernet SBC we currently support. This image should run on NanoPi R1S-H3 as well, which is pretty similar, just without eMMC and one USB port only.</p>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/nanopir1.jpg" alt="NanoPi R1 photo" width="8" height="5" loading="lazy"></div>
+					</div>
+				</div>
 				<div id="portfolio-grid" class="row" style="display:none">
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix raspberrypi">
 						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv1">
@@ -1160,6 +1215,15 @@
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix pine">
+						<a href="#downloadinfo" class="thumbnail show_hide" rel="#pinebookpro">
+							<img src="images/sbc_images/pinebookpro.jpg" alt="Pinebook Pro photo" width="8" height="5" loading="lazy">
+							<i class="more"></i>
+							<h3>Pinebook Pro</h3>
+							<p>RK3399 1.8GHz | 6 cores | ARMv8</p>
+							<div class="mask"></div>
+						</a>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix pine">
 						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv31">
 							<img src="images/sbc_images/rock64.jpg" alt="ROCK64 photo" width="8" height="5" loading="lazy">
 							<i class="more"></i>
@@ -1245,6 +1309,15 @@
 							<img src="images/sbc_images/nanopim4v2.jpg" alt="NanoPi M4V2 photo" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>NanoPi M4V2</h3>
+							<p>RK3399 1.8GHz | 6 cores | ARMv8</p>
+							<div class="mask"></div>
+						</a>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix nanopi">
+						<a href="#downloadinfo" class="thumbnail show_hide" rel="#nanopir4s">
+							<img src="images/sbc_images/nanopir4s.jpg" alt="NanoPi R4S photo" width="8" height="5" loading="lazy">
+							<i class="more"></i>
+							<h3>NanoPi R4S</h3>
 							<p>RK3399 1.8GHz | 6 cores | ARMv8</p>
 							<div class="mask"></div>
 						</a>
@@ -1353,6 +1426,15 @@
 							<img src="images/sbc_images/nanopim1plus.jpg" alt="NanoPi M1 Plus photo" width="8" height="5" loading="lazy">
 							<i class="more"></i>
 							<h3>NanoPi M1 Plus</h3>
+							<p>H3 1.2 GHz | 4 cores | ARMv7</p>
+							<div class="mask"></div>
+						</a>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix nanopi">
+						<a href="#downloadinfo" class="thumbnail show_hide" rel="#nanopir1">
+							<img src="images/sbc_images/nanopir1.jpg" alt="NanoPi R1 photo" width="8" height="5" loading="lazy">
+							<i class="more"></i>
+							<h3>NanoPi R1</h3>
 							<p>H3 1.2 GHz | 4 cores | ARMv7</p>
 							<div class="mask"></div>
 						</a>
