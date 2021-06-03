@@ -25,25 +25,20 @@ body {
 	line-height: 20px;
 	margin-top: 60px;
 }
-
 h1 {
 	margin: 10px 10px 20px;
 }
-
 p {
 	padding: 10px;
 	color: #ffffff;
 }
-
 a {
 	color: #ffffff;
 }
-
 a:hover {
 	color: #c5ff00;
 	text-decoration-line: none;
 }
-
 .navbar {
 	position: fixed;
 	top: 0;
@@ -54,17 +49,14 @@ a:hover {
 	background-color: #164046;
 	padding: 4.5px 15px;
 }
-
 .navbar > .container-xl {
 	padding: 0;
 }
-
 .navbar > .container-xl > img {
 	width: 120px;
 	height: 40px;
 	margin: 5.5px 0;
 }
-
 .navbar > .container-xl > .navbar-toggler {
 	width: 40px;
 	height: 40px;
@@ -78,13 +70,11 @@ a:hover {
 	fill: none;
 	transition: background-color 0.5s, border-color 0.5s, stroke 0.5s;
 }
-
-@media(max-width: 991px) {
+@media (max-width: 991px) {
 	.navbar > .container-xl > .navbar-toggler {
-		display:inline-grid;
+		display: inline-grid;
 	}
 }
-
 .navbar > .container-xl > .navbar-toggler:hover,
 .navbar > .container-xl > .navbar-toggler:focus,
 .navbar > .container-xl > .navbar-toggler:active {
@@ -92,21 +82,17 @@ a:hover {
 	border-color: #c5ff00;
 	stroke: #c5ff00;
 }
-
 .navbar > .container-xl > .navbar-collapse {
-	align-items: stretch
+	align-items: stretch;
 }
-
-@media(min-width: 992px) {
+@media (min-width: 992px) {
 	.navbar > .container-xl > .navbar-collapse {
-		place-content:flex-end;
+		place-content: flex-end;
 	}
 }
-
 .navbar > .container-xl > .navbar-collapse.collapsing {
 	transition: height 0.35s !important;
 }
-
 .navbar > .container-xl > .navbar-collapse > a {
 	color: #ffffff;
 	background-color: #164046;
@@ -118,18 +104,15 @@ a:hover {
 	border-radius: 5px;
 	transition: border-color 1s;
 }
-
 .navbar > .container-xl > .navbar-collapse > a:hover,
 .navbar > .container-xl > .navbar-collapse > a:focus,
 .navbar > .container-xl > .navbar-collapse > a:active,
 .navbar > .container-xl > .navbar-collapse > a.active {
 	border-color: #c5ff00;
 }
-
 .nav.nav-pills {
 	margin-bottom: 30px;
 }
-
 .nav.nav-pills > button {
 	margin: 2px 5px 2px 0;
 	background-color: #164046;
@@ -137,7 +120,6 @@ a:hover {
 	color: #ffffff;
 	border-radius: 4px;
 }
-
 .nav.nav-pills > button:hover,
 .nav.nav-pills > button:focus,
 .nav.nav-pills > button:active,
@@ -145,7 +127,6 @@ a:hover {
 	color: #164046;
 	background-color: #c5ff00;
 }
-
 .da-slider > .container-xl > .da-slide > .da-img {
 	width: 30%;
 }
@@ -157,7 +138,6 @@ a:hover {
 .centered {
 	text-align: center;
 }
-
 .medium-text {
 	line-height: 1.2em;
 	font-size: 22px;
@@ -165,25 +145,21 @@ a:hover {
 	padding: 20px;
 	margin-bottom: 20px;
 }
-
 .large-text {
 	line-height: 1.2em;
 	font-size: 30px;
 	color: #181a1c;
 	padding: 20px;
 }
-
 .triangle {
 	fill: #164046;
 	width: 100%;
 	height: 30px;
 }
-
 @keyframes fadeInDown {
 	0% { opacity: 0; transform: translateY(-20px); }
 	100% { opacity: 1; transform: translateY(0); }
 }
-
 .fadeInDown {
 	animation: fadeInDown 1s forwards;
 }
@@ -202,18 +178,15 @@ a:hover {
 	background-color: #164046;
 	border-radius: 4px;
 }
-
 .button:hover,
 .button:focus,
 .button:active {
 	background-color: #c5ff00;
 	color: #164046;
 }
-
 #portfolio-grid {
 	margin-left: -5px;
 }
-
 .thumbnail {
 	display: block;
 	overflow: hidden;
@@ -224,32 +197,28 @@ a:hover {
 	text-align: center;
 	background-color: #164046;
 }
-
 .thumbnail img {
 	display: block;
 	width: 100%;
 	height: auto;
 	aspect-ratio: 8/5;
 }
-
-.thumbnail h3,.thumbnail p {
+.thumbnail h3,
+.thumbnail p {
 	margin: 0;
 	padding: 3px 0;
 	white-space: nowrap;
 	position: relative;
 	z-index: 4;
 }
-
 .thumbnail h3 {
 	color: #ffffff;
 	font-size: 14px;
 	margin-top: 5px;
 }
-
 .thumbnail p {
 	font-size: 10px;
 }
-
 .thumbnail .more {
 	position: absolute;
 	top: -40px;
@@ -260,12 +229,10 @@ a:hover {
 	margin-top: -45px;
 	content: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'><path fill='none' stroke='white' stroke-width='2' stroke-linecap='round' d='M5 1v8M1 5h8'/></svg>");
 }
-
 .thumbnail:hover .more {
 	top: 50%;
 	transition: top 0.3s ease-out;
 }
-
 .thumbnail .mask {
 	width: 100%;
 	height: 100%;
@@ -275,65 +242,58 @@ a:hover {
 	top: 100%;
 	transition: top 0.2s ease-out;
 }
-
 .thumbnail:hover .mask {
 	top: 0;
 }
-
+/*
+2.4 Icons
+**********************************************************************/
 .fa-download {
-	content: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='white' d='M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 8-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z'/></svg>")
+	content: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='white' d='M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 8-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z'/></svg>");
 }
-
 .fa-book {
-	content: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'><path fill='white' d='M448 360V24c0-13.3-10.7-24-24-24H96C43 0 0 43 0 96v320c0 53 43 96 96 96h328c13.3 0 24-10.7 24-24v-16c0-7.5-3.5-14.3-8.9-18.7-4.2-15.4-4.2-59.3 0-74.7 5.4-4.3 8.9-11.1 8.9-18.6zM128 134c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm0 64c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm253.4 250H96c-17.7 0-32-14.3-32-32 0-17.6 14.4-32 32-32h285.4c-1.9 17.1-1.9 46.9 0 64z'/></svg>")
+	content: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'><path fill='white' d='M448 360V24c0-13.3-10.7-24-24-24H96C43 0 0 43 0 96v320c0 53 43 96 96 96h328c13.3 0 24-10.7 24-24v-16c0-7.5-3.5-14.3-8.9-18.7-4.2-15.4-4.2-59.3 0-74.7 5.4-4.3 8.9-11.1 8.9-18.6zM128 134c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm0 64c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm253.4 250H96c-17.7 0-32-14.3-32-32 0-17.6 14.4-32 32-32h285.4c-1.9 17.1-1.9 46.9 0 64z'/></svg>");
 }
-
 .fa-external-link-alt {
-	content: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='white' d='M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z'/></svg>")
+	content: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='white' d='M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z'/></svg>");
 }
-
+/*
+2.4 Icons
+**********************************************************************/
 .section {
 	padding-bottom: 50px;
 }
-
 .section .triangle {
 	margin-bottom: 50px;
 }
-
 .section .title {
 	text-align: center;
 	padding: 10px;
 	border-bottom: 1px solid #ffffff;
 	margin-bottom: 30px;
 }
-
 .primary-section {
 	background-color: #164046;
 }
-
 .primary-section .triangle {
 	fill: #9ccc00;
 }
-
 .primary-section .title p,
 .primary-section h3 {
 	color: #9ccc00;
 }
-
 .secondary-section {
 	background-color: #9ccc00
 }
-
 .secondary-section .title {
-	border-bottom-color: #181a1c
+	border-bottom-color: #181a1c;
 }
-
 .secondary-section h1,
 .secondary-section h2,
 .secondary-section .title p {
-	color: #181a1c
+	color: #181a1c;
 }
-
+/* Slider: https://github.com/Le-Stagiaire/jquery.cslider */
 .da-slider {
 	margin: 0;
 	height: 45vw;
@@ -344,7 +304,6 @@ a:hover {
 	background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 15'><path fill='%23edf3f7' d='M0 0h8v5H0zm48 0h8v5h-8zM8 10h8v5H8zm24 0h8v5h-8z'/><path fill='%23747c89' d='M8 0h8v5H8zm32 0h8v5h-8zM0 5h8v5H0zm16 5h8v5h-8z'/><path fill='%238b95a5' d='M16 0h8v5h-8zm8 5h8v5h-8zm24 0h8v5h-8zM0 10h8v5H0z'/><path fill='white' d='M24 0h8v5h-8zm8 5h8v5h-8zm-8 5h8v5h-8zm24 0h8v5h-8z'/><path fill='%23d1d7db' d='M32 0h8v5h-8zM8 5h8v5H8zm32 0h8v5h-8z'/><path fill='%234e555e' d='M16 5h8v5h-8zm24 5h8v5h-8z'/></svg>");
 	background-size: auto 100%;
 }
-
 .da-slider .mask {
 	position: absolute;
 	top: 0;
@@ -353,25 +312,21 @@ a:hover {
 	background-color: #c5ff00;
 	opacity: 0.85;
 }
-
 .da-slider .container-xl {
 	position: relative;
 	height: 100%;
 }
-
 .da-slide h2,
 .da-slide h4,
 .da-slide p,
-.da-slide {
+.da-slide .da-link {
 	color: #181a1c;
 }
-
 .da-slide h2 {
 	top: 100px;
 	font-size: 33px;
 	text-shadow: none;
 }
-
 .da-slide h4 {
 	position: absolute;
 	top: 155px;
@@ -381,28 +336,22 @@ a:hover {
 	width: 50%;
 	white-space: nowrap;
 }
-
 .da-slide-current h4 {
 	left: 10%;
 	opacity: 1;
 }
-
 .da-slide-fromright h4 {
 	animation: fromRightAnim1 0.6s ease-in 0.8s both;
 }
-
 .da-slide-fromleft h4 {
 	animation: fromLeftAnim1 0.6s ease-in 0.6s both;
 }
-
 .da-slide-toright h4 {
 	animation: toRightAnim1 0.6s ease-in 0.45s both;
 }
-
 .da-slide-toleft h4 {
 	animation: toLeftAnim1 0.6s ease-in 0.15s both;
 }
-
 .da-slide p {
 	top: 210px;
 	padding: 0;
@@ -411,43 +360,35 @@ a:hover {
 	line-height: unset;
 	height: unset;
 }
-
 .da-slide .da-link {
 	top: 320px;
 	width: unset;
-	/*border-color: rgb(24,26,28,.8)*/
+	/*border-color: rgb(24, 26, 28, 0.8);*/
 }
-
 .da-slide .da-link:hover,
 .da-slide .da-link:active,
 .da-slide .da-link:focus {
 	color: #181a1c;
 	background-color: #c5ff00;
 }
-
 .da-slide .da-img img {
 	vertical-align: unset;
 }
-
 .da-arrows span {
 	width: 45px;
 	height: 100%;
 	top: 0;
 	box-shadow: none;
 }
-
 .da-arrows span:after {
 	content: none;
 }
-
 .da-arrows span.da-arrows-next {
-	background: no-repeat center url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='45' height='130'><path fill='none' stroke='white' stroke-width='2' d='M2 0l40 65-40 65'/></svg>")
+	background: no-repeat center url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='45' height='130'><path fill='none' stroke='white' stroke-width='2' d='M2 0l40 65-40 65'/></svg>");
 }
-
 .da-arrows span.da-arrows-prev {
-	background: no-repeat center url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='45' height='130'><path fill='none' stroke='white' stroke-width='2' d='M42 0l-40 65 40 65'/></svg>")
+	background: no-repeat center url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='45' height='130'><path fill='none' stroke='white' stroke-width='2' d='M42 0l-40 65 40 65'/></svg>");
 }
-
 .da-dots span {
 	width: 50px;
 	height: 3px;
@@ -455,18 +396,15 @@ a:hover {
 	border-radius: 0;
 	box-shadow: none;
 }
-
 .da-dots span.da-dots-current {
 	background-color: #181a1c;
 }
-
 .da-dots span.da-dots-current:after {
 	content: none;
 }
-
-@media(max-width: 991px) {
+@media (max-width: 991px) {
 	.da-slide h2 {
-		top:50px;
+		top: 50px;
 	}
 	.da-slide h4 {
 		top: 105px;
@@ -479,19 +417,17 @@ a:hover {
 		top: 270px;
 	}
 }
-
-@media(max-width: 767px) {
+@media (max-width: 767px) {
 	.da-slide p {
-		display:none;
+		display: none;
 	}
 	.da-slide .da-link {
 		top: 190px;
 	}
 }
-
-@media(max-width: 575px) {
+@media (max-width: 575px) {
 	.da-slide h2 {
-		font-size:22px;
+		font-size: 22px;
 		width: 80%;
 	}
 	.da-slide h4 {
@@ -499,53 +435,52 @@ a:hover {
 		width: 80%;
 		top: 90px;
 	}
-	.da-slide .da-img,.da-slide .da-link {
+	.da-slide .da-img,
+	.da-slide .da-link {
 		display: none;
 	}
 }
-
+/*
+3.1 Features
+**********************************************************************/
 .service svg {
 	display: inline-block;
 	margin-top: 30px;
 	width: 131px;
 	height: 131px;
-	background-color: #000;
+	background-color: #000000;
 	fill: #ffffff;
 	border: 3px solid #ffffff;
 	border-radius: 50%;
 	transition: transform 0.25s;
 }
-
 .service svg:hover {
 	transform: scale(1.1, 1.1);
 	border-color: #c5ff00;
 }
-
 .service h3 {
 	margin-top: 10px;
 }
-
 .service p {
 	padding: 0 10px;
 }
-
+/*
+3.2 Details frame
+**********************************************************************/
 .single-project {
 	margin-bottom: 30px;
 	background-color: #181a1c;
 }
-
 .project-title {
 	border-bottom: 1px solid #c5ff00;
 }
-
 .project-title h3 {
 	float: left;
-	line-height: 30;
+	line-height: 30px;
 	margin-top: 10px;
 	margin-left: 20px;
 	color: #c5ff00;
 }
-
 .project-title .close {
 	width: 50px;
 	height: 50px;
@@ -553,66 +488,57 @@ a:hover {
 	cursor: pointer;
 	content: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 5 5'><path fill='none' stroke='white' stroke-width='1' stroke-linecap='round' d='M1 1l3 3M1 4l3-3'/></svg>");
 }
-
 .project-description {
 	font-size: 14px;
 }
-
 .project-description p {
 	padding-left: 20px;
 }
-
 .project-description a {
 	color: #c5ff00;
 }
-
 .project-info {
 	padding: 10px 20px;
 }
-
 .project-info div {
 	margin-bottom: 5px;
 }
-
-.project-info>div span {
+.project-info > div span {
 	display: inline-block;
 	width: 150px;
 	color: #c5ff00;
 }
-
-.project-info>div>a>.fa {
+.project-info > div > a > .fa {
 	width: 25px;
 	height: 25px;
 	vertical-align: text-bottom;
 }
-
-.project-info>div>a>u {
+.project-info > div > a > u {
 	margin-left: 10px;
 	font-size: 133%;
 	color: #181a1c;
 }
-
-.project-info>div>a:hover>u {
+.project-info > div > a:hover > u {
 	color: #c5ff00;
 }
-
 .single-project img {
 	width: 100%;
+	/* "height: auto" in combination with inline width and height allows to keep aspect ratio while loading for non-bleeding edge browsers, which do not support "aspect-ratio" yet. */
 	height: auto;
 	padding: 15px;
 }
-
+/*
+3.3 Testimonials
+**********************************************************************/
 div.testimonial {
 	margin-bottom: 30px;
 }
-
 .testimonial p {
 	color: #181a1c;
 	background-color: #c5ff00;
 	padding: 15px;
 	margin: 0;
 }
-
 .testimonial-text {
 	font-size: 22px;
 	line-height: 1.3em;
@@ -621,50 +547,44 @@ div.testimonial {
 	margin-right: auto;
 	width: 70%;
 }
-
 .whopic {
 	display: inline-block;
 	margin-left: 10px;
 	color: #c5ff00;
 }
-
-.whopic>.arrow {
+.whopic > .arrow {
 	width: 0;
 	border-top: 10px solid;
 	border-left: 20px outset transparent;
 	border-right: 20px outset transparent;
 	margin-bottom: 10px;
 }
-
+/*
+3.4 Footer
+**********************************************************************/
 .footer {
 	text-align: center;
 }
-
 .footer p {
 	margin: 0;
 }
-
 .footer a {
 	color: #c5ff00;
 	padding: 5px;
 }
-
 .footer p > a:hover,
 .footer p > a:focus {
 	text-decoration-line: underline;
 }
-
-.social a>svg {
+.social a > svg {
 	width: 48px;
 	height: 48px;
 	fill: #c5ff00;
 }
-
 .social a:hover > svg,
 .social a:focus > svg {
 	fill: #ffffff;
 }
-
 a.scrollup {
 	position: fixed;
 	bottom: 15px;
@@ -682,7 +602,6 @@ a.scrollup {
 	fill: none;
 	transition: background-color 0.5s, border-color 0.5s, stroke 0.5s;
 }
-
 a.scrollup:hover,
 a.scrollup:focus,
 a.scrollup:active {
