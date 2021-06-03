@@ -128,12 +128,13 @@ a:hover {
 .nav.nav-pills>button {
     margin: 2px 5px 2px 0;
     background-color: #164046;
-    border: 1px solid #181a1c;
+    border: 1px solid #164046;
     color: #fff;
+    border-radius: 4px;
 }
 
 .nav.nav-pills>button:hover,.nav.nav-pills>button:focus,.nav.nav-pills>button:active,.nav.nav-pills>button.mixitup-control-active {
-    color: #000;
+    color: #164046;
     background-color: #c5ff00;
 }
 
@@ -197,11 +198,12 @@ a:hover {
     border: 1px solid #164046;
     padding: 15px 30px;
     background-color: #164046;
+    border-radius: 4px;
 }
 
 .button:hover,.button:focus,.button:active {
     background-color: #c5ff00;
-    color: #000;
+    color: #164046;
 }
 
 #portfolio-grid {
@@ -350,7 +352,7 @@ a:hover {
     height: 100%
 }
 
-.da-slide h2,.da-slide h4,.da-slide p,.da-slide .da-link {
+.da-slide h2,.da-slide h4,.da-slide p,.da-slide {
     color: #181a1c
 }
 
@@ -403,12 +405,12 @@ a:hover {
 .da-slide .da-link {
     top: 320px;
     width: unset;
-    border-color: rgb(24,26,28,.8)
+    /*border-color: rgb(24,26,28,.8)*/
 }
 
 .da-slide .da-link:hover,.da-slide .da-link:active,.da-slide .da-link:focus {
-    color: #fff;
-    background-color: #181a1c
+    color: #000;
+    background-color: #c5ff00
 }
 
 .da-slide .da-img img {
@@ -533,7 +535,7 @@ a:hover {
 .project-title h3 {
     float: left;
     line-height: 30;
-    margin-top: 10;
+    margin-top: 10px;
     margin-left: 20px;
     color: #c5ff00
 }
