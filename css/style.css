@@ -130,11 +130,9 @@ a:hover {
 .da-slider > .container-xl > .da-slide > .da-img {
 	width: 30%;
 }
-
 /*
 2. Layout
 **********************************************************************/
-
 .centered {
 	text-align: center;
 }
@@ -156,6 +154,9 @@ a:hover {
 	width: 100%;
 	height: 30px;
 }
+/*
+2.1 Animations: Class is applied via app.js
+**********************************************************************/
 @keyframes fadeInDown {
 	0% { opacity: 0; transform: translateY(-20px); }
 	100% { opacity: 1; transform: translateY(0); }
@@ -163,11 +164,9 @@ a:hover {
 .fadeInDown {
 	animation: fadeInDown 1s forwards;
 }
-
 /*
 2.2 Buttons: For green background
 **********************************************************************/
-
 .button,
 .button:visited {
 	display: inline-block;
@@ -184,6 +183,9 @@ a:hover {
 	background-color: #c5ff00;
 	color: #164046;
 }
+/*
+2.3 Thumbnails
+**********************************************************************/
 #portfolio-grid {
 	margin-left: -5px;
 }
@@ -200,6 +202,7 @@ a:hover {
 .thumbnail img {
 	display: block;
 	width: 100%;
+	/* "height: auto" in combination with inline width and height allows to keep aspect ratio while loading for non-bleeding edge browsers, which do not support "aspect-ratio" yet. */
 	height: auto;
 	aspect-ratio: 8/5;
 }
@@ -258,8 +261,8 @@ a:hover {
 	content: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='white' d='M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z'/></svg>");
 }
 /*
-2.4 Icons
-**********************************************************************/
+3. Sections
+***************************************************************************/
 .section {
 	padding-bottom: 50px;
 }
