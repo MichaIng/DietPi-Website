@@ -321,8 +321,7 @@ a:hover {
 }
 .da-slide h2,
 .da-slide h4,
-.da-slide p,
-.da-slide .da-link {
+.da-slide p {
 	color: #181a1c;
 }
 .da-slide h2 {
@@ -366,6 +365,7 @@ a:hover {
 .da-slide .da-link {
 	top: 320px;
 	width: unset;
+	line-height: unset;
 	/*border-color: rgb(24, 26, 28, 0.8);*/
 }
 .da-slide .da-link:hover,
