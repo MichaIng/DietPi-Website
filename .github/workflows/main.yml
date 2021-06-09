@@ -8,17 +8,20 @@ jobs:
     - name: Deploy DietPi-Website locally
       id: deploy
       run: bash -c "$(curl -sSfL https://raw.githubusercontent.com/MichaIng/DietPi-Website${GITHUB_REF#refs/heads}/deploy.bash)" bash .
-    - name: Setup JRE 15 for Nu Html Checker
+    - name: Setup JRE 16 for Nu Html Checker
       # https://github.com/actions/setup-java/releases
-      uses: actions/setup-java@v1
+      uses: actions/setup-java@v2
       with:
+        distribution: 'zulu'
         # http://static.azul.com/zulu/bin/
-        java-version: '15'
+        java-version: '16'
         java-package: jre
+        check-latest: true
     - name: Download Nu Html Checker
       run: |
-        curl -sSfL "$(curl -sSfL https://api.github.com/repos/validator/validator/releases/latest | mawk -F\" '/\"browser_download_url.*vnu\.jar.*\.zip\"/{print $4}')" -o download.zip
-        unzip -jo download.zip dist/vnu.jar
+        curl -sSfL "$(curl -sSfL https://api.github.com/repos/validator/validator/releases/latest | mawk -F\" '/"browser_download_url.*vnu\.jar.*\.zip"/{print $4;exit}')" -o vnu.zip
+        unzip -jo vnu.zip dist/vnu.jar
+        rm vnu.zip
     - name: Run Nu Html Checker to check HTML, CSS and SVG files
       run: find . -type f \( -name '*.html' -o -name '*.css' -o -name '*.svg' \) -exec java -jar vnu.jar --verbose --also-check-css --also-check-svg --filterpattern '.*(text-decoration-skip-ink|color-adjust|overflow-anchor|break-word|aspect-ratio|html).*' {} +
     - name: Setup Python 3.9 for PySpelling
@@ -40,18 +43,19 @@ jobs:
     - name: Run PySpelling to check HTML files
       if: always() && steps.pyspelling.outcome == 'success'
       run: pyspelling -vc .spellcheck.yml
-    - name: Setup Go 1.16 for liche
-      id: go
+    - name: Setup Nginx for lychee
+      id: nginx
       if: always() && steps.deploy.outcome == 'success'
-      # https://github.com/actions/setup-go/releases
-      uses: actions/setup-go@v2
-      with:
-        # https://github.com/actions/go-versions/releases
-        go-version: '1.16'
-    - name: Install liche
-      id: liche
-      if: always() && steps.go.outcome == 'success'
-      run: GO111MODULE=on go get -u github.com/raviqqe/liche
-    - name: Run liche to check HTML and Markdown files
-      if: always() && steps.liche.outcome == 'success'
-      run: liche -c 64 -x 'https://twitter.com' -d . -r .
+      run: |
+        sudo sed -i "/^[[:blank:]]*root[[:blank:]]/c\root $(pwd)" /etc/nginx/sites-available/default
+        sudo systemctl restart nginx
+    - name: Download lychee
+      id: lychee
+      if: always() && steps.nginx.outcome == 'success'
+      run: |
+        curl -sSfL "$(curl -sSfL https://api.github.com/repos/lycheeverse/lychee/releases/latest | mawk -F\" '/"browser_download_url.*x86_64-unknown-linux-gnu\.tar\.gz"/{print $4;exit}')" -o lychee.tar.gz
+        tar xf lychee.tar.gz
+        rm lychee.tar.gz
+    - name: Run lychee to check Markdown and HTML files
+      if: always() && steps.lychee.outcome == 'success'
+      run: ./lychee -X head --github-token '${{ secrets.GITHUB_TOKEN }}' -b 'http://127.0.0.1' -v '**/*.md' '**/*.html'
