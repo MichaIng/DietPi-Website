@@ -58,4 +58,4 @@ jobs:
         rm lychee.tar.gz
     - name: Run lychee to check Markdown and HTML files
       if: always() && steps.lychee.outcome == 'success'
-      run: ./lychee -X head --github-token '${{ secrets.GITHUB_TOKEN }}' -b 'http://127.0.0.1' -v '**/*.md' '**/*.html'
+      run: ./lychee -v -X head -b 'http://127.0.0.1' --exclude 'chrome://gpu' --github-token '${{ secrets.GITHUB_TOKEN }}' '**/*.md' '**/*.html'
