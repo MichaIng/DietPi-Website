@@ -47,7 +47,7 @@ jobs:
       id: nginx
       if: always() && steps.deploy.outcome == 'success'
       run: |
-        sudo sed -i "/^[[:blank:]]*root[[:blank:]]/c\root $(pwd)" /etc/nginx/sites-available/default
+        sudo sed -i "/^[[:blank:]]*root[[:blank:]]/c\root $(pwd);" /etc/nginx/sites-available/default
         sudo systemctl restart nginx
     - name: Download lychee
       id: lychee
