@@ -195,6 +195,7 @@ a:hover {
 	margin-left: -10px;
 	text-align: center;
 	background-color: #164046;
+	border-radius: 4px;
 }
 .thumbnail img {
 	display: block;
@@ -209,7 +210,7 @@ a:hover {
 	padding: 3px 0;
 	white-space: nowrap;
 	position: relative;
-	z-index: 4;
+	z-index: 1;
 }
 .thumbnail h3 {
 	font-size: 14px;
@@ -327,6 +328,7 @@ a:hover {
 .single-project {
 	margin-bottom: 30px;
 	background-color: #181a1c;
+	border-radius: 4px;
 }
 .project-title {
 	border-bottom: 1px solid #9ccc00;
@@ -395,6 +397,7 @@ div.testimonial {
 	background-color: #c5ff00;
 	padding: 15px;
 	margin: 0;
+	border-radius: 4px;
 }
 .testimonial-text {
 	font-size: 22px;
