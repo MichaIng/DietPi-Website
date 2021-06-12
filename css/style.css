@@ -212,9 +212,13 @@ a:hover {
 	z-index: 4;
 }
 .thumbnail h3 {
-	color: #ffffff;
 	font-size: 14px;
 	margin-top: 5px;
+}
+.thumbnail:hover h3,
+.thumbnail:focus h3,
+.thumbnail:active h3 {
+	color: #c5ff00;
 }
 .thumbnail p {
 	font-size: 10px;
@@ -222,7 +226,7 @@ a:hover {
 .thumbnail .more {
 	position: absolute;
 	top: -40px;
-	z-index: 4;
+	z-index: 1;
 	width: 40px;
 	height: 40px;
 	margin-left: -20px;
@@ -236,10 +240,10 @@ a:hover {
 .thumbnail .mask {
 	width: 100%;
 	height: 100%;
-	background-color: #181a1c;
-	opacity: 0.85;
+	background-color: #181a1cd9;
 	position: absolute;
 	top: 100%;
+	left: 0;
 	transition: top 0.2s ease-out;
 }
 .thumbnail:hover .mask {
@@ -325,7 +329,7 @@ a:hover {
 	background-color: #181a1c;
 }
 .project-title {
-	border-bottom: 1px solid #c5ff00;
+	border-bottom: 1px solid #9ccc00;
 }
 .project-title h3 {
 	float: left;
