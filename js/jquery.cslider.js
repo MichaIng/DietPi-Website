@@ -1,17 +1,5 @@
-// Original: https://github.com/Le-Stagiaire/jquery.cslider/blob/0c99322279b114acdffca087d3700ab9a840c25f/src/jquery.cslider.js
-// Modified: https://github.com/Le-Stagiaire/jquery.cslider/pull/1
-(function (factory) {
-    if (typeof define === 'function' && define.amd) {
-        // AMD. Register as an anonymous module.
-        define(['jquery.cslider'], factory);
-    } else if (typeof exports === 'object') {
-        // Node/CommonJS
-        module.exports = factory(require('jquery'));
-    } else {
-        // Browser globals
-        factory(jQuery);
-    }
-}(function ($) {
+// Original: https://github.com/Le-Stagiaire/jquery.cslider/blob/0c99322/src/jquery.cslider.js
+(function ($) {
     /*
      * Slider object.
      */
@@ -20,10 +8,10 @@
         this._init(options);
     };
     $.Slider.defaults = {
-        current: 0,  // index of current slide
-        bgincrement: 50, // increment the bg position (parallax effect) when sliding
-        autoplay: false,// slideshow on / off
-        interval: 4000  // time between transitions
+        current: 0, // index of current slide
+        bgincrement: 100, // increment the bg position (parallax effect) when sliding
+        autoplay: true, // slideshow on / off
+        interval: 6000 // time between transitions
     };
     $.Slider.prototype = {
         _init: function (options) {
@@ -62,16 +50,14 @@
             var classTo, classFrom, d;
             if (!dir) {
                 ( page > this.current ) ? d = 'next' : d = 'prev';
-            }
-            else {
+            } else {
                 d = dir;
             }
             if (d === 'next') {
                 classTo = 'da-slide-toleft';
                 classFrom = 'da-slide-fromright';
                 ++this.bgpositer;
-            }
-            else {
+            } else {
                 classTo = 'da-slide-toright';
                 classFrom = 'da-slide-fromleft';
                 --this.bgpositer;
@@ -142,8 +128,7 @@
                         _self.isAnimating = false;
                     }
                 });
-            }
-            else {
+            } else {
                 this.$el.on('webkitTransitionEnd.cslider transitionend.cslider OTransitionEnd.cslider', function (event) {
                     if (event.target.id === _self.$el.attr('id'))
                         _self.isAnimating = false;
@@ -172,8 +157,7 @@
                 }
                 instance[options].apply(instance, args);
             });
-        }
-        else {
+        } else {
             this.each(function () {
                 var instance = $.data(this, 'cslider');
                 if (!instance) {
@@ -183,4 +167,4 @@
         }
         return this;
     };
-}));
+})(jQuery);
