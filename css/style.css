@@ -127,9 +127,6 @@ a:hover {
 	color: #164046;
 	background-color: #c5ff00;
 }
-.da-slider > .container-xl > .da-slide > .da-img {
-	width: 30%;
-}
 /*
 2. Layout
 **********************************************************************/
@@ -198,6 +195,7 @@ a:hover {
 	margin-left: -10px;
 	text-align: center;
 	background-color: #164046;
+	border-radius: 4px;
 }
 .thumbnail img {
 	display: block;
@@ -212,12 +210,16 @@ a:hover {
 	padding: 3px 0;
 	white-space: nowrap;
 	position: relative;
-	z-index: 4;
+	z-index: 1;
 }
 .thumbnail h3 {
-	color: #ffffff;
 	font-size: 14px;
 	margin-top: 5px;
+}
+.thumbnail:hover h3,
+.thumbnail:focus h3,
+.thumbnail:active h3 {
+	color: #c5ff00;
 }
 .thumbnail p {
 	font-size: 10px;
@@ -225,7 +227,7 @@ a:hover {
 .thumbnail .more {
 	position: absolute;
 	top: -40px;
-	z-index: 4;
+	z-index: 1;
 	width: 40px;
 	height: 40px;
 	margin-left: -20px;
@@ -239,10 +241,10 @@ a:hover {
 .thumbnail .mask {
 	width: 100%;
 	height: 100%;
-	background-color: #181a1c;
-	opacity: 0.85;
+	background-color: #181a1cd9;
 	position: absolute;
 	top: 100%;
+	left: 0;
 	transition: top 0.2s ease-out;
 }
 .thumbnail:hover .mask {
@@ -296,153 +298,6 @@ a:hover {
 .secondary-section .title p {
 	color: #181a1c;
 }
-/* Slider: https://github.com/Le-Stagiaire/jquery.cslider */
-.da-slider {
-	margin: 0;
-	height: 45vw;
-	max-height: 450px;
-	min-width: unset;
-	border: 0;
-	box-shadow: none;
-	background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 15'><path fill='%23edf3f7' d='M0 0h8v5H0zm48 0h8v5h-8zM8 10h8v5H8zm24 0h8v5h-8z'/><path fill='%23747c89' d='M8 0h8v5H8zm32 0h8v5h-8zM0 5h8v5H0zm16 5h8v5h-8z'/><path fill='%238b95a5' d='M16 0h8v5h-8zm8 5h8v5h-8zm24 0h8v5h-8zM0 10h8v5H0z'/><path fill='white' d='M24 0h8v5h-8zm8 5h8v5h-8zm-8 5h8v5h-8zm24 0h8v5h-8z'/><path fill='%23d1d7db' d='M32 0h8v5h-8zM8 5h8v5H8zm32 0h8v5h-8z'/><path fill='%234e555e' d='M16 5h8v5h-8zm24 5h8v5h-8z'/></svg>");
-	background-size: auto 100%;
-}
-.da-slider .mask {
-	position: absolute;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	background-color: #c5ff00;
-	opacity: 0.85;
-}
-.da-slider .container-xl {
-	position: relative;
-	height: 100%;
-}
-.da-slide h2,
-.da-slide h4,
-.da-slide p {
-	color: #181a1c;
-}
-.da-slide h2 {
-	top: 100px;
-	font-size: 33px;
-	text-shadow: none;
-}
-.da-slide h4 {
-	position: absolute;
-	top: 155px;
-	opacity: 0;
-	left: 110%;
-	font-size: 22px;
-	width: 50%;
-	white-space: nowrap;
-}
-.da-slide-current h4 {
-	left: 10%;
-	opacity: 1;
-}
-.da-slide-fromright h4 {
-	animation: fromRightAnim1 0.6s ease-in 0.8s both;
-}
-.da-slide-fromleft h4 {
-	animation: fromLeftAnim1 0.6s ease-in 0.6s both;
-}
-.da-slide-toright h4 {
-	animation: toRightAnim1 0.6s ease-in 0.45s both;
-}
-.da-slide-toleft h4 {
-	animation: toLeftAnim1 0.6s ease-in 0.15s both;
-}
-.da-slide p {
-	top: 210px;
-	padding: 0;
-	font-size: unset;
-	font-style: unset;
-	line-height: unset;
-	height: unset;
-}
-.da-slide .da-link {
-	top: 320px;
-	width: unset;
-	line-height: unset;
-	/*border-color: rgb(24, 26, 28, 0.8);*/
-}
-.da-slide .da-link:hover,
-.da-slide .da-link:active,
-.da-slide .da-link:focus {
-	color: #181a1c;
-	background-color: #c5ff00;
-}
-.da-slide .da-img img {
-	vertical-align: unset;
-}
-.da-arrows span {
-	width: 45px;
-	height: 100%;
-	top: 0;
-	box-shadow: none;
-}
-.da-arrows span:after {
-	content: none;
-}
-.da-arrows span.da-arrows-next {
-	background: no-repeat center url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='45' height='130'><path fill='none' stroke='white' stroke-width='2' d='M2 0l40 65-40 65'/></svg>");
-}
-.da-arrows span.da-arrows-prev {
-	background: no-repeat center url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='45' height='130'><path fill='none' stroke='white' stroke-width='2' d='M42 0l-40 65 40 65'/></svg>");
-}
-.da-dots span {
-	width: 50px;
-	height: 3px;
-	background-color: #ffffff;
-	border-radius: 0;
-	box-shadow: none;
-}
-.da-dots span.da-dots-current {
-	background-color: #181a1c;
-}
-.da-dots span.da-dots-current:after {
-	content: none;
-}
-@media (max-width: 991px) {
-	.da-slide h2 {
-		top: 50px;
-	}
-	.da-slide h4 {
-		top: 105px;
-		white-space: unset;
-	}
-	.da-slide p {
-		top: 160px;
-	}
-	.da-slide .da-link {
-		top: 270px;
-	}
-}
-@media (max-width: 767px) {
-	.da-slide p {
-		display: none;
-	}
-	.da-slide .da-link {
-		top: 190px;
-	}
-}
-@media (max-width: 575px) {
-	.da-slide h2 {
-		font-size: 22px;
-		width: 80%;
-	}
-	.da-slide h4 {
-		font-size: 18px;
-		width: 80%;
-		top: 90px;
-	}
-	.da-slide .da-img,
-	.da-slide .da-link {
-		display: none;
-	}
-}
 /*
 3.1 Features
 **********************************************************************/
@@ -473,9 +328,10 @@ a:hover {
 .single-project {
 	margin-bottom: 30px;
 	background-color: #181a1c;
+	border-radius: 4px;
 }
 .project-title {
-	border-bottom: 1px solid #c5ff00;
+	border-bottom: 1px solid #9ccc00;
 }
 .project-title h3 {
 	float: left;
@@ -541,6 +397,7 @@ div.testimonial {
 	background-color: #c5ff00;
 	padding: 15px;
 	margin: 0;
+	border-radius: 4px;
 }
 .testimonial-text {
 	font-size: 22px;

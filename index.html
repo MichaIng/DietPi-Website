@@ -33,8 +33,8 @@
 		<meta name="theme-color" content="#000000">
 		<!-- Load CSS styles -->
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="css/jquery.cslider.min.css?v=1">
-		<link rel="stylesheet" type="text/css" href="css/style.min.css?v=1">
+		<link rel="stylesheet" type="text/css" href="css/jquery.cslider.min.css?v=2">
+		<link rel="stylesheet" type="text/css" href="css/style.min.css?v=2">
 		<!-- Include JavaScript -->
 		<script defer src="js/jquery.min.js"></script>
 		<script defer src="js/bootstrap.min.js"></script>
@@ -62,53 +62,46 @@
 		</nav>
 		<!-- Start home section slider: https://github.com/Le-Stagiaire/jquery.cslider -->
 		<div class="da-slider" id="home">
-			<!-- mask element use for masking background image -->
-			<div class="mask"></div>
 			<!-- All slides centred in container element -->
 			<div class="container-xl">
 				<svg class="triangle" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0h100l-50 100"/></svg>
-				<!-- Start slide -->
+				<!-- Slide 1 -->
 				<div class="da-slide da-slide-current">
 					<h2>DietPi v7.2 has been released!</h2>
 					<h4>Update now and benefit from enhancements like:</h4>
 					<p>Reliable desktop autologin as non-root user, desktop and browser preference options, extended provider support for DietPi-VPN and DietPi-DDNS, and many further updates and bug fixes.</p>
-					<a href="https://dietpi.com/docs/releases/" class="da-link" target="_blank" rel="noopener">Release notes</a>
+					<a class="da-link" href="https://dietpi.com/docs/releases/" target="_blank" rel="noopener">Release notes</a>
 					<div class="da-img"><img class="img-fluid" src="images/dietpi-logo_360x360.png" alt="DietPi logo" width="300" height="300" loading="lazy"></div>
 				</div>
-				<!-- End slide -->
-				<!-- Start slide -->
+				<!-- Slide 2 -->
 				<div class="da-slide">
 					<h2>DietPi | Minimal image at its core</h2>
 					<h4>Highly optimised minimal Debian OS</h4>
 					<p>DietPi is extremely lightweight at its core, with features of low process/memory footprint and DietPi-RAMlog installed by default, to get the maximum performance from your device.</p>
-					<a href="https://docs.google.com/spreadsheets/d/1mDHGZC-H6tU6_O8kuLTG8d4A8Nt7lV1Q7MXTR_6qw30/edit?usp=sharing" class="da-link" target="_blank" rel="noopener">Learn more</a>
+					<a class="da-link" href="https://docs.google.com/spreadsheets/d/1mDHGZC-H6tU6_O8kuLTG8d4A8Nt7lV1Q7MXTR_6qw30/edit?usp=sharing" target="_blank" rel="noopener">Learn more</a>
 					<div class="da-img"><img class="img-fluid" src="images/slider_feather.png" alt="Feather" width="360" height="360" loading="lazy"></div>
 				</div>
-				<!-- End slide -->
-				<!-- Start slide -->
+				<!-- Slide 3 -->
 				<div class="da-slide">
 					<h2>DietPi-Software</h2>
 					<h4>Installs and optimises popular software for you</h4>
 					<p>Quickly and easily install popular software "ready to run" and optimised for your system. Gone are the days of reading 5+ page guides, DietPi does everything for you, giving you more time to enjoy the software you require.</p>
-					<a href="dietpi-software.html" class="da-link" target="_blank" rel="noopener">Learn more</a>
+					<a class="da-link" href="dietpi-software.html" target="_blank" rel="noopener">Learn more</a>
 					<div class="da-img"><img class="img-fluid" src="images/slider_software.png" alt="Software image" width="320" height="320"  loading="lazy"></div>
 				</div>
-				<!-- End slide -->
-				<!-- Start slide -->
+				<!-- Slide 4 -->
 				<div class="da-slide">
 					<h2>DietPi | Benchmarks</h2>
 					<h4>All devices benchmarked (CPU/IO)</h4>
 					<p>Looking to purchase a new SBC device? Curious to see which devices perform best? With thanks to our end users, you can now view and compare DietPi-Benchmark results for all devices.</p>
-					<a href="https://dietpi.com/survey/#benchmark" class="da-link" target="_blank" rel="noopener">Learn more</a>
+					<a class="da-link" href="https://dietpi.com/survey/#benchmark" target="_blank" rel="noopener">Learn more</a>
 					<div class="da-img"><img class="img-fluid" src="images/dietpi-logo_360x360.png" alt="DietPi logo" width="300" height="300" loading="lazy"></div>
 				</div>
-				<!-- End slide -->
-				<!-- Start slide navigation arrows -->
+				<!-- Slider navigation arrows -->
 				<div class="da-arrows">
 					<span class="da-arrows-prev"></span>
 					<span class="da-arrows-next"></span>
 				</div>
-				<!-- End slide navigation arrows -->
 			</div>
 		</div>
 		<!-- End home section -->
@@ -116,11 +109,10 @@
 		<div class="section primary-section" id="features">
 			<div class="container-xl centered">
 				<svg class="triangle" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0h100l-50 100"/></svg>
-				<!-- Start title section -->
 				<div class="title">
-					<!-- Section's title goes here -->
+					<!-- Section title -->
 					<h1>DietPi - features overview</h1>
-					<!-- Simple description for section goes here. -->
+					<!-- Section description -->
 					<p>DietPi is more than just a minimal image.</p>
 				</div>
 				<div class="row">
@@ -246,19 +238,19 @@
 								<br>
 								<div>
 									<a href="https://dietpi.com/downloads/images/DietPi_RPi-ARMv6-Buster.7z"><span>32-bit image:</span><i class="fa fa-download"></i><u>Download</u></a>
-									<div style="display:list-item;list-style-position: inside">The ARMv6 32-bit image boots on all Raspberry Pi models and is based on the official Raspberry Pi OS 32-bit image.</div>
+									<br>The ARMv6 32-bit image boots on all Raspberry Pi models and is based on the official Raspberry Pi OS 32-bit image.
 								</div>
 								<div>
 									<a href="https://dietpi.com/downloads/images/DietPi_RPi-ARMv8-Buster.7z"><span>64-bit image:</span><i class="fa fa-download"></i><u>Download</u></a>
-									<div style="display:list-item;list-style-position: inside">The ARMv8 64-bit image does <b>NOT</b> boot on Raspberry Pi models 1, Zero or 2 v1.1. A Raspberry Pi with an ARMv8-capable CPU is required. You can find an overview of all Raspberry Pi models and their CPU instruction sets at <a href="https://en.wikipedia.org/wiki/Raspberry_Pi#Specifications" target="_blank" rel="noopener" style="text-decoration-line:underline;">this</a> Wikipedia article.</div>
+									<br>The ARMv8 64-bit image does <b>NOT</b> boot on Raspberry Pi models 1, Zero or 2 v1.1. A Raspberry Pi with an ARMv8-capable CPU is required. You can find an overview of all Raspberry Pi models and their CPU instruction sets at <a href="https://en.wikipedia.org/wiki/Raspberry_Pi#Specifications" target="_blank" rel="noopener" style="text-decoration-line:underline;">this</a> Wikipedia article.
 								</div>
 								<div>
 									<a href="https://dietpi.com/downloads/images/DietPi_RPi-ARMv6-Buster_Amiberry.7z"><span>Amiberry image:</span><i class="fa fa-download"></i><u>Download</u></a>
-									<div style="display:list-item;list-style-position: inside">This image installs and boots into <a href="https://dietpi.com/docs/software/gaming/#amiberry" target="_blank" rel="noopener" style="text-decoration-line:underline;">Amiberry</a> automatically on first boot.</div>
+									<br>This image installs and boots into <a href="https://dietpi.com/docs/software/gaming/#amiberry" target="_blank" rel="noopener" style="text-decoration-line:underline;">Amiberry</a> automatically on first boot.
 								</div>
 								<div>
 									<a href="https://dietpi.com/downloads/images/DietPi_RPi-ARMv7-Buster_AlloGUI.7z"><span>Allo GUI image:</span><i class="fa fa-download"></i><u>Download</u></a>
-									<div style="display:list-item;list-style-position: inside">This image has our <a href="https://dietpi.com/phpbb/viewtopic.php?t=2317" target="_blank" rel="noopener" style="text-decoration-line:underline;">Allo web GUI</a> and audiophile software pre-installed.</div>
+									<br>This image has our <a href="https://dietpi.com/phpbb/viewtopic.php?t=2317" target="_blank" rel="noopener" style="text-decoration-line:underline;">Allo web GUI</a> and audiophile software pre-installed.
 								</div>
 								<div><a href="https://dietpi.com/docs/install/" target="_blank" rel="noopener"><span>How to install / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
 							</div>

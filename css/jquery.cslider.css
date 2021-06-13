@@ -1,32 +1,22 @@
-/* Original: https://github.com/Le-Stagiaire/jquery.cslider/blob/7a64edf1ab3eb6af7596ee1deb11de7438bf0280/src/style.css */
-/* Modified: https://github.com/Le-Stagiaire/jquery.cslider/pull/1 */
+/* Original: https://github.com/Le-Stagiaire/jquery.cslider/blob/7a64edf/src/style.css */
 .da-slider {
     width: 100%;
-    min-width: 520px;
-    height: 400px;
+    height: 45vw;
+    max-height: 450px;
     position: relative;
-    margin: 30px auto;
     overflow: hidden;
-    border-top: 8px solid #efc34a;
-    border-bottom: 8px solid #efc34a;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 -2px 1px #fff;
+    background-image: linear-gradient(#c5ff00d8,#c5ff00d8),url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 15'><path fill='%23edf3f7' d='M0 0h8v5H0zm48 0h8v5h-8zM8 10h8v5H8zm24 0h8v5h-8z'/><path fill='%23747c89' d='M8 0h8v5H8zm32 0h8v5h-8zM0 5h8v5H0zm16 5h8v5h-8z'/><path fill='%238b95a5' d='M16 0h8v5h-8zm8 5h8v5h-8zm24 0h8v5h-8zM0 10h8v5H0z'/><path fill='white' d='M24 0h8v5h-8zm8 5h8v5h-8zm-8 5h8v5h-8zm24 0h8v5h-8z'/><path fill='%23d1d7db' d='M32 0h8v5h-8zM8 5h8v5H8zm32 0h8v5h-8z'/><path fill='%234e555e' d='M16 5h8v5h-8zm24 5h8v5h-8z'/></svg>");
+    background-size: auto 100%;
     transition: background-position 1.4s ease-in-out 0.3s;
 }
 
-.da-slide {
-    position: absolute;
-    width: 100%;
+.da-slider > .container-xl {
+    position: relative;
     height: 100%;
-    top: 0;
-    left: 0;
-    text-align: left;
-}
-
-.da-slide-current {
-    z-index: 1000;
 }
 
 .da-slide h2,
+.da-slide h4,
 .da-slide p,
 .da-slide .da-link,
 .da-slide .da-img {
@@ -36,102 +26,54 @@
 }
 
 .da-slide h2 {
-    color: #fff;
-    font-size: 66px;
-    width: 50%;
-    top: 60px;
-    white-space: nowrap;
-    z-index: 10;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    top: 100px;
+    color: #181a1c;
+    font-size: 33px;
     font-weight: 700;
 }
 
-.da-slide p {
-    width: 45%;
+.da-slide h4 {
     top: 155px;
-    color: #916c05;
-    font-size: 18px;
-    line-height: 26px;
-    height: 80px;
-    overflow: hidden;
-    font-style: italic;
-    font-weight: 400;
+    color: #181a1c;
+    font-size: 22px;
+    width: 50%;
 }
 
-.da-slide .da-img {
-    text-align: center;
-    width: 30%;
-    top: 70px;
-    height: 256px;
-    line-height: 320px;
-    left: 110%; /*60%*/
+.da-slide p {
+    top: 210px;
+    color: #181a1c;
+    padding: 0;
+    width: 45%;
 }
 
 .da-slide .da-link {
-    top: 270px; /*depends on p height*/
-    border-radius: 4px;
-    /*box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);*/
-    color: #fff;
-    /*text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);*/
-    border: 1px solid #164046;
-    padding: 15px 30px;
+    top: 320px;
     font-size: 18px;
-    line-height: 30px;
-    width: 80px;
-    text-align: center;
+    padding: 10px 20px;
+    border: 1px solid #164046;
     background-color: #164046;
+    border-radius: 4px;
 }
 
-.da-slide .da-link:hover {
+.da-slide .da-link:hover,
+.da-slide .da-link:active,
+.da-slide .da-link:focus {
+    color: #181a1c;
     background-color: #c5ff00;
 }
 
-.da-dots {
-    width: 100%;
-    position: absolute;
-    text-align: center;
-    left: 0;
-    bottom: 20px;
-    z-index: 2000;
-}
-
-.da-dots span {
-    display: inline-block;
-    position: relative;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: #e4b42d;
-    margin: 3px;
-    cursor: pointer;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1) inset,
-    1px 1px 1px rgba(255, 255, 255, 0.1);
-}
-
-.da-dots span.da-dots-current:after {
-    content: '';
-    width: 8px;
-    height: 8px;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    border-radius: 50%;
-    background: rgb(255, 255, 255);
-    background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+.da-slide .da-img {
+    top: 70px;
+    width: 30%;
 }
 
 .da-arrows span {
     position: absolute;
-    top: 50%;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    background: #e4b42d;
+    top: 0;
+    height: 100%;
+    width: 45px;
     cursor: pointer;
-    z-index: 2000;
     opacity: 0;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1) inset,
-    1px 1px 1px rgba(255, 255, 255, 0.1);
     transition: opacity 0.4s ease-in-out 0.2s;
 }
 
@@ -139,38 +81,37 @@
     opacity: 1;
 }
 
-.da-arrows span:after {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 5px;
-    left: 5px;
-    border-radius: 50%;
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-.da-arrows span:hover:after {
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
-}
-
-.da-arrows span:active:after {
-    box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.1);
-}
-
-.da-arrows span.da-arrows-next:after {
-    background-position: top right;
-}
-
 .da-arrows span.da-arrows-prev {
-    left: 15px;
+    background: no-repeat center url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='45' height='130'><path fill='none' stroke='white' stroke-width='2' d='M42 0l-40 65 40 65'/></svg>");
 }
 
 .da-arrows span.da-arrows-next {
     right: 15px;
+    background: no-repeat center url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='45' height='130'><path fill='none' stroke='white' stroke-width='2' d='M2 0l40 65-40 65'/></svg>");
+}
+
+.da-dots {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.da-dots span {
+    display: inline-block;
+    width: 50px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 3px;
+    cursor: pointer;
+}
+
+.da-dots span.da-dots-current {
+    background-color: #181a1c;
 }
 
 .da-slide-current h2,
+.da-slide-current h4,
 .da-slide-current p,
 .da-slide-current .da-link {
     left: 10%;
@@ -182,10 +123,50 @@
     opacity: 1;
 }
 
+@media (max-width: 991px) {
+    .da-slide h2 {
+        top: 50px;
+    }
+    .da-slide h4 {
+        top: 105px;
+    }
+    .da-slide p {
+        top: 160px;
+    }
+    .da-slide .da-link {
+        top: 270px;
+    }
+}
+
+@media (max-width: 767px) {
+    .da-slide p {
+        display: none;
+    }
+    .da-slide .da-link {
+        top: 180px;
+    }
+}
+
+@media (max-width: 575px) {
+    .da-slide h2 {
+        font-size: 22px;
+    }
+    .da-slide h4 {
+        top: 90px;
+        font-size: 18px;
+        width: 80%;
+    }
+    .da-slide .da-img,
+    .da-slide .da-link {
+        display: none;
+    }
+}
+
 /* Animation classes and animations */
 
 /* Slide in from the right */
 .da-slide-fromright h2,
+.da-slide-fromright h4,
 .da-slide-fromright p {
     animation: fromRightAnim1 0.6s ease-in 0.8s both;
 }
@@ -199,44 +180,24 @@
 }
 
 @keyframes fromRightAnim1 {
-    0% {
-        left: 110%;
-        opacity: 0;
-    }
-    100% {
-        left: 10%;
-        opacity: 1;
-    }
+    0% { left: 110%; opacity: 0; }
+    100% { left: 10%; opacity: 1; }
 }
 
 @keyframes fromRightAnim3 {
-    0% {
-        left: 110%;
-        opacity: 0;
-    }
-    1% {
-        left: 10%;
-        opacity: 0;
-    }
-    100% {
-        left: 10%;
-        opacity: 1;
-    }
+    0% { left: 110%; opacity: 0; }
+    1% { left: 10%; opacity: 0; }
+    100% { left: 10%; opacity: 1; }
 }
 
 @keyframes fromRightAnim4 {
-    0% {
-        left: 110%;
-        opacity: 0;
-    }
-    100% {
-        left: 60%;
-        opacity: 1;
-    }
+    0% { left: 110%; opacity: 0; }
+    100% { left: 60%; opacity: 1; }
 }
 
 /* Slide in from the left */
 .da-slide-fromleft h2,
+.da-slide-fromleft h4,
 .da-slide-fromleft p {
     animation: fromLeftAnim1 0.6s ease-in 0.6s both;
 }
@@ -250,45 +211,28 @@
 }
 
 @keyframes fromLeftAnim1 {
-    0% {
-        left: -110%;
-        opacity: 0;
-    }
-    100% {
-        left: 10%;
-        opacity: 1;
-    }
+    0% { left: -110%; opacity: 0; }
+    100% { left: 10%; opacity: 1; }
 }
 
 @keyframes fromLeftAnim3 {
-    0% {
-        left: -110%;
-        opacity: 0;
-    }
-    1% {
-        left: 10%;
-        opacity: 0;
-    }
-    100% {
-        left: 10%;
-        opacity: 1;
-    }
+    0% { left: -110%; opacity: 0; }
+    1% { left: 10%; opacity: 0; }
+    100% { left: 10%; opacity: 1; }
 }
 
 @keyframes fromLeftAnim4 {
-    0% {
-        left: -110%;
-        opacity: 0;
-    }
-    100% {
-        left: 60%;
-        opacity: 1;
-    }
+    0% { left: -110%; opacity: 0; }
+    100% { left: 60%; opacity: 1; }
 }
 
 /* Slide out to the right */
 .da-slide-toright h2 {
     animation: toRightAnim1 0.6s ease-in 0.6s both;
+}
+
+.da-slide-toright h4 {
+    animation: toRightAnim1 0.6s ease-in 0.45s both;
 }
 
 .da-slide-toright p {
@@ -304,49 +248,29 @@
 }
 
 @keyframes toRightAnim1 {
-    0% {
-        left: 10%;
-        opacity: 1;
-    }
-    100% {
-        left: 100%;
-        opacity: 0;
-    }
+    0% { left: 10%; opacity: 1; }
+    100% { left: 100%; opacity: 0; }
 }
 
 @keyframes toRightAnim3 {
-    0% {
-        left: 10%;
-        opacity: 1;
-    }
-    99% {
-        left: 10%;
-        opacity: 0;
-    }
-    100% {
-        left: 100%;
-        opacity: 0;
-    }
+    0% { left: 10%; opacity: 1; }
+    99% { left: 10%; opacity: 0; }
+    100% { left: 100%; opacity: 0; }
 }
 
 @keyframes toRightAnim4 {
-    0% {
-        left: 60%;
-        opacity: 1;
-    }
-    30% {
-        left: 55%;
-        opacity: 1;
-    }
-    100% {
-        left: 100%;
-        opacity: 0;
-    }
+    0% { left: 60%; opacity: 1; }
+    30% { left: 55%; opacity: 1; }
+    100% { left: 100%; opacity: 0; }
 }
 
 /* Slide out to the left */
 .da-slide-toleft h2 {
     animation: toLeftAnim1 0.6s ease-in both;
+}
+
+.da-slide-toleft h4 {
+    animation: toLeftAnim1 0.6s ease-in 0.15s both;
 }
 
 .da-slide-toleft p {
@@ -362,50 +286,20 @@
 }
 
 @keyframes toLeftAnim1 {
-    0% {
-        left: 10%;
-        opacity: 1;
-    }
-    30% {
-        left: 15%;
-        opacity: 1;
-    }
-    100% {
-        left: -50%;
-        opacity: 0;
-    }
+    0% { left: 10%; opacity: 1; }
+    30% { left: 15%; opacity: 1; }
+    100% { left: -50%; opacity: 0; }
 }
 
 @keyframes toLeftAnim3 {
-    0% {
-        left: 10%;
-        opacity: 1;
-    }
-    99% {
-        left: 10%;
-        opacity: 0;
-    }
-    100% {
-        left: -50%;
-        opacity: 0;
-    }
+    0% { left: 10%; opacity: 1; }
+    99% { left: 10%; opacity: 0; }
+    100% { left: -50%; opacity: 0; }
 }
 
 @keyframes toLeftAnim4 {
-    0% {
-        left: 60%;
-        opacity: 1;
-    }
-    40% {
-        left: 70%;
-        opacity: 1;
-    }
-    90% {
-        left: 0;
-        opacity: 0;
-    }
-    100% {
-        left: -50%;
-        opacity: 0;
-    }
+    0% { left: 60%; opacity: 1; }
+    40% { left: 70%; opacity: 1; }
+    90% { left: 0; opacity: 0; }
+    100% { left: -50%; opacity: 0; }
 }
