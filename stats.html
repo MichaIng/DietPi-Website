@@ -5,13 +5,13 @@
 		<meta charset="utf-8">
 		<link rel="canonical" href="https://dietpi.com/stats.html">
 		<title>DietPi OS stats & comparison</title>
-		<meta name="description" content="See resource usage and performance stats of DietPi images, and compare those against other Debian-based distros">
+		<meta name="description" content="See resource usage and performance stats of DietPi images, and compare those against other Debian-based distributions">
 		<!-- Twitter meta tags: https://developer.twitter.com/docs/twitter-for-websites/cards -->
 		<meta name="twitter:card" content="summary">
 		<meta name="twitter:site" content="@DietPi_">
 		<meta name="twitter:creator" content="@DietPi_">
 		<meta name="twitter:title" content="DietPi OS stats & comparison">
-		<meta name="twitter:description" content="See resource usage and performance stats of DietPi images, and compare those against other Debian-based distros">
+		<meta name="twitter:description" content="See resource usage and performance stats of DietPi images, and compare those against other Debian-based distributions">
 		<meta name="twitter:image" content="https://dietpi.com/images/dietpi-logo_720x720.png">
 		<!-- Open Graph meta tags: https://developers.facebook.com/docs/sharing/webmasters -->
 		<meta property="og:locale" content="en_GB">
@@ -19,7 +19,7 @@
 		<meta property="og:type" content="website">
 		<meta property="og:url" content="https://dietpi.com/contribute.html">
 		<meta property="og:title" content="DietPi OS stats & comparison">
-		<meta property="og:description" content="See resource usage and performance stats of DietPi images, and compare those against other Debian-based distros">
+		<meta property="og:description" content="See resource usage and performance stats of DietPi images, and compare those against other Debian-based distributions">
 		<meta property="og:image" content="https://dietpi.com/images/dietpi-logo_720x720.png">
 		<!-- Adjust width based on screen size -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -64,7 +64,7 @@
 				<svg class="triangle" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0h100l-50 100"/></svg>
 				<div class="title">
 					<h1>DietPi OS stats & comparison</h1>
-					<p>See resource usage and performance stats of DietPi images, and compare those against other Debian-based distros:</p>
+					<p>See resource usage and performance stats of DietPi images, and compare those against other Debian-based distributions:</p>
 				</div>
 				<nav class="nav nav-pills" id="distrostats" style="display:none">
 					<button class="nav-link filter" data-filter=".raspberrypi">Raspberry Pi</button>
@@ -88,7 +88,8 @@
 									<tr><td>Pre-installed packages</td><td><code>dpkg --get-selections | wc -l</code></td><td>223</td><td>475</td></tr>
 									<tr><td>Running processes</td><td><code>echo $(( $(pstree -Ta | wc -l) - 3 ))</code></td><td>10</td><td>20</td></tr>
 									<tr><td>Boot duration</td><td><code>systemd-analyze | mawk '{print $(NF-1)" "$NF;exit}'</code></td><td>17.881s</td><td>24.553s</td></tr>
-									<tr><td>/tmp is tmpfs</td><td><code>findmnt -no FSTYPE /tmp</code></td><td>Yes</td><td>No</td></tr>
+									<tr><td>Temporary files in RAM</td><td><code>findmnt -no FSTYPE /tmp</code></td><td>Yes</td><td>No</td></tr>
+									<tr><td>Logs in RAM</td><td><code>findmnt -no FSTYPE /tmp</code></td><td>Yes</td><td>No</td></tr>
 									<tr><td>SSH pre-installed</td><td><code>ss -tulpn | grep ':22'</code></td><td>Yes</td><td>Optional</td></tr>
 								</table>
 							</div>
@@ -110,7 +111,8 @@
 									<tr><td>Pre-installed packages</td><td><code>dpkg --get-selections | wc -l</code></td><td>223</td><td>475</td></tr>
 									<tr><td>Running processes</td><td><code>echo $(( $(pstree -Ta | wc -l) - 3 ))</code></td><td>10</td><td>20</td></tr>
 									<tr><td>Boot duration</td><td><code>systemd-analyze | mawk '{print $(NF-1)" "$NF;exit}'</code></td><td>17.881s</td><td>24.553s</td></tr>
-									<tr><td>/tmp is tmpfs</td><td><code>findmnt -no FSTYPE /tmp</code></td><td>Yes</td><td>No</td></tr>
+									<tr><td>Temporary files in RAM</td><td><code>findmnt -no FSTYPE /tmp</code></td><td>Yes</td><td>No</td></tr>
+									<tr><td>Logs in RAM</td><td><code>findmnt -no FSTYPE /tmp</code></td><td>Yes</td><td>No</td></tr>
 									<tr><td>SSH pre-installed</td><td><code>ss -tulpn | grep ':22'</code></td><td>Yes</td><td>Optional</td></tr>
 								</table>
 							</div>
