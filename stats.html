@@ -32,6 +32,11 @@
 		<meta name="msapplication-TileColor" content="#da532c">
 		<meta name="theme-color" content="#000000">
 		<!-- Load CSS styles -->
+		<style>
+			.project-info { overflow-x: auto; }
+			table { width: 100%; }
+			th,td { border: 1px solid #9ccc00; padding: 5px; }
+		</style>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="css/style.min.css?v=2">
 		<!-- Include JavaScript -->
@@ -67,6 +72,7 @@
 					<p>See resource usage and performance stats of DietPi images, and compare those against other Debian-based distributions:</p>
 				</div>
 				<nav class="nav nav-pills" id="distrostats" style="display:none">
+					<button class="nav-link filter" data-filter="all">[All]</button>
 					<button class="nav-link filter" data-filter=".raspberrypi">Raspberry Pi</button>
 					<button class="nav-link filter" data-filter=".nanopir2s">NanoPi R2S</button>
 					<button class="nav-link filter" data-filter=".nanopineo3">NanoPi NEO3</button>
@@ -78,7 +84,7 @@
 					<div class="row">
 						<div class="col-md-12 project-description">
 							<div class="project-info">
-								<table style="width:100%">
+								<table>
 									<tr><th>Stat</th><th>Command</th><th>DietPi</th><th>Raspberry Pi OS</th></tr>
 									<tr><td>Build date</td><td></td><td>2021-03-25</td><td>2021-01-11</td></tr>
 									<tr><td>Download size</td><td></td><td>174.950.885 bytes</td><td>463.405.209 bytes</td></tr>
@@ -89,7 +95,7 @@
 									<tr><td>Running processes</td><td><code>echo $(( $(pstree -Ta | wc -l) - 3 ))</code></td><td>10</td><td>20</td></tr>
 									<tr><td>Boot duration</td><td><code>systemd-analyze | mawk '{print $(NF-1)" "$NF;exit}'</code></td><td>17.881s</td><td>24.553s</td></tr>
 									<tr><td>Temporary files in RAM</td><td><code>findmnt -no FSTYPE /tmp</code></td><td>Yes</td><td>No</td></tr>
-									<tr><td>Logs in RAM</td><td><code>findmnt -no FSTYPE /tmp</code></td><td>Yes</td><td>No</td></tr>
+									<tr><td>Logs in RAM</td><td><code>findmnt -no FSTYPE /var/log</code></td><td>Yes</td><td>No</td></tr>
 									<tr><td>SSH pre-installed</td><td><code>ss -tulpn | grep ':22'</code></td><td>Yes</td><td>Optional</td></tr>
 								</table>
 							</div>
@@ -101,7 +107,7 @@
 					<div class="row">
 						<div class="col-md-12 project-description">
 							<div class="project-info">
-								<table style="width:100%">
+								<table>
 									<tr><th>Stat</th><th>Command</th><th>DietPi</th><th>Raspberry Pi OS</th></tr>
 									<tr><td>Build date</td><td></td><td>2021-03-25</td><td>2021-01-11</td></tr>
 									<tr><td>Download size</td><td></td><td>174.950.885 bytes</td><td>463.405.209 bytes</td></tr>
@@ -112,7 +118,7 @@
 									<tr><td>Running processes</td><td><code>echo $(( $(pstree -Ta | wc -l) - 3 ))</code></td><td>10</td><td>20</td></tr>
 									<tr><td>Boot duration</td><td><code>systemd-analyze | mawk '{print $(NF-1)" "$NF;exit}'</code></td><td>17.881s</td><td>24.553s</td></tr>
 									<tr><td>Temporary files in RAM</td><td><code>findmnt -no FSTYPE /tmp</code></td><td>Yes</td><td>No</td></tr>
-									<tr><td>Logs in RAM</td><td><code>findmnt -no FSTYPE /tmp</code></td><td>Yes</td><td>No</td></tr>
+									<tr><td>Logs in RAM</td><td><code>findmnt -no FSTYPE /var/log</code></td><td>Yes</td><td>No</td></tr>
 									<tr><td>SSH pre-installed</td><td><code>ss -tulpn | grep ':22'</code></td><td>Yes</td><td>Optional</td></tr>
 								</table>
 							</div>
