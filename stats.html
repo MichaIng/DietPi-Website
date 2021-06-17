@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!-- https://github.com/MichaIng/DietPi-Website -->
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link rel="canonical" href="https://dietpi.com/stats.html">
+		<title>DietPi OS stats & comparison</title>
+		<meta name="description" content="See resource usage and performance stats of DietPi images, and compare those against other Debian-based distros">
+		<!-- Twitter meta tags: https://developer.twitter.com/docs/twitter-for-websites/cards -->
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:site" content="@DietPi_">
+		<meta name="twitter:creator" content="@DietPi_">
+		<meta name="twitter:title" content="DietPi OS stats & comparison">
+		<meta name="twitter:description" content="See resource usage and performance stats of DietPi images, and compare those against other Debian-based distros">
+		<meta name="twitter:image" content="https://dietpi.com/images/dietpi-logo_720x720.png">
+		<!-- Open Graph meta tags: https://developers.facebook.com/docs/sharing/webmasters -->
+		<meta property="og:locale" content="en_GB">
+		<meta property="og:site_name" content="DietPi-Stats">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://dietpi.com/contribute.html">
+		<meta property="og:title" content="DietPi OS stats & comparison">
+		<meta property="og:description" content="See resource usage and performance stats of DietPi images, and compare those against other Debian-based distros">
+		<meta property="og:image" content="https://dietpi.com/images/dietpi-logo_720x720.png">
+		<!-- Adjust width based on screen size -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Favicon and theme: https://realfavicongenerator.net/ -->
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="images/dietpi-logo_32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="images/dietpi-logo_16x16.png">
+		<link rel="manifest" href="site.webmanifest">
+		<link rel="mask-icon" href="images/dietpi-logo_mask_720x720.svg" color="#c5ff00">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#000000">
+		<!-- Load CSS styles -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.min.css?v=2">
+		<!-- Include JavaScript -->
+		<script defer src="js/jquery.min.js"></script>
+		<script defer src="js/bootstrap.min.js"></script>
+		<script defer src="js/mixitup.min.js"></script>
+		<script defer src="js/app.min.js"></script>
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg">
+			<div class="container-xl">
+				<img src="images/dietpi-logo_240x80.png" alt="Logo" loading="lazy">
+				<!-- Navigation button, visible on small resolution -->
+				<button class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse"><svg viewBox="0 0 12 12"><path d="M1 1h10M1 6h10M1 11h10"/></svg></button>
+				<!-- Main navigation -->
+				<div class="navbar-nav navbar-collapse collapse">
+					<a class="nav-link" href="/">Home</a>
+					<a class="nav-link" href="/#features">Features</a>
+					<a class="nav-link" href="/#download">Download</a>
+					<a class="nav-link" href="/#gettingstarted">Getting Started</a>
+					<a class="nav-link" href="#stats">Contribute</a>
+					<a class="nav-link" href="/#testimonials">Testimonials</a>
+				</div>
+				<!-- End main navigation -->
+			</div>
+		</nav>
+		<!-- Portfolio section start -->
+		<div class="section secondary-section mixitup" id="stats">
+			<div class="container-xl">
+				<svg class="triangle" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0h100l-50 100"/></svg>
+				<div class="title">
+					<h1>DietPi OS stats & comparison</h1>
+					<p>See resource usage and performance stats of DietPi images, and compare those against other Debian-based distros:</p>
+				</div>
+				<nav class="nav nav-pills" id="distrostats" style="display:none">
+					<button class="nav-link filter" data-filter=".raspberrypi">Raspberry Pi</button>
+					<button class="nav-link filter" data-filter=".nanopir2s">NanoPi R2S</button>
+					<button class="nav-link filter" data-filter=".nanopineo3">NanoPi NEO3</button>
+					<button class="nav-link filter" data-filter=".odroidc4">Odroid C4</button>
+					<button class="nav-link filter" data-filter=".x86_64">PC/VM</button>
+				</nav>
+				<div id="raspberrypi1" class="toggleDiv single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>DietPi vs Raspberry Pi OS Lite (32-bit)</h3><span class="show_hide close"></span></div></div>
+					<div class="row">
+						<div class="col-md-12 project-description">
+							<div class="project-info">
+								<table style="width:100%">
+									<tr><th>Stat</th><th>Command</th><th>DietPi</th><th>Raspberry Pi OS</th></tr>
+									<tr><td>Build date</td><td></td><td>2021-03-25</td><td>2021-01-11</td></tr>
+									<tr><td>Download size</td><td></td><td>174.950.885 bytes</td><td>463.405.209 bytes</td></tr>
+									<tr><td>Image size</td><td></td><td>1.071.456.256 bytes</td><td>1.866.465.280 bytes</td></tr>
+									<tr><td>Disk usage</td><td><code>findmnt -no USED /</code></td><td>596.2M</td><td>1.2G</td></tr>
+									<tr><td>RAM usage</td><td><code>free -th | mawk '/^Total:/{print $3}'</code></td><td>26Mi</td><td>36Mi</td></tr>
+									<tr><td>Pre-installed packages</td><td><code>dpkg --get-selections | wc -l</code></td><td>223</td><td>475</td></tr>
+									<tr><td>Running processes</td><td><code>echo $(( $(pstree -Ta | wc -l) - 3 ))</code></td><td>10</td><td>20</td></tr>
+									<tr><td>Boot duration</td><td><code>systemd-analyze | mawk '{print $(NF-1)" "$NF;exit}'</code></td><td>17.881s</td><td>24.553s</td></tr>
+									<tr><td>/tmp is tmpfs</td><td><code>findmnt -no FSTYPE /tmp</code></td><td>Yes</td><td>No</td></tr>
+									<tr><td>SSH pre-installed</td><td><code>ss -tulpn | grep ':22'</code></td><td>Yes</td><td>Optional</td></tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="nanopir2s1" class="toggleDiv single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>DietPi vs Armbian</h3><span class="show_hide close"></span></div></div>
+					<div class="row">
+						<div class="col-md-12 project-description">
+							<div class="project-info">
+								<table style="width:100%">
+									<tr><th>Stat</th><th>Command</th><th>DietPi</th><th>Raspberry Pi OS</th></tr>
+									<tr><td>Build date</td><td></td><td>2021-03-25</td><td>2021-01-11</td></tr>
+									<tr><td>Download size</td><td></td><td>174.950.885 bytes</td><td>463.405.209 bytes</td></tr>
+									<tr><td>Image size</td><td></td><td>1.071.456.256 bytes</td><td>1.866.465.280 bytes</td></tr>
+									<tr><td>Disk usage</td><td><code>findmnt -no USED /</code></td><td>596.2M</td><td>1.2G</td></tr>
+									<tr><td>RAM usage</td><td><code>free -th | mawk '/^Total:/{print $3}'</code></td><td>26Mi</td><td>36Mi</td></tr>
+									<tr><td>Pre-installed packages</td><td><code>dpkg --get-selections | wc -l</code></td><td>223</td><td>475</td></tr>
+									<tr><td>Running processes</td><td><code>echo $(( $(pstree -Ta | wc -l) - 3 ))</code></td><td>10</td><td>20</td></tr>
+									<tr><td>Boot duration</td><td><code>systemd-analyze | mawk '{print $(NF-1)" "$NF;exit}'</code></td><td>17.881s</td><td>24.553s</td></tr>
+									<tr><td>/tmp is tmpfs</td><td><code>findmnt -no FSTYPE /tmp</code></td><td>Yes</td><td>No</td></tr>
+									<tr><td>SSH pre-installed</td><td><code>ss -tulpn | grep ':22'</code></td><td>Yes</td><td>Optional</td></tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="portfolio-grid" class="row" style="display:none">
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix raspberrypi">
+						<a href="#distrostats" class="thumbnail show_hide" rel="#raspberrypi1">
+							<img src="images/sbc_images/raspberrypi3.jpg" alt="Raspberry Pi photo" width="8" height="5" loading="lazy">
+							<div class="mask"></div>
+							<i class="more"></i>
+							<h3>Raspberry Pi</h3>
+							<p>DietPi vs Raspberry Pi OS Lite (32-bit)</p>
+						</a>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix nanopir2s">
+						<a href="#distrostats" class="thumbnail show_hide" rel="#nanopir2s1">
+							<img src="images/sbc_images/nanopir2s.jpg" alt="NanoPi R2S photo" width="8" height="5" loading="lazy">
+							<div class="mask"></div>
+							<i class="more"></i>
+							<h3>NanoPi R2S</h3>
+							<p>DietPi vs Armbian</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Footer section start -->
+		<div class="section primary-section footer" id="contact">
+			<div class="container-xl">
+				<svg class="triangle" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0h100l-50 100"/></svg>
+				<div class="social">
+					<a href="https://twitter.com/DietPi_" target="_blank" rel="noopener">
+						<svg viewBox="0 0 400 400" aria-hidden="true">
+							<path d="M400,200c0,110.5-89.5,200-200,200S0,310.5,0,200S89.5,0,200,0S400,89.5,400,200z M163.4,305.5c88.7,0,137.2-73.5,137.2-137.2c0-2.1,0-4.2-0.1-6.2c9.4-6.8,17.6-15.3,24.1-25c-8.6,3.8-17.9,6.4-27.7,7.6c10-6,17.6-15.4,21.2-26.7c-9.3,5.5-19.6,9.5-30.6,11.7c-8.8-9.4-21.3-15.2-35.2-15.2c-26.6,0-48.2,21.6-48.2,48.2c0,3.8,0.4,7.5,1.3,11c-40.1-2-75.6-21.2-99.4-50.4c-4.1,7.1-6.5,15.4-6.5,24.2c0,16.7,8.5,31.5,21.5,40.1c-7.9-0.2-15.3-2.4-21.8-6c0,0.2,0,0.4,0,0.6c0,23.4,16.6,42.8,38.7,47.3c-4,1.1-8.3,1.7-12.7,1.7c-3.1,0-6.1-0.3-9.1-0.9c6.1,19.2,23.9,33.1,45,33.5c-16.5,12.9-37.3,20.6-59.9,20.6c-3.9,0-7.7-0.2-11.5-0.7C110.8,297.5,136.2,305.5,163.4,305.5"></path>
+						</svg>
+					</a>
+					<a href="https://github.com/MichaIng/DietPi" target="_blank" rel="noopener">
+						<svg viewBox="0 0 16 16" aria-hidden="true">
+							<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+						</svg>
+					</a>
+				</div>
+				<br>
+				<p>&copy; 2021 DietPi created by <a href="https://dietpi.com/" target="_blank" rel="noopener">Daniel Knight</a></p>
+				<p>&copy; 2013 Website theme by <a href="https://www.graphberry.com/" target="_blank" rel="noopener">Graphberry</a></p>
+				<p>DietPi web hosting is powered by <a href="https://myvirtualserver.com" target="_blank" rel="noopener">myVirtualserver.com
+				<br><br><img src="images/myvirtualserver_logo.png" alt="myVirtualserver" width="200" height="44" loading="lazy"></a></p>
+			</div>
+		</div>
+		<!-- Footer section end -->
+		<!-- Scroll up button start -->
+		<a class="scrollup" href="#"><svg viewBox="0 0 12 12"><path d="M1 8l5-5l5 5"/></svg></a>
+		<!-- Scroll up button end -->
+		<!-- Inline JavaScript to quickly show/hide elements if browser loads scripts -->
+		<script>
+			document.querySelectorAll('div.toggleDiv').forEach(function(e){e.setAttribute("style","display:none");});
+			document.getElementById("distrostats").removeAttribute("style");
+			document.getElementById("portfolio-grid").removeAttribute("style");
+			document.querySelectorAll('svg.triangle').forEach(function(e){e.setAttribute("opacity","0");});
+		</script>
+	</body>
+</html>
