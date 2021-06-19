@@ -1,3 +1,4 @@
+AdGuard
 AirPlay
 Airsonic
 AIY
@@ -161,6 +162,7 @@ Koel
 Komga
 kickstart
 kickstarted
+Kubernetes
 Laravel
 LASP
 LEDs
@@ -313,6 +315,7 @@ Shoutcast
 Signalyst
 SMB
 sn
+Snapcast
 Sonarr
 SoC
 SoCs
