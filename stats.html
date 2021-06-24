@@ -73,75 +73,105 @@
 				</div>
 				<nav class="nav nav-pills" id="distrostats" style="display:none">
 					<button class="nav-link filter" data-filter="all">[All]</button>
-					<button class="nav-link filter" data-filter=".raspberrypi">Raspberry Pi</button>
-					<button class="nav-link filter" data-filter=".nanopir2s">NanoPi R2S</button>
-					<button class="nav-link filter" data-filter=".nanopineo3">NanoPi NEO3</button>
-					<button class="nav-link filter" data-filter=".odroidc4">Odroid C4</button>
-					<button class="nav-link filter" data-filter=".x86_64">PC/VM</button>
+					<button class="nav-link filter" data-filter=".commands">Raspberry Pi</button>
+					<button class="nav-link filter" data-filter=".raspberrypios">Raspberry Pi</button>
+					<button class="nav-link filter" data-filter=".armbian">NanoPi R2S</button>
 				</nav>
-				<div id="raspberrypi1" class="toggleDiv single-project">
-					<div class="row"><div class="col-md-12 project-title"><h3>DietPi vs Raspberry Pi OS Lite (32-bit)</h3><span class="show_hide close"></span></div></div>
+				<div id="commands" class="toggleDiv single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>Commands to derive data</h3><span class="show_hide close"></span></div></div>
 					<div class="row">
 						<div class="col-md-12 project-description">
 							<div class="project-info">
+								<p>You may also run our <a href="https://github.com/MichaIng/hacks/blob/main/dietpi-distro_comparison" target="_blank" rel="noopener">comparison script</a> to test and print the values right on your system.</p>
 								<table>
-									<tr><th>Stat</th><th>Command</th><th>DietPi</th><th>Raspberry Pi OS</th></tr>
-									<tr><td>Build date</td><td></td><td>2021-03-25</td><td>2021-01-11</td></tr>
-									<tr><td>Download size</td><td></td><td>174.950.885 bytes</td><td>463.405.209 bytes</td></tr>
-									<tr><td>Image size</td><td></td><td>1.071.456.256 bytes</td><td>1.866.465.280 bytes</td></tr>
-									<tr><td>Disk usage</td><td><code>findmnt -no USED /</code></td><td>596.2M</td><td>1.2G</td></tr>
-									<tr><td>RAM usage</td><td><code>free -th | mawk '/^Total:/{print $3}'</code></td><td>26Mi</td><td>36Mi</td></tr>
-									<tr><td>Pre-installed packages</td><td><code>dpkg --get-selections | wc -l</code></td><td>223</td><td>475</td></tr>
-									<tr><td>Running processes</td><td><code>echo $(( $(pstree -Ta | wc -l) - 3 ))</code></td><td>10</td><td>20</td></tr>
-									<tr><td>Boot duration</td><td><code>systemd-analyze | mawk '{print $(NF-1)" "$NF;exit}'</code></td><td>17.881s</td><td>24.553s</td></tr>
-									<tr><td>Temporary files in RAM</td><td><code>findmnt -no FSTYPE /tmp</code></td><td>Yes</td><td>No</td></tr>
-									<tr><td>Logs in RAM</td><td><code>findmnt -no FSTYPE /var/log</code></td><td>Yes</td><td>No</td></tr>
-									<tr><td>SSH pre-installed</td><td><code>ss -tulpn | grep ':22'</code></td><td>Yes</td><td>Optional</td></tr>
+									<tr><th>Stat</th><th>Command</th></tr>
+									<tr><td>Disk usage</td><td><code>findmnt -no USED /</code></td></tr>
+									<tr><td>RAM usage</td><td><code>free -th | mawk '/^Total:/{print $3}'</code></td></tr>
+									<tr><td>Pre-installed packages</td><td><code>dpkg --get-selections | wc -l</code></td></tr>
+									<tr><td>Running processes</td><td><code>echo $(( $(pstree -Ta | wc -l) - 3 ))</code></td></tr>
+									<tr><td>Boot duration</td><td><code>systemd-analyze | mawk '{print $(NF-1)" "$NF;exit}'</code></td></tr>
+									<tr><td>Temporary files in RAM</td><td><code>findmnt -no FSTYPE /tmp</code></td></tr>
+									<tr><td>Logs in RAM</td><td><code>findmnt -no FSTYPE /var/log</code></td></tr>
+									<tr><td>SSH pre-installed</td><td><code>ss -tulpn | grep ':22'</code></td></tr>
 								</table>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div id="nanopir2s1" class="toggleDiv single-project">
+				<div id="raspberrypios1" class="toggleDiv single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>DietPi vs Raspberry Pi OS Lite (32-bit)</h3><span class="show_hide close"></span></div></div>
+					<div class="row">
+						<div class="col-md-12 project-description">
+							<div class="project-info">
+								<h5>on Raspberry Pi 2</h5>
+								<table>
+									<tr><th>Stat</th><th>DietPi</th><th>Raspberry Pi OS</th></tr>
+									<tr><td>RAM usage</td><td>26Mi</td><td>36Mi</td></tr>
+									<tr><td>Running processes</td><td>10</td><td>20</td></tr>
+									<tr><td>Disk usage</td><td>596.2M</td><td>1.2G</td></tr>
+									<tr><td>Pre-installed packages</td><td>223</td><td>475</td></tr>
+									<tr><td>Boot duration</td><td>17.881s</td><td>24.553s</td></tr>
+									<tr><td>Temporary files in RAM</td><td>Yes</td><td>No</td></tr>
+									<tr><td>Logs in RAM</td><td>Yes</td><td>No</td></tr>
+									<tr><td>SSH pre-installed</td><td>Yes</td><td>Optional</td></tr>
+									<tr><td>Download size</td><td></td><td>174.950.885 bytes</td><td>463.405.209 bytes</td></tr>
+									<tr><td>Image size</td><td></td><td>1.071.456.256 bytes</td><td>1.866.465.280 bytes</td></tr>
+									<tr><td>Build date</td><td></td><td>2021-03-25</td><td>2021-01-11</td></tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="armbian1" class="toggleDiv single-project">
 					<div class="row"><div class="col-md-12 project-title"><h3>DietPi vs Armbian</h3><span class="show_hide close"></span></div></div>
 					<div class="row">
 						<div class="col-md-12 project-description">
 							<div class="project-info">
+								<h5>on NanoPi R2S</h5>
 								<table>
-									<tr><th>Stat</th><th>Command</th><th>DietPi</th><th>Raspberry Pi OS</th></tr>
-									<tr><td>Build date</td><td></td><td>2021-03-25</td><td>2021-01-11</td></tr>
+									<tr><th>Stat</th><th>DietPi</th><th>Raspberry Pi OS</th></tr>
+									<tr><td>RAM usage</td><td>26Mi</td><td>36Mi</td></tr>
+									<tr><td>Running processes</td><td>10</td><td>20</td></tr>
+									<tr><td>Disk usage</td><td>596.2M</td><td>1.2G</td></tr>
+									<tr><td>Pre-installed packages</td><td>223</td><td>475</td></tr>
+									<tr><td>Boot duration</td><td>17.881s</td><td>24.553s</td></tr>
+									<tr><td>Temporary files in RAM</td><td>Yes</td><td>No</td></tr>
+									<tr><td>Logs in RAM</td><td>Yes</td><td>No</td></tr>
+									<tr><td>SSH pre-installed</td><td>Yes</td><td>Optional</td></tr>
 									<tr><td>Download size</td><td></td><td>174.950.885 bytes</td><td>463.405.209 bytes</td></tr>
 									<tr><td>Image size</td><td></td><td>1.071.456.256 bytes</td><td>1.866.465.280 bytes</td></tr>
-									<tr><td>Disk usage</td><td><code>findmnt -no USED /</code></td><td>596.2M</td><td>1.2G</td></tr>
-									<tr><td>RAM usage</td><td><code>free -th | mawk '/^Total:/{print $3}'</code></td><td>26Mi</td><td>36Mi</td></tr>
-									<tr><td>Pre-installed packages</td><td><code>dpkg --get-selections | wc -l</code></td><td>223</td><td>475</td></tr>
-									<tr><td>Running processes</td><td><code>echo $(( $(pstree -Ta | wc -l) - 3 ))</code></td><td>10</td><td>20</td></tr>
-									<tr><td>Boot duration</td><td><code>systemd-analyze | mawk '{print $(NF-1)" "$NF;exit}'</code></td><td>17.881s</td><td>24.553s</td></tr>
-									<tr><td>Temporary files in RAM</td><td><code>findmnt -no FSTYPE /tmp</code></td><td>Yes</td><td>No</td></tr>
-									<tr><td>Logs in RAM</td><td><code>findmnt -no FSTYPE /var/log</code></td><td>Yes</td><td>No</td></tr>
-									<tr><td>SSH pre-installed</td><td><code>ss -tulpn | grep ':22'</code></td><td>Yes</td><td>Optional</td></tr>
+									<tr><td>Build date</td><td></td><td>2021-03-25</td><td>2021-01-11</td></tr>
 								</table>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div id="portfolio-grid" class="row" style="display:none">
-					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix raspberrypi">
-						<a href="#distrostats" class="thumbnail show_hide" rel="#raspberrypi1">
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix commands">
+						<a href="#distrostats" class="thumbnail show_hide" rel="#commands">
 							<img src="images/sbc_images/raspberrypi3.jpg" alt="Raspberry Pi photo" width="8" height="5" loading="lazy">
 							<div class="mask"></div>
 							<i class="more"></i>
-							<h3>Raspberry Pi</h3>
-							<p>DietPi vs Raspberry Pi OS Lite (32-bit)</p>
+							<h3>Test commands</h3>
+							<p>Commands to obtain system stats</p>
 						</a>
 					</div>
-					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix nanopir2s">
-						<a href="#distrostats" class="thumbnail show_hide" rel="#nanopir2s1">
-							<img src="images/sbc_images/nanopir2s.jpg" alt="NanoPi R2S photo" width="8" height="5" loading="lazy">
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix raspberrypios">
+						<a href="#distrostats" class="thumbnail show_hide" rel="#raspberrypios1">
+							<img src="images/sbc_images/raspberrypi3.jpg" alt="Raspberry Pi OS logo" width="8" height="5" loading="lazy">
 							<div class="mask"></div>
 							<i class="more"></i>
-							<h3>NanoPi R2S</h3>
-							<p>DietPi vs Armbian</p>
+							<h3>Raspberry Pi OS Lite (32-bit)</h3>
+							<p>on Raspberry Pi 2</p>
+						</a>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix armbian">
+						<a href="#distrostats" class="thumbnail show_hide" rel="#armbian1">
+							<img src="images/sbc_images/nanopir2s.jpg" alt="Armbian logo" width="8" height="5" loading="lazy">
+							<div class="mask"></div>
+							<i class="more"></i>
+							<h3>Armbian</h3>
+							<p>on NanoPi R2S</p>
 						</a>
 					</div>
 				</div>
