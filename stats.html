@@ -36,6 +36,8 @@
 			.project-info { overflow-x: auto; }
 			table { width: 100%; white-space: nowrap; }
 			th,td { border: 1px solid #9ccc00; padding: 5px; }
+			code, td.los { color: #ff7799; }
+			td.win { color: #c5ff00; }
 		</style>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="css/style.min.css?v=2">
@@ -105,17 +107,17 @@
 							<div class="project-info">
 								<h5>on Raspberry Pi 2</h5>
 								<table>
-									<tr><th>Stat</th><th>DietPi</th><th>Raspberry Pi OS</th></tr>
-									<tr><td>RAM usage</td><td style="color:#c5ff00">26Mi (72%)</td><td style="color:#e83e8c">36Mi (138%)</td></tr>
-									<tr><td>Running processes</td><td style="color:#c5ff00">10 (50%)</td><td style="color:#e83e8c">20 (200%)</td></tr>
-									<tr><td>Disk usage</td><td style="color:#c5ff00">596.2M (49%)</td><td style="color:#e83e8c">1.2G (206%)</td></tr>
-									<tr><td>Pre-installed packages</td><td style="color:#c5ff00">223 (47%)</td><td style="color:#e83e8c">475 (213%)</td></tr>
-									<tr><td>Boot duration</td><td style="color:#c5ff00">17.881s (73%)</td><td style="color:#e83e8c">24.553s (137%)</td></tr>
-									<tr><td>Temporary files in RAM</td><td style="color:#c5ff00">Yes</td><td style="color:#e83e8c">No</td></tr>
-									<tr><td>Logs in RAM</td><td style="color:#c5ff00">Yes</td><td style="color:#e83e8c">No</td></tr>
-									<tr><td>SSH pre-installed</td><td style="color:#c5ff00">Yes</td><td style="color:#e83e8c">Optional</td></tr>
-									<tr><td>Download size</td><td style="color:#c5ff00">174.950.885 bytes (38%)</td><td style="color:#e83e8c">463.405.209 bytes (265%)</td></tr>
-									<tr><td>Image size</td><td style="color:#c5ff00">1.071.456.256 bytes (57%)</td><td style="color:#e83e8c">1.866.465.280 bytes (174%)</td></tr>
+									<tr><th>Stat</th><th>DietPi</th><th>DietPi/Raspberry Pi OS [%]</th><th>Raspberry Pi OS</th></tr>
+									<tr><td>RAM usage</td><td class="win">26Mi</td><td>72%</td><td class="los">36Mi</td></tr>
+									<tr><td>Running processes</td><td class="win">10</td><td>50%</td><td class="los">20</td></tr>
+									<tr><td>Disk usage</td><td class="win">596.2M</td><td>49%</td><td class="los">1.2G</td></tr>
+									<tr><td>Pre-installed packages</td><td class="win">223</td><td>47%</td><td class="los">475</td></tr>
+									<tr><td>Boot duration</td><td class="win">17.881s</td><td>73%</td><td class="los">24.553s</td></tr>
+									<tr><td>Temporary files in RAM</td><td class="win">Yes</td><td></td><td class="los">No</td></tr>
+									<tr><td>Logs in RAM</td><td class="win">Yes</td><td></td><td class="los">No</td></tr>
+									<tr><td>SSH pre-installed</td><td class="win">Yes</td><td></td><td class="los">Optional</td></tr>
+									<tr><td>Download size</td><td class="win">174.950.885 bytes</td><td>38%</td><td class="los">463.405.209 bytes</td></tr>
+									<tr><td>Image size</td><td class="win">1.071.456.256 bytes</td><td>57%</td><td class="los">1.866.465.280 bytes</td></tr>
 									<tr><td>Build date</td><td>2021-03-25</td><td>2021-01-11</td></tr>
 								</table>
 							</div>
@@ -123,24 +125,72 @@
 					</div>
 				</div>
 				<div id="armbian1" class="toggleDiv single-project">
-					<div class="row"><div class="col-md-12 project-title"><h3>DietPi vs Armbian</h3><span class="show_hide close"></span></div></div>
+					<div class="row"><div class="col-md-12 project-title"><h3>DietPi vs Armbian (server image)</h3><span class="show_hide close"></span></div></div>
 					<div class="row">
 						<div class="col-md-12 project-description">
 							<div class="project-info">
 								<h5>on NanoPi R2S</h5>
 								<table>
-									<tr><th>Stat</th><th>DietPi</th><th>Raspberry Pi OS</th></tr>
-									<tr><td>RAM usage</td><td style="color:#c5ff00">26Mi (72%)</td><td style="color:#e83e8c">36Mi (138%)</td></tr>
-									<tr><td>Running processes</td><td style="color:#c5ff00">10 (50%)</td><td style="color:#e83e8c">20 (200%)</td></tr>
-									<tr><td>Disk usage</td><td style="color:#c5ff00">596.2M (49%)</td><td style="color:#e83e8c">1.2G (206%)</td></tr>
-									<tr><td>Pre-installed packages</td><td style="color:#c5ff00">223 (47%)</td><td style="color:#e83e8c">475 (213%)</td></tr>
-									<tr><td>Boot duration</td><td style="color:#c5ff00">17.881s (73%)</td><td style="color:#e83e8c">24.553s (137%)</td></tr>
-									<tr><td>Temporary files in RAM</td><td style="color:#c5ff00">Yes</td><td style="color:#e83e8c">No</td></tr>
-									<tr><td>Logs in RAM</td><td style="color:#c5ff00">Yes</td><td style="color:#e83e8c">No</td></tr>
-									<tr><td>SSH pre-installed</td><td style="color:#c5ff00">Yes</td><td style="color:#e83e8c">Optional</td></tr>
-									<tr><td>Download size</td><td style="color:#c5ff00">174.950.885 bytes (38%)</td><td style="color:#e83e8c">463.405.209 bytes (265%)</td></tr>
-									<tr><td>Image size</td><td style="color:#c5ff00">1.071.456.256 bytes (57%)</td><td style="color:#e83e8c">1.866.465.280 bytes (174%)</td></tr>
+									<tr><th>Stat</th><th>DietPi</th><th>DietPi/Armbian [%]</th><th>Armbian</th></tr>
+									<tr><td>RAM usage</td><td class="win">104Mi</td><td>90%</td><td class="los">116Mi</td></tr>
+									<tr><td>Running processes</td><td class="win">18</td><td>55%</td><td class="los">33</td></tr>
+									<tr><td>Disk usage</td><td class="win">596.2M</td><td>49%</td><td class="los">1.2G</td></tr>
+									<tr><td>Pre-installed packages</td><td class="win">223</td><td>47%</td><td class="los">475</td></tr>
+									<tr><td>Boot duration</td><td class="win">17.881s</td><td>73%</td><td class="los">24.553s</td></tr>
+									<tr><td>Temporary files in RAM</td><td class="win">Yes</td><td></td><td class="los">No</td></tr>
+									<tr><td>Logs in RAM</td><td class="win">Yes</td><td></td><td class="los">No</td></tr>
+									<tr><td>SSH pre-installed</td><td class="win">Yes</td><td></td><td class="los">Optional</td></tr>
+									<tr><td>Download size</td><td class="win">174.950.885 bytes</td><td>38%</td><td class="los">463.405.209 bytes</td></tr>
+									<tr><td>Image size</td><td class="win">1.071.456.256 bytes</td><td>57%</td><td class="los">1.866.465.280 bytes</td></tr>
 									<tr><td>Build date</td><td>2021-03-25</td><td>2021-01-11</td></tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="armbian2" class="toggleDiv single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>DietPi vs Armbian (server image)</h3><span class="show_hide close"></span></div></div>
+					<div class="row">
+						<div class="col-md-12 project-description">
+							<div class="project-info">
+								<h5>on Odroid C4</h5>
+								<table>
+									<tr><th>Stat</th><th>DietPi</th><th>DietPi/Armbian [%]</th><th>Armbian</th></tr>
+									<tr><td>RAM usage</td><td class="win">129Mi</td><td>65%</td><td class="los">198Mi</td></tr>
+									<tr><td>Running processes</td><td class="win">12</td><td>34%</td><td class="los">35</td></tr>
+									<tr><td>Disk usage</td><td class="win">521.9M</td><td>36%</td><td class="los">1.4G</td></tr>
+									<tr><td>Pre-installed packages</td><td class="win">216</td><td>46%</td><td class="los">466</td></tr>
+									<tr><td>Boot duration</td><td class="los">16.528s</td><td>108%</td><td class="win">15.342s</td></tr>
+									<tr><td>Temporary files in RAM</td><td>Yes</td><td></td><td>Yes</td></tr>
+									<tr><td>Logs in RAM</td><td class="win">Yes</td><td></td><td class="los">No</td></tr>
+									<tr><td>SSH pre-installed</td><td>Yes</td><td></td><td>Yes</td></tr>
+									<tr><td>Download size</td><td class="win">161.822.824 bytes</td><td>44%</td><td class="los">364.990.872 bytes</td></tr>
+									<tr><td>Image size</td><td class="win">1.148.600.320 bytes</td><td>67%</td><td class="los">1.702.887.424 bytes</td></tr>
+									<tr><td>Build date</td><td>2021-01-08</td><td>2021-05-07</td></tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="debian1" class="toggleDiv single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>DietPi vs Debian (server image)</h3><span class="show_hide close"></span></div></div>
+					<div class="row">
+						<div class="col-md-12 project-description">
+							<div class="project-info">
+								<h5>on Odroid C4</h5>
+								<table>
+									<tr><th>Stat</th><th>DietPi</th><th>DietPi/Debian [%]</th><th>Armbian</th></tr>
+									<tr><td>RAM usage</td><td class="win">129Mi</td><td>96%</td><td class="los">134Mi</td></tr>
+									<tr><td>Running processes</td><td class="win">12</td><td>67%</td><td class="los">18</td></tr>
+									<tr><td>Disk usage</td><td class="win">521.9M</td><td>71%</td><td class="los">725.4M</td></tr>
+									<tr><td>Pre-installed packages</td><td class="win">216</td><td>94%</td><td class="los">231</td></tr>
+									<tr><td>Boot duration</td><td class="los">16.528s</td><td>24%</td><td class="win">1min 8.115s</td></tr>
+									<tr><td>Temporary files in RAM</td><td class="win">Yes</td><td></td><td class="los">No</td></tr>
+									<tr><td>Logs in RAM</td><td class="win">Yes</td><td></td><td class="los">No</td></tr>
+									<tr><td>SSH pre-installed</td><td>Yes</td><td></td><td>Yes</td></tr>
+									<tr><td>Download size</td><td class="los">161.822.824 bytes</td><td>135%</td><td class="win">119.896.092 bytes</td></tr>
+									<tr><td>Image size</td><td class="los">1.148.600.320 bytes</td><td>107%</td><td class="win">1.074.790.400 bytes</td></tr>
+									<tr><td>Build date</td><td>2021-01-08</td><td>2021-05-06</td></tr>
 								</table>
 							</div>
 						</div>
@@ -149,7 +199,7 @@
 				<div id="portfolio-grid" class="row" style="display:none">
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix commands">
 						<a href="#distrostats" class="thumbnail show_hide" rel="#commands">
-							<img src="images/sbc_images/raspberrypi3.jpg" alt="Raspberry Pi photo" width="8" height="5" loading="lazy">
+							<img src="images/stats/commands.jpg" alt="Raspberry Pi photo" width="8" height="5" loading="lazy">
 							<div class="mask"></div>
 							<i class="more"></i>
 							<h3>Test commands</h3>
@@ -158,20 +208,38 @@
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix raspberrypios">
 						<a href="#distrostats" class="thumbnail show_hide" rel="#raspberrypios1">
-							<img src="images/sbc_images/raspberrypi3.jpg" alt="Raspberry Pi OS logo" width="8" height="5" loading="lazy">
+							<img src="images/stats/raspberrypios.jpg" alt="Raspberry Pi OS logo" width="8" height="5" loading="lazy">
 							<div class="mask"></div>
 							<i class="more"></i>
-							<h3>Raspberry Pi OS Lite (32-bit)</h3>
-							<p>on Raspberry Pi 2</p>
+							<h3>Raspberry Pi OS Lite</h3>
+							<p>on Raspberry Pi 2 (32-bit)</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix armbian">
 						<a href="#distrostats" class="thumbnail show_hide" rel="#armbian1">
-							<img src="images/sbc_images/nanopir2s.jpg" alt="Armbian logo" width="8" height="5" loading="lazy">
+							<img src="images/stats/armbian.jpg" alt="Armbian logo" width="8" height="5" loading="lazy">
 							<div class="mask"></div>
 							<i class="more"></i>
 							<h3>Armbian</h3>
 							<p>on NanoPi R2S</p>
+						</a>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix armbian">
+						<a href="#distrostats" class="thumbnail show_hide" rel="#armbian2">
+							<img src="images/stats/armbian.jpg" alt="Armbian logo" width="8" height="5" loading="lazy">
+							<div class="mask"></div>
+							<i class="more"></i>
+							<h3>Armbian</h3>
+							<p>on Odroid C4</p>
+						</a>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix debian">
+						<a href="#distrostats" class="thumbnail show_hide" rel="#debian1">
+							<img src="images/stats/debian.jpg" alt="Debian logo" width="8" height="5" loading="lazy">
+							<div class="mask"></div>
+							<i class="more"></i>
+							<h3>Debian</h3>
+							<p>on Odroid C4</p>
 						</a>
 					</div>
 				</div>
