@@ -88,7 +88,7 @@
 								<p>You may also run our <a href="https://github.com/MichaIng/hacks/blob/main/dietpi-distro_comparison" target="_blank" rel="noopener">comparison script</a> to test and print the values right on your system.</p>
 								<table>
 									<tr><th>Stat</th><th>Command</th></tr>
-									<tr><td>Disk usage</td><td><code>findmnt -no USED /</code></td></tr>
+									<tr><td>Disk usage</td><td><code>findmnt -no USED / # + /boot + /boot/efi</code></td></tr>
 									<tr><td>RAM usage</td><td><code>free -th | mawk '/^Total:/{print $3}'</code></td></tr>
 									<tr><td>Pre-installed packages</td><td><code>dpkg --get-selections | wc -l</code></td></tr>
 									<tr><td>Running processes</td><td><code>echo $(( $(pstree -Ta | wc -l) - 3 ))</code></td></tr>
