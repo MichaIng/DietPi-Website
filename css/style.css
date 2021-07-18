@@ -162,10 +162,9 @@ a:hover {
 	animation: fadeInDown 1s forwards;
 }
 /*
-2.2 Buttons: For green background
+2.2 Buttons
 **********************************************************************/
-.button,
-.button:visited {
+.button {
 	display: inline-block;
 	margin-top: 2px;
 	margin-bottom: 2px;
@@ -179,6 +178,18 @@ a:hover {
 .button:active {
 	background-color: #c5ff00;
 	color: #164046;
+}
+.primary-section .button {
+	border-color: #181a1c;
+	color: #181a1c;
+	background-color: #9ccc00;
+}
+.primary-section .button:hover,
+.primary-section .button:focus,
+.primary-section .button:active {
+	border-color: #c5ff00;
+	color: #c5ff00;
+	background-color: unset;
 }
 /*
 2.3 Thumbnails
