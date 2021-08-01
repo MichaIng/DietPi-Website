@@ -44,7 +44,7 @@ a:hover {
 	top: 0;
 	right: 0;
 	left: 0;
-	z-index: 2;
+	z-index: 1;
 	min-height: 60px;
 	background-color: #164046;
 	padding: 4.5px 15px;
