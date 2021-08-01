@@ -1,8 +1,6 @@
 // Original: https://github.com/Le-Stagiaire/jquery.cslider/blob/0c99322/src/jquery.cslider.js
 (function ($) {
-    /*
-     * Slider object.
-     */
+    // Slider object
     $.Slider = function (options, element) {
         this.$el = $(element);
         this._init(options);
@@ -43,8 +41,10 @@
             }
         },
         _navigate: function (page, dir) {
-            var $current = this.$slides.eq(this.current), $next;
-            if (this.current === page || this.isAnimating) return false;
+            var $current = this.$slides.eq(this.current);
+            if (this.current === page || this.isAnimating) {
+                return false;
+            }
             this.isAnimating = true;
             // check dir
             var classTo, classFrom, d;
@@ -62,10 +62,10 @@
                 classFrom = 'da-slide-fromleft';
                 --this.bgpositer;
             }
-            this.$el.css('background-position', this.bgpositer * this.options.bgincrement + '% 0%');
+            this.$el.css('background-position-x', this.bgpositer * this.options.bgincrement + '%');
             this.current = page;
-            $next = this.$slides.eq(this.current);
-            var rmClasses = 'da-slide-toleft da-slide-toright da-slide-fromleft da-slide-fromright';
+            var $next = this.$slides.eq(this.current),
+                rmClasses = 'da-slide-toleft da-slide-toright da-slide-fromleft da-slide-fromright';
             $current.removeClass(rmClasses);
             $next.removeClass(rmClasses);
             $current.addClass(classTo);
@@ -88,14 +88,17 @@
                 }
             }, this.options.interval);
         },
-        page: function (idx) {
-            if (idx >= this.slidesCount || idx < 0) {
-                return false;
-            }
+        _stopSlideshow: function () {
             if (this.options.autoplay) {
                 clearTimeout(this.slideshow);
                 this.options.autoplay = false;
             }
+        },
+        page: function (idx) {
+            if (idx >= this.slidesCount || idx < 0) {
+                return false;
+            }
+            this._stopSlideshow();
             this._navigate(idx);
         },
         _loadEvents: function () {
@@ -105,33 +108,28 @@
                 return false;
             });
             this.$navNext.on('click.cslider', function () {
-                if (_self.options.autoplay) {
-                    clearTimeout(_self.slideshow);
-                    _self.options.autoplay = false;
-                }
+                _self._stopSlideshow();
                 var page = ( _self.current < _self.slidesCount - 1 ) ? page = _self.current + 1 : page = 0;
                 _self._navigate(page, 'next');
                 return false;
             });
             this.$navPrev.on('click.cslider', function () {
-                if (_self.options.autoplay) {
-                    clearTimeout(_self.slideshow);
-                    _self.options.autoplay = false;
-                }
+                _self._stopSlideshow();
                 var page = ( _self.current > 0 ) ? page = _self.current - 1 : page = _self.slidesCount - 1;
                 _self._navigate(page, 'prev');
                 return false;
             });
             if (!this.options.bgincrement) {
-                this.$el.on('webkitAnimationEnd.cslider animationend.cslider OAnimationEnd.cslider', function (event) {
-                    if (event.originalEvent.animationName === 'toRightAnim4' || event.originalEvent.animationName === 'toLeftAnim4') {
+                this.$el.on('animationend.cslider', function (event) {
+                    if (_self.isAnimating && (event.originalEvent.animationName === 'fromRight' || event.originalEvent.animationName === 'fromLeft')) {
                         _self.isAnimating = false;
                     }
                 });
             } else {
-                this.$el.on('webkitTransitionEnd.cslider transitionend.cslider OTransitionEnd.cslider', function (event) {
-                    if (event.target.id === _self.$el.attr('id'))
+                this.$el.on('transitionend.cslider', function (event) {
+                    if (_self.isAnimating && (event.target.id === _self.$el.attr('id'))) {
                         _self.isAnimating = false;
+                    }
                 });
             }
         }
@@ -149,13 +147,11 @@
                 if (!instance) {
                     logError("cannot call methods on cslider prior to initialization; " +
                     "attempted to call method '" + options + "'");
-                    return;
-                }
-                if (!$.isFunction(instance[options]) || options.charAt(0) === "_") {
+                } else if (!$.isFunction(instance[options]) || options.charAt(0) === "_") {
                     logError("no such method '" + options + "' for cslider instance");
-                    return;
+                } else {
+                    instance[options].apply(instance, args);
                 }
-                instance[options].apply(instance, args);
             });
         } else {
             this.each(function () {
