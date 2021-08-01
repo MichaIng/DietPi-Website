@@ -200,7 +200,6 @@ a:hover {
 	border-radius: 4px;
 }
 .thumbnail img {
-	display: block;
 	width: 100%;
 	/* "height: auto" in combination with inline width and height allows to keep aspect ratio while loading for non-bleeding edge browsers, which do not support "aspect-ratio" yet. */
 	height: auto;
@@ -211,8 +210,8 @@ a:hover {
 	margin: 0;
 	padding: 3px 0;
 	white-space: nowrap;
+	/* "position: relative" required to keep text in front of the mask element */
 	position: relative;
-	z-index: 1;
 }
 .thumbnail h3 {
 	font-size: 14px;
@@ -226,29 +225,29 @@ a:hover {
 .thumbnail p {
 	font-size: 10px;
 }
-.thumbnail .more {
+.thumbnail::after {
 	width: 40px;
 	height: 100%;
 	content: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'><path fill='none' stroke='white' stroke-width='2' stroke-linecap='round' d='M5 1v8M1 5h8'/></svg>");
 	position: absolute;
 	top: calc(-50% - 20px);
 	left: calc(50% - 20px);
-	z-index: 1;
 }
-.thumbnail:hover .more {
+.thumbnail:hover::after {
 	transform: translateY(50%);
 	transition: transform 0.3s ease-out;
 }
-.thumbnail .mask {
+.thumbnail::before {
 	width: 100%;
 	height: 100%;
+	content=""
 	background-color: #181a1cd9;
 	position: absolute;
 	top: 100%;
 	left: 0;
 	transition: transform 0.2s ease-out;
 }
-.thumbnail:hover .mask {
+.thumbnail:hover::before {
 	transform: translateY(-100%);
 }
 /*
