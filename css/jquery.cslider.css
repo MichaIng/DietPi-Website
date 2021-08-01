@@ -5,9 +5,9 @@
     max-height: 450px;
     position: relative;
     overflow: hidden;
-    background-image: linear-gradient(#c5ff00d8,#c5ff00d8),url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 15'><path fill='%23edf3f7' d='M0 0h8v5H0zm48 0h8v5h-8zM8 10h8v5H8zm24 0h8v5h-8z'/><path fill='%23747c89' d='M8 0h8v5H8zm32 0h8v5h-8zM0 5h8v5H0zm16 5h8v5h-8z'/><path fill='%238b95a5' d='M16 0h8v5h-8zm8 5h8v5h-8zm24 0h8v5h-8zM0 10h8v5H0z'/><path fill='white' d='M24 0h8v5h-8zm8 5h8v5h-8zm-8 5h8v5h-8zm24 0h8v5h-8z'/><path fill='%23d1d7db' d='M32 0h8v5h-8zM8 5h8v5H8zm32 0h8v5h-8z'/><path fill='%234e555e' d='M16 5h8v5h-8zm24 5h8v5h-8z'/></svg>");
+    background-image: linear-gradient(#c5ff00d8,#c5ff00d8), url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 15'><path fill='%23edf3f7' d='M0 0h8v5H0zm48 0h8v5h-8zM8 10h8v5H8zm24 0h8v5h-8z'/><path fill='%23747c89' d='M8 0h8v5H8zm32 0h8v5h-8zM0 5h8v5H0zm16 5h8v5h-8z'/><path fill='%238b95a5' d='M16 0h8v5h-8zm8 5h8v5h-8zm24 0h8v5h-8zM0 10h8v5H0z'/><path fill='white' d='M24 0h8v5h-8zm8 5h8v5h-8zm-8 5h8v5h-8zm24 0h8v5h-8z'/><path fill='%23d1d7db' d='M32 0h8v5h-8zM8 5h8v5H8zm32 0h8v5h-8z'/><path fill='%234e555e' d='M16 5h8v5h-8zm24 5h8v5h-8z'/></svg>");
     background-size: auto 100%;
-    transition: background-position 1.4s ease-in-out 0.3s;
+    transition: background-position-x 1.4s ease-in-out 0.3s;
 }
 
 .da-slider > .container-xl {
@@ -22,7 +22,8 @@
 .da-slide .da-img {
     position: absolute;
     opacity: 0;
-    left: 110%;
+    left: 10%;
+    transform: translateX(100vw);
 }
 
 .da-slide h2 {
@@ -64,6 +65,7 @@
 
 .da-slide .da-img {
     top: 70px;
+    left: 60%;
     width: 30%;
 }
 
@@ -114,12 +116,12 @@
 .da-slide-current h4,
 .da-slide-current p,
 .da-slide-current .da-link {
-    left: 10%;
+    transform: translateX(0);
     opacity: 1;
 }
 
 .da-slide-current .da-img {
-    left: 60%;
+    transform: translateX(0);
     opacity: 1;
 }
 
@@ -167,139 +169,123 @@
 /* Slide in from the right */
 .da-slide-fromright h2,
 .da-slide-fromright h4,
-.da-slide-fromright p {
-    animation: fromRightAnim1 0.6s ease-in 0.8s both;
+.da-slide-fromright p,
+.da-slide-fromright .da-img {
+    animation: fromRight 0.6s ease-in 0.8s both;
 }
 
 .da-slide-fromright .da-link {
-    animation: fromRightAnim3 0.4s ease-in 1.2s both;
+    animation: fromRightLink 0.4s ease-in 1.2s both;
 }
 
-.da-slide-fromright .da-img {
-    animation: fromRightAnim4 0.6s ease-in 0.8s both;
+@keyframes fromRight {
+    0% { transform: translateX(100vw); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
 }
 
-@keyframes fromRightAnim1 {
-    0% { left: 110%; opacity: 0; }
-    100% { left: 10%; opacity: 1; }
-}
-
-@keyframes fromRightAnim3 {
-    0% { left: 110%; opacity: 0; }
-    1% { left: 10%; opacity: 0; }
-    100% { left: 10%; opacity: 1; }
-}
-
-@keyframes fromRightAnim4 {
-    0% { left: 110%; opacity: 0; }
-    100% { left: 60%; opacity: 1; }
+@keyframes fromRightLink {
+    0% { transform: translateX(100vw); opacity: 0; }
+    1% { transform: translateX(0); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
 }
 
 /* Slide in from the left */
 .da-slide-fromleft h2,
 .da-slide-fromleft h4,
-.da-slide-fromleft p {
-    animation: fromLeftAnim1 0.6s ease-in 0.6s both;
+.da-slide-fromleft p,
+.da-slide-fromleft .da-img {
+    animation: fromLeft 0.6s ease-in 0.6s both;
 }
 
 .da-slide-fromleft .da-link {
-    animation: fromLeftAnim3 0.4s ease-in 1.2s both;
+    animation: fromLeftLink 0.4s ease-in 1.2s both;
 }
 
-.da-slide-fromleft .da-img {
-    animation: fromLeftAnim4 0.6s ease-in 0.6s both;
+@keyframes fromLeft {
+    0% { transform: translateX(-100vw); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
 }
 
-@keyframes fromLeftAnim1 {
-    0% { left: -110%; opacity: 0; }
-    100% { left: 10%; opacity: 1; }
-}
-
-@keyframes fromLeftAnim3 {
-    0% { left: -110%; opacity: 0; }
-    1% { left: 10%; opacity: 0; }
-    100% { left: 10%; opacity: 1; }
-}
-
-@keyframes fromLeftAnim4 {
-    0% { left: -110%; opacity: 0; }
-    100% { left: 60%; opacity: 1; }
+@keyframes fromLeftLink {
+    0% { transform: translateX(-100vw); opacity: 0; }
+    1% { transform: translateX(0); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
 }
 
 /* Slide out to the right */
 .da-slide-toright h2 {
-    animation: toRightAnim1 0.6s ease-in 0.6s both;
+    animation: toRightText 0.6s ease-in 0.6s both;
 }
 
 .da-slide-toright h4 {
-    animation: toRightAnim1 0.6s ease-in 0.45s both;
+    animation: toRightText 0.6s ease-in 0.45s both;
 }
 
 .da-slide-toright p {
-    animation: toRightAnim1 0.6s ease-in 0.3s both;
+    animation: toRightText 0.6s ease-in 0.3s both;
 }
 
 .da-slide-toright .da-link {
-    animation: toRightAnim3 0.4s ease-in both;
+    animation: toRightLink 0.4s ease-in both;
 }
 
 .da-slide-toright .da-img {
-    animation: toRightAnim4 0.6s ease-in both;
+    animation: toRightImg 0.6s ease-in both;
 }
 
-@keyframes toRightAnim1 {
-    0% { left: 10%; opacity: 1; }
-    100% { left: 100%; opacity: 0; }
+@keyframes toRightText {
+    0% { transform: translateX(0); opacity: 1; }
+    100% { transform: translateX(100vw); opacity: 0; }
 }
 
-@keyframes toRightAnim3 {
-    0% { left: 10%; opacity: 1; }
-    99% { left: 10%; opacity: 0; }
-    100% { left: 100%; opacity: 0; }
+@keyframes toRightLink {
+    0% { transform: translateX(0); opacity: 1; }
+    99% { transform: translateX(0); opacity: 0; }
+    100% { transform: translateX(100vw); opacity: 0; }
 }
 
-@keyframes toRightAnim4 {
-    0% { left: 60%; opacity: 1; }
-    30% { left: 55%; opacity: 1; }
-    100% { left: 100%; opacity: 0; }
+@keyframes toRightImg {
+    0% { transform: translateX(0); opacity: 1; }
+    30% { transform: translateX(-5vw); opacity: 1; }
+    100% { transform: translateX(100vw); opacity: 0; }
 }
 
 /* Slide out to the left */
 .da-slide-toleft h2 {
-    animation: toLeftAnim1 0.6s ease-in both;
+    animation: toLeftText 0.6s ease-in both;
 }
 
 .da-slide-toleft h4 {
-    animation: toLeftAnim1 0.6s ease-in 0.15s both;
+    animation: toLeftText 0.6s ease-in 0.15s both;
 }
 
 .da-slide-toleft p {
-    animation: toLeftAnim1 0.6s ease-in 0.3s both;
+    animation: toLeftText 0.6s ease-in 0.3s both;
 }
 
 .da-slide-toleft .da-link {
-    animation: toLeftAnim3 0.4s ease-in both;
+    animation: toLeftLink 0.4s ease-in both;
 }
 
 .da-slide-toleft .da-img {
-    animation: toLeftAnim4 0.6s ease-in 0.6s both;
+    animation: toLeftImg 0.6s ease-in 0.6s both;
 }
 
-@keyframes toLeftAnim1 {
-    0% { left: 10%; opacity: 1; }
-    30% { left: 15%; opacity: 1; }
-    100% { left: -50%; opacity: 0; }
+@keyframes toLeftText {
+    0% { transform: translateX(0); opacity: 1; }
+    30% { transform: translateX(5vw); opacity: 1; }
+    100% { transform: translateX(-100vw); opacity: 0; }
 }
 
-@keyframes toLeftAnim3 {
-    0% { left: 10%; opacity: 1; }
-    99% { left: 10%; opacity: 0; }
-    100% { left: -50%; opacity: 0; }
+@keyframes toLeftLink {
+    0% { transform: translateX(0); opacity: 1; }
+    99% { transform: translateX(0); opacity: 0; }
+    100% { transform: translateX(-100vw); opacity: 0; }
 }
 
-@keyframes toLeftAnim4 {
-    0% { left: 60%; opacity: 1; }
-    40% { left: 70%; opacity: 1; }
-    90% { left: 0; opacity: 0; }
-    100% { left: -50%; opacity: 0; }
+@keyframes toLeftImg {
+    0% { transform: translateX(0); opacity: 1; }
+    40% { transform: translateX(10vw); opacity: 1; }
+    90% { transform: translateX(-60vw); opacity: 0; }
+    100% { transform: translateX(-100vw); opacity: 0; }
 }
