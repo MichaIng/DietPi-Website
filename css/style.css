@@ -240,7 +240,7 @@ a:hover {
 .thumbnail::before {
 	width: 100%;
 	height: 100%;
-	content=""
+	content: "";
 	background-color: #181a1cd9;
 	position: absolute;
 	top: 100%;
