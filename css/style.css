@@ -230,7 +230,7 @@ a:hover {
 	height: 100%;
 	content: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'><path fill='none' stroke='white' stroke-width='2' stroke-linecap='round' d='M5 1v8M1 5h8'/></svg>");
 	position: absolute;
-	top: calc(-50% - 20px);
+	top: -45px;
 	left: calc(50% - 20px);
 }
 .thumbnail:hover::after {
