@@ -4,17 +4,13 @@ $(function () {
 	// Initialise home slider: https://github.com/Le-Stagiaire/jquery.cslider
 	// Check first if function exist to allow skipping it on dietpi-software site
 	if (typeof $.fn.cslider === 'function') {
-		$('#home').cslider({
-			bgincrement: 100,
-			autoplay: true,
-			interval: 6000
-		});
+		$('#home').cslider();
 	}
 
 	// Map navigation bar scroll links and targets
 	var lastId,
 	    $navbar = $('div.navbar-collapse'),
-	    navbarHeight = 60, //$navbar.outerHeight() leads to wrong scroll offset when menu is expanded
+	    navbarHeight = 60, // $navbar.outerHeight() leads to wrong scroll offset when menu is expanded
 	    // Navigation bar links
 	    $navbarLinks = $navbar.find('a[href^="#"]'),
 	    // Navigation bar targets
@@ -96,7 +92,7 @@ $(function () {
 			// Get section offset
 			if (targetOffset !== 0)
 				targetOffset = $target.offset().top - navbarHeight;
-			// Scroll in 0.8 seconds
+			// Scroll in 0.75 seconds
 			$('html, body').animate({
 				scrollTop: targetOffset
 			}, 750);
