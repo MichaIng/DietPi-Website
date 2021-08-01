@@ -40,7 +40,7 @@
 			td.win { color: #c5ff00; }
 		</style>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="css/style.min.css?v=3">
+		<link rel="stylesheet" type="text/css" href="css/style.min.css?v=4">
 		<!-- Include JavaScript -->
 		<script defer src="js/jquery.min.js"></script>
 		<script defer src="js/bootstrap.min.js"></script>
@@ -54,7 +54,7 @@
 				<!-- Navigation button, visible on small resolution -->
 				<button class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse"><svg viewBox="0 0 12 12"><path d="M1 1h10M1 6h10M1 11h10"/></svg></button>
 				<!-- Main navigation -->
-				<div class="navbar-nav navbar-collapse collapse">
+				<div class="navbar-collapse collapse">
 					<a class="nav-link" href="/">Home</a>
 					<a class="nav-link" href="/#features">Features</a>
 					<a class="nav-link" href="/#download">Download</a>
@@ -272,8 +272,6 @@
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix commands">
 						<a href="#distrostats" class="thumbnail show_hide" rel="#commands">
 							<img src="images/stats/commands.svg" alt="Linux command prompt sign" width="8" height="5" loading="lazy">
-							<div class="mask"></div>
-							<i class="more"></i>
 							<h3>Test commands</h3>
 							<p>Commands to obtain system stats</p>
 						</a>
@@ -281,8 +279,6 @@
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix raspberrypios">
 						<a href="#distrostats" class="thumbnail show_hide" rel="#raspberrypios1">
 							<img src="images/stats/raspberrypios.svg" alt="Raspberry Pi OS logo" width="8" height="5" loading="lazy">
-							<div class="mask"></div>
-							<i class="more"></i>
 							<h3>Raspberry Pi OS Lite</h3>
 							<p>on Raspberry Pi 2 (32-bit)</p>
 						</a>
@@ -290,8 +286,6 @@
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix raspberrypios">
 						<a href="#distrostats" class="thumbnail show_hide" rel="#raspberrypios2">
 							<img src="images/stats/raspberrypios.svg" alt="Raspberry Pi OS logo" width="8" height="5" loading="lazy">
-							<div class="mask"></div>
-							<i class="more"></i>
 							<h3>Raspberry Pi OS Lite</h3>
 							<p>on Raspberry Pi 4 (64-bit)</p>
 						</a>
@@ -299,8 +293,6 @@
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix armbian">
 						<a href="#distrostats" class="thumbnail show_hide" rel="#armbian1">
 							<img src="images/stats/armbian.png" alt="Armbian logo" width="8" height="5" loading="lazy">
-							<div class="mask"></div>
-							<i class="more"></i>
 							<h3>Armbian</h3>
 							<p>on NanoPi R2S</p>
 						</a>
@@ -308,8 +300,6 @@
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix armbian">
 						<a href="#distrostats" class="thumbnail show_hide" rel="#armbian2">
 							<img src="images/stats/armbian.png" alt="Armbian logo" width="8" height="5" loading="lazy">
-							<div class="mask"></div>
-							<i class="more"></i>
 							<h3>Armbian</h3>
 							<p>on Odroid C4</p>
 						</a>
@@ -317,8 +307,6 @@
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix armbian">
 						<a href="#distrostats" class="thumbnail show_hide" rel="#armbian3">
 							<img src="images/stats/armbian.png" alt="Armbian logo" width="8" height="5" loading="lazy">
-							<div class="mask"></div>
-							<i class="more"></i>
 							<h3>Armbian</h3>
 							<p>on NanoPi NEO3</p>
 						</a>
@@ -326,8 +314,6 @@
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix debian">
 						<a href="#distrostats" class="thumbnail show_hide" rel="#debian1">
 							<img src="images/stats/debian.svg" alt="Debian logo" width="8" height="5" loading="lazy">
-							<div class="mask"></div>
-							<i class="more"></i>
 							<h3>Debian</h3>
 							<p>on Odroid C4</p>
 						</a>
@@ -335,8 +321,6 @@
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix debian">
 						<a href="#distrostats" class="thumbnail show_hide" rel="#debian2">
 							<img src="images/stats/debian.svg" alt="Debian logo" width="8" height="5" loading="lazy">
-							<div class="mask"></div>
-							<i class="more"></i>
 							<h3>Debian</h3>
 							<p>on x86_64 PC</p>
 						</a>
@@ -376,7 +360,6 @@
 			document.querySelectorAll('div.toggleDiv').forEach(function(e){e.setAttribute("style","display:none");});
 			document.getElementById("distrostats").removeAttribute("style");
 			document.getElementById("portfolio-grid").removeAttribute("style");
-			document.querySelectorAll('svg.triangle').forEach(function(e){e.setAttribute("opacity","0");});
 		</script>
 	</body>
 </html>
