@@ -123,13 +123,13 @@
                 return false;
             });
             if (!this.options.bgincrement) {
-                this.$el.on('webkitAnimationEnd.cslider animationend.cslider OAnimationEnd.cslider', function (event) {
+                this.$el.on('animationend.cslider', function (event) {
                     if (event.originalEvent.animationName === 'toRightAnim4' || event.originalEvent.animationName === 'toLeftAnim4') {
                         _self.isAnimating = false;
                     }
                 });
             } else {
-                this.$el.on('webkitTransitionEnd.cslider transitionend.cslider OTransitionEnd.cslider', function (event) {
+                this.$el.on('transitionend.cslider', function (event) {
                     if (event.target.id === _self.$el.attr('id'))
                         _self.isAnimating = false;
                 });
