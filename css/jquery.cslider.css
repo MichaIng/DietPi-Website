@@ -23,7 +23,7 @@
     position: absolute;
     opacity: 0;
     left: 10%;
-    transform: translateX(100vw);
+    transform: translateX(90vw);
 }
 
 .da-slide h2 {
@@ -171,21 +171,20 @@
 .da-slide-fromright h4,
 .da-slide-fromright p,
 .da-slide-fromright .da-img {
-    animation: fromRight 0.6s ease-in 0.8s both;
+    animation: fromRight 0.6s ease-out 0.8s both;
 }
 
 .da-slide-fromright .da-link {
-    animation: fromRightLink 0.4s ease-in 1.2s both;
+    animation: fromRightLink 0.4s ease-out 1.2s both;
 }
 
 @keyframes fromRight {
-    0% { transform: translateX(100vw); opacity: 0; }
+    0% { transform: translateX(90vw); opacity: 0; }
     100% { transform: translateX(0); opacity: 1; }
 }
 
 @keyframes fromRightLink {
-    0% { transform: translateX(100vw); opacity: 0; }
-    1% { transform: translateX(0); opacity: 0; }
+    0% { transform: translateX(0); opacity: 0; }
     100% { transform: translateX(0); opacity: 1; }
 }
 
@@ -194,21 +193,20 @@
 .da-slide-fromleft h4,
 .da-slide-fromleft p,
 .da-slide-fromleft .da-img {
-    animation: fromLeft 0.6s ease-in 0.6s both;
+    animation: fromLeft 0.6s ease-out 0.6s both;
 }
 
 .da-slide-fromleft .da-link {
-    animation: fromLeftLink 0.4s ease-in 1.2s both;
+    animation: fromLeftLink 0.4s ease-out 1.2s both;
 }
 
 @keyframes fromLeft {
-    0% { transform: translateX(-100vw); opacity: 0; }
+    0% { transform: translateX(-90vw); opacity: 0; }
     100% { transform: translateX(0); opacity: 1; }
 }
 
 @keyframes fromLeftLink {
-    0% { transform: translateX(-100vw); opacity: 0; }
-    1% { transform: translateX(0); opacity: 0; }
+    0% { transform: translateX(0); opacity: 0; }
     100% { transform: translateX(0); opacity: 1; }
 }
 
@@ -235,19 +233,19 @@
 
 @keyframes toRightText {
     0% { transform: translateX(0); opacity: 1; }
-    100% { transform: translateX(100vw); opacity: 0; }
+    100% { transform: translateX(90vw); opacity: 0; }
 }
 
 @keyframes toRightLink {
     0% { transform: translateX(0); opacity: 1; }
     99% { transform: translateX(0); opacity: 0; }
-    100% { transform: translateX(100vw); opacity: 0; }
+    100% { transform: translateX(90vw); opacity: 0; }
 }
 
 @keyframes toRightImg {
     0% { transform: translateX(0); opacity: 1; }
     30% { transform: translateX(-5vw); opacity: 1; }
-    100% { transform: translateX(100vw); opacity: 0; }
+    100% { transform: translateX(50vw); opacity: 0; }
 }
 
 /* Slide out to the left */
@@ -274,18 +272,18 @@
 @keyframes toLeftText {
     0% { transform: translateX(0); opacity: 1; }
     30% { transform: translateX(5vw); opacity: 1; }
-    100% { transform: translateX(-100vw); opacity: 0; }
+    100% { transform: translateX(-90vw); opacity: 0; }
 }
 
 @keyframes toLeftLink {
     0% { transform: translateX(0); opacity: 1; }
     99% { transform: translateX(0); opacity: 0; }
-    100% { transform: translateX(-100vw); opacity: 0; }
+    100% { transform: translateX(-90vw); opacity: 0; }
 }
 
 @keyframes toLeftImg {
     0% { transform: translateX(0); opacity: 1; }
     40% { transform: translateX(10vw); opacity: 1; }
     90% { transform: translateX(-60vw); opacity: 0; }
-    100% { transform: translateX(-100vw); opacity: 0; }
+    100% { transform: translateX(-90vw); opacity: 0; }
 }
