@@ -44,7 +44,7 @@ a:hover {
 	top: 0;
 	right: 0;
 	left: 0;
-	z-index: 2001;
+	z-index: 2;
 	min-height: 60px;
 	background-color: #164046;
 	padding: 4.5px 15px;
@@ -83,14 +83,7 @@ a:hover {
 	stroke: #c5ff00;
 }
 .navbar > .container-xl > .navbar-collapse {
-	align-items: stretch;
-}
-@media (min-width: 992px) {
-	.navbar > .container-xl > .navbar-collapse {
-		place-content: flex-end;
-	}
-}
-.navbar > .container-xl > .navbar-collapse.collapsing {
+	justify-content: flex-end;
 	transition: height 0.35s !important;
 }
 .navbar > .container-xl > .navbar-collapse > a {
@@ -101,7 +94,7 @@ a:hover {
 	margin: 4.5px 0;
 	padding: 10px 14px;
 	border: 1px solid #164046;
-	border-radius: 5px;
+	border-radius: 4px;
 	transition: border-color 1s;
 }
 .navbar > .container-xl > .navbar-collapse > a:hover,
@@ -150,16 +143,14 @@ a:hover {
 	fill: #164046;
 	width: 100%;
 	height: 30px;
+	opacity: 0;
+	transform: scaleY(0);
+	transform-origin: top;
+	transition: opacity 1s, transform 1s;
 }
-/*
-2.1 Animations: Class is applied via app.js
-**********************************************************************/
-@keyframes fadeInDown {
-	0% { opacity: 0; transform: translateY(-20px); }
-	100% { opacity: 1; transform: translateY(0); }
-}
-.fadeInDown {
-	animation: fadeInDown 1s forwards;
+.triangle.fadeInDown {
+	opacity: 1;
+	transform: scaleY(1);
 }
 /*
 2.2 Buttons
@@ -236,18 +227,17 @@ a:hover {
 	font-size: 10px;
 }
 .thumbnail .more {
-	position: absolute;
-	top: -40px;
-	z-index: 1;
 	width: 40px;
-	height: 40px;
-	margin-left: -20px;
-	margin-top: -45px;
+	height: 100%;
 	content: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'><path fill='none' stroke='white' stroke-width='2' stroke-linecap='round' d='M5 1v8M1 5h8'/></svg>");
+	position: absolute;
+	top: calc(-50% - 20px);
+	left: calc(50% - 20px);
+	z-index: 1;
 }
 .thumbnail:hover .more {
-	top: 50%;
-	transition: top 0.3s ease-out;
+	transform: translateY(50%);
+	transition: transform 0.3s ease-out;
 }
 .thumbnail .mask {
 	width: 100%;
@@ -256,10 +246,10 @@ a:hover {
 	position: absolute;
 	top: 100%;
 	left: 0;
-	transition: top 0.2s ease-out;
+	transition: transform 0.2s ease-out;
 }
 .thumbnail:hover .mask {
-	top: 0;
+	transform: translateY(-100%);
 }
 /*
 2.4 Icons
@@ -294,8 +284,8 @@ a:hover {
 .primary-section .triangle {
 	fill: #9ccc00;
 }
-.primary-section .title p,
-.primary-section h3 {
+.primary-section h3,
+.primary-section .title p {
 	color: #9ccc00;
 }
 .secondary-section {
