@@ -233,7 +233,9 @@ a:hover {
 	top: -45px;
 	left: calc(50% - 20px);
 }
-.thumbnail:hover::after {
+.thumbnail:hover::after,
+.thumbnail:focus::after,
+.thumbnail:active::after {
 	transform: translateY(50%);
 	transition: transform 0.3s ease-out;
 }
@@ -247,7 +249,9 @@ a:hover {
 	left: 0;
 	transition: transform 0.2s ease-out;
 }
-.thumbnail:hover::before {
+.thumbnail:hover::before,
+.thumbnail:focus::before,
+.thumbnail:active::before {
 	transform: translateY(-100%);
 }
 /*
