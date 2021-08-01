@@ -62,7 +62,7 @@
                 classFrom = 'da-slide-fromleft';
                 --this.bgpositer;
             }
-            this.$el.css('background-position', this.bgpositer * this.options.bgincrement + '% 0%');
+            this.$el.css('background-position-x', this.bgpositer * this.options.bgincrement + '%');
             this.current = page;
             $next = this.$slides.eq(this.current);
             var rmClasses = 'da-slide-toleft da-slide-toright da-slide-fromleft da-slide-fromright';
