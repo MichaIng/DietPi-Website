@@ -1,59 +1,58 @@
 // Original: https://github.com/Le-Stagiaire/jquery.cslider/blob/0c99322/src/jquery.cslider.js
+'use strict';
 (function ($) {
-    // Slider object
     $.Slider = function (options, element) {
         this.$el = $(element);
         this._init(options);
     };
     $.Slider.defaults = {
-        current: 0, // index of current slide
-        bgincrement: 100, // increment the bg position (parallax effect) when sliding
-        autoplay: true, // slideshow on / off
-        interval: 6000 // time between transitions
+        current: 0, // Initial slide [index]
+        bgincrement: 100, // Background parallax [pixels], set "0" to disable
+        autoplay: true, // Slideshow enabled [true|false]
+        interval: 6000 // Slideshow interval [milliseconds]
     };
     $.Slider.prototype = {
         _init: function (options) {
             this.options = $.extend(true, {}, $.Slider.defaults, options);
+            this.isAnimating = false;
+            this.bgpositer = 0;
+            // Detect slides
             this.$slides = this.$el.find('div.da-slide');
             this.slidesCount = this.$slides.length;
-            this.current = this.options.current;
-            if (this.current < 0 || this.current >= this.slidesCount) {
-                this.current = 0;
-            }
+            this.current = (this.options.current >= 0 && this.options.current < this.slidesCount) ? this.options.current : 0;
             this.$slides.eq(this.current).addClass('da-slide-current');
+            // Create navigation dots
             var $navigation = $('<nav class="da-dots"/>');
             for (var i = 0; i < this.slidesCount; ++i) {
-                $navigation.append('<span/>');
+                if (i === this.current) {
+                    $navigation.append('<span class="da-dots-current"/>');
+                } else {
+                    $navigation.append('<span/>');
+                }
             }
             $navigation.appendTo(this.$el);
             this.$pages = this.$el.find('nav.da-dots > span');
+            // Detect navigation arrows
             this.$navNext = this.$el.find('span.da-arrows-next');
             this.$navPrev = this.$el.find('span.da-arrows-prev');
-            this.isAnimating = false;
-            this.bgpositer = 0;
-
-            this._updatePage();
-            // load the events
+            // Register navigation events
             this._loadEvents();
-            // slideshow
+            // Start slideshow if enabled
             if (this.options.autoplay) {
                 this._startSlideshow();
             }
         },
         _navigate: function (page, dir) {
-            var $current = this.$slides.eq(this.current);
             if (this.current === page || this.isAnimating) {
                 return false;
             }
             this.isAnimating = true;
-            // check dir
-            var classTo, classFrom, d;
-            if (!dir) {
-                ( page > this.current ) ? d = 'next' : d = 'prev';
-            } else {
-                d = dir;
-            }
-            if (d === 'next') {
+            var $current = this.$slides.eq(this.current),
+                $next = this.$slides.eq(page),
+                rmClasses = 'da-slide-toleft da-slide-toright da-slide-fromleft da-slide-fromright',
+                classTo, classFrom;
+            // Direction
+            if (dir === 'next') {
                 classTo = 'da-slide-toleft';
                 classFrom = 'da-slide-fromright';
                 ++this.bgpositer;
@@ -62,26 +61,26 @@
                 classFrom = 'da-slide-fromleft';
                 --this.bgpositer;
             }
-            this.$el.css('background-position-x', this.bgpositer * this.options.bgincrement + '%');
-            this.current = page;
-            var $next = this.$slides.eq(this.current),
-                rmClasses = 'da-slide-toleft da-slide-toright da-slide-fromleft da-slide-fromright';
+            // Start background animation if enabled
+            if (this.options.bgincrement) {
+                this.$el.css('background-position-x', this.bgpositer * this.options.bgincrement + '%');
+            }
+            // Start slide animation
             $current.removeClass(rmClasses);
             $next.removeClass(rmClasses);
             $current.addClass(classTo);
             $next.addClass(classFrom);
             $current.removeClass('da-slide-current');
             $next.addClass('da-slide-current');
-            this._updatePage();
-        },
-        _updatePage: function () {
+            // Update navigation dots
             this.$pages.removeClass('da-dots-current');
-            this.$pages.eq(this.current).addClass('da-dots-current');
+            this.$pages.eq(page).addClass('da-dots-current');
+            this.current = page;
         },
         _startSlideshow: function () {
             var _self = this;
             this.slideshow = setTimeout(function () {
-                var page = ( _self.current < _self.slidesCount - 1 ) ? page = _self.current + 1 : page = 0;
+                var page = (_self.current < _self.slidesCount - 1) ? _self.current + 1 : 0;
                 _self._navigate(page, 'next');
                 if (_self.options.autoplay) {
                     _self._startSlideshow();
@@ -94,49 +93,43 @@
                 this.options.autoplay = false;
             }
         },
-        page: function (idx) {
-            if (idx >= this.slidesCount || idx < 0) {
-                return false;
-            }
-            this._stopSlideshow();
-            this._navigate(idx);
-        },
         _loadEvents: function () {
             var _self = this;
+            // Click on navigation dots
             this.$pages.on('click.cslider', function () {
-                _self.page($(this).index());
+                _self._stopSlideshow();
+                var dir = ($(this).index() > _self.current) ? 'next' : 'prev';
+                _self._navigate($(this).index(), dir);
                 return false;
             });
+            // Click on right navigation arrow
             this.$navNext.on('click.cslider', function () {
                 _self._stopSlideshow();
-                var page = ( _self.current < _self.slidesCount - 1 ) ? page = _self.current + 1 : page = 0;
+                var page = (_self.current < _self.slidesCount - 1) ? _self.current + 1 : 0;
                 _self._navigate(page, 'next');
                 return false;
             });
+            // Click on left navigation arrow
             this.$navPrev.on('click.cslider', function () {
                 _self._stopSlideshow();
-                var page = ( _self.current > 0 ) ? page = _self.current - 1 : page = _self.slidesCount - 1;
+                var page = (_self.current > 0) ? _self.current - 1 : _self.slidesCount - 1;
                 _self._navigate(page, 'prev');
                 return false;
             });
-            if (!this.options.bgincrement) {
+            // Flag to disable navigation during animation
+            if (this.options.bgincrement) {
+                this.$el.on('transitionend.cslider', function (event) {
+                    if (_self.isAnimating && (event.target === event.currentTarget)) {
+                        _self.isAnimating = false;
+                    }
+                });
+            } else {
                 this.$el.on('animationend.cslider', function (event) {
                     if (_self.isAnimating && (event.originalEvent.animationName === 'fromRight' || event.originalEvent.animationName === 'fromLeft')) {
                         _self.isAnimating = false;
                     }
                 });
-            } else {
-                this.$el.on('transitionend.cslider', function (event) {
-                    if (_self.isAnimating && (event.target.id === _self.$el.attr('id'))) {
-                        _self.isAnimating = false;
-                    }
-                });
             }
-        }
-    };
-    var logError = function (message) {
-        if (this.console) {
-            console.error(message);
         }
     };
     $.fn.cslider = function (options) {
@@ -145,10 +138,10 @@
             this.each(function () {
                 var instance = $.data(this, 'cslider');
                 if (!instance) {
-                    logError("cannot call methods on cslider prior to initialization; " +
+                    console.error("cannot call methods on cslider prior to initialization; " +
                     "attempted to call method '" + options + "'");
                 } else if (!$.isFunction(instance[options]) || options.charAt(0) === "_") {
-                    logError("no such method '" + options + "' for cslider instance");
+                    console.error("no such method '" + options + "' for cslider instance");
                 } else {
                     instance[options].apply(instance, args);
                 }
