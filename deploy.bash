@@ -50,12 +50,12 @@ G_EXEC cd DietPi-Website-$BRANCH
 G_EXEC sed -i "s|<lastmod>.*</lastmod>|<lastmod>$(date '+%Y-%m-%dT%T%:z')</lastmod>|" sitemap.xml
 
 # 3rd party
-G_EXEC curl -sSfL https://raw.githubusercontent.com/jquery/codeorigin.jquery.com/main/cdn/jquery-3.6.0.min.js -o js/jquery.min.js
-G_EXEC curl -sSfL https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css -o css/bootstrap.min.css
-G_EXEC sed -i '\|^/\*# sourceMappingURL=bootstrap.min.css.map \*/$|d' css/bootstrap.min.css # Suppress browser console warning about missing map file
-G_EXEC curl -sSfL https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js -o js/bootstrap.min.js
-G_EXEC sed -i '\|^//# sourceMappingURL=bootstrap.min.js.map$|d' js/bootstrap.min.js # Suppress browser console warning about missing map file
-G_EXEC curl -sSfL https://raw.githubusercontent.com/patrickkunka/mixitup/61dac0554ab2b69fca3c927a173b0a000e4f6896/dist/mixitup.min.js -o js/mixitup.min.js
+G_EXEC curl -sSfL https://raw.githubusercontent.com/jquery/codeorigin.jquery.com/main/cdn/jquery-3.6.0.min.js -o js/jquery.js
+G_EXEC curl -sSfL https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css -o css/bootstrap.css
+G_EXEC sed -i '\|^/\*# sourceMappingURL=bootstrap.min.css.map \*/$|d' css/bootstrap.css # Suppress browser console warning about missing map file
+G_EXEC curl -sSfL https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js -o js/bootstrap.js
+G_EXEC sed -i '\|^//# sourceMappingURL=bootstrap.min.js.map$|d' js/bootstrap.js # Suppress browser console warning about missing map file
+G_EXEC curl -sSfL https://raw.githubusercontent.com/MichaIng/mixitup/patch-1/dist/mixitup.js -o js/mixitup.js
 
 # Minify
 # - Download
@@ -65,14 +65,12 @@ G_EXEC_NOHALT=1 G_EXEC rm minify.tar.gz
 # - Minify js: Use web API since "minify" does not minify internal function and variable names.
 for i in js/*.js
 do
-	[[ $i == *'.min.js' ]] && continue
 	G_EXEC curl -X POST -sSfL --data-urlencode "input@$i" https://javascript-minifier.com/raw -o "${i%.js}.min.js"
 	G_EXEC_NOHALT=1 G_EXEC rm "$i"
 done
 # - Minify CSS
 for i in css/*.css
 do
-	[[ $i == *'.min.css' ]] && continue
 	G_EXEC ./minify -o "${i%.css}.min.css" "$i"
 	G_EXEC_NOHALT=1 G_EXEC rm "$i"
 done

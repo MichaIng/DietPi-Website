@@ -52,6 +52,7 @@
 					<a class="nav-link" href="/#features">Features</a>
 					<a class="nav-link" href="/#download">Download</a>
 					<a class="nav-link" href="/#gettingstarted">Getting Started</a>
+					<a class="nav-link" href="stats.html">Stats</a>
 					<a class="nav-link" href="#contribute">Contribute</a>
 					<a class="nav-link" href="/#testimonials">Testimonials</a>
 				</div>
@@ -69,7 +70,7 @@
 				<div class="title">
 					<h2>Grow in 2021</h2>
 					<p>
-						We are asking you to help the DietPi project. DietPi is an open-source product and it is free to use. We are sustained by donations and <b>even a small one (as little as the price of a cup of coffee)</b> would help the things move forward, covering the costs for hardware (new boards, micro SD cards etc.), web hosting and future development. 
+						We are asking you to help the DietPi project. DietPi is an open-source product and it is free to use. We are sustained by donations and <b>even a small one (as little as the price of a cup of coffee)</b> would help the things move forward, covering the costs for hardware (new boards, micro SD cards etc.), web hosting and future development.
 						<br><br>This allows us to continue working on DietPi, make it better with every new update.
 						<br><br><img src="images/contribute/coffee.jpg" alt="Coffee" width="200" height="189" loading="lazy">
 						<br><br>In 2020 we made 8 releases and brought 128 improvements and changes, and fixed 119 bugs. We provided new software titles, support new SBCs and brought many optimisations. There are over <a href="https://dietpi.com/survey/" target="_blank" rel="noopener">110000</a> systems running DietPi.
@@ -78,185 +79,177 @@
 					<p class="medium-text">
 						<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=6DVBECXRW3TAA" class="button" target="_blank" rel="noopener">Donate via PayPal</a>
 						<a href="https://www.patreon.com/bePatron?u=12464530" class="button" target="_blank" rel="noopener">Become a Patron</a>
-						<a href="https://brave.com/brave-rewards/" class="button" target="_blank" rel="noopener">Donate through Brave Rewards</a>
+						<a href="https://brave.com/tips/" class="button" target="_blank" rel="noopener">Donate through Brave Rewards</a>
 					</p>
 				</div>
 				<div class="title">
 					<h2>Why contribute to DietPi as an open-source project?</h2>
 					<p>You can improve the software you rely on. It's empowering to be able to make changes, even small ones: whether it's coding, documentation, testing, web design. If you're looking to help, there's something for you on here!</p>
-				</div>				
+				</div>
 				<nav class="nav nav-pills" id="contributeinfo" style="display:none">
+					<button class="nav-link filter" data-filter="all">[All]</button>
 					<button class="nav-link filter" data-filter=".Report">Report / Diagnose issues</button>
 					<button class="nav-link filter" data-filter=".Ideas">Contribute with ideas</button>
 					<button class="nav-link filter" data-filter=".Community">Part of community & Share experiences</button>
 					<button class="nav-link filter" data-filter=".Expand">Expand code / documentation</button>
 				</nav>
 				<!-- Bug report -->
-				<div id="bugreport" class="toggleDiv row single-project">
-					<div class="col-md-4"><img src="images/contribute/diagnose.jpg" alt="Bug report" width="8" height="5" loading="lazy"></div>
-					<div class="col-md-8">
-						<div class="project-description">
-							<div class="project-title clearfix"><h3>Create a new bug report / Report a security issue</h3><span class="show_hide close"></span></div>
+				<div id="bugreport" class="toggleDiv single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>Create a new bug report / Report a security issue</h3><span class="show_hide close"></span></div></div>
+					<div class="row">
+						<div class="col-md-6 project-description">
 							<p>
 								Creating a bug report helps us to improve. Providing required info, steps to replicate, and expected vs. actual behaviour you give us valuable info to understand the problem.
 								<br><br>Create now a <a href="https://github.com/MichaIng/DietPi/issues/new?template=bug_report.md" target="_blank" rel="noopener">GitHub issue</a>.
 							</p>
 							<p>Security is on top of our list. Please report any security vulnerability shipped with our images or created by our scripts (in /boot/dietpi/). For more details check our <a href="https://github.com/MichaIng/DietPi/security/policy" target="_blank" rel="noopener">Security Policy</a> guide.</p>
 						</div>
+						<div class="col-md-6"><img src="images/contribute/diagnose.jpg" alt="Bug report" width="8" height="5" loading="lazy"></div>
 					</div>
 				</div>
 				<!-- Diagnose -->
-				<div id="diagnose" class="toggleDiv row single-project">
-					<div class="col-md-4"><img src="images/contribute/investigate.jpg" alt="Diagnose" width="8" height="5" loading="lazy"></div>
-					<div class="col-md-8">
-						<div class="project-description">
-							<div class="project-title clearfix"><h3>Investigate issues / Provide help</h3><span class="show_hide close"></span></div>
+				<div id="diagnose" class="toggleDiv single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>Investigate issues / Provide help</h3><span class="show_hide close"></span></div></div>
+					<div class="row">
+						<div class="col-md-6 project-description">
+							<p>Many times the DietPi project needs help on existent items:</p>
+							<ul>
+								<li>Run an investigation (e.g. an installation issue on specific software title)</li>
+								<li>Provide a workaround to an existent issue</li>
+								<li>Give help when testing is required</li>
+								<li>Give your opinion on discussions in the issue tracker. It's a good opportunity to influence the future direction of DietPi.
+							</ul>
 							<p>
-								Many times the DietPi project needs help on existent items:
-								<ul>
-									<li>Run an investigation (e.g. an installation issue on specific software title)</li>
-									<li>Provide a workaround to an existent issue</li>
-									<li>Give help when testing is required</li>
-									<li>Give your opinion on discussions in the issue tracker. It's a good opportunity to influence the future direction of DietPi.
-								</ul>
-							</p>
-							<p>
-								Sometimes issues are created with missing information, or we are not able to replicate, or plain invalid. 
+								Sometimes issues are created with missing information, or we are not able to replicate, or plain invalid.
 								<br>Help make them easier to resolve. Handling issues takes a lot of time that we could rather spend on fixing bugs and adding features.
 								<br><br>Browse <a href="https://github.com/MichaIng/DietPi/issues" target="_blank" rel="noopener">DietPi issues on GitHub</a> or <a href="https://github.com/MichaIng/DietPi-Docs/issues" target="_blank" rel="noopener">DietPi documentation tasks on GitHub</a>.
 							</p>
 						</div>
+						<div class="col-md-6"><img src="images/contribute/investigate.jpg" alt="Diagnose" width="8" height="5" loading="lazy"></div>
 					</div>
 				</div>
 				<!-- Question -->
-				<div id="question" class="toggleDiv row single-project">
-					<div class="col-md-4"><img src="images/contribute/question.jpg" alt="Question" width="8" height="5" loading="lazy"></div>
-					<div class="col-md-8">
-						<div class="project-description">
-							<div class="project-title clearfix"><h3>Answer questions / Provide insights</h3><span class="show_hide close"></span></div>
+				<div id="question" class="toggleDiv single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>Answer questions / Provide insights</h3><span class="show_hide close"></span></div></div>
+					<div class="row">
+						<div class="col-md-6 project-description">
 							<p>Start a discussion, ask and answer questions. There are many questions on <a href="https://github.com/MichaIng/DietPi/issues" target="_blank" rel="noopener">DietPi GitHub</a>, and also on <a href="https://dietpi.com/phpbb" target="_blank" rel="noopener">Forum</a> for which you may have already the answers, or you could provide valuable insights.</p>
 							<p>Browse <a href="https://github.com/MichaIng/DietPi/issues" target="_blank" rel="noopener">DietPi issues on GitHub</a> or browse different conversation topics on <a href="https://dietpi.com/phpbb" target="_blank" rel="noopener">DietPi Forums</a> and find the ones that interest you the most.</p>
 						</div>
+						<div class="col-md-6"><img src="images/contribute/question.jpg" alt="Question" width="8" height="5" loading="lazy"></div>
 					</div>
 				</div>
 				<!-- Test -->
-				<div id="test" class="toggleDiv row single-project">
-					<div class="col-md-4"><img src="images/contribute/test-configurations.jpg" alt="Test" width="8" height="5" loading="lazy"></div>
-					<div class="col-md-8">
-						<div class="project-description">
-							<div class="project-title clearfix"><h3>Test configurations</h3><span class="show_hide close"></span></div>
+				<div id="test" class="toggleDiv single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>Test configurations</h3><span class="show_hide close"></span></div></div>
+					<div class="row">
+						<div class="col-md-6 project-description">
 							<p>DietPi supports multiple SBCs or PC / VM configurations. Very similar with investigating the issues, but specific to hardware, we need your help to run tests and specific installations for certain SBC models or PCs</p>
 							<p>It is often the need to check a new installation on a new SBC model, or maybe verify DietPi in connection with a specific driver. Doing such installation provides a big help to the overall project.</p>
-							<p>
-								Examples:
-								<ul>
-									<li>A driver installation for a specific SBC</li>
-									<li>Testing a performance tweak.</li>
-								</ul>
-							</p>
-							<p>Browse <a href="https://github.com/MichaIng/DietPi/issues?q=is:open+is:issue+label:%22Help+wanted+:sos:%22+label:%22Testing/testers+required+:arrow_down_small:%22" target="_blank" rel="noopener"><i>Help wanted!</i> or <i>Testing Required</i></a> in DietPi issues on GitHub.</p>
+							<p>Examples:</p>
+							<ul>
+								<li>A driver installation for a specific SBC</li>
+								<li>Testing a performance tweak.</li>
+							</ul>
+							<p>Browse <a href="https://github.com/MichaIng/DietPi/issues?q=is:open+is:issue+label:%22Help+wanted+:sos:%22" target="_blank" rel="noopener"><i>Help wanted!</i></a> or <a href="https://github.com/MichaIng/DietPi/issues?q=is:open+is:issue+label:%22Testing/testers+required+:arrow_down_small:%22" target="_blank" rel="noopener"><i>Testing required</i></a> in DietPi issues on GitHub.</p>
 						</div>
+						<div class="col-md-6"><img src="images/contribute/test-configurations.jpg" alt="Test" width="8" height="5" loading="lazy"></div>
 					</div>
 				</div>
 				<!-- Improve website -->
-				<div id="improvewebsite" class="toggleDiv row single-project">
-					<div class="col-md-4"><img src="images/contribute/improve-website.jpg" alt="Improve website" width="8" height="5" loading="lazy"></div>
-					<div class="col-md-8">
-						<div class="project-description">
-							<div class="project-title clearfix"><h3>Improve DietPi website</h3><span class="show_hide close"></span></div>
+				<div id="improvewebsite" class="toggleDiv single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>Improve DietPi website</h3><span class="show_hide close"></span></div></div>
+					<div class="row">
+						<div class="col-md-6 project-description">
 							<p>Web development is a dynamic and challenging field. Someone with skills in graphics and web design could provide a help to the overall online presence of this open-source project.</p>
 							<p>Have you seen something on the website which could be improved? Do you have web design skills and you would like to help?</p>
 							<p>We welcome your help to further expand the website. Please check on <a href="https://github.com/MichaIng/DietPi-Website" target="_blank" rel="noopener">How to Contribute on DietPi-Website project</a>.</p>
 						</div>
+						<div class="col-md-6"><img src="images/contribute/improve-website.jpg" alt="Improve website" width="8" height="5" loading="lazy"></div>
 					</div>
 				</div>
 				<!-- Improve docs -->
-				<div id="improvedocs" class="toggleDiv row single-project">
-					<div class="col-md-4"><img src="images/contribute/improve-docs.jpg" alt="Improve docs" width="8" height="5" loading="lazy"></div>
-					<div class="col-md-8">
-						<div class="project-description">
-							<div class="project-title clearfix"><h3>Expand DietPi Docs</h3><span class="show_hide close"></span></div>
+				<div id="improvedocs" class="toggleDiv single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>Expand DietPi Docs</h3><span class="show_hide close"></span></div></div>
+					<div class="row">
+						<div class="col-md-6 project-description">
 							<p>This is an ever growing topic. Please join us to update documentation, bringing more examples and details, making the project easy to use and access.</p>
 							<p>Please check <a href="https://github.com/MichaIng/DietPi-Docs" target="_blank" rel="noopener">How to Contribute on DietPi-Docs project</a>.</p>
 						</div>
+						<div class="col-md-6"><img src="images/contribute/improve-docs.jpg" alt="Improve docs" width="8" height="5" loading="lazy"></div>
 					</div>
 				</div>
 				<!-- Suggest -->
-				<div id="suggest" class="toggleDiv row single-project">
-					<div class="col-md-4"><img src="images/contribute/new-features.jpg" alt="Suggest" width="8" height="5" loading="lazy"></div>
-					<div class="col-md-8">
-						<div class="project-description">
-							<div class="project-title clearfix"><h3>New feature suggestions & Software titles</h3><span class="show_hide close"></span></div>
+				<div id="suggest" class="toggleDiv single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>New feature suggestions & Software titles</h3><span class="show_hide close"></span></div></div>
+					<div class="row">
+						<div class="col-md-6 project-description">
 							<p>Do you like the project and you would like to see new software titles or new configuration features?</p>
 							<p>
 								Please add your request and ideas using this <a href="https://github.com/MichaIng/DietPi/issues/new/choose" target="_blank" rel="noopener">GitHub form</a>*.
 								<br><i>* To be able to do it you would need to be logged in with your GitHub account.</i>
 							</p>
 						</div>
+						<div class="col-md-6"><img src="images/contribute/new-features.jpg" alt="Suggest" width="8" height="5" loading="lazy"></div>
 					</div>
 				</div>
 				<!-- Code -->
-				<div id="code" class="toggleDiv row single-project">
-					<div class="col-md-4"><img src="images/contribute/expand-code.jpg" alt="Code" width="8" height="5" loading="lazy"></div>
-					<div class="col-md-8">
-						<div class="project-description">
-							<div class="project-title clearfix"><h3>Extend DietPi</h3><span class="show_hide close"></span></div>
+				<div id="code" class="toggleDiv single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>Extend DietPi</h3><span class="show_hide close"></span></div></div>
+					<div class="row">
+						<div class="col-md-6 project-description">
 							<p>
-								<b>Would you like to fix a bug or help extending the DietPi project?</b> 
+								<b>Would you like to fix a bug or help extending the DietPi project?</b>
 								<br><br>You can use issue labels to discover issues you could help out with. Either for a specific hardware model: RPi4, ROCK64, ROCK PI S, Odroid C1, Odroid N1 etc. or Debian distribution.
 								<br><br>You may find an issue is assigned. Please double-check before starting on this issue because somebody else is likely already working on it. Once you find an issue you'd like to work on leave a comment so others are aware. We'll then assign that issue to you.
-								<br><br>When you're ready to get feedback on your work, open a draft pull request.							
+								<br><br>When you're ready to get feedback on your work, open a draft pull request.
 							</p>
 							<p>
 								Please find here more details on <a href="https://github.com/MichaIng/DietPi#contributing">contributing code</a>.
 								<br><br>Have fun!
 							</p>
 						</div>
+						<div class="col-md-6"><img src="images/contribute/expand-code.jpg" alt="Code" width="8" height="5" loading="lazy"></div>
 					</div>
 				</div>
 				<!-- Community -->
-				<div id="community" class="toggleDiv row single-project">
-					<div class="col-md-4"><img src="images/contribute/be-part-community.jpg" alt="Community" width="8" height="5" loading="lazy"></div>
-					<div class="col-md-8">
-						<div class="project-description">
-							<div class="project-title clearfix"><h3>Use DietPi Forum</h3><span class="show_hide close"></span></div>
-							<p>
-								Discuss with community. 
-								<ul> 
-									<li>First time user, and you need help? No problem!</li>
-									<li>Do you have a question? Search for answers or create a new topic. One of the community members will help you</li>
-								</ul>
-								<br>Connect now to the <a href="https://dietpi.com/phpbb/">DietPi Forum</a>.
-							</p>
+				<div id="community" class="toggleDiv single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>Use DietPi Forum</h3><span class="show_hide close"></span></div></div>
+					<div class="row">
+						<div class="col-md-6 project-description">
+							<p>Discuss with community.</p>
+							<ul>
+								<li>First time user, and you need help? No problem!</li>
+								<li>Do you have a question? Search for answers or create a new topic. One of the community members will help you</li>
+							</ul>
+							<p>Connect now to the <a href="https://dietpi.com/phpbb/">DietPi Forum</a>.</p>
 						</div>
+						<div class="col-md-6"><img src="images/contribute/be-part-community.jpg" alt="Community" width="8" height="5" loading="lazy"></div>
 					</div>
 				</div>
 				<!-- Blog -->
-				<div id="blog" class="toggleDiv row single-project">
-					<div class="col-md-4"><img src="images/contribute/social-Twitter.jpg" alt="Blog" width="8" height="5" loading="lazy"></div>
-					<div class="col-md-8">
-						<div class="project-description">
-							<div class="project-title clearfix"><h3>Write about DietPi</h3><span class="show_hide close"></span></div>
+				<div id="blog" class="toggleDiv single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>Write about DietPi</h3><span class="show_hide close"></span></div></div>
+					<div class="row">
+						<div class="col-md-6 project-description">
 							<p>
 								Sometimes the easiest way to help, it is to share experience. It helps a lot to write about DietPi project, tell others about it.
 								<br>We embed relevant blog posts and YouTube links in the documentation. There is also a dedicated <a href="https://dietpi.com/docs/references/">Reference page</a>
 							</p>
 							<p>Help spread the word about DietPi project!</p>
 						</div>
+						<div class="col-md-6"><img src="images/contribute/social-Twitter.jpg" alt="Blog" width="8" height="5" loading="lazy"></div>
 					</div>
 				</div>
 				<!-- Social -->
-				<div id="social" class="toggleDiv row single-project">
-					<div class="col-md-4"><img src="images/contribute/more-social.jpg" alt="Social" width="8" height="5" loading="lazy"></div>
-					<div class="col-md-8">
-						<div class="project-description">
-							<div class="project-title clearfix">
-								<h3>Social media</h3>
-								<span class="show_hide close"></span>
-							</div>
+				<div id="social" class="toggleDiv single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>Social media</h3><span class="show_hide close"></span></div></div>
+					<div class="row">
+						<div class="col-md-6 project-description">
 							<p>This could be as simple as a Twitter Like, or re-share a conversation, article, feature via a Retweet. Or maybe adding a link to a Facebook post, or a Reddit reference.</p>
 							<p>In an age where communication is the key, these social references help DietPi project!</p>
 						</div>
+						<div class="col-md-6"><img src="images/contribute/more-social.jpg" alt="Social" width="8" height="5" loading="lazy"></div>
 					</div>
 				</div>
 				<!-- END details for portfolio -->
