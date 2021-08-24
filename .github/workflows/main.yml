@@ -18,10 +18,7 @@ jobs:
         java-package: jre
         check-latest: true
     - name: Download Nu Html Checker
-      run: |
-        curl -sSfL "$(curl -sSfL https://api.github.com/repos/validator/validator/releases/latest | mawk -F\" '/"browser_download_url.*vnu\.jar.*\.zip"/{print $4;exit}')" -o vnu.zip
-        unzip -jo vnu.zip dist/vnu.jar
-        rm vnu.zip
+      run: curl -sSfLO 'https://github.com/validator/validator/releases/download/latest/vnu.jar'
     - name: Run Nu Html Checker to check HTML, CSS and SVG files
       run: find . -type f \( -name '*.html' -o -name '*.css' -o -name '*.svg' \) -exec java -jar vnu.jar --verbose --also-check-css --also-check-svg --filterpattern '.*(color-adjust|break-word|html).*' {} +
     - name: Setup Python 3.9 for PySpelling
