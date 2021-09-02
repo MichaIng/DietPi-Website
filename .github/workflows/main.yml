@@ -3,35 +3,32 @@ on: push
 jobs:
   Actions:
     # https://github.com/actions/virtual-environments
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
     - name: Deploy DietPi-Website locally
       id: deploy
       run: bash -c "$(curl -sSfL https://raw.githubusercontent.com/MichaIng/DietPi-Website${GITHUB_REF#refs/heads}/deploy.bash)" bash .
-    - name: Setup JRE 16 for Nu Html Checker
+    - name: Setup JRE for Nu Html Checker
       # https://github.com/actions/setup-java/releases
       uses: actions/setup-java@v2
       with:
-        distribution: 'zulu'
-        # http://static.azul.com/zulu/bin/
-        java-version: '16'
+        distribution: 'temurin'
+        # https://github.com/adoptium
+        java-version: '17-ea'
         java-package: jre
         check-latest: true
     - name: Download Nu Html Checker
-      run: |
-        curl -sSfL "$(curl -sSfL https://api.github.com/repos/validator/validator/releases/latest | mawk -F\" '/"browser_download_url.*vnu\.jar.*\.zip"/{print $4;exit}')" -o vnu.zip
-        unzip -jo vnu.zip dist/vnu.jar
-        rm vnu.zip
+      run: curl -sSfLO 'https://github.com/validator/validator/releases/download/latest/vnu.jar'
     - name: Run Nu Html Checker to check HTML, CSS and SVG files
-      run: find . -type f \( -name '*.html' -o -name '*.css' -o -name '*.svg' \) -exec java -jar vnu.jar --verbose --also-check-css --also-check-svg --filterpattern '.*(text-decoration-skip-ink|color-adjust|overflow-anchor|break-word|aspect-ratio|html).*' {} +
-    - name: Setup Python 3.9 for PySpelling
+      run: find . -type f \( -name '*.html' -o -name '*.css' -o -name '*.svg' \) -exec java -jar vnu.jar --verbose --also-check-css --also-check-svg --filterpattern '.*“(break-word|html)”.*' {} +
+    - name: Setup Python for PySpelling
       id: python
       if: always() && steps.deploy.outcome == 'success'
       # https://github.com/actions/setup-python/releases
       uses: actions/setup-python@v2
       with:
         # https://github.com/actions/python-versions/releases
-        python-version: '3.9'
+        python-version: '3.10.0-rc.1 - 3.10'
     - name: Install PySpelling
       id: pyspelling
       if: always() && steps.python.outcome == 'success'
