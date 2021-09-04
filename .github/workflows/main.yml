@@ -42,7 +42,7 @@ jobs:
       run: pyspelling -vc .spellcheck.yml
     - name: Build lychee
       id: lychee
-      if: always() && steps.nginx.outcome == 'success'
+      if: always() && steps.deploy.outcome == 'success'
       run: cargo install --git https://github.com/lycheeverse/lychee --branch local-files
     - name: Run lychee to check Markdown and HTML files
       if: always() && steps.lychee.outcome == 'success'
