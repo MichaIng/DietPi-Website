@@ -40,7 +40,7 @@ fi
 
 # Main
 G_EXEC cd /tmp
-G_EXEC curl -sSfLO 'https://github.com/MichaIng/DietPi-Website/archive/$BRANCH.tar.gz'
+G_EXEC curl -sSfLO "https://github.com/MichaIng/DietPi-Website/archive/$BRANCH.tar.gz"
 G_EXEC tar xf $BRANCH.tar.gz
 G_EXEC_NOHALT=1 G_EXEC rm $BRANCH.tar.gz
 G_EXEC cd DietPi-Website-$BRANCH
