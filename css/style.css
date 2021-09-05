@@ -383,6 +383,8 @@ a:active {
 }
 .project-info {
 	padding: 10px 20px;
+	/* Vertical scroll bar when content is too wide */
+	overflow-x: auto;
 }
 .project-info div {
 	margin-bottom: 5px;
@@ -410,6 +412,22 @@ a:active {
 	/* "height: auto" in combination with inline width and height allows to keep aspect ratio while loading for non-bleeding edge browsers, which do not support "aspect-ratio" yet. */
 	height: auto;
 	padding: 15px;
+}
+.project-info > table {
+	width: 100%;
+	white-space: nowrap;
+}
+.project-info > table th,
+.project-info > table td {
+	border: 1px solid #9ccc00;
+	padding: 5px;
+}
+.project-info > table td > code,
+.project-info > table td.los {
+	color: #ff7799;
+}
+.project-info > table td.win {
+	color: #c5ff00;
 }
 /*
 3.3 Testimonials
