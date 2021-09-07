@@ -46,4 +46,4 @@ jobs:
       run: cargo install --git https://github.com/lycheeverse/lychee --branch local-files
     - name: Run lychee to check Markdown and HTML files
       if: always() && steps.lychee.outcome == 'success'
-      run: lychee -X head -b '.' --github-token '${{ secrets.GITHUB_TOKEN }}' -v '**/*.md' '**/*.html'
+      run: lychee -X head -b '.' --github-token '${{ secrets.GITHUB_TOKEN }}' -v --no-progress '**/*.md' '**/*.html'
