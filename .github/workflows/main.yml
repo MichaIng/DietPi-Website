@@ -43,7 +43,7 @@ jobs:
     - name: Build lychee
       id: lychee
       if: always() && steps.deploy.outcome == 'success'
-      run: cargo install --git https://github.com/lycheeverse/lychee --branch local-files
+      run: cargo install --git 'https://github.com/lycheeverse/lychee'
     - name: Run lychee to check Markdown and HTML files
       if: always() && steps.lychee.outcome == 'success'
       run: lychee -Env --require-https --github-token '${{ secrets.GITHUB_TOKEN }}' -X head -b '.' '**/*.md' '**/*.html'
