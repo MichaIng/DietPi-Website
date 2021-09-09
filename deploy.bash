@@ -33,14 +33,14 @@ if [[ -f '/boot/dietpi/func/dietpi-globals' ]]
 then
 	. /boot/dietpi/func/dietpi-globals
 else
-	curl -sSfL https://raw.githubusercontent.com/MichaIng/DietPi/master/dietpi/func/dietpi-globals -o /tmp/dietpi-globals || exit 1
+	curl -sSfL 'https://raw.githubusercontent.com/MichaIng/DietPi/master/dietpi/func/dietpi-globals' -o /tmp/dietpi-globals || exit 1
 	. /tmp/dietpi-globals
 	G_EXEC_NOHALT=1 G_EXEC rm /tmp/dietpi-globals
 fi
 
 # Main
 G_EXEC cd /tmp
-G_EXEC curl -sSfLO https://github.com/MichaIng/DietPi-Website/archive/$BRANCH.tar.gz
+G_EXEC curl -sSfLO "https://github.com/MichaIng/DietPi-Website/archive/$BRANCH.tar.gz"
 G_EXEC tar xf $BRANCH.tar.gz
 G_EXEC_NOHALT=1 G_EXEC rm $BRANCH.tar.gz
 G_EXEC cd DietPi-Website-$BRANCH
@@ -50,22 +50,22 @@ G_EXEC cd DietPi-Website-$BRANCH
 G_EXEC sed -i "s|<lastmod>.*</lastmod>|<lastmod>$(date '+%Y-%m-%dT%T%:z')</lastmod>|" sitemap.xml
 
 # 3rd party
-G_EXEC curl -sSfL https://raw.githubusercontent.com/jquery/codeorigin.jquery.com/main/cdn/jquery-3.6.0.min.js -o js/jquery.js
-G_EXEC curl -sSfL https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css -o css/bootstrap.css
+G_EXEC curl -sSfL 'https://raw.githubusercontent.com/jquery/codeorigin.jquery.com/main/cdn/jquery-3.6.0.min.js' -o js/jquery.js
+G_EXEC curl -sSfL 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css' -o css/bootstrap.css
 G_EXEC sed -i '\|^/\*# sourceMappingURL=bootstrap.min.css.map \*/$|d' css/bootstrap.css # Suppress browser console warning about missing map file
-G_EXEC curl -sSfL https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js -o js/bootstrap.js
+G_EXEC curl -sSfL 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js' -o js/bootstrap.js
 G_EXEC sed -i '\|^//# sourceMappingURL=bootstrap.min.js.map$|d' js/bootstrap.js # Suppress browser console warning about missing map file
-G_EXEC curl -sSfL https://raw.githubusercontent.com/MichaIng/mixitup/patch-1/dist/mixitup.js -o js/mixitup.js
+G_EXEC curl -sSfL 'https://raw.githubusercontent.com/MichaIng/mixitup/patch-1/dist/mixitup.js' -o js/mixitup.js
 
 # Minify
 # - Download
-G_EXEC curl -sSfL "$(curl -sSfL https://api.github.com/repos/tdewolff/minify/releases/latest | mawk -F\" '/\"browser_download_url\".*linux_amd64\.tar\.gz\"$/{print $4}')" -o minify.tar.gz
+G_EXEC curl -sSfL "$(curl -sSfL 'https://api.github.com/repos/tdewolff/minify/releases/latest' | mawk -F\" '/\"browser_download_url\".*linux_amd64\.tar\.gz\"$/{print $4}')" -o minify.tar.gz
 G_EXEC tar xf minify.tar.gz minify
 G_EXEC_NOHALT=1 G_EXEC rm minify.tar.gz
 # - Minify js: Use web API since "minify" does not minify internal function and variable names.
 for i in js/*.js
 do
-	G_EXEC curl -X POST -sSfL --data-urlencode "input@$i" https://javascript-minifier.com/raw -o "${i%.js}.min.js"
+	G_EXEC curl -X POST -sSfL --data-urlencode "input@$i" 'https://javascript-minifier.com/raw' -o "${i%.js}.min.js"
 	G_EXEC_NOHALT=1 G_EXEC rm "$i"
 done
 # - Minify CSS
