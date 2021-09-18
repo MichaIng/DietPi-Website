@@ -20,7 +20,7 @@ jobs:
     - name: Download Nu Html Checker
       run: curl -sSfLO 'https://github.com/validator/validator/releases/download/latest/vnu.jar'
     - name: Run Nu Html Checker to check HTML, CSS and SVG files
-      run: find . -type f \( -name '*.html' -o -name '*.css' -o -name '*.svg' \) -exec java -jar vnu.jar --verbose --also-check-css --also-check-svg --filterpattern '.*“break-word”.*' {} +
+      run: find . -type f \( -name '*.html' -o -name '*.css' -o -name '*.svg' \) ! -name 'bootstrap.min.css' -exec java -jar vnu.jar --verbose --also-check-css --also-check-svg {} +
     - name: Setup Python for PySpelling
       id: python
       if: always() && steps.deploy.outcome == 'success'
