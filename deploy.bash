@@ -63,7 +63,7 @@ G_EXEC_NOHALT=1 G_EXEC rm minify.tar.gz
 # - Minify js: Use web API since "minify" does not minify internal function and variable names.
 for i in js/*.js
 do
-	G_EXEC curl -X POST -sSfL --data-urlencode "input@$i" 'https://javascript-minifier.com/raw' -o "${i%.js}.min.js"
+	G_EXEC curl -X POST -sSfL --data-urlencode "input@$i" 'https://www.toptal.com/developers/javascript-minifier//raw' -o "${i%.js}.min.js"
 	G_EXEC_NOHALT=1 G_EXEC rm "$i"
 done
 # - Minify CSS
