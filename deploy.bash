@@ -60,10 +60,10 @@ G_EXEC curl -sSfL 'https://raw.githubusercontent.com/MichaIng/mixitup/DietPi/dis
 G_EXEC curl -sSfL "$(curl -sSfL 'https://api.github.com/repos/tdewolff/minify/releases/latest' | mawk -F\" '/\"browser_download_url\".*linux_amd64\.tar\.gz\"$/{print $4}')" -o minify.tar.gz
 G_EXEC tar xf minify.tar.gz minify
 G_EXEC_NOHALT=1 G_EXEC rm minify.tar.gz
-# - Minify js: Use web API since "minify" does not minify internal function and variable names.
+# - Minify JavaScript
 for i in js/*.js
 do
-	G_EXEC curl -X POST -sSfL --data-urlencode "input@$i" 'https://www.toptal.com/developers/javascript-minifier//raw' -o "${i%.js}.min.js"
+	G_EXEC ./minify -o "${i%.js}.min.js" "$i"
 	G_EXEC_NOHALT=1 G_EXEC rm "$i"
 done
 # - Minify CSS
