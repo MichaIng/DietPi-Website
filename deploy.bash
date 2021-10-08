@@ -51,8 +51,8 @@ G_EXEC sed -i "s|<lastmod>.*</lastmod>|<lastmod>$(date '+%Y-%m-%dT%T%:z')</lastm
 
 # 3rd party
 G_EXEC curl -sSfL 'https://raw.githubusercontent.com/jquery/codeorigin.jquery.com/main/cdn/jquery-3.6.0.min.js' -o js/jquery.js
-G_EXEC curl -sSfL 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css' -o css/bootstrap.css
-G_EXEC curl -sSfL 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js' -o js/bootstrap.js
+G_EXEC curl -sSfL 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css' -o css/bootstrap.css
+G_EXEC curl -sSfL 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js' -o js/bootstrap.js
 G_EXEC curl -sSfL 'https://raw.githubusercontent.com/MichaIng/mixitup/DietPi/dist/mixitup.js' -o js/mixitup.js
 
 # Minify
