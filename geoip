@@ -1,0 +1,4 @@
+<?php
+$geoip = $_SERVER['HTTP_CF_CONNECTING_IP'];
+isset($_SERVER['HTTP_CF_IPCOUNTRY']) && ($_SERVER['HTTP_CF_IPCOUNTRY'] != 'XX') && $geoip .= ' ' . $_SERVER['HTTP_CF_IPCOUNTRY'];
+echo $geoip;
