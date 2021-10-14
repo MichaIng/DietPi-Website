@@ -18,7 +18,7 @@ autologin
 autostart
 AutoStart
 backend
-BaiKal
+Baïkal
 balancer
 Balena
 balenaEtcher
