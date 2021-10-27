@@ -7,7 +7,7 @@ jobs:
     steps:
     - name: Deploy DietPi-Website locally
       id: deploy
-      run: bash -c "$(curl -sSL "https://raw.githubusercontent.com/MichaIng/DietPi-Website${GITHUB_REF#refs/heads}/deploy.bash")" bash .
+      run: bash -c "$(curl -sSf "https://raw.githubusercontent.com/MichaIng/DietPi-Website${GITHUB_REF#refs/heads}/deploy.bash")" bash .
     - name: Setup JRE for Nu Html Checker
       # https://github.com/actions/setup-java/releases
       uses: actions/setup-java@v2
@@ -39,10 +39,12 @@ jobs:
     - name: Run PySpelling to check HTML files
       if: always() && steps.pyspelling.outcome == 'success'
       run: pyspelling -vc .spellcheck.yml
-    - name: Build lychee
+    - name: Download lychee
       id: lychee
       if: always() && steps.deploy.outcome == 'success'
-      run: cargo install --git 'https://github.com/lycheeverse/lychee'
+      run: |
+        curl -sSfL "$(curl -sSf 'https://api.github.com/repos/lycheeverse/lychee/releases/latest' | mawk -F\" '/"browser_download_url.*x86_64-unknown-linux-gnu\.tar\.gz"/{print $4;exit}')" -o lychee.tar.gz
+        tar xf lychee.tar.gz
     - name: Run lychee to check Markdown and HTML files
       if: always() && steps.lychee.outcome == 'success'
-      run: lychee -Env --require-https --github-token '${{ secrets.GITHUB_TOKEN }}' -X head -b '.' '**/*.md' '**/*.html'
+      run: ./lychee -Env --require-https --github-token '${{ secrets.GITHUB_TOKEN }}' -X head -b '.' '**/*.md' '**/*.html'
