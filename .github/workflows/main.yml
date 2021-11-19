@@ -15,7 +15,7 @@ jobs:
         distribution: 'temurin'
         # https://github.com/adoptium
         java-version: '17'
-        java-package: jre
+        #java-package: jre
         check-latest: true
     - name: Download Nu Html Checker
       run: curl -sSfLO 'https://github.com/validator/validator/releases/download/latest/vnu.jar'
