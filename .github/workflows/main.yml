@@ -14,7 +14,7 @@ jobs:
       with:
         distribution: 'temurin'
         # https://github.com/adoptium
-        java-version: '17-ea'
+        java-version: '17'
         java-package: jre
         check-latest: true
     - name: Download Nu Html Checker
