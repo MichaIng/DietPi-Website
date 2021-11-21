@@ -249,6 +249,7 @@ OpenGLES
 OpenSSH
 OpenTyrian
 OpenVPN
+OTG
 ownCloud
 passwd
 PCIe
