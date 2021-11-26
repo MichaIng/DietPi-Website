@@ -909,11 +909,7 @@
          */
 
         defer: function() {
-            var deferred       = null,
-                promiseWrapper = null,
-                $              = null;
-
-            promiseWrapper = new this.Deferred();
+            var promiseWrapper = new this.Deferred();
 
             promiseWrapper.promise = new Promise(function(resolve, reject) {
                 promiseWrapper.resolve = resolve;
@@ -930,8 +926,6 @@
          */
 
         all: function(tasks) {
-            var $ = null;
-
             return Promise.all(tasks);
         },
 
@@ -5022,7 +5016,7 @@
         splitCompoundSelector: function(compoundSelector) {
             // Break at a `.` or `[`, capturing the delineator
 
-            var partials    = compoundSelector.split(/([\.\[])/g),
+            var partials    = compoundSelector.split(/([.[])/g),
                 toggleArray = [],
                 selector    = '',
                 i           = -1;
@@ -9460,7 +9454,7 @@
                 index = self.mixer.config.animation.staggerSequence.call(self, index, self.state);
             }
 
-            delay = !!self.mixer.staggerDuration ? index * self.mixer.staggerDuration : 0;
+            delay = self.mixer.staggerDuration ? index * self.mixer.staggerDuration : 0;
 
             return self.callFilters('delayGetDelay', delay, arguments);
         },
