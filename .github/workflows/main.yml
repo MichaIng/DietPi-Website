@@ -47,4 +47,4 @@ jobs:
         tar xf lychee.tar.gz
     - name: Run lychee to check Markdown and HTML files
       if: always() && steps.lychee.outcome == 'success'
-      run: ./lychee -Env --require-https --github-token '${{ secrets.GITHUB_TOKEN }}' -X head -b '.' '**/*.md' '**/*.html'
+      run: ./lychee -Env --require-https -a 429 --github-token '${{ secrets.GITHUB_TOKEN }}' -X head -b '.' '**/*.md' '**/*.html'
