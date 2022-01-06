@@ -68,10 +68,10 @@
 				<svg class="triangle" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0h100l-50 100"/></svg>
 				<!-- Slide 1 -->
 				<div class="da-slide da-slide-current">
-					<h2>DietPi v7.9 has been released</h2>
-					<h4>with best wishes for Christmas season</h4>
-					<p>Our last release with Debian Stretch support! We added password protection for the DietPi-Dashboard, DietPi-Backup has included support for multiple backups, the Apache web server uses the dedicated PHP-FPM server, and much more.</p>
-					<a class="da-link" href="https://dietpi.com/docs/releases/#december-2021-version-79" target="_blank" rel="noopener">Release notes</a>
+					<h2>DietPi v8.0 beta here</h2>
+					<h4>and a happy new year :)!</h4>
+					<p>Support for Debian Stretch has now been removed, which allowed us to improve and remove a lot of code and methods to keep up Stretch compatibility. Further improvements to myMPD, FuguHub and bug fixes for several software titles and platforms have been applied.</p>
+					<a class="da-link" href="https://dietpi.com/docs/releases/v8_0/" target="_blank" rel="noopener">Release notes</a>
 					<div class="da-img"><img class="img-fluid" src="images/dietpi-logo_360x360.png" alt="DietPi logo" width="300" height="300" loading="lazy"></div>
 				</div>
 				<!-- Slide 2 -->
@@ -458,6 +458,21 @@
 						<div class="col-md-6"><img src="images/sbc_images/hyperv.jpg" alt="Hyper-V logo" width="8" height="5" loading="lazy"></div>
 					</div>
 				</div>
+				<div id="parallels" class="toggleDiv single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>Parallels</h3><span class="show_hide close"></span></div></div>
+					<div class="row">
+						<div class="col-md-6 project-description">
+							<div class="project-info">
+								<div><span>RAM:</span>1 GiB | Can be changed</div>
+								<br>
+								<div><a href="https://dietpi.com/downloads/images/DietPi_Parallels-x86_64-Bullseye.7z"><span>Download Image:</span><i class="fa fa-download"></i><u>Download</u></a></div>
+								<div><a href="https://dietpi.com/docs/install/" target="_blank" rel="noopener"><span>How to install / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
+							</div>
+							<p>The Parallels virtual machine is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience.</p>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/parallels.svg" alt="Parallels logo" width="8" height="5" loading="lazy"></div>
+					</div>
+				</div>
 				<div id="slidingdiv14" class="toggleDiv single-project">
 					<div class="row"><div class="col-md-12 project-title"><h3>Odroid N2</h3><span class="show_hide close"></span></div></div>
 					<div class="row">
@@ -735,12 +750,12 @@
 						<div class="col-md-6 project-description">
 							<div class="project-info">
 								<div>
-									<a href="https://dietpi.com/downloads/images/DietPi_NativePC-BIOS-x86_64-Bullseye.7z"><span>Direct flash Image:</span><i class="fa fa-download"></i><u>Download</u></a>
-									<br>Choose this to flash directly to the root drive of the target system.
+									<a href="https://dietpi.com/downloads/images/DietPi_NativePC-BIOS-x86_64-Bullseye.7z"><span>Direct write Image:</span><i class="fa fa-download"></i><u>Download</u></a>
+									<br>Choose this to write directly to the internal/root drive of the target system.
 								</div>
 								<div>
 									<a href="https://dietpi.com/downloads/images/DietPi_NativePC-BIOS-x86_64-Bullseye_Installer.7z"><span>Installer Image:</span><i class="fa fa-download"></i><u>Download</u></a>
-									<br>Choose this to flash to e.g. a USB stick to boot and install DietPi to internal drive.
+									<br>Choose this to write to e.g. a USB stick to boot and install DietPi to an internal drive.
 								</div>
 								<div><a href="https://dietpi.com/docs/install/" target="_blank" rel="noopener"><span>How to install / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
 							</div>
@@ -776,7 +791,7 @@
 							<div class="project-info">
 								<div>
 									<a href="https://dietpi.com/downloads/images/DietPi_NativePC-UEFI-x86_64-Bullseye_Installer.7z"><span>Installer Image:</span><i class="fa fa-download"></i><u>Download</u></a>
-									<br>Flash to e.g. a USB stick to boot and install DietPi to internal drive.
+									<br>Write to e.g. a USB stick to boot and install DietPi to an internal drive.
 								</div>
 								<div><a href="https://dietpi.com/docs/install/" target="_blank" rel="noopener"><span>How to install / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
 							</div>
@@ -1340,6 +1355,13 @@
 						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv13">
 							<img src="images/sbc_images/hyperv.jpg" alt="Hyper-V logo" width="8" height="5" loading="lazy">
 							<h3>Hyper-V</h3>
+							<p>Virtual Machine x86_64</p>
+						</a>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix x86_64">
+						<a href="#downloadinfo" class="thumbnail show_hide" rel="#parallels">
+							<img src="images/sbc_images/parallels.svg" alt="Parallels logo" width="8" height="5" loading="lazy">
+							<h3>Parallels</h3>
 							<p>Virtual Machine x86_64</p>
 						</a>
 					</div>
