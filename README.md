@@ -57,6 +57,5 @@ If you need help:
 - [Bootstrap](https://github.com/twbs/bootstrap) v5.1.3
 - [Mixitup](https://github.com/patrickkunka/mixitup) v3.3.1 modified for our needs
 - [jquery.cslider](https://github.com/Le-Stagiaire/jquery.cslider) modified for our needs
-- [Font Awesome Free](https://fontawesome.com/) v5.15.3 individual glyphs: fa-download, fa-book and fa-external-link-alt
-- [minify](https://github.com/tdewolff/minify) to minify HTML and CSS files
-- [JavaScript Minifier](https://javascript-minifier.com/api) to minify JavaScript files
+- [Font Awesome Free](https://fontawesome.com/) v5.15.4 individual glyphs: fa-download, fa-book and fa-external-link-alt
+- [minify](https://github.com/tdewolff/minify) to minify HTML and CSS and JavaScript files
