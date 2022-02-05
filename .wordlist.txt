@@ -340,6 +340,7 @@ TasmoAdmin
 Tasmota
 Tautulli
 TCP
+th
 TigerVNC
 TLDR
 Tonido
