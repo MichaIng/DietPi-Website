@@ -57,5 +57,5 @@ If you need help:
 - [Bootstrap](https://github.com/twbs/bootstrap) v5.1.3
 - [Mixitup](https://github.com/patrickkunka/mixitup) v3.3.1 modified for our needs
 - [jquery.cslider](https://github.com/Le-Stagiaire/jquery.cslider) modified for our needs
-- [Font Awesome Free](https://fontawesome.com/) v5.15.4 individual glyphs: fa-download, fa-book and fa-external-link-alt
+- [Font Awesome](https://github.com/FortAwesome/Font-Awesome) v5.15.4 individual glyphs: [fa-download](https://github.com/FortAwesome/Font-Awesome/blob/5.x/svgs/solid/download.svg), [fa-book](https://github.com/FortAwesome/Font-Awesome/blob/5.x/svgs/solid/book.svg) and [fa-external-link-alt](https://github.com/FortAwesome/Font-Awesome/blob/5.x/svgs/solid/external-link-alt.svg)
 - [minify](https://github.com/tdewolff/minify) to minify HTML and CSS and JavaScript files
