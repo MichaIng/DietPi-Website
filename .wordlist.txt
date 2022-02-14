@@ -361,6 +361,7 @@ upvote
 UrBackup
 Usenet
 userdata
+UTM
 UUID
 VirtualBox
 VirtualHere
