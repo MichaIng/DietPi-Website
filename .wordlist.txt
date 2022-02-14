@@ -125,6 +125,7 @@ HAProxy
 HATs
 harddisk
 Hardkernel
+Hardkernel's
 HC
 hexa
 HiFi
