@@ -196,12 +196,15 @@ a:active {
 /*
 2.2 Thumbnails
 **********************************************************************/
+.row {
+	--bs-gutter-x: 0.75rem;
+}
 .thumbnail {
 	display: block;
 	overflow: hidden;
 	position: relative;
 	padding: 4px;
-	margin-bottom: 20px;
+	margin-bottom: 12px;
 	text-align: center;
 	background-color: #164046;
 	border-radius: 4px;
