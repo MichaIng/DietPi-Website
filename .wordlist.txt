@@ -125,6 +125,7 @@ HAProxy
 HATs
 harddisk
 Hardkernel
+Hardkernel's
 HC
 hexa
 HiFi
@@ -361,6 +362,7 @@ upvote
 UrBackup
 Usenet
 userdata
+UTM
 UUID
 VirtualBox
 VirtualHere

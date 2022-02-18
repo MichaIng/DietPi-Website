@@ -22,11 +22,11 @@ This is the official repository for hosting collaborative development of the off
 ## Deploy instructions
 Deploy to `/tmp/DietPi-Website-master` (no input argument):
 ```sh
-bash -c "$(curl -sSfL https://raw.githubusercontent.com/MichaIng/DietPi-Website/master/deploy.bash)"
+bash -c "$(curl -sSf 'https://raw.githubusercontent.com/MichaIng/DietPi-Website/master/deploy.bash')"
 ```
 Deploy to `/var/www` (target path as input argument $1):
 ```sh
-bash -c "$(curl -sSfL https://raw.githubusercontent.com/MichaIng/DietPi-Website/master/deploy.bash)" bash /var/www
+bash -c "$(curl -sSf 'https://raw.githubusercontent.com/MichaIng/DietPi-Website/master/deploy.bash')" bash /var/www
 ```
 
 ## Contributing
@@ -36,7 +36,7 @@ There are many ways you could contribute to DietPi project. You could work on th
 If you have experience with GitHub, you could either look for existent issue to start with or report a new one. Website code updates should be done directly on GitHub, using the development branch: **[dev](https://github.com/MichaIng/DietPi-Website/tree/dev)**, creating a Pull Request (PR).
 
 If you need help:
-- Send an email: micha@dietpi.com
+- Send an email: <micha@dietpi.com>
 - Read the documentation: <https://dietpi.com/docs/>
 - Join our forums: <https://dietpi.com/phpbb/>
 - GitHub: <https://github.com/MichaIng/DietPi-Website>
@@ -57,5 +57,5 @@ If you need help:
 - [Bootstrap](https://github.com/twbs/bootstrap) v5.1.3
 - [Mixitup](https://github.com/patrickkunka/mixitup) v3.3.1 modified for our needs
 - [jquery.cslider](https://github.com/Le-Stagiaire/jquery.cslider) modified for our needs
-- [Font Awesome Free](https://fontawesome.com/) v5.15.4 individual glyphs: fa-download, fa-book and fa-external-link-alt
+- [Font Awesome](https://github.com/FortAwesome/Font-Awesome) v5.15.4 individual glyphs: [fa-download](https://github.com/FortAwesome/Font-Awesome/blob/5.x/svgs/solid/download.svg), [fa-book](https://github.com/FortAwesome/Font-Awesome/blob/5.x/svgs/solid/book.svg) and [fa-external-link-alt](https://github.com/FortAwesome/Font-Awesome/blob/5.x/svgs/solid/external-link-alt.svg)
 - [minify](https://github.com/tdewolff/minify) to minify HTML and CSS and JavaScript files

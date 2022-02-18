@@ -34,7 +34,7 @@
 		<!-- Load CSS styles -->
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css?v=1">
 		<link rel="stylesheet" type="text/css" href="css/jquery.cslider.min.css?v=3">
-		<link rel="stylesheet" type="text/css" href="css/style.min.css?v=5">
+		<link rel="stylesheet" type="text/css" href="css/style.min.css?v=6">
 		<!-- Include JavaScript -->
 		<script defer src="js/jquery.min.js"></script>
 		<script defer src="js/bootstrap.min.js?v=1"></script>
@@ -70,7 +70,7 @@
 				<div class="da-slide da-slide-current">
 					<h2>DietPi v8.1 is here</h2>
 					<h4>Check out the changes of our new release</h4>
-					<p>The February 5th 2022 release of DietPi v8.1 comes together with a new image for Odroid N2, some improvements to our drive manager as well as set of enhancements and bug fixes for several software install options.</p>
+					<p>The February 5th 2022 release of DietPi v8.1 comes together with a new image for Odroid N2(+), some improvements to our drive manager and a number of enhancements and bug fixes for several software install options.</p>
 					<a class="da-link" href="https://dietpi.com/docs/releases/v8_1/" target="_blank" rel="noopener">Release notes</a>
 					<div class="da-img"><img class="img-fluid" src="images/dietpi-logo_360x360.png" alt="DietPi logo" width="300" height="300" loading="lazy"></div>
 				</div>
@@ -473,12 +473,27 @@
 						<div class="col-md-6"><img src="images/sbc_images/parallels.svg" alt="Parallels logo" width="8" height="5" loading="lazy"></div>
 					</div>
 				</div>
-				<div id="slidingdiv14" class="toggleDiv single-project">
-					<div class="row"><div class="col-md-12 project-title"><h3>Odroid N2</h3><span class="show_hide close"></span></div></div>
+				<div id="utm" class="toggleDiv single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>UTM</h3><span class="show_hide close"></span></div></div>
 					<div class="row">
 						<div class="col-md-6 project-description">
 							<div class="project-info">
-								<div><span>CPU:</span>Amlogic S922X 1.8 GHz | 6 cores | ARMv8</div>
+								<div><span>RAM:</span>1 GiB | Can be changed</div>
+								<br>
+								<div><a href="https://dietpi.com/downloads/images/DietPi_UTM-x86_64-Bullseye.7z"><span>Download Image:</span><i class="fa fa-download"></i><u>Download</u></a></div>
+								<div><a href="https://dietpi.com/docs/install/" target="_blank" rel="noopener"><span>How to install / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
+							</div>
+							<p>The UTM virtual machine is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience.</p>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/utm.png" alt="UTM logo" width="8" height="5" loading="lazy"></div>
+					</div>
+				</div>
+				<div id="slidingdiv14" class="toggleDiv single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>Odroid N2(+)</h3><span class="show_hide close"></span></div></div>
+					<div class="row">
+						<div class="col-md-6 project-description">
+							<div class="project-info">
+								<div><span>CPU:</span>Amlogic S922X 2.0(2.4) GHz | 6 cores | ARMv8</div>
 								<div><span>RAM:</span>4 GiB DDR4 1320 MHz</div>
 								<div><span>NET:</span>Gbit Ethernet</div>
 								<div><span>Storage:</span>eMMC socket</div>
@@ -486,7 +501,7 @@
 								<div><a href="https://dietpi.com/downloads/images/DietPi_OdroidN2-ARMv8-Bullseye.7z"><span>Download Image:</span><i class="fa fa-download"></i><u>Download</u></a></div>
 								<div><a href="https://dietpi.com/docs/install/" target="_blank" rel="noopener"><span>How to install / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
 							</div>
-							<p>Odroid's next generation "high-end" SBC is finally here! The fastest ARM SBC we have ever tested. Excellent performance and thermals at a reasonable price range.</p>
+							<p>Hardkernel's next generation "high-end" SBC is finally here! The fastest ARM SBC we have ever tested. Excellent performance and thermals at a reasonable price range.</p>
 						</div>
 						<div class="col-md-6"><img src="images/sbc_images/odroidn2.jpg" alt="Odroid N2 photo" width="8" height="5" loading="lazy"></div>
 					</div>
@@ -1088,8 +1103,8 @@
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix odroid">
 						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv14">
 							<img src="images/sbc_images/odroidn2.jpg" alt="Odroid N2 photo" width="8" height="5" loading="lazy">
-							<h3>Odroid N2</h3>
-							<p>S922X 1.8 GHz | 6 cores | ARMv8</p>
+							<h3>Odroid N2(+)</h3>
+							<p>S922X 2.0(2.4) GHz | 6 cores | ARMv8</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix odroid">
@@ -1362,6 +1377,13 @@
 						<a href="#downloadinfo" class="thumbnail show_hide" rel="#parallels">
 							<img src="images/sbc_images/parallels.svg" alt="Parallels logo" width="8" height="5" loading="lazy">
 							<h3>Parallels</h3>
+							<p>Virtual Machine x86_64</p>
+						</a>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix x86_64">
+						<a href="#downloadinfo" class="thumbnail show_hide" rel="#utm">
+							<img src="images/sbc_images/utm.png" alt="UTM logo" width="8" height="5" loading="lazy">
+							<h3>UTM</h3>
 							<p>Virtual Machine x86_64</p>
 						</a>
 					</div>
