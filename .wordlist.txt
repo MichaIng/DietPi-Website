@@ -91,6 +91,7 @@ Emby
 eMMC
 EmonPi
 EPL
+ESXi
 exFAT
 Exynos
 fanless
@@ -196,6 +197,7 @@ MiB
 MichaIng
 microcontroller
 microcontrollers
+MicroK
 microSD
 Minecraft
 MineOS
@@ -270,6 +272,7 @@ PiVPN
 Plex
 pre
 ProFTPD
+Proxmox
 PVR
 Pydio
 pyenv
