@@ -68,10 +68,10 @@
 				<svg class="triangle" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0h100l-50 100"/></svg>
 				<!-- Slide 1 -->
 				<div class="da-slide da-slide-current">
-					<h2>DietPi v8.2 beta is here</h2>
-					<h4>Please help testing the upcoming release</h4>
+					<h2>DietPi v8.2 is here</h2>
+					<h4>Check out the changes of our new release</h4>
 					<p>New images for Proxmox, ESXi, UTM and Odroid C4 are generated from scratch via GitHub actions. We added the Kubernetes platform MicroK8s software option. Users are informed of pending reboots after kernel upgrades, and more.</p>
-					<a class="da-link" href="https://github.com/MichaIng/DietPi/issues/5319" target="_blank" rel="noopener">All info</a>
+					<a class="da-link" href="https://dietpi.com/docs/releases/v8_2/" target="_blank" rel="noopener">Release notes</a>
 					<div class="da-img"><img class="img-fluid" src="images/dietpi-logo_360x360.png" alt="DietPi logo" width="300" height="300" loading="lazy"></div>
 				</div>
 				<!-- Slide 2 -->
@@ -488,6 +488,21 @@
 						<div class="col-md-6"><img src="images/sbc_images/utm.png" alt="UTM logo" width="8" height="5" loading="lazy"></div>
 					</div>
 				</div>
+				<div id="proxmox" class="toggleDiv single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>Proxmox</h3><span class="show_hide close"></span></div></div>
+					<div class="row">
+						<div class="col-md-6 project-description">
+							<div class="project-info">
+								<div><span>ARCH:</span>x86_64</div>
+								<br>
+								<div><a href="https://dietpi.com/downloads/images/DietPi_Proxmox-x86_64-Bullseye.7z"><span>Download Image:</span><i class="fa fa-download"></i><u>Download</u></a></div>
+								<div><a href="https://dietpi.com/docs/install/" target="_blank" rel="noopener"><span>How to install / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
+							</div>
+							<p>The Proxmox virtual machine is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience.</p>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/proxmox.svg" alt="Proxmox logo" width="8" height="5" loading="lazy"></div>
+					</div>
+				</div>
 				<div id="slidingdiv14" class="toggleDiv single-project">
 					<div class="row"><div class="col-md-12 project-title"><h3>Odroid N2(+)</h3><span class="show_hide close"></span></div></div>
 					<div class="row">
@@ -507,13 +522,20 @@
 					</div>
 				</div>
 				<div id="slidingdiv15" class="toggleDiv single-project">
-					<div class="row"><div class="col-md-12 project-title"><h3>VMware</h3><span class="show_hide close"></span></div></div>
+					<div class="row"><div class="col-md-12 project-title"><h3>VMware/ESXi</h3><span class="show_hide close"></span></div></div>
 					<div class="row">
 						<div class="col-md-6 project-description">
 							<div class="project-info">
 								<div><span>RAM:</span>1 GiB | Can be changed</div>
 								<br>
-								<div><a href="https://dietpi.com/downloads/images/DietPi_VMware-x86_64-Bullseye.7z"><span>Download Image:</span><i class="fa fa-download"></i><u>Download</u></a></div>
+								<div>
+									<a href="https://dietpi.com/downloads/images/DietPi_VMware-x86_64-Bullseye.7z"><span>VMX appliance:</span><i class="fa fa-download"></i><u>Download</u></a>
+									<br>This appliance can be used with <b>VMware Workstation Player/Pro</b> and <b>Fusion</b>.
+								</div>
+								<div>
+									<a href="https://dietpi.com/downloads/images/DietPi_ESXi-x86_64-Bullseye.7z"><span>OVA appliance:</span><i class="fa fa-download"></i><u>Download</u></a>
+									<br>This appliance can be used with <b>VMware vSphere</b> and <b>ESXi</b>.
+								</div>
 								<div><a href="https://dietpi.com/docs/install/" target="_blank" rel="noopener"><span>How to install / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
 							</div>
 							<p>The VMware virtual machine is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience.</p>
@@ -1355,7 +1377,7 @@
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix x86_64">
 						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv15">
 							<img src="images/sbc_images/vmware.jpg" alt="VMware logo" width="8" height="5" loading="lazy">
-							<h3>VMware</h3>
+							<h3>VMware/ESXi</h3>
 							<p>Virtual Machine x86_64</p>
 						</a>
 					</div>
@@ -1363,6 +1385,13 @@
 						<a href="#downloadinfo" class="thumbnail show_hide" rel="#slidingdiv16">
 							<img src="images/sbc_images/virtualbox.jpg" alt="VirtualBox logo" width="8" height="5" loading="lazy">
 							<h3>VirtualBox</h3>
+							<p>Virtual Machine x86_64</p>
+						</a>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix x86_64">
+						<a href="#downloadinfo" class="thumbnail show_hide" rel="#proxmox">
+							<img src="images/sbc_images/proxmox.svg" alt="Proxmox logo" width="8" height="5" loading="lazy">
+							<h3>Proxmox</h3>
 							<p>Virtual Machine x86_64</p>
 						</a>
 					</div>

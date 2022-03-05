@@ -374,6 +374,7 @@ virtualiser
 VM
 VMs
 VMware
+VMX
 VNC
 vncpasswd
 vncserver
@@ -381,6 +382,7 @@ VNCSERVER
 VPN
 VSCodium
 vsftpd
+vSphere
 Vue
 Waveshare
 WebIOPi
