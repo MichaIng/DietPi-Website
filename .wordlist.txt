@@ -206,6 +206,7 @@ MinIO
 MIPI
 MJPEG
 MkDocs
+motionEye
 NAS
 mnt
 Mopidy
