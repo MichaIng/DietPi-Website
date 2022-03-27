@@ -217,7 +217,7 @@ a:active {
 	background-color: #ffffff;
 }
 .thumbnail img[src$=".svg"] {
-	padding: 0 3%;;
+	padding: 0 3%;
 }
 .thumbnail h3,
 .thumbnail p {
