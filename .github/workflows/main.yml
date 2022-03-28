@@ -1,7 +1,11 @@
 name: Build test and quality checks
-on: push
+on: [pull_request, push]
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   Actions:
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.owner.login != github.event.pull_request.base.repo.owner.login
     # https://github.com/actions/virtual-environments
     runs-on: ubuntu-latest
     steps:
@@ -47,4 +51,4 @@ jobs:
         tar xf lychee.tar.gz
     - name: Run lychee to check Markdown and HTML files
       if: always() && steps.lychee.outcome == 'success'
-      run: ./lychee -En --require-https --exclude '^https://twitter.com' -a 429 --github-token '${{ secrets.GITHUB_TOKEN }}' -X head -b '.' '**/*.md' '**/*.html'
+      run: ./lychee -En --cache --require-https --exclude '^https://twitter.com' -a 429 --github-token '${{ secrets.GITHUB_TOKEN }}' -X head -b '.' '**/*.md' '**/*.html'
