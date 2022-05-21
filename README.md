@@ -4,7 +4,7 @@
 	<br><br>
 	optimised • simplified • for everyone
 	<br><br>
-	<a href="https://dietpi.com/" target="_blank" rel="noopener">Website</a> • <a href="https://dietpi.com/#download" target="_blank" rel="noopener">Downloads</a> • <a href="https://dietpi.com/docs/" target="_blank" rel="noopener">Documentation</a> • <a href="https://dietpi.com/phpbb/" target="_blank" rel="noopener">Forum</a> • <a href="https://dietpi.com/blog/" target="_blank" rel="noopener">Blog</a>
+	<a href="https://dietpi.com/" target="_blank" rel="noopener">Website</a> • <a href="https://dietpi.com/#download" target="_blank" rel="noopener">Downloads</a> • <a href="https://dietpi.com/docs/" target="_blank" rel="noopener">Documentation</a> • <a href="https://dietpi.com/forum/" target="_blank" rel="noopener">Forum</a> • <a href="https://dietpi.com/blog/" target="_blank" rel="noopener">Blog</a>
 </p>
 <hr>
 <p align="center">
@@ -38,7 +38,7 @@ If you have experience with GitHub, you could either look for existent issue to 
 If you need help:
 - Send an email: <micha@dietpi.com>
 - Read the documentation: <https://dietpi.com/docs/>
-- Join our forums: <https://dietpi.com/phpbb/>
+- Join our forum: <https://dietpi.com/forum/>
 - GitHub: <https://github.com/MichaIng/DietPi-Website>
 
 ## License
