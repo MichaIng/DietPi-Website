@@ -199,6 +199,7 @@ microcontroller
 microcontrollers
 MicroK
 microSD
+midwan
 Minecraft
 MineOS
 MiniDLNA
@@ -207,7 +208,6 @@ MIPI
 MJPEG
 MkDocs
 motionEye
-NAS
 mnt
 Mopidy
 morse
@@ -228,6 +228,7 @@ NAND
 nano
 NanoPC
 NanoPi
+NAS
 natively
 ncc
 Netdata
@@ -273,7 +274,9 @@ PiVPN
 Plex
 pre
 ProFTPD
+Prowlarr
 Proxmox
+pubkey
 PVR
 Pydio
 pyenv
