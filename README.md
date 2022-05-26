@@ -20,11 +20,15 @@ This is the official repository for hosting collaborative development of the off
 [![CodeFactor](https://www.codefactor.io/repository/github/michaing/dietpi-website/badge)](https://www.codefactor.io/repository/github/michaing/dietpi-website)
 
 ## Deploy instructions
+
 Deploy to `/tmp/DietPi-Website-master` (no input argument):
+
 ```sh
 bash -c "$(curl -sSf 'https://raw.githubusercontent.com/MichaIng/DietPi-Website/master/deploy.bash')"
 ```
+
 Deploy to `/var/www` (target path as input argument $1):
+
 ```sh
 bash -c "$(curl -sSf 'https://raw.githubusercontent.com/MichaIng/DietPi-Website/master/deploy.bash')" bash /var/www
 ```
@@ -33,19 +37,22 @@ bash -c "$(curl -sSf 'https://raw.githubusercontent.com/MichaIng/DietPi-Website/
 
 There are many ways you could contribute to DietPi project. You could work on the DietPi project, website design, extend the documentation, or just run tests.
 
-If you have experience with GitHub, you could either look for existent issue to start with or report a new one. Website code updates should be done directly on GitHub, using the development branch: **[dev](https://github.com/MichaIng/DietPi-Website/tree/dev)**, creating a Pull Request (PR).
+If you have experience with GitHub, you could either look for existent issue to start with or report a new one. Website code updates should be done directly on GitHub, using the development branch: **[dev](https://github.com/MichaIng/DietPi-Website/tree/dev)**, creating a pull request (PR).
 
 If you need help:
+
 - Send an email: <micha@dietpi.com>
 - Read the documentation: <https://dietpi.com/docs/>
 - Join our forum: <https://dietpi.com/forum/>
 - GitHub: <https://github.com/MichaIng/DietPi-Website>
 
+To see the full list of possibilities, please check our [contribution](https://dietpi.com/contribute.html) page.
+
 ## License
 
-<a rel="cc:attributionURL" property="dct:title" href="https://dietpi.com/">DietPi-Website</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://dietpi.com/">DietPi</a> is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License - <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
+<a rel="cc:attributionURL" property="dct:title" href="https://dietpi.com/" target="_blank" rel="noopener">DietPi-Website</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://dietpi.com/" target="_blank" rel="noopener">DietPi</a> is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License - <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>.
 
-<a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+<a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener"><img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
 
 - Original website theme: [Pluton](https://www.graphberry.com/item/pluton-single-page-bootstrap-html-template) by [Graphberry](https://www.graphberry.com/)
 - Initial content author and webmaster until 2019: [Daniel Knight (Fourdee)](https://github.com/Fourdee)
