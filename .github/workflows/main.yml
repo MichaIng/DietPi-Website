@@ -51,4 +51,4 @@ jobs:
         tar xf lychee.tar.gz
     - name: Run lychee to check Markdown and HTML files
       if: always() && steps.lychee.outcome == 'success'
-      run: ./lychee -En --cache --require-https --exclude '^https://twitter.com' -a 429 --github-token '${{ secrets.GITHUB_TOKEN }}' -X head -b '.' '**/*.md' '**/*.html'
+      run: ./lychee -En --cache --require-https --github-token '${{ secrets.GITHUB_TOKEN }}' -X head -b '.' '**/*.md' '**/*.html'
