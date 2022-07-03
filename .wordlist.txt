@@ -288,15 +288,16 @@ RAMdisk
 RAMlog
 Raspbian
 Raspcontrol
+Rclone
 RDP
 Reclocker
 ReadyMedia
 RealVNC
 Reddit
 Remot
-RK
 renderer
 repo
+RK
 Rockchip
 ROCKPro
 Roon
@@ -327,9 +328,10 @@ Signalyst
 SMB
 sn
 Snapcast
-Sonarr
 SoC
 SoCs
+Sonarr
+SOQuartz
 SPC
 SPI
 Squeezebox
@@ -344,6 +346,7 @@ sudo
 Syncthing
 systemctl
 systemd
+Tailscale
 TasmoAdmin
 Tasmota
 Tautulli
@@ -410,4 +413,5 @@ ympd
 YouTube
 yumiris
 ZeroPi
+ZeroTier
 zr
