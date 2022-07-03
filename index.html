@@ -68,10 +68,10 @@
 				<svg class="triangle" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0h100l-50 100"/></svg>
 				<!-- Slide 1 -->
 				<div class="da-slide da-slide-current">
-					<h2>DietPi v8.5 has been released</h2>
+					<h2>DietPi v8.6 has been released</h2>
 					<h4>Check out all changes</h4>
-					<p><a href="https://github.com/Prowlarr/Prowlarr" target="_blank" rel="noopener">Prowlarr indexer manager</a> added as software option. <a href="https://github.com/midwan/amiberry" target="_blank" rel="noopener">Amiberry by @midwan</a> updated to latest version. Security: WiFi key input + storage as 64-digit hexadecimal key, and SSH pubkey support and password login control via <code>dietpi.txt</code></p>
-					<a class="da-link" href="https://dietpi.com/docs/releases/v8_5/" target="_blank" rel="noopener">Release notes</a>
+					<p>We added support and images for all PINE64 Quartz64 models. Thanks to community contributions, Tailscale, ZeroTier, Rclone and Prometheus Node Exporter were added to our software catalogue.</p>
+					<a class="da-link" href="https://dietpi.com/docs/releases/v8_6/" target="_blank" rel="noopener">Release notes</a>
 					<div class="da-img"><img class="img-fluid" src="images/dietpi-logo_360x360.png" alt="DietPi logo" width="300" height="300" loading="lazy"></div>
 				</div>
 				<!-- Slide 2 -->
@@ -771,14 +771,68 @@
 								<div><span>CPU:</span>Rockchip RK3399 1.8/1.4 GHz | 6 cores | ARMv8</div>
 								<div><span>RAM:</span>4 GiB LPDDR4</div>
 								<div><span>NET:</span>Gbit Ethernet</div>
-								<div><span>Storage:</span>eMMC socket, PCIe 4x</div>
+								<div><span>Storage:</span>eMMC socket, PCIe x4</div>
 								<br>
 								<div><a href="https://dietpi.com/downloads/images/DietPi_ROCKPro64-ARMv8-Bullseye.7z"><span>Download Image:</span><i class="fa fa-download"></i><u>Download</u></a></div>
 								<div><a href="https://dietpi.com/docs/install/" target="_blank" rel="noopener"><span>How to install / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
 							</div>
-							<p>The ROCK64's big brother is here! One of the fastest ARM SBC (RK3399) on the market today, with 2x1.8 GHz A72 cores and 4x1.4 GHz A53 cores. Onboard full size PCIe 4x with excellent throughput compliments a NAS/Server setup, and, endless opportunities. A great addition to your SBC lineup that provides next gen SBC performance. Bottom line: "it's a little chunky, but it ain't no monkey", we love it!</p>
+							<p>The ROCK64's big brother is here! One of the fastest ARM SBC (RK3399) on the market today, with 2x1.8 GHz A72 cores and 4x1.4 GHz A53 cores. Onboard full size PCIe x4 with excellent throughput compliments a NAS/Server setup, and, endless opportunities. A great addition to your SBC lineup that provides next gen SBC performance. Bottom line: "it's a little chunky, but it ain't no monkey", we love it!</p>
 						</div>
 						<div class="col-md-6"><img src="images/sbc_images/rockpro64.jpg" alt="ROCKPro64 photo" width="8" height="5" loading="lazy"></div>
+					</div>
+				</div>
+				<div id="quartz64a" class="toggleDiv single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>Quartz64 Model A</h3><span class="show_hide close"></span></div></div>
+					<div class="row">
+						<div class="col-md-6 project-description">
+							<div class="project-info">
+								<div><span>CPU:</span>Rockchip RK3566 1.8 GHz | 4 cores | ARMv8</div>
+								<div><span>RAM:</span>4 GiB - 8 GiB LPDDR4</div>
+								<div><span>NET:</span>Gbit Ethernet, optional WiFi 5</div>
+								<div><span>Storage:</span>eMMC socket, PCIe x4, SATA 3.0</div>
+								<br>
+								<div><a href="https://dietpi.com/downloads/images/DietPi_Quartz64A-ARMv8-Bullseye.7z"><span>Download Image:</span><i class="fa fa-download"></i><u>Download</u></a></div>
+								<div><a href="https://dietpi.com/docs/install/" target="_blank" rel="noopener"><span>How to install / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
+							</div>
+							<p>PINE64's next generation SBC based on the new Rockchip RK3566 SoC, which provides a lot of hardware features and connectors. Note that the RK3566 is aimed to be a successor for RK3288 and RK3328, not for the flagship RK3399. So expect the raw CPU performance to be in the range of the ROCK64. The SoC however provides a lot more hardware features, connectors and slots exposed on the SBC.</p>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/quartz64a.jpg" alt="Quartz64 Model A photo" width="8" height="5" loading="lazy"></div>
+					</div>
+				</div>
+				<div id="quartz64b" class="toggleDiv single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>Quartz64 Model B</h3><span class="show_hide close"></span></div></div>
+					<div class="row">
+						<div class="col-md-6 project-description">
+							<div class="project-info">
+								<div><span>CPU:</span>Rockchip RK3566 1.8 GHz | 4 cores | ARMv8</div>
+								<div><span>RAM:</span>4 GiB - 8 GiB LPDDR4</div>
+								<div><span>NET:</span>Gbit Ethernet, WiFi 5</div>
+								<div><span>Storage:</span>eMMC socket, M.2 slot</div>
+								<br>
+								<div><a href="https://dietpi.com/downloads/images/DietPi_Quartz64B-ARMv8-Bullseye.7z"><span>Download Image:</span><i class="fa fa-download"></i><u>Download</u></a></div>
+								<div><a href="https://dietpi.com/docs/install/" target="_blank" rel="noopener"><span>How to install / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
+							</div>
+							<p>PINE64's next generation SBC in credit card size, based on the new Rockchip RK3566 SoC, which provides a lot of hardware features and connectors. Note that the RK3566 is aimed to be a successor for RK3288 and RK3328, not for the flagship RK3399. So expect the raw CPU performance to be in the range of the ROCK64. The SoC however provides a lot more hardware features, connectors and slots exposed on the SBC.</p>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/quartz64b.jpg" alt="Quartz64 Model B photo" width="8" height="5" loading="lazy"></div>
+					</div>
+				</div>
+				<div id="soquartz" class="toggleDiv single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>SOQuartz</h3><span class="show_hide close"></span></div></div>
+					<div class="row">
+						<div class="col-md-6 project-description">
+							<div class="project-info">
+								<div><span>CPU:</span>Rockchip RK3566 1.8 GHz | 4 cores | ARMv8</div>
+								<div><span>RAM:</span>2 GiB - 8 GiB LPDDR4</div>
+								<div><span>NET:</span>Gbit Ethernet, WiFi 5</div>
+								<div><span>Storage:</span>eMMC socket, PCIe x1</div>
+								<br>
+								<div><a href="https://dietpi.com/downloads/images/DietPi_SOQuartz-ARMv8-Bullseye.7z"><span>Download Image:</span><i class="fa fa-download"></i><u>Download</u></a></div>
+								<div><a href="https://dietpi.com/docs/install/" target="_blank" rel="noopener"><span>How to install / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
+							</div>
+							<p>PINE64's next generation compute module based on the new Rockchip RK3566 SoC, which provides a lot of hardware features. Note that the RK3566 is aimed to be a successor for RK3288 and RK3328, not for the flagship RK3399. So expect the raw CPU performance to be in the range of the ROCK64. The SoC however provides a lot more hardware features, connectors and slots exposed on the default baseboard.</p>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/soquartz.jpg" alt="SOQuartz photo" width="8" height="5" loading="lazy"></div>
 					</div>
 				</div>
 				<div id="slidingdiv30" class="toggleDiv single-project">
@@ -861,12 +915,12 @@
 								<div><span>CPU:</span>Rockchip RK3399 1.8/1.4 GHz | 6 cores | ARMv8</div>
 								<div><span>RAM:</span>4 GiB LPDDR3-1866</div>
 								<div><span>NET:</span>Gbit Ethernet, WiFi, Bluetooth</div>
-								<div><span>Storage:</span>16 GiB eMMC, M.2 socket, PCIe 4x</div>
+								<div><span>Storage:</span>16 GiB eMMC, M.2 socket, PCIe x4</div>
 								<br>
 								<div><a href="https://dietpi.com/downloads/images/DietPi_NanoPCT4-ARMv8-Bullseye.7z"><span>Download Image:</span><i class="fa fa-download"></i><u>Download</u></a></div>
 								<div><a href="https://dietpi.com/docs/install/" target="_blank" rel="noopener"><span>How to install / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
 							</div>
-							<p>FriendlyARM's next generation SBC is finally here! One of the fastest ARM SBC (RK3399) on the market today, with 2x1.8 GHz A72 cores and 4x1.4 GHz A53 cores. Onboard M.2/PCIe 4x with excellent throughput compliments a NAS/Server setup. Bottom line, we love it!</p>
+							<p>FriendlyARM's next generation SBC is finally here! One of the fastest ARM SBC (RK3399) on the market today, with 2x1.8 GHz A72 cores and 4x1.4 GHz A53 cores. Onboard M.2/PCIe x4 with excellent throughput compliments a NAS/Server setup. Bottom line, we love it!</p>
 						</div>
 						<div class="col-md-6"><img src="images/sbc_images/nanopct4.jpg" alt="NanoPC T4 photo" width="8" height="5" loading="lazy"></div>
 					</div>
@@ -1176,6 +1230,27 @@
 							<img src="images/sbc_images/rockpro64.jpg" alt="ROCKPro64 photo" width="8" height="5" loading="lazy">
 							<h3>ROCKPro64</h3>
 							<p>RK3399 1.8GHz | 6 cores | ARMv8</p>
+						</a>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix pine">
+						<a href="#downloadinfo" class="thumbnail show_hide" rel="#quartz64a">
+							<img src="images/sbc_images/quartz64a.jpg" alt="Quartz64 Model A photo" width="8" height="5" loading="lazy">
+							<h3>Quartz64 Model A</h3>
+							<p>RK3566 1.8GHz | 4 cores | ARMv8</p>
+						</a>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix pine">
+						<a href="#downloadinfo" class="thumbnail show_hide" rel="#quartz64b">
+							<img src="images/sbc_images/quartz64b.jpg" alt="Quartz64 Model B photo" width="8" height="5" loading="lazy">
+							<h3>Quartz64 Model B</h3>
+							<p>RK3566 1.8GHz | 4 cores | ARMv8</p>
+						</a>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix pine">
+						<a href="#downloadinfo" class="thumbnail show_hide" rel="#soquartz">
+							<img src="images/sbc_images/soquartz.jpg" alt="SOQuartz photo" width="8" height="5" loading="lazy">
+							<h3>SOQuartz</h3>
+							<p>RK3566 1.8GHz | 4 cores | ARMv8</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix radxa">
