@@ -33,13 +33,12 @@
 		<meta name="theme-color" content="#000000">
 		<!-- Load CSS styles -->
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css?v=2">
-		<link rel="stylesheet" type="text/css" href="css/jquery.cslider.min.css?v=3">
+		<link rel="stylesheet" type="text/css" href="css/glider.min.css">
 		<link rel="stylesheet" type="text/css" href="css/style.min.css?v=6">
 		<!-- Include JavaScript -->
-		<script defer src="js/jquery.min.js"></script>
-		<script defer src="js/bootstrap.min.js?v=2"></script>
-		<script defer src="js/jquery.cslider.min.js?v=1"></script>
+		<script defer src="js/bootstrap.min.js?v=1"></script>
 		<script defer src="js/mixitup.min.js"></script>
+		<script defer src="js/glider.min.js"></script>
 		<script defer src="js/app.min.js"></script>
 	</head>
 	<body>
@@ -61,49 +60,72 @@
 				<!-- End main navigation -->
 			</div>
 		</nav>
-		<!-- Start home section slider: https://github.com/Le-Stagiaire/jquery.cslider -->
-		<div class="da-slider" id="home">
+		<!-- Start home section slider -->
+		<div class="glider-contain" id="home">
+			<svg class="triangle" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0h100l-50 100"/></svg>
 			<!-- All slides centred in container element -->
-			<div class="container-xl">
-				<svg class="triangle" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0h100l-50 100"/></svg>
+			<div class="glider container-xl text-black">
 				<!-- Slide 1 -->
-				<div class="da-slide da-slide-current">
-					<h2>DietPi v8.7 has been released</h2>
-					<h4>Check out all changes</h4>
-					<p>We added support for FriendlyELEC's new NanoPi R5S, as well as the ebook server Readarr and the Subsonic-compatible media server Navidrome. vaultwarden is now installed much faster as DEB package.</p>
-					<a class="da-link" href="https://dietpi.com/docs/releases/v8_7/" target="_blank" rel="noopener">Release notes</a>
-					<div class="da-img"><img class="img-fluid" src="images/dietpi-logo_360x360.png" alt="DietPi logo" width="300" height="300" loading="lazy"></div>
+				<div>
+					<div class="row justify-content-center">
+						<div class="col my-auto">
+							<h2>DietPi v8.7 has been released</h2>
+							<h4>Check out all changes</h4>
+							<p class="text-black">We added support for FriendlyELEC's new NanoPi R5S, as well as the ebook server Readarr and the Subsonic-compatible media server Navidrome. vaultwarden is now installed much faster as DEB package.</p>
+							<a class="button" href="https://dietpi.com/docs/releases/v8_7/" target="_blank" rel="noopener">All info</a>
+						</div>
+						<div class="col text-center">
+							<img class="img-fluid" src="images/dietpi-logo_360x360.png" alt="DietPi logo" width="300" height="300" loading="lazy">
+						</div>
+					</div>
 				</div>
 				<!-- Slide 2 -->
-				<div class="da-slide">
-					<h2>DietPi | Minimal image at its core</h2>
-					<h4>Highly optimised minimal Debian OS</h4>
-					<p>DietPi is extremely lightweight at its core, with features of low process/memory footprint and DietPi-RAMlog installed by default, to get the maximum performance from your device.</p>
-					<a class="da-link" href="stats.html">Learn more</a>
-					<div class="da-img"><img class="img-fluid" src="images/slider_feather.png" alt="Feather" width="360" height="360" loading="lazy"></div>
+				<div>
+					<div class="row justify-content-center">
+						<div class="col my-auto">
+							<h2>DietPi | Minimal image at its core</h2>
+							<h4>Highly optimised minimal Debian OS</h4>
+							<p class="text-black">DietPi is extremely lightweight at its core, with features of low process/memory footprint and DietPi-RAMlog installed by default, to get the maximum performance from your device.</p>
+							<a class="button" href="stats.html">Learn more</a>
+						</div>
+						<div class="col text-center">
+							<img class="img-fluid" src="images/slider_feather.png" alt="Feather" width="360" height="360" loading="lazy">
+						</div>
+					</div>
 				</div>
 				<!-- Slide 3 -->
-				<div class="da-slide">
-					<h2>DietPi-Software</h2>
-					<h4>Installs and optimises popular software for you</h4>
-					<p>Quickly and easily install popular software "ready to run" and optimised for your system. Gone are the days of reading 5+ page guides, DietPi does everything for you, giving you more time to enjoy the software you require.</p>
-					<a class="da-link" href="dietpi-software.html">Learn more</a>
-					<div class="da-img"><img class="img-fluid" src="images/slider_software.png" alt="Software image" width="320" height="320"  loading="lazy"></div>
+				<div>
+					<div class="row justify-content-center">
+						<div class="col my-auto">
+							<h2>DietPi-Software</h2>
+							<h4>Installs and optimises popular software for you</h4>
+							<p class="text-black">Quickly and easily install popular software "ready to run" and optimised for your system. Gone are the days of reading 5+ page guides, DietPi does everything for you, giving you more time to enjoy the software you require.</p>
+							<a class="button" href="dietpi-software.html">Learn more</a>
+						</div>
+						<div class="col text-center">
+							<img class="img-fluid" src="images/slider_software.png" alt="Software image" width="320" height="320"  loading="lazy">
+						</div>
+					</div>
 				</div>
 				<!-- Slide 4 -->
-				<div class="da-slide">
-					<h2>DietPi | Benchmarks</h2>
-					<h4>All devices benchmarked (CPU/IO)</h4>
-					<p>Looking to purchase a new SBC device? Curious to see which devices perform best? With thanks to our end users, you can now view and compare DietPi-Benchmark results for all devices.</p>
-					<a class="da-link" href="https://dietpi.com/survey/#benchmark" target="_blank" rel="noopener">Learn more</a>
-					<div class="da-img"><img class="img-fluid" src="images/dietpi-logo_360x360.png" alt="DietPi logo" width="300" height="300" loading="lazy"></div>
-				</div>
-				<!-- Slider navigation arrows -->
-				<div class="da-arrows">
-					<span class="da-arrows-prev"></span>
-					<span class="da-arrows-next"></span>
+				<div>
+					<div class="row justify-content-center">
+						<div class="col my-auto">
+							<h2>DietPi | Benchmarks</h2>
+							<h4>All devices benchmarked (CPU/IO)</h4>
+							<p class="text-black">Looking to purchase a new SBC device? Curious to see which devices perform best? With thanks to our end users, you can now view and compare DietPi-Benchmark results for all devices.</p>
+							<a class="button" href="https://dietpi.com/survey/#benchmark" target="_blank" rel="noopener">Learn more</a>
+						</div>
+						<div class="col text-center">
+							<img class="img-fluid" src="images/dietpi-logo_360x360.png" alt="DietPi logo" width="300" height="300" loading="lazy">
+						</div>
+					</div>
 				</div>
 			</div>
+			<!-- Slider navigation arrows -->
+			<button aria-label="Previous" class="glider-prev"><</button>
+			<button aria-label="Next" class="glider-next">></button>
+			<div role="tablist" class="dots"></div>
 		</div>
 		<!-- End home section -->
 		<!-- Features section start -->

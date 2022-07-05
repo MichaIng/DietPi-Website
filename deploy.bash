@@ -69,7 +69,8 @@ G_EXEC cd "DietPi-Website-$BRANCH"
 G_EXEC sed -i "s|<lastmod>.*</lastmod>|<lastmod>$(date '+%Y-%m-%dT%T%:z')</lastmod>|" sitemap.xml
 
 # 3rd party
-G_EXEC curl -sSf 'https://raw.githubusercontent.com/jquery/codeorigin.jquery.com/main/cdn/jquery-3.6.0.min.js' -o js/jquery.js
+G_EXEC curl -sSf 'https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js' -o js/glider.js
+G_EXEC curl -sSf 'https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.css' -o css/glider.css
 G_EXEC curl -sSf 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css' -o css/bootstrap.css
 G_EXEC curl -sSf 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js' -o js/bootstrap.js
 

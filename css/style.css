@@ -13,6 +13,7 @@
  3.2 Details frame
  3.3 Testimonials
  3.4 Footer
+ 3.5 Glider
 4 Responsive
 **********************************************************************/
 /*
@@ -26,25 +27,35 @@ body {
 	line-height: 20px;
 	margin-top: 60px;
 }
+
+html {
+	scroll-behavior: smooth;
+}
+
 h1 {
 	margin: 10px 10px 20px;
 }
+
 p {
 	padding: 10px;
 	color: #ffffff;
 }
+
 a {
 	text-decoration-line: none;
 	color: #ffffff;
 }
+
 a:hover,
 a:focus,
 a:active {
 	color: #c5ff00;
 }
+
 .container-xl {
 	max-width: 1140px;
 }
+
 /*
 1.1 Navigation bar
 **********************************************************************/
@@ -58,15 +69,18 @@ a:active {
 	background-color: #164046;
 	padding: 4.5px 15px;
 }
-.navbar > .container-xl {
+
+.navbar>.container-xl {
 	padding: 0;
 }
-.navbar > .container-xl > img {
+
+.navbar>.container-xl>img {
 	width: 120px;
 	height: 40px;
 	margin: 5.5px 0;
 }
-.navbar > .container-xl > .navbar-toggler {
+
+.navbar>.container-xl>.navbar-toggler {
 	width: 40px;
 	height: 40px;
 	margin: 5.5px 0;
@@ -80,23 +94,27 @@ a:active {
 	box-shadow: none;
 	transition: background-color 0.5s, border-color 0.5s, stroke 0.5s;
 }
+
 @media (max-width: 991px) {
-	.navbar > .container-xl > .navbar-toggler {
+	.navbar>.container-xl>.navbar-toggler {
 		display: inline-grid;
 	}
 }
-.navbar > .container-xl > .navbar-toggler:hover,
-.navbar > .container-xl > .navbar-toggler:focus,
-.navbar > .container-xl > .navbar-toggler:active {
+
+.navbar>.container-xl>.navbar-toggler:hover,
+.navbar>.container-xl>.navbar-toggler:focus,
+.navbar>.container-xl>.navbar-toggler:active {
 	background-color: #164046;
 	border-color: #c5ff00;
 	stroke: #c5ff00;
 }
-.navbar > .container-xl > .navbar-collapse {
+
+.navbar>.container-xl>.navbar-collapse {
 	justify-content: flex-end;
 	transition: height 0.35s !important;
 }
-.navbar > .container-xl > .navbar-collapse > a {
+
+.navbar>.container-xl>.navbar-collapse>a {
 	color: #ffffff;
 	font-size: 15px;
 	margin: 4.5px 0;
@@ -105,38 +123,57 @@ a:active {
 	border-radius: 4px;
 	transition: border-color 1s;
 }
-.navbar > .container-xl > .navbar-collapse > a:hover,
-.navbar > .container-xl > .navbar-collapse > a:focus,
-.navbar > .container-xl > .navbar-collapse > a:active,
-.navbar > .container-xl > .navbar-collapse > a.active {
+
+.navbar>.container-xl>.navbar-collapse>a:hover,
+.navbar>.container-xl>.navbar-collapse>a:focus,
+.navbar>.container-xl>.navbar-collapse>a:active,
+.navbar>.container-xl>.navbar-collapse>a.active {
 	border-color: #c5ff00;
 }
+
 /*
 1.2 Filter buttons
 **********************************************************************/
 .nav.nav-pills {
 	margin-bottom: 30px;
 }
-.nav.nav-pills > button {
+
+.nav.nav-pills>button {
 	margin: 2px 5px 2px 0;
 	background-color: #164046;
 	border: 1px solid #164046;
 	color: #ffffff;
 	border-radius: 4px;
 }
-.nav.nav-pills > button:hover,
-.nav.nav-pills > button:focus,
-.nav.nav-pills > button:active,
-.nav.nav-pills > button.mixitup-control-active {
+
+.nav.nav-pills>button:hover,
+.nav.nav-pills>button:focus,
+.nav.nav-pills>button:active,
+.nav.nav-pills>button.mixitup-control-active {
 	color: #164046;
 	background-color: #c5ff00;
 }
+
+div.toggleDiv {
+	height: 0;
+	max-height: 1000px;
+	overflow: hidden;
+	margin-bottom: 0px;
+	transition: max-height 0.5s, margin-bottom 0.5s;
+}
+
+div.toggleDiv.active {
+	height: auto;
+	margin-bottom: 30px;
+}
+
 /*
 2. Layout
 **********************************************************************/
 .centered {
 	text-align: center;
 }
+
 .medium-text {
 	line-height: 1.2em;
 	font-size: 22px;
@@ -144,12 +181,14 @@ a:active {
 	padding: 20px;
 	margin-bottom: 20px;
 }
+
 .large-text {
 	line-height: 1.2em;
 	font-size: 30px;
 	color: #181a1c;
 	padding: 20px;
 }
+
 .triangle {
 	fill: #164046;
 	width: 100%;
@@ -159,10 +198,12 @@ a:active {
 	transform-origin: top;
 	transition: opacity 1s, transform 1s;
 }
+
 .triangle.fadeInDown {
 	opacity: 1;
 	transform: scaleY(1);
 }
+
 /*
 2.1 Buttons
 **********************************************************************/
@@ -175,17 +216,20 @@ a:active {
 	background-color: #164046;
 	border-radius: 4px;
 }
+
 .button:hover,
 .button:focus,
 .button:active {
 	background-color: #c5ff00;
 	color: #164046;
 }
+
 .primary-section .button {
 	border-color: #181a1c;
 	color: #181a1c;
 	background-color: #9ccc00;
 }
+
 .primary-section .button:hover,
 .primary-section .button:focus,
 .primary-section .button:active {
@@ -193,12 +237,14 @@ a:active {
 	color: #c5ff00;
 	background-color: unset;
 }
+
 /*
 2.2 Thumbnails
 **********************************************************************/
 .row {
 	--bs-gutter-x: 0.75rem;
 }
+
 .thumbnail {
 	display: block;
 	overflow: hidden;
@@ -209,6 +255,7 @@ a:active {
 	background-color: #164046;
 	border-radius: 4px;
 }
+
 .thumbnail img {
 	width: 100%;
 	/* "height: auto" in combination with inline width and height allows to keep aspect ratio while loading for non-bleeding edge browsers, which do not support "aspect-ratio" yet. */
@@ -216,9 +263,11 @@ a:active {
 	aspect-ratio: 8/5;
 	background-color: #ffffff;
 }
+
 .thumbnail img[src$=".svg"] {
 	padding: 0 3%;
 }
+
 .thumbnail h3,
 .thumbnail p {
 	margin: 0;
@@ -227,18 +276,22 @@ a:active {
 	/* "position: relative" required to keep text in front of the mask element */
 	position: relative;
 }
+
 .thumbnail h3 {
 	font-size: 14px;
 	margin-top: 5px;
 }
+
 .thumbnail:hover h3,
 .thumbnail:focus h3,
 .thumbnail:active h3 {
 	color: #c5ff00;
 }
+
 .thumbnail p {
 	font-size: 10px;
 }
+
 .thumbnail::after {
 	width: 40px;
 	height: 100%;
@@ -247,12 +300,14 @@ a:active {
 	top: -45px;
 	left: calc(50% - 20px);
 }
+
 .thumbnail:hover::after,
 .thumbnail:focus::after,
 .thumbnail:active::after {
 	transform: translateY(50%);
 	transition: transform 0.3s ease-out;
 }
+
 .thumbnail::before {
 	width: 100%;
 	height: 100%;
@@ -263,11 +318,13 @@ a:active {
 	left: 0;
 	transition: transform 0.2s ease-out;
 }
+
 .thumbnail:hover::before,
 .thumbnail:focus::before,
 .thumbnail:active::before {
 	transform: translateY(-100%);
 }
+
 /*
 2.3 Icons: Minified via: https://vecta.io/nano
 **********************************************************************/
@@ -275,10 +332,12 @@ a:active {
 .fa-download {
 	content: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='white' d='M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z'/></svg>");
 }
+
 /* https://raw.githubusercontent.com/FortAwesome/Font-Awesome/5.x/svgs/solid/book.svg */
 .fa-book {
 	content: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'><path fill='white' d='M448 360V24c0-13.3-10.7-24-24-24H96C43 0 0 43 0 96v320c0 53 43 96 96 96h328c13.3 0 24-10.7 24-24v-16c0-7.5-3.5-14.3-8.9-18.7-4.2-15.4-4.2-59.3 0-74.7 5.4-4.3 8.9-11.1 8.9-18.6zM128 134c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm0 64c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm253.4 250H96c-17.7 0-32-14.3-32-32 0-17.6 14.4-32 32-32h285.4c-1.9 17.1-1.9 46.9 0 64z'/></svg>");
 }
+
 /* https://raw.githubusercontent.com/FortAwesome/Font-Awesome/5.x/svgs/solid/external-link-alt.svg */
 /*.fa-external-link-alt {
 	content: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='white' d='M432 320h-32a16 16 0 0 0-16 16v112H64V128h144a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16H48a48 48 0 0 0-48 48v352a48 48 0 0 0 48 48h352a48 48 0 0 0 48-48V336a16 16 0 0 0-16-16zM488 0H360c-21.37 0-32.05 25.91-17 41l35.73 35.73L135 320.37a24 24 0 0 0 0 34L157.67 377a24 24 0 0 0 34 0l243.61-243.68L471 169c15 15 41 4.5 41-17V24a24 24 0 0 0-24-24z'/></svg>");
@@ -289,36 +348,45 @@ a:active {
 .section {
 	padding-bottom: 50px;
 }
+
 .section .triangle {
 	margin-bottom: 50px;
 }
+
 .section .title {
 	text-align: center;
 	padding: 10px;
 	border-bottom: 1px solid #ffffff;
 	margin-bottom: 30px;
 }
+
 .primary-section {
 	background-color: #164046;
 }
+
 .primary-section .triangle {
 	fill: #9ccc00;
 }
+
 .primary-section h3,
 .primary-section .title p {
 	color: #9ccc00;
 }
+
 .secondary-section {
 	background-color: #9ccc00
 }
+
 .secondary-section .title {
 	border-bottom-color: #181a1c;
 }
+
 .secondary-section h1,
 .secondary-section h2,
 .secondary-section .title p {
 	color: #181a1c;
 }
+
 /*
 3.1 Features
 **********************************************************************/
@@ -333,23 +401,28 @@ a:active {
 	border-radius: 50%;
 	transition: transform 0.25s;
 }
-.service > a:hover > svg,
-.service > a:focus > svg,
-.service > a:active > svg {
+
+.service>a:hover>svg,
+.service>a:focus>svg,
+.service>a:active>svg {
 	transform: scale(1.1, 1.1);
 	border-color: #c5ff00;
 }
+
 .service h3 {
 	margin-top: 10px;
 }
-.service > a:hover > h3,
-.service > a:focus > h3,
-.service > a:active > h3 {
+
+.service>a:hover>h3,
+.service>a:focus>h3,
+.service>a:active>h3 {
 	color: #c5ff00;
 }
+
 .service p {
 	padding: 0 10px;
 }
+
 /*
 3.2 Details frame
 **********************************************************************/
@@ -358,9 +431,11 @@ a:active {
 	background-color: #181a1c;
 	border-radius: 4px;
 }
+
 .project-title {
 	border-bottom: 1px solid #9ccc00;
 }
+
 .project-title h3 {
 	float: left;
 	line-height: 30px;
@@ -368,6 +443,7 @@ a:active {
 	margin-left: 20px;
 	color: #c5ff00;
 }
+
 .project-title .close {
 	width: 50px;
 	height: 50px;
@@ -377,46 +453,57 @@ a:active {
 	content: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 5 5'><path fill='none' stroke='white' stroke-width='1' stroke-linecap='round' d='M1 1l3 3M1 4l3-3'/></svg>");
 	opacity: 0.5;
 }
+
 .project-title .close:hover,
 .project-title .close:focus,
 .project-title .close:active {
 	opacity: 0.75;
 }
+
 .project-description {
 	font-size: 14px;
 }
+
 .project-description p {
 	padding-left: 20px;
 }
+
 .project-description a {
 	color: #c5ff00;
 }
+
 .project-info {
 	padding: 10px 20px;
 	/* Vertical scroll bar when content is too wide */
 	overflow-x: auto;
 }
+
 .project-info div {
 	margin-bottom: 5px;
 }
-.project-info > div span {
+
+.project-info>div span {
 	display: inline-block;
 	width: 150px;
 	color: #c5ff00;
 }
-.project-info > div > a > .fa {
+
+.project-info>div>a>.fa {
 	width: 25px;
 	height: 25px;
 	vertical-align: text-bottom;
 }
-.project-info > div > a > u {
+
+.project-info>div>a>u {
 	margin-left: 10px;
 	font-size: 133%;
 	color: #181a1c;
 }
-.project-info > div > a:hover > u {
+
+.project-info>div>a:hover>u {
 	color: #c5ff00;
 }
+
 .single-project img {
 	width: 100%;
 	/* "height: auto" in combination with inline width and height allows to keep aspect ratio while loading for non-bleeding edge browsers, which do not support "aspect-ratio" yet. */
@@ -426,31 +513,38 @@ a:active {
 	background-color: #ffffff;
 	background-clip: padding-box;
 }
+
 .single-project img[src$=".svg"] {
 	padding: 0 3%;
 }
-.project-info > table {
+
+.project-info>table {
 	width: 100%;
 	white-space: nowrap;
 }
-.project-info > table th,
-.project-info > table td {
+
+.project-info>table th,
+.project-info>table td {
 	border: 1px solid #9ccc00;
 	padding: 5px;
 }
-.project-info > table td > code,
-.project-info > table td.los {
+
+.project-info>table td>code,
+.project-info>table td.los {
 	color: #ff7799;
 }
-.project-info > table td.win {
+
+.project-info>table td.win {
 	color: #c5ff00;
 }
+
 /*
 3.3 Testimonials
 **********************************************************************/
 div.testimonial {
 	margin-bottom: 30px;
 }
+
 .testimonial p {
 	color: #181a1c;
 	background-color: #c5ff00;
@@ -458,6 +552,7 @@ div.testimonial {
 	margin: 0;
 	border-radius: 4px;
 }
+
 .testimonial-text {
 	font-size: 22px;
 	line-height: 1.3em;
@@ -466,44 +561,53 @@ div.testimonial {
 	margin-right: auto;
 	width: 70%;
 }
+
 .whopic {
 	display: inline-block;
 	margin-left: 10px;
 	color: #c5ff00;
 }
-.whopic > .arrow {
+
+.whopic>.arrow {
 	width: 0;
 	border-top: 10px solid;
 	border-left: 20px outset transparent;
 	border-right: 20px outset transparent;
 	margin-bottom: 10px;
 }
+
 /*
 3.4 Footer
 **********************************************************************/
 .footer {
 	text-align: center;
 }
+
 .footer p {
 	margin: 0;
 }
+
 .footer a {
 	color: #c5ff00;
 	padding: 5px;
 }
-.footer p > a:hover,
-.footer p > a:focus {
+
+.footer p>a:hover,
+.footer p>a:focus {
 	text-decoration-line: underline;
 }
-.social a > svg {
+
+.social a>svg {
 	width: 48px;
 	height: 48px;
 	fill: #c5ff00;
 }
-.social a:hover > svg,
-.social a:focus > svg {
+
+.social a:hover>svg,
+.social a:focus>svg {
 	fill: #ffffff;
 }
+
 a.scrollup {
 	position: fixed;
 	bottom: 15px;
@@ -519,12 +623,40 @@ a.scrollup {
 	stroke-width: 2;
 	stroke-linecap: round;
 	fill: none;
-	transition: background-color 0.5s, border-color 0.5s, stroke 0.5s;
+	opacity: 0;
+	transition: background-color 0.5s, border-color 0.5s, stroke 0.5s, opacity 0.5s;
 }
+
 a.scrollup:hover,
 a.scrollup:focus,
 a.scrollup:active {
 	background-color: #181a1c;
 	border-color: #c5ff00;
 	stroke: #c5ff00;
+}
+
+/*
+3.5 Glider
+**********************************************************************/
+
+.glider-prev {
+	left: 50px;
+	font-size: 5rem;
+}
+
+.glider-next {
+	right: 50px;
+	font-size: 5rem;
+}
+
+.glider-contain {
+	background-image: linear-gradient(#c5ff00d8, #c5ff00d8), url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 15'><path fill='%23edf3f7' d='M0 0h8v5H0zm48 0h8v5h-8zM8 10h8v5H8zm24 0h8v5h-8z'/><path fill='%23747c89' d='M8 0h8v5H8zm32 0h8v5h-8zM0 5h8v5H0zm16 5h8v5h-8z'/><path fill='%238b95a5' d='M16 0h8v5h-8zm8 5h8v5h-8zm24 0h8v5h-8zM0 10h8v5H0z'/><path fill='white' d='M24 0h8v5h-8zm8 5h8v5h-8zm-8 5h8v5h-8zm24 0h8v5h-8z'/><path fill='%23d1d7db' d='M32 0h8v5h-8zM8 5h8v5H8zm32 0h8v5h-8z'/><path fill='%234e555e' d='M16 5h8v5h-8zm24 5h8v5h-8z'/></svg>");
+}
+
+.glider-dot {
+	background-color: white;
+}
+
+.glider-dot.active {
+	background-color: #181818;
 }
