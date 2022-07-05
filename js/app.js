@@ -44,11 +44,7 @@ var lastId,
 	navbar = document.querySelector("div.navbar-collapse"),
 	navbarHeight = 60, // $navbar.outerHeight() leads to wrong scroll offset when menu is expanded
 	// Navigation bar links
-	navbarLinks = Array.from(navbar.querySelectorAll('a[href^="#"]')),
-	// Navigation bar targets
-	navbarTargets = navbarLinks.map(function (x) {
-		return x.hash;
-	});
+	navbarLinks = Array.from(navbar.querySelectorAll('a[href^="#"]'));
 
 // Bind to scroll
 window.addEventListener('scroll', function () {
