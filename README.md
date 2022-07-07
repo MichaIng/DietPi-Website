@@ -27,11 +27,43 @@ Deploy to `/tmp/DietPi-Website-master` (no input argument):
 bash -c "$(curl -sSf 'https://raw.githubusercontent.com/MichaIng/DietPi-Website/master/deploy.bash')"
 ```
 
-Deploy to `/var/www` (target path as input argument $1):
+Deploy to `/var/www/html` (target path as input argument $1):
 
 ```sh
-bash -c "$(curl -sSf 'https://raw.githubusercontent.com/MichaIng/DietPi-Website/master/deploy.bash')" bash /var/www
+bash -c "$(curl -sSf 'https://raw.githubusercontent.com/MichaIng/DietPi-Website/master/deploy.bash')" bash /var/www/html
 ```
+
+## Developing website - view changes
+
+There are two options to view changes in the website code:
+
+1. Using a webserver which serves the local copy of the website
+1. Using a GUI based system and viewing the website within a browser
+
+### Using a webserver
+
+As a prerequisite you need a running webserver on your system. Otherwise you can install one via `dietpi-software`(example NGINX)
+
+```sh
+sudo dietpi-software install 85
+```
+
+You may check the installation via `http://localhost` to view the webserver's welcome page.
+
+Then deploy the website code to `/var/www/html` with the bash script like explained above.  
+After this, display the DietPi website with
+
+```sh
+http://localhost/html/
+```
+
+### Using a GUI based system
+
+In case that you have a running GUI based system, you can view the website within your browser.
+
+First, deploy the website code to `/tmp/DietPi-Website-master` (or any other local directory) with the bash script like explained above.  
+Then display the DietPi website in your browser by opening the index.html file (via ->file->open or by dragging this file into your browser). The file is located within your local copy (e.g. `/tmp/DietPi-Website-master/index.html`).  
+The address line in your browser then shows typically `file:///tmp/DietPi-Website-master/index.html`.
 
 ## Contributing
 
