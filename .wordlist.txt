@@ -83,6 +83,7 @@ Dropbear
 DSI
 DVFS
 DXX
+ebook
 ebooks
 eco
 EDL
@@ -105,8 +106,8 @@ FOSS
 Fourdee
 FPM
 FreshRSS
-FriendlyARM
-FriendlyARM's
+FriendlyELEC
+FriendlyELEC's
 frontend
 Gbit
 GiB
@@ -230,6 +231,7 @@ NanoPC
 NanoPi
 NAS
 natively
+Navidrome
 ncc
 Netdata
 nm
@@ -290,6 +292,7 @@ Raspbian
 Raspcontrol
 Rclone
 RDP
+Readarr
 Reclocker
 ReadyMedia
 RealVNC
@@ -374,6 +377,7 @@ Usenet
 userdata
 UTM
 UUID
+vaultwarden
 VirtualBox
 VirtualHere
 virtualised
