@@ -33,6 +33,35 @@ Deploy to `/var/www` (target path as input argument $1):
 bash -c "$(curl -sSf 'https://raw.githubusercontent.com/MichaIng/DietPi-Website/master/deploy.bash')" bash /var/www
 ```
 
+## View local changes
+
+There are two options to view your local changes:
+
+1. Using a webserver which serves the local website
+2. Using a GUI based system to view the HTML files in a browser
+
+### Using a webserver
+
+As a prerequisite you need a running webserver on your system. Otherwise you can install one via `dietpi-software`, for example Apache:
+
+```sh
+sudo dietpi-software install 83
+```
+
+When you deployed the website to `/var/www` as explained above, you can view it from any browser in your LAN via:
+
+```
+http://<your.IP>/
+```
+
+### Using a GUI based system
+
+In case you have a GUI based system, you can view the HTML files directly in your browser:
+
+- Deploy the DietPi website to `/tmp/DietPi-Website-master` or any other local directory as explained above.
+- Display it in your browser by opening `/tmp/DietPi-Website-master/index.html` via drag & drop or -> **File** -> **Open**.
+- The address line in your browser then typically shows `file:///tmp/DietPi-Website-master/index.html`.
+
 ## Contributing
 
 There are many ways you could contribute to DietPi project. You could work on the DietPi project, website design, extend the documentation, or just run tests.
