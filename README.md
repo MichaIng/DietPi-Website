@@ -56,7 +56,7 @@ http://<your.IP>/
 
 ### Using a GUI based system
 
-In case that you have a running GUI based system, you can view the HTML files directly in your browser.
+In case you have a GUI based system, you can view the HTML files directly in your browser:
 
 - Deploy the DietPi website to `/tmp/DietPi-Website-master` or any other local directory as explained above.
 - Display it in your browser by opening `/tmp/DietPi-Website-master/index.html` via drag & drop or -> **File** -> **Open**.
