@@ -11,7 +11,7 @@ jobs:
     steps:
     - name: Deploy DietPi-Website locally
       id: deploy
-      run: bash -c "$(curl -sSf "https://raw.githubusercontent.com/MichaIng/DietPi-Website${GITHUB_REF#refs/heads}/deploy.bash")" bash .
+      run: bash -c "$(curl -sSf "https://raw.githubusercontent.com/$GITHUB_REPOSITORY_OWNER/DietPi-Website${GITHUB_REF#refs/heads}/deploy.bash")" bash .
     - name: Setup JRE for Nu Html Checker
       # https://github.com/actions/setup-java/releases
       uses: actions/setup-java@v3
