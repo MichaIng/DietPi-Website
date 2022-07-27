@@ -97,17 +97,26 @@ document.querySelectorAll('div.toggleDiv').forEach(y => {
 	y.style.display = ""
 })
 
+function growDiv(x) {
+	if (x.clientHeight) {
+		x.style.height = 0;
+		x.style.marginBottom = 0;
+	} else {
+		x.style.height = x.scrollHeight + 'px';
+		x.style.marginBottom = '30px';
+	}
+}
+
 // Show or hide portfolio description on click
 document.querySelectorAll('.show_hide').forEach(x => x.addEventListener('click', function () {
 	document.querySelectorAll('div.toggleDiv').forEach(y => {
-		y.classList.remove("active")
+		y.style.height = 0;
+		y.style.marginBottom = 0;
 	})
 	let y = document.querySelector(x.getAttribute('rel'));
 	if (y == null) {
 		return;
 	}
 
-	if (!y.classList.contains("active")) {
-		y.classList.add("active")
-	}
+	growDiv(y)
 }));

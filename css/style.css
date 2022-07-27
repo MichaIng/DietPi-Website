@@ -156,15 +156,9 @@ a:active {
 
 div.toggleDiv {
 	height: 0;
-	max-height: 1000px;
 	overflow: hidden;
 	margin-bottom: 0px;
-	transition: max-height 0.5s, margin-bottom 0.5s;
-}
-
-div.toggleDiv.active {
-	height: auto;
-	margin-bottom: 30px;
+	transition: height 0.5s, margin-bottom 0.5s;
 }
 
 /*
