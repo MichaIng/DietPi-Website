@@ -32,12 +32,12 @@
 		<meta name="msapplication-TileColor" content="#da532c">
 		<meta name="theme-color" content="#000000">
 		<!-- Load CSS styles -->
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css?v=1">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css?v=2">
 		<link rel="stylesheet" type="text/css" href="css/jquery.cslider.min.css?v=3">
 		<link rel="stylesheet" type="text/css" href="css/style.min.css?v=6">
 		<!-- Include JavaScript -->
 		<script defer src="js/jquery.min.js"></script>
-		<script defer src="js/bootstrap.min.js?v=1"></script>
+		<script defer src="js/bootstrap.min.js?v=2"></script>
 		<script defer src="js/jquery.cslider.min.js?v=1"></script>
 		<script defer src="js/mixitup.min.js"></script>
 		<script defer src="js/app.min.js"></script>
@@ -68,10 +68,10 @@
 				<svg class="triangle" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0h100l-50 100"/></svg>
 				<!-- Slide 1 -->
 				<div class="da-slide da-slide-current">
-					<h2>DietPi beta v8.7 is here</h2>
-					<h4>Help testing our upcoming release</h4>
+					<h2>DietPi v8.7 has been released</h2>
+					<h4>Check out all changes</h4>
 					<p>We added support for FriendlyELEC's new NanoPi R5S, as well as the ebook server Readarr and the Subsonic-compatible media server Navidrome. vaultwarden is now installed much faster as DEB package.</p>
-					<a class="da-link" href="https://github.com/MichaIng/DietPi/issues/5643" target="_blank" rel="noopener">All info</a>
+					<a class="da-link" href="https://dietpi.com/docs/releases/v8_7/" target="_blank" rel="noopener">Release notes</a>
 					<div class="da-img"><img class="img-fluid" src="images/dietpi-logo_360x360.png" alt="DietPi logo" width="300" height="300" loading="lazy"></div>
 				</div>
 				<!-- Slide 2 -->
@@ -1071,6 +1071,25 @@
 						<div class="col-md-6"><img src="images/sbc_images/nanopir4s.jpg" alt="NanoPi R4S photo" width="8" height="5" loading="lazy"></div>
 					</div>
 				</div>
+				<!-- NanoPi R5S -->
+				<div id="nanopir5s" class="toggleDiv single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>NanoPi R5S</h3><span class="show_hide close"></span></div></div>
+					<div class="row">
+						<div class="col-md-6 project-description">
+							<div class="project-info">
+								<div><span>CPU:</span>Rockchip RK3568 2.0 GHz | 4 cores | ARMv8</div>
+								<div><span>RAM:</span>2 GiB LPDDR4X</div>
+								<div><span>NET:</span>2x 2.5 Gbit + 1x 1 Gbit Ethernet</div>
+								<div><span>Storage:</span>8 GiB eMMC</div>
+								<br>
+								<div><a href="https://dietpi.com/downloads/images/DietPi_NanoPiR5S-ARMv8-Bullseye.7z"><span>Download Image:</span><i class="fa fa-download"></i><u>Download</u></a></div>
+								<div><a href="https://dietpi.com/docs/install/" target="_blank" rel="noopener"><span>How to install / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
+							</div>
+							<p>FriendlyELEC's latest RK3568 dual-2.5 Gbit Ethernet router board. When using the optionally shipped metal case, the CPU temperature stays in moderate range without a fan, as long as you do not run long-term full-load processes. Other than previous NanoPi router boards, the R5S has a HDMI port as well.</p>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/nanopir5s.jpg" alt="NanoPi R5S photo" width="8" height="5" loading="lazy"></div>
+					</div>
+				</div>
 				<!-- Pinebook Pro -->
 				<div id="pinebookpro" class="toggleDiv single-project">
 					<div class="row"><div class="col-md-12 project-title"><h3>Pinebook Pro</h3><span class="show_hide close"></span></div></div>
@@ -1306,6 +1325,13 @@
 							<img src="images/sbc_images/nanopir4s.jpg" alt="NanoPi R4S photo" width="8" height="5" loading="lazy">
 							<h3>NanoPi R4S</h3>
 							<p>RK3399 1.8GHz | 6 cores | ARMv8</p>
+						</a>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix nanopi">
+						<a href="#downloadinfo" class="thumbnail show_hide" rel="#nanopir5s">
+							<img src="images/sbc_images/nanopir5s.jpg" alt="NanoPi R5S photo" width="8" height="5" loading="lazy">
+							<h3>NanoPi R5S</h3>
+							<p>RK3568 2.0GHz | 4 cores | ARMv8</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix nanopi">

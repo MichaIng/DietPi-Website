@@ -27,6 +27,17 @@ then
 else
 	BRANCH='master'
 fi
+# - Optional owner
+if [[ $3 ]]
+then
+	OWNER=$3
+
+elif [[ $GITHUB_REPOSITORY_OWNER ]]
+then
+	OWNER=$GITHUB_REPOSITORY_OWNER
+else
+	OWNER='MichaIng'
+fi
 
 # Load DietPi-Globals
 if [[ -f '/boot/dietpi/func/dietpi-globals' ]]
@@ -40,7 +51,7 @@ fi
 
 # Main
 G_EXEC cd /tmp
-G_EXEC curl -sSfLO "https://github.com/MichaIng/DietPi-Website/archive/$BRANCH.tar.gz"
+G_EXEC curl -sSfLO "https://github.com/$OWNER/DietPi-Website/archive/$BRANCH.tar.gz"
 G_EXEC tar xf "$BRANCH.tar.gz"
 G_EXEC_NOHALT=1 G_EXEC rm "$BRANCH.tar.gz"
 G_EXEC cd "DietPi-Website-$BRANCH"
@@ -51,8 +62,8 @@ G_EXEC sed -i "s|<lastmod>.*</lastmod>|<lastmod>$(date '+%Y-%m-%dT%T%:z')</lastm
 
 # 3rd party
 G_EXEC curl -sSf 'https://raw.githubusercontent.com/jquery/codeorigin.jquery.com/main/cdn/jquery-3.6.0.min.js' -o js/jquery.js
-G_EXEC curl -sSf 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css' -o css/bootstrap.css
-G_EXEC curl -sSf 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js' -o js/bootstrap.js
+G_EXEC curl -sSf 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css' -o css/bootstrap.css
+G_EXEC curl -sSf 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js' -o js/bootstrap.js
 
 # Minify
 # - Download
