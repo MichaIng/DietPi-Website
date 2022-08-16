@@ -27,7 +27,6 @@ then
 
 elif [[ $GITHUB_REF ]]
 then
-	BRANCH=${GITHUB_REF#refs/heads/}
 	BRANCH=${GITHUB_REF#refs/heads/} # push
 else
 	BRANCH='master'
@@ -43,7 +42,6 @@ then
 
 elif [[ $GITHUB_REPOSITORY_OWNER ]]
 then
-	OWNER=$GITHUB_REPOSITORY_OWNER
 	OWNER=$GITHUB_REPOSITORY_OWNER # push
 else
 	OWNER='MichaIng'
