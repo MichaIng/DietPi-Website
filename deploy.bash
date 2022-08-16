@@ -21,9 +21,14 @@ if [[ $2 ]]
 then
 	BRANCH=$2
 
+elif [[ $GITHUB_HEAD_REF ]]
+then
+	BRANCH=$GITHUB_HEAD_REF # PR
+
 elif [[ $GITHUB_REF ]]
 then
 	BRANCH=${GITHUB_REF#refs/heads/}
+	BRANCH=${GITHUB_REF#refs/heads/} # push
 else
 	BRANCH='master'
 fi
@@ -32,9 +37,14 @@ if [[ $3 ]]
 then
 	OWNER=$3
 
+elif [[ $HEAD_OWNER ]]
+then
+	OWNER=$HEAD_OWNER # PR, custom env var
+
 elif [[ $GITHUB_REPOSITORY_OWNER ]]
 then
 	OWNER=$GITHUB_REPOSITORY_OWNER
+	OWNER=$GITHUB_REPOSITORY_OWNER # push
 else
 	OWNER='MichaIng'
 fi
