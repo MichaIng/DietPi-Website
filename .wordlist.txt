@@ -144,6 +144,7 @@ https
 HW
 IceCast
 ICMP
+Imager
 img
 InfluxDB
 ini
