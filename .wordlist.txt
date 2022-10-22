@@ -123,6 +123,7 @@ GPT
 gpu
 Grafana
 Graphberry
+HACS
 HAProxy
 HATs
 harddisk
