@@ -4,12 +4,15 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 jobs:
-  Actions:
+  main:
     if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.owner.login != github.event.pull_request.base.repo.owner.login
-    # https://github.com/actions/virtual-environments
+    # https://github.com/actions/runner-images
     runs-on: ubuntu-22.04
     env:
       HEAD_OWNER: ${{ github.event.pull_request.head.repo.owner.login }}
+    defaults:
+      run:
+        working-directory: /dev/shm
     steps:
     - name: Deploy DietPi-Website locally
       id: deploy
@@ -20,8 +23,8 @@ jobs:
       with:
         distribution: 'temurin'
         # https://github.com/adoptium
-        java-version: '18'
-        #java-package: jre
+        java-version: '19'
+        java-package: jre
         check-latest: true
     - name: Download Nu Html Checker
       run: curl -sSfLO 'https://github.com/validator/validator/releases/download/latest/vnu.jar'

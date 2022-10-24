@@ -288,6 +288,7 @@ qBittorrent
 QuiteRSS
 Radarr
 Radxa
+Radxa's
 RAMdisk
 RAMlog
 Raspbian
