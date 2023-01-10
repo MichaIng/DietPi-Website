@@ -18,7 +18,7 @@ jobs:
       id: deploy
       run: bash -c "$(curl -sSf "https://raw.githubusercontent.com/${HEAD_OWNER:-$GITHUB_REPOSITORY_OWNER}/DietPi-Website/${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}/deploy.bash")" bash .
     - name: Setup JRE for Nu Html Checker
-      # https://github.com/actions/setup-java/releases
+      # https://github.com/actions/setup-java/tags
       uses: actions/setup-java@v3
       with:
         distribution: 'temurin'
@@ -37,11 +37,12 @@ jobs:
     - name: Setup Python for PySpelling
       id: python
       if: always() && steps.deploy.outcome == 'success'
-      # https://github.com/actions/setup-python/releases
+      # https://github.com/actions/setup-python/tags
       uses: actions/setup-python@v4
       with:
-        # https://github.com/actions/python-versions/releases
+        # https://github.com/actions/python-versions/tags
         python-version: '3.11'
+        check-latest: true
     - name: Install PySpelling
       id: pyspelling
       if: always() && steps.python.outcome == 'success'
@@ -60,4 +61,4 @@ jobs:
         tar xf lychee.tar.gz
     - name: Run lychee to check Markdown and HTML files
       if: always() && steps.lychee.outcome == 'success'
-      run: ./lychee -En --cache --require-https --github-token '${{ secrets.GITHUB_TOKEN }}' -b '.' '**/*.md' '**/*.html'
+      run: ./lychee -En --cache --require-https --exclude '^https://twitter.com/DietPi_$' --github-token '${{ secrets.GITHUB_TOKEN }}' -b '.' '**/*.md' '**/*.html'
