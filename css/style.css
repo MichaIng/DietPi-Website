@@ -519,7 +519,7 @@ a.scrollup {
 	stroke-width: 2;
 	stroke-linecap: round;
 	fill: none;
-	transition: background-color 0.5s, border-color 0.5s, stroke 0.5s;
+	transition: background-color 0.5s, border-color 0.5s, stroke 0.5s, opacity 0.5s;
 }
 a.scrollup:hover,
 a.scrollup:focus,
