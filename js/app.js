@@ -1,11 +1,6 @@
 // https://github.com/MichaIng/DietPi-Website
 'use strict';
 !function () {
-	// Initialise home slider: https://github.com/Le-Stagiaire/jquery.cslider
-	// Check first if function exist to allow skipping it on dietpi-software site
-	if (typeof $.fn.cslider === 'function')
-		$('#home').cslider();
-
 	// Store used elements globally once
 	var lastId,
 	    scrollUp = document.querySelector('a.scrollup'),
@@ -57,9 +52,9 @@
 
 		// Display or hide scroll-to-top button
 		if (window.pageYOffset > 80) {
-			scrollUp.style.opacity = 100;
+			scrollUp.style.opacity = '1';
 		} else {
-			scrollUp.style.opacity = 0;
+			scrollUp.style.opacity = '0';
 		}
 	});
 
@@ -80,35 +75,25 @@
 	});
 
 	// Show or hide portfolio description on click
-	for (let x of document.querySelectorAll('.show_hide')) {
+	for (let x of document.querySelectorAll('.close, .thumbnail')) {
 		x.addEventListener('click', function () {
-			$('div.single-project').slideUp(500, '');
-			$(x.getAttribute('rel')).slideToggle(500, '');
+			let target = document.querySelector(x.getAttribute('rel'));
+			for (let x of singleProjects) {
+				if (x === target) {
+					x.style.height = x.scrollHeight + 'px';
+					x.classList.remove('hidden');
+				} else if (x.clientHeight) {
+					x.style.height = '0';
+					x.classList.add('hidden');
+				}
+			}
 		});
 	}
 
-	// Function for smooth scrolling links
+	// Collapse navbar when clicking page anchor
 	for (let x of document.querySelectorAll('a[href^="#"]')) {
-		// Scroll to top offset
-		let target, targetOffset;
-		if (x.hash === '') {
-			targetOffset = 0;
-		// Scroll target
-		} else {
-			target = document.getElementById(x.hash.substring(1));
-		}
 		x.addEventListener('click', function () {
-			// Collapse navbar when scrolling
 			navbar.classList.remove('show');
-			// Get section offset
-			if (target)
-				targetOffset = window.pageYOffset + target.getBoundingClientRect().y - navbarHeight;
-			// Scroll in 0.75 seconds
-			$('html, body').animate({
-				scrollTop: targetOffset
-			}, 750);
-			// Omit browser link processing
-			return false;
 		});
 	}
 }();

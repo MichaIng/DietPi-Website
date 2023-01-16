@@ -156,4 +156,5 @@
         }
         return this;
     };
+    $('#home').cslider();
 }();
