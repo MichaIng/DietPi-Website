@@ -1,6 +1,6 @@
 // Original: https://github.com/Le-Stagiaire/jquery.cslider/blob/0c99322/src/jquery.cslider.js
 'use strict';
-(function ($) {
+!function () {
     $.Slider = function (options, element) {
         this.$el = $(element);
         this._init(options);
@@ -156,4 +156,4 @@
         }
         return this;
     };
-})(jQuery);
+}();
