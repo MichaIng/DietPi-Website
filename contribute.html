@@ -33,12 +33,11 @@
 		<meta name="theme-color" content="#000000">
 		<!-- Load CSS styles -->
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css?v=2">
-		<link rel="stylesheet" type="text/css" href="css/style.min.css?v=6">
+		<link rel="stylesheet" type="text/css" href="css/style.min.css?v=7">
 		<!-- Include JavaScript -->
-		<script defer src="js/jquery.min.js"></script>
 		<script defer src="js/bootstrap.min.js?v=2"></script>
 		<script defer src="js/mixitup.min.js"></script>
-		<script defer src="js/app.min.js"></script>
+		<script defer src="js/app.min.js?v=1"></script>
 	</head>
 	<body>
 		<nav class="navbar navbar-expand-lg">
@@ -94,8 +93,8 @@
 					<button class="nav-link filter" data-filter=".Expand">Expand code / documentation</button>
 				</nav>
 				<!-- Bug report -->
-				<div id="bugreport" class="toggleDiv single-project">
-					<div class="row"><div class="col-md-12 project-title"><h3>Create a new bug report / Report a security issue</h3><span class="show_hide close"></span></div></div>
+				<div id="bugreport" class="single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>Create a new bug report / Report a security issue</h3><span class="close"></span></div></div>
 					<div class="row">
 						<div class="col-md-6 project-description">
 							<p>
@@ -108,8 +107,8 @@
 					</div>
 				</div>
 				<!-- Diagnose -->
-				<div id="diagnose" class="toggleDiv single-project">
-					<div class="row"><div class="col-md-12 project-title"><h3>Investigate issues / Provide help</h3><span class="show_hide close"></span></div></div>
+				<div id="diagnose" class="single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>Investigate issues / Provide help</h3><span class="close"></span></div></div>
 					<div class="row">
 						<div class="col-md-6 project-description">
 							<p>Many times the DietPi project needs help on existent items:</p>
@@ -129,8 +128,8 @@
 					</div>
 				</div>
 				<!-- Question -->
-				<div id="question" class="toggleDiv single-project">
-					<div class="row"><div class="col-md-12 project-title"><h3>Answer questions / Provide insights</h3><span class="show_hide close"></span></div></div>
+				<div id="question" class="single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>Answer questions / Provide insights</h3><span class="close"></span></div></div>
 					<div class="row">
 						<div class="col-md-6 project-description">
 							<p>Start a discussion, ask and answer questions. There are many questions on <a href="https://github.com/MichaIng/DietPi/issues" target="_blank" rel="noopener">the DietPi GitHub repository</a> and on our <a href="https://dietpi.com/forum/" target="_blank" rel="noopener">forum</a> for which you may have already the answers, or you could provide valuable insights.</p>
@@ -140,8 +139,8 @@
 					</div>
 				</div>
 				<!-- Test -->
-				<div id="test" class="toggleDiv single-project">
-					<div class="row"><div class="col-md-12 project-title"><h3>Test configurations</h3><span class="show_hide close"></span></div></div>
+				<div id="test" class="single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>Test configurations</h3><span class="close"></span></div></div>
 					<div class="row">
 						<div class="col-md-6 project-description">
 							<p>DietPi supports multiple SBCs or PC / VM configurations. Very similar with investigating the issues, but specific to hardware, we need your help to run tests and specific installations for certain SBC models or PCs</p>
@@ -157,8 +156,8 @@
 					</div>
 				</div>
 				<!-- Improve website -->
-				<div id="improvewebsite" class="toggleDiv single-project">
-					<div class="row"><div class="col-md-12 project-title"><h3>Improve DietPi website</h3><span class="show_hide close"></span></div></div>
+				<div id="improvewebsite" class="single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>Improve DietPi website</h3><span class="close"></span></div></div>
 					<div class="row">
 						<div class="col-md-6 project-description">
 							<p>Web development is a dynamic and challenging field. Someone with skills in graphics and web design could provide a help to the overall online presence of this open-source project.</p>
@@ -169,8 +168,8 @@
 					</div>
 				</div>
 				<!-- Improve docs -->
-				<div id="improvedocs" class="toggleDiv single-project">
-					<div class="row"><div class="col-md-12 project-title"><h3>Expand DietPi Docs</h3><span class="show_hide close"></span></div></div>
+				<div id="improvedocs" class="single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>Expand DietPi Docs</h3><span class="close"></span></div></div>
 					<div class="row">
 						<div class="col-md-6 project-description">
 							<p>This is an ever growing topic. Please join us to update documentation, bringing more examples and details, making the project easy to use and access.</p>
@@ -180,8 +179,8 @@
 					</div>
 				</div>
 				<!-- Suggest -->
-				<div id="suggest" class="toggleDiv single-project">
-					<div class="row"><div class="col-md-12 project-title"><h3>New feature suggestions & Software titles</h3><span class="show_hide close"></span></div></div>
+				<div id="suggest" class="single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>New feature suggestions & Software titles</h3><span class="close"></span></div></div>
 					<div class="row">
 						<div class="col-md-6 project-description">
 							<p>Do you like the project and you would like to see new software titles or new configuration features?</p>
@@ -194,8 +193,8 @@
 					</div>
 				</div>
 				<!-- Code -->
-				<div id="code" class="toggleDiv single-project">
-					<div class="row"><div class="col-md-12 project-title"><h3>Extend DietPi</h3><span class="show_hide close"></span></div></div>
+				<div id="code" class="single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>Extend DietPi</h3><span class="close"></span></div></div>
 					<div class="row">
 						<div class="col-md-6 project-description">
 							<p>
@@ -213,8 +212,8 @@
 					</div>
 				</div>
 				<!-- Community -->
-				<div id="community" class="toggleDiv single-project">
-					<div class="row"><div class="col-md-12 project-title"><h3>Use DietPi Forum</h3><span class="show_hide close"></span></div></div>
+				<div id="community" class="single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>Use DietPi Forum</h3><span class="close"></span></div></div>
 					<div class="row">
 						<div class="col-md-6 project-description">
 							<p>Discuss with community.</p>
@@ -228,8 +227,8 @@
 					</div>
 				</div>
 				<!-- Blog -->
-				<div id="blog" class="toggleDiv single-project">
-					<div class="row"><div class="col-md-12 project-title"><h3>Write about DietPi</h3><span class="show_hide close"></span></div></div>
+				<div id="blog" class="single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>Write about DietPi</h3><span class="close"></span></div></div>
 					<div class="row">
 						<div class="col-md-6 project-description">
 							<p>
@@ -242,8 +241,8 @@
 					</div>
 				</div>
 				<!-- Social -->
-				<div id="social" class="toggleDiv single-project">
-					<div class="row"><div class="col-md-12 project-title"><h3>Social media</h3><span class="show_hide close"></span></div></div>
+				<div id="social" class="single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>Social media</h3><span class="close"></span></div></div>
 					<div class="row">
 						<div class="col-md-6 project-description">
 							<p>This could be as simple as a Twitter Like, or re-share a conversation, article, feature via a Retweet. Or maybe adding a link to a Facebook post, or a Reddit reference.</p>
@@ -256,35 +255,35 @@
 				<div id="portfolio-grid" class="row" style="display:none">
 					<!-- Desktops -->
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Report">
-						<a href="#contributeinfo" class="thumbnail show_hide" rel="#bugreport">
+						<a href="#contributeinfo" class="thumbnail" rel="#bugreport">
 							<img src="images/contribute/diagnose.jpg" alt="Report an issue" width="8" height="5" loading="lazy">
 							<h3>Report an issue</h3>
 							<p>Bugs or security issues</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Report">
-						<a href="#contributeinfo" class="thumbnail show_hide" rel="#diagnose">
+						<a href="#contributeinfo" class="thumbnail" rel="#diagnose">
 							<img src="images/contribute/investigate.jpg" alt="Investigate / Help" width="8" height="5" loading="lazy">
 							<h3>Diagnose issues</h3>
 							<p>Investigate & Find reasons</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Report">
-						<a href="#contributeinfo" class="thumbnail show_hide" rel="#question">
+						<a href="#contributeinfo" class="thumbnail" rel="#question">
 							<img src="images/contribute/question.jpg" alt="Question" width="8" height="5" loading="lazy">
 							<h3>Answer questions</h3>
 							<p>Share feedback and insights</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Report">
-						<a href="#contributeinfo" class="thumbnail show_hide" rel="#test">
+						<a href="#contributeinfo" class="thumbnail" rel="#test">
 							<img src="images/contribute/test-configurations.jpg" alt="Test" width="8" height="5" loading="lazy">
 							<h3>Test configurations</h3>
 							<p>Run specific tests</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Ideas">
-						<a href="#contributeinfo" class="thumbnail show_hide" rel="#improvewebsite">
+						<a href="#contributeinfo" class="thumbnail" rel="#improvewebsite">
 							<img src="images/contribute/improve-website.jpg" alt="Improve website" width="8" height="5" loading="lazy">
 							<h3>Improve DietPi website</h3>
 							<p>Help to improve & extend</p>
@@ -292,42 +291,42 @@
 					</div>
 					<!-- Remote desktop -->
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Ideas">
-						<a href="#contributeinfo" class="thumbnail show_hide" rel="#improvedocs">
+						<a href="#contributeinfo" class="thumbnail" rel="#improvedocs">
 							<img src="images/contribute/improve-docs.jpg" alt="Improve docs" width="8" height="5" loading="lazy">
 							<h3>Extend DietPi Docs</h3>
 							<p>Bring more details & samples</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Ideas">
-						<a href="#contributeinfo" class="thumbnail show_hide" rel="#suggest">
+						<a href="#contributeinfo" class="thumbnail" rel="#suggest">
 							<img src="images/contribute/new-features.jpg" alt="Suggest" width="8" height="5" loading="lazy">
 							<h3>New software titles</h3>
 							<p>Suggest features & software</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Expand">
-						<a href="#contributeinfo" class="thumbnail show_hide" rel="#code">
+						<a href="#contributeinfo" class="thumbnail" rel="#code">
 							<img src="images/contribute/expand-code.jpg" alt="Code" width="8" height="5" loading="lazy">
 							<h3>Extend DietPi</h3>
 							<p>Bring contributions in GitHub</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Community">
-						<a href="#contributeinfo" class="thumbnail show_hide" rel="#community">
+						<a href="#contributeinfo" class="thumbnail" rel="#community">
 							<img src="images/contribute/be-part-community.jpg" alt="Community" width="8" height="5" loading="lazy">
 							<h3>Use DietPi Forum</h3>
 							<p>Share & Receive help</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Community">
-						<a href="#contributeinfo" class="thumbnail show_hide" rel="#blog">
+						<a href="#contributeinfo" class="thumbnail" rel="#blog">
 							<img src="images/contribute/social-Twitter.jpg" alt="Blog" width="8" height="5" loading="lazy">
 							<h3>Write about DietPi</h3>
 							<p>Spread the word</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Community">
-						<a href="#contributeinfo" class="thumbnail show_hide" rel="#social">
+						<a href="#contributeinfo" class="thumbnail" rel="#social">
 							<img src="images/contribute/more-social.jpg" alt="Social" width="8" height="5" loading="lazy">
 							<h3>Social media</h3>
 							<p>Share info & love</p>
@@ -366,7 +365,7 @@
 		<!-- Scroll up button end -->
 		<!-- Inline JavaScript to quickly show/hide elements if browser loads scripts -->
 		<script>
-			document.querySelectorAll('div.toggleDiv').forEach(function(e){e.setAttribute("style","display:none");});
+			for (let x of document.querySelectorAll('div.single-project')) x.classList.add('hidden');
 			document.getElementById("contributeinfo").removeAttribute("style");
 			document.getElementById("portfolio-grid").removeAttribute("style");
 		</script>

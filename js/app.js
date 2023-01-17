@@ -1,63 +1,65 @@
-'use strict';
 // https://github.com/MichaIng/DietPi-Website
-$(function () {
-	// Initialise home slider: https://github.com/Le-Stagiaire/jquery.cslider
-	// Check first if function exist to allow skipping it on dietpi-software site
-	if (typeof $.fn.cslider === 'function') {
-		$('#home').cslider();
-	}
-
-	// Map navigation bar scroll links and targets
+'use strict';
+!function () {
+	// Store used elements globally once
 	var lastId,
-	    $navbar = $('div.navbar-collapse'),
-	    navbarHeight = 60, // $navbar.outerHeight() leads to wrong scroll offset when menu is expanded
+	    scrollUp = document.querySelector('a.scrollup'),
+	    triangles = document.querySelectorAll('svg.triangle'),
+	    singleProjects = document.querySelectorAll('div.single-project'),
+	    navbar = document.querySelector('div.navbar-collapse'),
+	    navbarHeight = 60, // navbar.outerHeight() leads to wrong scroll offset when menu is expanded
 	    // Navigation bar links
-	    $navbarLinks = $navbar.find('a[href^="#"]'),
+	    navbarLinks = navbar.querySelectorAll('a[href^="#"]'),
 	    // Navigation bar targets
-	    $navbarTargets = $navbarLinks.map(function () {
-		return $(this.hash);
-	    });
+	    navbarTargets = [];
+	    for (let x of navbarLinks) {
+		navbarTargets.push(document.getElementById(x.hash.substring(1)));
+	    }
 
 	// Bind to scroll
-	$(window).on('scroll', function () {
-		// Get current scroll offset
-		var scrollTop = $(this).scrollTop();
-
+	window.addEventListener('scroll', function () {
 		// Mark navbar link, related to scroll position, as active
-		// - Get targets until current scroll position
-		var cur = $navbarTargets.map(function () {
-			if ($(this).offset().top < scrollTop + navbarHeight + 50)
-				return this;
-		});
-		// - Get id of the current target
-		cur = cur[cur.length - 1];
-		var id = cur && cur.length ? cur[0].id : '';
-		// - If id changed, change links active class accordingly
-		if (lastId !== id) {
-			lastId = id;
-			$navbarLinks.removeClass('active');
-			$navbarLinks.filter('[href="#' + id + '"]').addClass('active');
+		// - Get ID of the current target
+		var curId = '';
+		for (let x of navbarTargets) {
+			if (x.getBoundingClientRect().y > navbarHeight + 50)
+				break;
+			curId = x.id;
+		}
+
+		// - If ID changed, change links active class accordingly
+		if (lastId !== curId) {
+			lastId = curId;
+			for (let x of navbarLinks) {
+				if (x.hash === '#' + curId) {
+					x.classList.add('active');
+				} else {
+					x.classList.remove('active');
+				}
+			}
 		}
 
 		// Animate triangles once, when they come in view
-		$('svg.triangle').each(function () {
-			// Element has not been animated yet and is in view
-			if (!$(this).hasClass('fadeInDown') && (scrollTop + $(window).innerHeight() > $(this).offset().top) && (scrollTop < $(this).offset().top + $(this).outerHeight())) {
+		for (let x of triangles) {
+			// Break once loop reached triangle below viewport
+			if (x.getBoundingClientRect().y > window.innerHeight)
+				break;
+			// Triangle is in view and has not been animated yet
+			if (x.getBoundingClientRect().bottom > 0 && !x.classList.contains('fadeInDown'))
 				// Add animate classes
-				$(this).addClass('fadeInDown');
-			}
-		});
+				x.classList.add('fadeInDown');
+		}
 
-		// Display or hide scroll to top button
-		if (scrollTop > 80) {
-			$('a.scrollup').fadeIn();
+		// Display or hide scroll-to-top button
+		if (window.pageYOffset > 80) {
+			scrollUp.style.opacity = '1';
 		} else {
-			$('a.scrollup').fadeOut();
+			scrollUp.style.opacity = '0';
 		}
 	});
 
 	// Trigger scroll event once to set initial element states
-	$(window).trigger('scroll');
+	window.dispatchEvent(new Event('scroll'));
 
 	// Initialise MixItUp for animated portfolio tile filtering
 	mixitup('div.mixitup', {
@@ -65,39 +67,33 @@ $(function () {
 		callbacks: {
 			// Close open portfolio project when resorting
 			'onMixStart': function () {
-				$('div.toggleDiv').hide();
+				for (let x of singleProjects) {
+					x.style.display = 'none';
+				}
 			}
 		}
 	});
 
 	// Show or hide portfolio description on click
-	$('.show_hide').on('click', function () {
-		$('div.toggleDiv').slideUp(500, '');
-		$($(this).attr('rel')).slideToggle(500, '');
-	});
-
-	// Function for smooth scrolling links
-	$('a[href^="#"]').each(function () {
-		// Scroll to top offset
-		var targetOffset;
-		if (this.hash === '') {
-			targetOffset = 0;
-		// Scroll target
-		} else {
-			var $target = $(this.hash);
-		}
-		$(this).on('click', function () {
- 			// Collapse navbar when scrolling
-			$navbar.removeClass('show');
-			// Get section offset
-			if (targetOffset !== 0)
-				targetOffset = $target.offset().top - navbarHeight;
-			// Scroll in 0.75 seconds
-			$('html, body').animate({
-				scrollTop: targetOffset
-			}, 750);
-			// Omit browser link processing
-			return false;
+	for (let x of document.querySelectorAll('.close, .thumbnail')) {
+		x.addEventListener('click', function () {
+			let target = document.querySelector(x.getAttribute('rel'));
+			for (let x of singleProjects) {
+				if (x === target) {
+					x.style.height = x.scrollHeight + 'px';
+					x.classList.remove('hidden');
+				} else if (x.clientHeight) {
+					x.style.height = '0';
+					x.classList.add('hidden');
+				}
+			}
 		});
-	});
-});
+	}
+
+	// Collapse navbar when clicking page anchor
+	for (let x of document.querySelectorAll('a[href^="#"]')) {
+		x.addEventListener('click', function () {
+			navbar.classList.remove('show');
+		});
+	}
+}();

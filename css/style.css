@@ -18,6 +18,10 @@
 /*
 1. General
 **********************************************************************/
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 60px;
+}
 body {
 	font-family: Arial, sans-serif;
 	color: #ffffff;
@@ -56,7 +60,7 @@ a:active {
 	z-index: 1;
 	min-height: 60px;
 	background-color: #164046;
-	padding: 4.5px 15px;
+	padding: 5px 15px;
 }
 .navbar > .container-xl {
 	padding: 0;
@@ -64,12 +68,12 @@ a:active {
 .navbar > .container-xl > img {
 	width: 120px;
 	height: 40px;
-	margin: 5.5px 0;
+	margin: 5px 0;
 }
 .navbar > .container-xl > .navbar-toggler {
 	width: 40px;
 	height: 40px;
-	margin: 5.5px 0;
+	margin: 5px 0;
 	padding: 10px;
 	background-color: #c5ff00;
 	border-color: #164046;
@@ -99,7 +103,7 @@ a:active {
 .navbar > .container-xl > .navbar-collapse > a {
 	color: #ffffff;
 	font-size: 15px;
-	margin: 4.5px 0;
+	margin: 4px 0;
 	padding: 10px 14px;
 	border: 1px solid #164046;
 	border-radius: 4px;
@@ -354,9 +358,15 @@ a:active {
 3.2 Details frame
 **********************************************************************/
 .single-project {
-	margin-bottom: 30px;
 	background-color: #181a1c;
 	border-radius: 4px;
+	margin-bottom: 30px;
+	overflow-y: clip;
+	transition: height 0.5s, margin-bottom 0.5s;
+}
+.single-project.hidden {
+	height: 0;
+	margin-bottom: 0;
 }
 .project-title {
 	border-bottom: 1px solid #9ccc00;
@@ -519,7 +529,7 @@ a.scrollup {
 	stroke-width: 2;
 	stroke-linecap: round;
 	fill: none;
-	transition: background-color 0.5s, border-color 0.5s, stroke 0.5s;
+	transition: background-color 0.5s, border-color 0.5s, stroke 0.5s, opacity 0.5s;
 }
 a.scrollup:hover,
 a.scrollup:focus,
