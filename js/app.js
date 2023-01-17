@@ -2,25 +2,25 @@
 'use strict';
 !function () {
 	// Store used elements globally once
-	var lastId,
-	    scrollUp = document.querySelector('a.scrollup'),
-	    triangles = document.querySelectorAll('svg.triangle'),
-	    singleProjects = document.querySelectorAll('div.single-project'),
-	    navbar = document.querySelector('div.navbar-collapse'),
-	    navbarHeight = 60, // navbar.outerHeight() leads to wrong scroll offset when menu is expanded
-	    // Navigation bar links
-	    navbarLinks = navbar.querySelectorAll('a[href^="#"]'),
-	    // Navigation bar targets
-	    navbarTargets = [];
-	    for (let x of navbarLinks) {
-		navbarTargets.push(document.getElementById(x.hash.substring(1)));
-	    }
+	const scrollUp = document.querySelector('a.scrollup'),
+		triangles = document.querySelectorAll('svg.triangle'),
+		singleProjects = document.querySelectorAll('div.single-project'),
+		navbar = document.querySelector('div.navbar-collapse'),
+		navbarHeight = 60, // navbar.outerHeight() leads to wrong scroll offset when menu is expanded
+		// Navigation bar links
+		navbarLinks = navbar.querySelectorAll('a[href^="#"]'),
+		// Navigation bar targets
+		navbarTargets = [];
+		for (let x of navbarLinks) {
+			navbarTargets.push(document.getElementById(x.hash.substring(1)));
+		}
+	let lastId;
 
 	// Bind to scroll
 	window.addEventListener('scroll', function () {
 		// Mark navbar link, related to scroll position, as active
 		// - Get ID of the current target
-		var curId = '';
+		let curId = '';
 		for (let x of navbarTargets) {
 			if (x.getBoundingClientRect().y > navbarHeight + 50)
 				break;
@@ -68,7 +68,10 @@
 			// Close open portfolio project when resorting
 			'onMixStart': function () {
 				for (let x of singleProjects) {
-					x.style.display = 'none';
+					if (x.clientHeight) {
+						x.style.height = '0';
+						x.classList.add('hidden');
+					}
 				}
 			}
 		}
@@ -77,7 +80,7 @@
 	// Show or hide portfolio description on click
 	for (let x of document.querySelectorAll('.close, .thumbnail')) {
 		x.addEventListener('click', function () {
-			let target = document.querySelector(x.getAttribute('rel'));
+			const target = document.querySelector(x.getAttribute('rel'));
 			for (let x of singleProjects) {
 				if (x === target) {
 					x.style.height = x.scrollHeight + 'px';
