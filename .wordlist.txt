@@ -409,7 +409,7 @@ Widevine
 wifi
 WireGuard
 WiringPi
-Wordpress
+WordPress
 WPA
 www
 Xfce
