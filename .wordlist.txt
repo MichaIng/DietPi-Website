@@ -264,6 +264,7 @@ OTG
 ownCloud
 passwd
 PCIe
+petitboot
 pHAT
 php
 phpBB
@@ -409,7 +410,7 @@ Widevine
 wifi
 WireGuard
 WiringPi
-Wordpress
+WordPress
 WPA
 www
 Xfce

@@ -66,10 +66,10 @@
 				<svg class="triangle" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0h100l-50 100"/></svg>
 				<!-- Slide 1 -->
 				<div class="da-slide da-slide-current">
-					<h2>DietPi v8.13 has been released</h2>
-					<h4>Check out all changes</h4>
-					<p>FriendlyELEC NanoPi R5C support was added. Amiberry, NoMachine and vaultwarden packages were updated to latest versions. The UrBackup backup path can now be pre-configured via new dietpi.txt setting.</p>
-					<a class="da-link" href="https://dietpi.com/docs/releases/v8_13/" target="_blank" rel="noopener">Release notes</a>
+					<h2>DietPi Beta v8.14 is here</h2>
+					<h4>Please help testing our upcoming release</h4>
+					<p>Orange Pi 5 images were added. Odroid N2/HC4 images do now support USB boot/petitboot. Radxa ROCK 5B images have been fixed with an ext4 boot filesystem. Gogs has received a major update for ARMv6 Raspberry Pi models.</p>
+					<a class="da-link" href="https://github.com/MichaIng/DietPi/issues/6130" target="_blank" rel="noopener">All info</a>
 					<div class="da-img"><img class="img-fluid" src="images/dietpi-logo_360x360.png" alt="DietPi logo" width="300" height="300" loading="lazy"></div>
 				</div>
 				<!-- Slide 2 -->
@@ -219,6 +219,7 @@
 					<button class="nav-link filter" data-filter=".allo">Allo</button>
 					<button class="nav-link filter" data-filter=".asus">ASUS</button>
 					<button class="nav-link filter" data-filter=".nanopi">NanoPi</button>
+					<button class="nav-link filter" data-filter=".orangepi">Orange Pi</button>
 					<button class="nav-link filter" data-filter=".x86_64">PC/VM</button>
 					<button class="nav-link filter" data-filter=".other">Other</button>
 				</nav>
@@ -1248,6 +1249,26 @@
 						<div class="col-md-6"><img src="images/sbc_images/rock5b.jpg" alt="ROCK 5B photo" width="8" height="5" loading="lazy"></div>
 					</div>
 				</div>
+				<!-- Orange Pi 5 -->
+				<div id="orangepi5" class="single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>Orange Pi 5</h3><span class="close"></span></div></div>
+					<div class="row">
+						<div class="col-md-6 project-description">
+							<div class="project-info">
+								<div><span>CPU:</span>Rockchip RK3588S 1.8/2.4 GHz | 8 cores | ARMv8</div>
+								<div><span>RAM:</span>4 GiB - 16 GiB LPDDR4</div>
+								<div><span>USB:</span>1x USB 3.0 2x USB 2.0 1x USB Type-C (USB 3.1)</div>
+								<div><span>NET:</span>Gbit Ethernet</div>
+								<div><span>Storage:</span>microSD and eMMC sockets</div>
+								<br>
+								<div><a href="https://dietpi.com/downloads/images/DietPi_OrangePi5-ARMv8-Bullseye.7z"><span>Download Image:</span><i class="fa fa-download"></i><u>Download</u></a></div>
+								<div><a href="https://dietpi.com/docs/install/" target="_blank" rel="noopener"><span>How to install / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
+							</div>
+							<p>Orange pi new flagship SBC, featuring the new Rockchip RK3588S SoC: A quad-core 4x Cortex-A76 @2.4 GHz + 4x Cortex A55 @1.8 GHz is making this the by far fastest SoC ever tested with DietPi.</p>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/orange-pi-5.jpg" alt="Orange Pi 5 photo" width="8" height="5" loading="lazy"></div>
+					</div>
+				</div>
 				<div id="portfolio-grid" class="row" style="display:none">
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix raspberrypi">
 						<a href="#downloadinfo" class="thumbnail" rel="#raspberrypi1">
@@ -1401,6 +1422,13 @@
 							<img src="images/sbc_images/rock5b.jpg" alt="ROCK 5B photo" width="8" height="5" loading="lazy">
 							<h3>ROCK 5B</h3>
 							<p>RK3588 2.4GHz | 8 cores | ARMv8</p>
+						</a>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix orangepi">
+						<a href="#downloadinfo" class="thumbnail" rel="#orangepi5">
+							<img src="images/sbc_images/orange-pi-5.jpg" alt="Orange Pi 5 photo" width="8" height="5" loading="lazy">
+							<h3>Orange Pi 5</h3>
+							<p>RK3588S 2.4GHz | 8 cores | ARMv8</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix allo">
