@@ -264,6 +264,7 @@ OTG
 ownCloud
 passwd
 PCIe
+petitboot
 pHAT
 php
 phpBB
