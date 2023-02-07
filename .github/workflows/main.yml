@@ -12,6 +12,7 @@ jobs:
       HEAD_OWNER: ${{ github.event.pull_request.head.repo.owner.login }}
     defaults:
       run:
+        shell: sh
         working-directory: /dev/shm
     steps:
     - name: Deploy DietPi-Website locally
@@ -31,9 +32,12 @@ jobs:
     - name: Run Nu Html Checker to check HTML, CSS and SVG files
       run: |
         java -jar vnu.jar --verbose *.html
-        GLOBIGNORE='css/bootstrap.min.css'
-        java -jar vnu.jar --css --verbose css/*.css
+        java -jar vnu.jar --css --verbose css/[!b][!o]*.css # Exclude bootstrap.min.css
         java -jar vnu.jar --skip-non-svg --verbose .
+    - name: Check for obsolete image files
+      if: always() && steps.deploy.outcome == 'success'
+      run: |
+        find images/ -type f | while read -r line; do [ $line != ${line#images/dietpi-logo_} ] || grep -rq "$line" *.html || { echo "ERROR: $line is not used"; exit 1; }; done
     - name: Setup Python for PySpelling
       id: python
       if: always() && steps.deploy.outcome == 'success'
