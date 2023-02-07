@@ -33,12 +33,11 @@
 		<meta name="theme-color" content="#000000">
 		<!-- Load CSS styles -->
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css?v=2">
-		<link rel="stylesheet" type="text/css" href="css/style.min.css?v=6">
+		<link rel="stylesheet" type="text/css" href="css/style.min.css?v=7">
 		<!-- Include JavaScript -->
-		<script defer src="js/jquery.min.js"></script>
 		<script defer src="js/bootstrap.min.js?v=2"></script>
 		<script defer src="js/mixitup.min.js"></script>
-		<script defer src="js/app.min.js"></script>
+		<script defer src="js/app.min.js?v=2"></script>
 	</head>
 	<body>
 		<nav class="navbar navbar-expand-lg">
@@ -75,8 +74,8 @@
 					<button class="nav-link filter" data-filter=".armbian">Armbian</button>
 					<button class="nav-link filter" data-filter=".debian">Debian</button>
 				</nav>
-				<div id="commands" class="toggleDiv single-project">
-					<div class="row"><div class="col-md-12 project-title"><h3>Commands to derive data</h3><span class="show_hide close"></span></div></div>
+				<div id="commands" class="single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>Commands to derive data</h3><span class="close"></span></div></div>
 					<div class="row">
 						<div class="col-md-12 project-description">
 							<div class="project-info">
@@ -96,8 +95,8 @@
 						</div>
 					</div>
 				</div>
-				<div id="raspberrypios1" class="toggleDiv single-project">
-					<div class="row"><div class="col-md-12 project-title"><h3>DietPi vs Raspberry Pi OS Lite (32-bit)</h3><span class="show_hide close"></span></div></div>
+				<div id="raspberrypios1" class="single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>DietPi vs Raspberry Pi OS Lite (32-bit)</h3><span class="close"></span></div></div>
 					<div class="row">
 						<div class="col-md-12 project-description">
 							<div class="project-info">
@@ -120,8 +119,8 @@
 						</div>
 					</div>
 				</div>
-				<div id="raspberrypios2" class="toggleDiv single-project">
-					<div class="row"><div class="col-md-12 project-title"><h3>DietPi vs Raspberry Pi OS Lite (64-bit)</h3><span class="show_hide close"></span></div></div>
+				<div id="raspberrypios2" class="single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>DietPi vs Raspberry Pi OS Lite (64-bit)</h3><span class="close"></span></div></div>
 					<div class="row">
 						<div class="col-md-12 project-description">
 							<div class="project-info">
@@ -144,8 +143,8 @@
 						</div>
 					</div>
 				</div>
-				<div id="armbian1" class="toggleDiv single-project">
-					<div class="row"><div class="col-md-12 project-title"><h3>DietPi vs Armbian (server image)</h3><span class="show_hide close"></span></div></div>
+				<div id="armbian1" class="single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>DietPi vs Armbian (server image)</h3><span class="close"></span></div></div>
 					<div class="row">
 						<div class="col-md-12 project-description">
 							<div class="project-info">
@@ -168,8 +167,8 @@
 						</div>
 					</div>
 				</div>
-				<div id="armbian2" class="toggleDiv single-project">
-					<div class="row"><div class="col-md-12 project-title"><h3>DietPi vs Armbian (server image)</h3><span class="show_hide close"></span></div></div>
+				<div id="armbian2" class="single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>DietPi vs Armbian (server image)</h3><span class="close"></span></div></div>
 					<div class="row">
 						<div class="col-md-12 project-description">
 							<div class="project-info">
@@ -192,8 +191,8 @@
 						</div>
 					</div>
 				</div>
-				<div id="armbian3" class="toggleDiv single-project">
-					<div class="row"><div class="col-md-12 project-title"><h3>DietPi vs Armbian (server image)</h3><span class="show_hide close"></span></div></div>
+				<div id="armbian3" class="single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>DietPi vs Armbian (server image)</h3><span class="close"></span></div></div>
 					<div class="row">
 						<div class="col-md-12 project-description">
 							<div class="project-info">
@@ -216,8 +215,8 @@
 						</div>
 					</div>
 				</div>
-				<div id="debian1" class="toggleDiv single-project">
-					<div class="row"><div class="col-md-12 project-title"><h3>DietPi vs Debian (server image)</h3><span class="show_hide close"></span></div></div>
+				<div id="debian1" class="single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>DietPi vs Debian (server image)</h3><span class="close"></span></div></div>
 					<div class="row">
 						<div class="col-md-12 project-description">
 							<div class="project-info">
@@ -240,8 +239,8 @@
 						</div>
 					</div>
 				</div>
-				<div id="debian2" class="toggleDiv single-project">
-					<div class="row"><div class="col-md-12 project-title"><h3>DietPi vs Debian (server image)</h3><span class="show_hide close"></span></div></div>
+				<div id="debian2" class="single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>DietPi vs Debian (server image)</h3><span class="close"></span></div></div>
 					<div class="row">
 						<div class="col-md-12 project-description">
 							<div class="project-info">
@@ -265,56 +264,56 @@
 				</div>
 				<div id="portfolio-grid" class="row" style="display:none">
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix commands">
-						<a href="#distrostats" class="thumbnail show_hide" rel="#commands">
+						<a href="#distrostats" class="thumbnail" rel="#commands">
 							<img src="images/stats/commands.svg" alt="Linux command prompt sign" width="8" height="5" loading="lazy">
 							<h3>Test commands</h3>
 							<p>Commands to obtain system stats</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix raspberrypios">
-						<a href="#distrostats" class="thumbnail show_hide" rel="#raspberrypios1">
+						<a href="#distrostats" class="thumbnail" rel="#raspberrypios1">
 							<img src="images/stats/raspberrypios.svg" alt="Raspberry Pi OS logo" width="8" height="5" loading="lazy">
 							<h3>Raspberry Pi OS Lite</h3>
 							<p>on Raspberry Pi 2 (32-bit)</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix raspberrypios">
-						<a href="#distrostats" class="thumbnail show_hide" rel="#raspberrypios2">
+						<a href="#distrostats" class="thumbnail" rel="#raspberrypios2">
 							<img src="images/stats/raspberrypios.svg" alt="Raspberry Pi OS logo" width="8" height="5" loading="lazy">
 							<h3>Raspberry Pi OS Lite</h3>
 							<p>on Raspberry Pi 4 (64-bit)</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix armbian">
-						<a href="#distrostats" class="thumbnail show_hide" rel="#armbian1">
+						<a href="#distrostats" class="thumbnail" rel="#armbian1">
 							<img src="images/stats/armbian.png" alt="Armbian logo" width="8" height="5" loading="lazy">
 							<h3>Armbian</h3>
 							<p>on NanoPi R2S</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix armbian">
-						<a href="#distrostats" class="thumbnail show_hide" rel="#armbian2">
+						<a href="#distrostats" class="thumbnail" rel="#armbian2">
 							<img src="images/stats/armbian.png" alt="Armbian logo" width="8" height="5" loading="lazy">
 							<h3>Armbian</h3>
 							<p>on Odroid C4</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix armbian">
-						<a href="#distrostats" class="thumbnail show_hide" rel="#armbian3">
+						<a href="#distrostats" class="thumbnail" rel="#armbian3">
 							<img src="images/stats/armbian.png" alt="Armbian logo" width="8" height="5" loading="lazy">
 							<h3>Armbian</h3>
 							<p>on NanoPi NEO3</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix debian">
-						<a href="#distrostats" class="thumbnail show_hide" rel="#debian1">
+						<a href="#distrostats" class="thumbnail" rel="#debian1">
 							<img src="images/stats/debian.svg" alt="Debian logo" width="8" height="5" loading="lazy">
 							<h3>Debian</h3>
 							<p>on Odroid C4</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix debian">
-						<a href="#distrostats" class="thumbnail show_hide" rel="#debian2">
+						<a href="#distrostats" class="thumbnail" rel="#debian2">
 							<img src="images/stats/debian.svg" alt="Debian logo" width="8" height="5" loading="lazy">
 							<h3>Debian</h3>
 							<p>on x86_64 PC</p>
@@ -352,7 +351,7 @@
 		<!-- Scroll up button end -->
 		<!-- Inline JavaScript to quickly show/hide elements if browser loads scripts -->
 		<script>
-			document.querySelectorAll('div.toggleDiv').forEach(function(e){e.setAttribute("style","display:none");});
+			for (let x of document.querySelectorAll('div.single-project')) x.classList.add('hidden');
 			document.getElementById("distrostats").removeAttribute("style");
 			document.getElementById("portfolio-grid").removeAttribute("style");
 		</script>
