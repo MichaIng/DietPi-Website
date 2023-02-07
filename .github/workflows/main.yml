@@ -37,7 +37,10 @@ jobs:
     - name: Check for obsolete image files
       if: always() && steps.deploy.outcome == 'success'
       run: |
-        find images/ -type f | while read -r line; do [ $line != ${line#images/dietpi-logo_} ] || grep -rq "$line" *.html || { echo "ERROR: $line is not used"; exit 1; }; done
+        while read -r line; do [ $line != ${line#images/dietpi-logo_} ] || grep -rq "$line" *.html || { error=1; echo "ERROR: $line is not used"; }; done << _EOF_
+        $(find images/ -type f)
+        _EOF_
+        [ "$error" = 1 ] && exit 1
     - name: Setup Python for PySpelling
       id: python
       if: always() && steps.deploy.outcome == 'success'
