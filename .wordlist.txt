@@ -28,6 +28,7 @@ Beelink
 benchmarked
 Bing
 Bitcoin
+Bitwarden
 blazingly
 Blynk
 bootable
@@ -60,6 +61,7 @@ DarkBetter
 DarkIce
 DDNS
 DDR
+de
 deinstallation
 DHCP
 dialogs
@@ -71,6 +73,7 @@ diskimager
 distro
 DistroWatch
 DIY
+dl
 DL
 DLNA
 DNS
@@ -95,9 +98,11 @@ EPL
 ESXi
 exFAT
 Exynos
+facto
 fanless
 favicon
 FHS
+FileBrowser
 filesystem
 Flexbox
 FuguHub
@@ -109,6 +114,7 @@ FreshRSS
 FriendlyELEC
 FriendlyELEC's
 frontend
+frp
 Gbit
 GiB
 Gitea
@@ -158,6 +164,7 @@ Joulinar
 journalctl
 journald
 jRiver
+js
 JSON
 JSP
 JustBoom
@@ -209,6 +216,7 @@ MiniDLNA
 MinIO
 MIPI
 MJPEG
+mjpg
 MkDocs
 motionEye
 mnt
@@ -262,6 +270,7 @@ OpenTyrian
 OpenVPN
 OTG
 ownCloud
+PaperMC
 passwd
 PCIe
 petitboot
@@ -277,6 +286,7 @@ Pinebook
 PiSupply
 PiVPN
 Plex
+Portainer
 pre
 ProFTPD
 Prowlarr
@@ -294,6 +304,7 @@ RAMdisk
 RAMlog
 Raspbian
 Raspcontrol
+Raspotify
 Rclone
 RDP
 Readarr
@@ -301,7 +312,6 @@ Reclocker
 ReadyMedia
 RealVNC
 Reddit
-Remot
 renderer
 repo
 RK
@@ -341,6 +351,8 @@ Sonarr
 SOQuartz
 SPC
 SPI
+Spotify
+Spotifyd
 Squeezebox
 Squeezelite
 SSD
@@ -349,6 +361,7 @@ SSID
 SSL
 startx
 StephanStS
+storages
 sudo
 Syncthing
 systemctl
@@ -404,6 +417,7 @@ WebIOPi
 webhosting
 Webmin
 webpage
+webserver
 webui
 Whiptail
 Widevine
@@ -418,6 +432,7 @@ XRDP
 XU
 YaCy
 ympd
+youtube
 YouTube
 yumiris
 ZeroPi
