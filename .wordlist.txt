@@ -160,6 +160,7 @@ IPFS
 IPS
 Jackett
 Jellyfin
+JH
 Joulinar
 journalctl
 journald
@@ -262,6 +263,7 @@ Odroids
 Odroid's
 oldschool
 Ok
+OOTB
 OpenBazaar
 OpenGL
 OpenGLES
@@ -359,6 +361,7 @@ SSD
 SSHFS
 SSID
 SSL
+StarFive
 startx
 StephanStS
 storages
@@ -374,6 +377,7 @@ TCP
 th
 TigerVNC
 TLDR
+TLS
 Tonido
 transcoding
 tweakers
@@ -399,6 +403,7 @@ VirtualBox
 VirtualHere
 virtualised
 virtualiser
+VisionFive
 VM
 VMs
 VMware
