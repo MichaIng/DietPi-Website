@@ -206,6 +206,7 @@ Metalink
 Meveric
 MiB
 MichaIng
+microblog
 microcontroller
 microcontrollers
 MicroK
@@ -417,6 +418,7 @@ VSCodium
 vsftpd
 vSphere
 Vue
+Vulkan
 Waveshare
 WebIOPi
 webhosting

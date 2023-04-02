@@ -48,7 +48,6 @@ jobs:
       # https://github.com/actions/setup-python/tags
       uses: actions/setup-python@v4
       with:
-        # https://github.com/actions/python-versions/tags
         python-version: '3.x'
         check-latest: true
     - name: Install PySpelling
