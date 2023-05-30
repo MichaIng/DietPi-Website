@@ -68,9 +68,9 @@ G_EXEC cd "DietPi-Website-$BRANCH"
 # Update sitemap timestamps
 G_EXEC sed -i "s|<lastmod>.*</lastmod>|<lastmod>$(date '+%Y-%m-%dT%T%:z')</lastmod>|" sitemap.xml
 
-# 3rd party
-G_EXEC curl -sSf 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css' -o css/bootstrap.css
-G_EXEC curl -sSf 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js' -o js/bootstrap.js
+# Bootstrap
+G_EXEC curl -sSf 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' -o css/bootstrap.css
+G_EXEC curl -sSf 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js' -o js/bootstrap.js
 
 # Minify
 # - Download
