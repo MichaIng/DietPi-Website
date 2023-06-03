@@ -195,6 +195,7 @@ Logitech
 logrotate
 LPDDR
 LTS
+LVM
 LXDE
 LXQt
 maarten
