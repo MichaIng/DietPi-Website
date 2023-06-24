@@ -313,6 +313,7 @@ Raspotify
 Rclone
 RDP
 Readarr
+rebased
 Reclocker
 ReadyMedia
 RealVNC
