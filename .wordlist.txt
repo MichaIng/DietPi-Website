@@ -203,6 +203,7 @@ macOS
 mangas
 marcobrianza
 Mbit
+MediaWiki
 Metalink
 Meveric
 MiB
@@ -385,6 +386,7 @@ TLDR
 TLS
 Tonido
 transcoding
+Trixie
 tweakers
 txt
 Tyrian
