@@ -69,8 +69,8 @@ G_EXEC cd "DietPi-Website-$BRANCH"
 G_EXEC sed -i "s|<lastmod>.*</lastmod>|<lastmod>$(date '+%Y-%m-%dT%T%:z')</lastmod>|" sitemap.xml
 
 # Bootstrap
-G_EXEC curl -sSf 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' -o css/bootstrap.css
-G_EXEC curl -sSf 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js' -o js/bootstrap.js
+G_EXEC curl -sSf 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css' -o css/bootstrap.css
+G_EXEC curl -sSf 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js' -o js/bootstrap.js
 
 # Minify
 # - Download
