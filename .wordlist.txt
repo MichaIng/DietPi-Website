@@ -138,6 +138,8 @@ Hardkernel's
 HC
 hexa
 HiFi
+Homebridge
+HomeKit
 Hotfix
 hotspot
 HotSpot
