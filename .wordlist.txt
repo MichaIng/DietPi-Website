@@ -32,6 +32,7 @@ Bitwarden
 blazingly
 Blynk
 bootable
+BT
 Bticino
 BubbleUPnP
 Bugreport
@@ -259,6 +260,7 @@ NordVPN
 NTFS
 NUC
 Nukkit
+NVMe
 NZB
 NZBGet
 occ
@@ -326,6 +328,7 @@ repo
 Restic
 RK
 Rockchip
+Rockchip's
 ROCKPro
 Roon
 RPC
@@ -366,6 +369,7 @@ Spotifyd
 Squeezebox
 Squeezelite
 SSD
+SSDs
 SSHFS
 SSID
 SSL
