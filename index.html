@@ -66,10 +66,10 @@
 				<svg class="triangle" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0h100l-50 100"/></svg>
 				<!-- Slide 1 -->
 				<div class="da-slide da-slide-current">
-					<h2>DietPi v8.20 has been released</h2>
+					<h2>DietPi v8.21 has been released</h2>
 					<h4>Check out all changes</h4>
-					<p>Homebridge HomeKit API platform added; NFS server support for Quartz64; kernel updates for NanoPi 5/6 series and VisionFive 2; cipher suite and security header updates for some webserver/software combinations</p>
-					<a class="da-link" href="https://dietpi.com/docs/releases/v8_20/" target="_blank" rel="noopener">Release notes</a>
+					<p>Added support for Orange Pi 5 Plus; Major kernel upgrade for Orange Pi 5, ROCK 5B and all RK33xx SBCs; 802.11ac/WiFi 5, 802.11ax/WiFi 6 and 5 GHz support for WiFi hotspot</p>
+					<a class="da-link" href="https://dietpi.com/docs/releases/v8_21/" target="_blank" rel="noopener">Release notes</a>
 					<div class="da-img"><img class="img-fluid" src="images/dietpi-logo_360x360.png" alt="DietPi logo" width="300" height="300" loading="lazy"></div>
 				</div>
 				<!-- Slide 2 -->
@@ -610,7 +610,7 @@
 									<br>We provide images based on the older Debian Bullseye release as well, as not all software in our catalogue is compatible with Debian Bookworm yet. All info about this can be found <a href="https://dietpi.com/blog/?p=3128" target="_blank" rel="noopener">here</a>.
 								</div>
 							</div>
-							<p>Hardkernel's next generation "high-end" SBC is finally here! The fastest ARM SBC we have ever tested. Excellent performance and thermals at a reasonable price range.</p>
+							<p>Hardkernel's next generation "high-end" SBC is finally here! It was the fastest ARM SBC we ever tested, until the first boards with Rockchip's RK3588 arrived. Excellent performance and thermals at a reasonable price range.</p>
 						</div>
 						<div class="col-md-6"><img src="images/sbc_images/odroidn2.jpg" alt="Odroid N2 photo" width="8" height="5" loading="lazy"></div>
 					</div>
@@ -1318,7 +1318,7 @@
 								<div><span>NET:</span>2x/1x 2.5 Gbit + 1x 1 Gbit Ethernet</div>
 								<div><span>Storage:</span>32 GiB eMMC (optional on R6C)</div>
 								<br>
-								<div><a href="https://dietpi.com/downloads/images/DietPi_NanoPiR6S-ARMv8-Bookworm.7z"><span>Download Image:</span><i class="fa fa-download"></i><u>Download</u></a></div>
+								<div><a href="https://dietpi.com/downloads/images/DietPi_NanoPi6-ARMv8-Bookworm.7z"><span>Download Image:</span><i class="fa fa-download"></i><u>Download</u></a></div>
 								<div><a href="https://dietpi.com/docs/install/" target="_blank" rel="noopener"><span>How to install / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
 								<div>
 									<span>Bullseye images:</span>
@@ -1457,11 +1457,11 @@
 					<div class="row">
 						<div class="col-md-6 project-description">
 							<div class="project-info">
-								<div><span>CPU:</span>Rockchip RK3588S 1.8/2.4 GHz | 8 cores | ARMv8</div>
+								<div><span>CPU:</span>Rockchip RK3588 1.8/2.4 GHz | 8 cores | ARMv8</div>
 								<div><span>RAM:</span>4 GiB - 16 GiB LPDDR4</div>
 								<div><span>USB:</span>1x USB 3.0 2x USB 2.0 1x USB Type-C (USB 3.1)</div>
 								<div><span>NET:</span>Gbit Ethernet</div>
-								<div><span>Storage:</span>microSD and eMMC sockets</div>
+								<div><span>Storage:</span>microSD, eMMC and M.2 2242 NVMe sockets</div>
 								<br>
 								<div><a href="https://dietpi.com/downloads/images/DietPi_OrangePi5-ARMv8-Bookworm.7z"><span>Download Image:</span><i class="fa fa-download"></i><u>Download</u></a></div>
 								<div><a href="https://dietpi.com/docs/install/" target="_blank" rel="noopener"><span>How to install / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
@@ -1470,9 +1470,33 @@
 									<br>We provide images based on the older Debian Bullseye release as well, as not all software in our catalogue is compatible with Debian Bookworm yet. All info about this can be found <a href="https://dietpi.com/blog/?p=3128" target="_blank" rel="noopener">here</a>.
 								</div>
 							</div>
-							<p>Orange pi new flagship SBC, featuring the new Rockchip RK3588S SoC: A quad-core 4x Cortex-A76 @2.4 GHz + 4x Cortex A55 @1.8 GHz is making this the by far fastest SoC ever tested with DietPi.</p>
+							<p>The new Orange Pi flagship SBC, featuring the new Rockchip RK3588 SoC: A quad-core 4x Cortex-A76 @2.4 GHz + 4x Cortex A55 @1.8 GHz is making this the by far fastest SoC ever tested with DietPi.</p>
 						</div>
 						<div class="col-md-6"><img src="images/sbc_images/orange-pi-5.jpg" alt="Orange Pi 5 photo" width="8" height="5" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- Orange Pi 5 Plus -->
+				<div id="orangepi5plus" class="single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>Orange Pi 5 Plus</h3><span class="close"></span></div></div>
+					<div class="row">
+						<div class="col-md-6 project-description">
+							<div class="project-info">
+								<div><span>CPU:</span>Rockchip RK3588 1.8/2.4 GHz | 8 cores | ARMv8</div>
+								<div><span>RAM:</span>8 GiB - 32 GiB LPDDR4</div>
+								<div><span>USB:</span>2x USB 3.0 2x USB 2.0 1x USB Type-C (USB 3.1)</div>
+								<div><span>NET:</span>2x 2.5 Gbit Ethernet, M.2 2230 E key slot for WiFi/BT module</div>
+								<div><span>Storage:</span>microSD, eMMC and M.2 2280 NVMe sockets</div>
+								<br>
+								<div><a href="https://dietpi.com/downloads/images/DietPi_OrangePi5Plus-ARMv8-Bookworm.7z"><span>Download Image:</span><i class="fa fa-download"></i><u>Download</u></a></div>
+								<div><a href="https://dietpi.com/docs/install/" target="_blank" rel="noopener"><span>How to install / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
+								<div>
+									<span>Bullseye images:</span>
+									<br>We provide images based on the older Debian Bullseye release as well, as not all software in our catalogue is compatible with Debian Bookworm yet. All info about this can be found <a href="https://dietpi.com/blog/?p=3128" target="_blank" rel="noopener">here</a>.
+								</div>
+							</div>
+							<p>A larger revision of the Orange Pi 5, with triple HDMI, dual 2.5 Gbit Ethernet and space for larger NVMe SSDs up to M.2 2280 factor.</p>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/orangepi5plus.jpg" alt="Orange Pi 5 Plus photo" width="8" height="5" loading="lazy"></div>
 					</div>
 				</div>
 				<!-- VisionFive 2 -->
@@ -1654,7 +1678,14 @@
 						<a href="#downloadinfo" class="thumbnail" rel="#orangepi5">
 							<img src="images/sbc_images/orange-pi-5.jpg" alt="Orange Pi 5 photo" width="8" height="5" loading="lazy">
 							<h3>Orange Pi 5</h3>
-							<p>RK3588S 2.4GHz | 8 cores | ARMv8</p>
+							<p>RK3588 2.4GHz | 8 cores | ARMv8</p>
+						</a>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix orangepi">
+						<a href="#downloadinfo" class="thumbnail" rel="#orangepi5plus">
+							<img src="images/sbc_images/orangepi5plus.jpg" alt="Orange Pi 5 Plus photo" width="8" height="5" loading="lazy">
+							<h3>Orange Pi 5 Plus</h3>
+							<p>RK3588 2.4GHz | 8 cores | ARMv8</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix allo">
