@@ -351,6 +351,7 @@ SDIO
 SDL
 servlet
 SFTP
+SHA
 Shairport
 ShareAlike
 Shoutcast
