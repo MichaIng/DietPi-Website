@@ -91,7 +91,7 @@ To see the full list of possibilities, please check our [contribution](https://d
 
 ## 3rd party resources
 
-- [Bootstrap](https://github.com/twbs/bootstrap) v5.3.1
+- [Bootstrap](https://github.com/twbs/bootstrap) v5.3.2
 - [Mixitup](https://github.com/patrickkunka/mixitup) v3.3.1 modified for our needs
 - [jquery.cslider](https://github.com/Le-Stagiaire/jquery.cslider) modified for our needs and converted to vanilla JavaScript
 - [Font Awesome](https://github.com/FortAwesome/Font-Awesome) v5.15.4 individual glyphs: [fa-download](https://github.com/FortAwesome/Font-Awesome/blob/5.x/svgs/solid/download.svg), [fa-book](https://github.com/FortAwesome/Font-Awesome/blob/5.x/svgs/solid/book.svg) and [fa-external-link-alt](https://github.com/FortAwesome/Font-Awesome/blob/5.x/svgs/solid/external-link-alt.svg)
