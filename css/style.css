@@ -418,15 +418,16 @@ a:active {
 	width: 25px;
 	height: 25px;
 	vertical-align: text-bottom;
+	margin-right: 10px;
 }
-.project-info > div > a > u {
+/*.project-info > div > a > u {
 	margin-left: 10px;
 	font-size: 133%;
 	color: #181a1c;
 }
 .project-info > div > a:hover > u {
 	color: #c5ff00;
-}
+}*/
 .single-project img {
 	width: 100%;
 	/* "height: auto" in combination with inline width and height allows to keep aspect ratio while loading for non-bleeding edge browsers, which do not support "aspect-ratio" yet. */
