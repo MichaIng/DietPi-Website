@@ -172,6 +172,7 @@ js
 JSON
 JSP
 JustBoom
+Kavita
 Kbit
 KiB
 klick
@@ -450,6 +451,7 @@ www
 Xfce
 XRDP
 XU
+xz
 YaCy
 ympd
 youtube
