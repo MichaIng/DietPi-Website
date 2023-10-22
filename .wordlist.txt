@@ -32,6 +32,7 @@ Bitwarden
 blazingly
 Blynk
 bootable
+bootloader
 BT
 Bticino
 BubbleUPnP
@@ -95,6 +96,7 @@ EEPROM
 Emby
 eMMC
 EmonPi
+env
 EPL
 ESXi
 exFAT
