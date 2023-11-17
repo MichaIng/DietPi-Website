@@ -32,6 +32,7 @@ Bitwarden
 blazingly
 Blynk
 bootable
+bootloader
 BT
 Bticino
 BubbleUPnP
@@ -95,6 +96,7 @@ EEPROM
 Emby
 eMMC
 EmonPi
+env
 EPL
 ESXi
 exFAT
@@ -172,6 +174,7 @@ js
 JSON
 JSP
 JustBoom
+Kavita
 Kbit
 KiB
 klick
@@ -351,6 +354,7 @@ SDIO
 SDL
 servlet
 SFTP
+SHA
 Shairport
 ShareAlike
 Shoutcast
@@ -449,6 +453,7 @@ www
 Xfce
 XRDP
 XU
+xz
 YaCy
 ympd
 youtube
