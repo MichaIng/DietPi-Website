@@ -77,7 +77,7 @@ If you need help:
 - Join our forum: <https://dietpi.com/forum/>
 - GitHub: <https://github.com/MichaIng/DietPi-Website>
 
-To see the full list of possibilities, please check our [contribution](https://dietpi.com/donate.html) page.
+To see the full list of possibilities, please check our [contribution](https://dietpi.com/contribute.html) page.
 
 ## License
 
