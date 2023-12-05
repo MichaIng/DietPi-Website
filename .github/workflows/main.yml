@@ -20,7 +20,7 @@ jobs:
       run: bash -c "$(curl -sSf "https://raw.githubusercontent.com/${HEAD_OWNER:-$GITHUB_REPOSITORY_OWNER}/DietPi-Website/${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}/deploy.bash")" bash .
     - name: Setup JRE for Nu Html Checker
       # https://github.com/actions/setup-java/tags
-      uses: actions/setup-java@v3
+      uses: actions/setup-java@v4
       with:
         distribution: 'temurin'
         # https://github.com/adoptium
