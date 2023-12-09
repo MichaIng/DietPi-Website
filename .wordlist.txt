@@ -211,6 +211,7 @@ maarten
 macOS
 mangas
 marcobrianza
+Mastercard
 Mbit
 MediaWiki
 Metalink
@@ -288,6 +289,7 @@ OTG
 ownCloud
 PaperMC
 passwd
+Patreon
 PCIe
 petitboot
 pHAT
