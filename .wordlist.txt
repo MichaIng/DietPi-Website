@@ -165,11 +165,13 @@ IoT
 IPFS
 IPS
 Jackett
+JDK
 Jellyfin
 JH
 Joulinar
 journalctl
 journald
+JRE
 jRiver
 js
 JSON
