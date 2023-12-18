@@ -147,6 +147,14 @@ a:active {
 	color: #181a1c;
 	padding: 20px;
 	margin-bottom: 20px;
+	display: flex;
+  margin-left: auto;
+  width: auto;
+  margin-right: auto;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  /*align-items: center;*/
 }
 .large-text {
 	line-height: 1.2em;
