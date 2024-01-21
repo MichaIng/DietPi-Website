@@ -74,7 +74,7 @@ G_EXEC curl -sSf 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap
 
 # Minify
 # - Download
-G_EXEC curl -sSfL "$(curl -sSf 'https://api.github.com/repos/tdewolff/minify/releases/latest' | mawk -F\" '/^ *\"browser_download_url\" ".*linux_amd64\.tar\.gz\"$/{print $4}')" -o minify.tar.gz
+G_EXEC curl -sSfL "$(curl -sSf 'https://api.github.com/repos/tdewolff/minify/releases/latest' | mawk -F\" '/^ *\"browser_download_url\": ".*linux_amd64\.tar\.gz\"$/{print $4}')" -o minify.tar.gz
 G_EXEC tar xf minify.tar.gz minify
 G_EXEC_NOHALT=1 G_EXEC rm minify.tar.gz
 # - Minify JavaScript
