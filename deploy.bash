@@ -1,5 +1,26 @@
 #!/bin/bash
 {
+#////////////////////////////////////
+# deploy.bash
+#
+# Info:
+# - Used to deploy changes of the DietPi website 
+#   to view local changes before doing a PR on GitHub
+# - Generates a DietPi website directory structure 
+#   locally on the host running the script
+#
+# Usage:
+# deploy $1 $2 $3
+# - $1 (optional) = deploy target directory (default: /tmp/DietPi-Website-master)
+# - $2 (optional) = GitHub branch (default: https://github.com/<GitHub owner>/DietPi-Website/master)
+# - $3 (optional) = GitHub owner (default: MichaIng)
+#
+# Examples
+# - deploy /var/www
+# - deploy /var/www/public_html dev StephanStS
+#
+#////////////////////////////////////
+#
 # Inputs
 # - Optional target directory
 if [[ $1 == '/'* ]]
