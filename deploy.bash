@@ -12,7 +12,7 @@
 # Usage:
 # deploy $1 $2 $3
 # - $1 (optional) = deploy target directory (default: /tmp/DietPi-Website-<branch>, e.g. /tmp/DietPi-Website-master)
-# - $2 (optional) = GitHub branch (default: https://github.com/<GitHub owner>/DietPi-Website/master)
+# - $2 (optional) = GitHub branch (default: master)
 # - $3 (optional) = GitHub owner (default: MichaIng)
 #
 # Examples
