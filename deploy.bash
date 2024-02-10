@@ -16,8 +16,8 @@
 # - $3 (optional) = GitHub owner (default: MichaIng)
 #
 # Examples
-# - deploy /var/www
-# - deploy /var/www/public_html dev StephanStS
+# - ./deploy.bash /var/www
+# - ./deploy.bash /var/www/public_html dev StephanStS
 #
 #////////////////////////////////////
 #
