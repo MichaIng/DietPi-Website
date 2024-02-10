@@ -10,7 +10,7 @@
 #   locally on the host running the script
 #
 # Usage:
-# deploy $1 $2 $3
+# ./deploy.bash $1 $2 $3
 # - $1 (optional) = deploy target directory (default: /tmp/DietPi-Website-<branch>, e.g. /tmp/DietPi-Website-master)
 # - $2 (optional) = GitHub branch (default: master)
 # - $3 (optional) = GitHub owner (default: MichaIng)
