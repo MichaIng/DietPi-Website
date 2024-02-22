@@ -73,6 +73,7 @@ dietpi
 Digi
 DiogoAbu
 diskimager
+DispmanX
 distro
 DistroWatch
 DIY
@@ -232,6 +233,7 @@ MIPI
 MJPEG
 mjpg
 MkDocs
+MMAL
 motionEye
 mnt
 Mopidy
