@@ -55,7 +55,7 @@
 					<a class="nav-link" href="https://dietpi.com/docs/">DOCS</a>
 					<a class="nav-link" href="https://dietpi.com/forum/">FORUM</a>
 					<a class="nav-link" href="https://dietpi.com/blog/">BLOG</a>
-					<a class="nav-link" href="#gettingstarted">GETTING STARTED</a>
+					<a class="nav-link" href="https://github.com/MichaIng/DietPi" target="_blank" rel="noopener">GITHUB</a>
 					<a class="nav-link" href="contribute.html">DONATE</a>
 				</div>
 			</div>
@@ -67,10 +67,10 @@
 				<svg class="triangle" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0h100l-50 100"/></svg>
 				<!-- Slide 1 -->
 				<div class="da-slide da-slide-current">
-					<h2>DietPi v9.0 has been released</h2>
+					<h2>DietPi v9.1 has been released</h2>
 					<h4>Check out all changes</h4>
-					<p>Support for Debian Buster has been removed. DietPi systems with underlying Debian Buster will be migrated to a separate v8.25-based branch, which won't receive further feature updates, but an info about how to upgrade to Bullseye.</p>
-					<a class="da-link" href="https://dietpi.com/docs/releases/v9_0/" target="_blank" rel="noopener">Release notes</a>
+					<p>Raspberry Pi 5 images available for testing. ROCK 4 SE support added, NanoPi R5S/R5C/R6S/R6C/T6 images reworked with Armbian-based kernel/bootloader. Many bug fixes for software titles and filesystem expansion on Bullseye.</p>
+					<a class="da-link" href="https://dietpi.com/docs/releases/v9_1/" target="_blank" rel="noopener">Release notes</a>
 					<div class="da-img"><img class="img-fluid" src="images/dietpi-logo_360x360.png" alt="DietPi logo" width="300" height="300" loading="lazy"></div>
 				</div>
 				<!-- Slide 2 -->
@@ -313,6 +313,22 @@
 							</p>
 						</div>
 						<div class="col-md-6"><img src="images/sbc_images/raspberrypi4.jpg" alt="Raspberry Pi 4 photo" width="8" height="5" loading="lazy"></div>
+					</div>
+				</div>
+				<div id="raspberrypi5" class="single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>Raspberry Pi 5 (testing)</h3><span class="close"></span></div></div>
+					<div class="row">
+						<div class="col-md-6 project-description">
+							<div class="project-info">
+								<div><span>CPU:</span>BCM2712 2.4 GHz | 4 Cores | ARMv8</div>
+								<div><span>RAM:</span>4 - 8 GiB LPDDR4</div>
+								<br>
+								<div><a href="https://dietpi.com/downloads/images/testing/DietPi_RPi5-ARMv8-Bookworm.img.xz"><span>Download Image:</span><i class="fa fa-download"></i><u>Download</u></a> (<a href="https://dietpi.com/downloads/images/testing/DietPi_RPi5-ARMv8-Bookworm.img.xz.sha256"><u>SHA256</u></a>) (<a href="https://dietpi.com/downloads/images/testing/DietPi_RPi5-ARMv8-Bookworm.img.xz.asc"><u>Signature</u></a>)</div>
+								<div><a href="https://dietpi.com/docs/install/" target="_blank" rel="noopener"><span>How to install / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
+							</div>
+							<p>Not all hardware features, especially overclocking, display and camera settings, can be controlled with our scripts yet. Legacy GPU and camera support, MMAL and DispmanX have been removed, which breaks some older camera software. Details can be found <a href="https://github.com/MichaIng/DietPi/issues/6676" target="_blank" rel="noopener">here</a></p>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/raspberrypi5.jpg" alt="Raspberry Pi 5 photo" width="8" height="5" loading="lazy"></div>
 					</div>
 				</div>
 				<div id="odroidc1" class="single-project">
@@ -662,7 +678,7 @@
 					</div>
 				</div>
 				<div id="rockpi4" class="single-project">
-					<div class="row"><div class="col-md-12 project-title"><h3>ROCK Pi 4</h3><span class="close"></span></div></div>
+					<div class="row"><div class="col-md-12 project-title"><h3>ROCK 4</h3><span class="close"></span></div></div>
 					<div class="row">
 						<div class="col-md-6 project-description">
 							<div class="project-info">
@@ -671,7 +687,14 @@
 								<div><span>NET:</span>Gbit Ethernet</div>
 								<div><span>Storage:</span>eMMC socket</div>
 								<br>
-								<div><a href="https://dietpi.com/downloads/images/DietPi_ROCKPi4-ARMv8-Bookworm.img.xz"><span>Download Image:</span><i class="fa fa-download"></i><u>Download</u></a> (<a href="https://dietpi.com/downloads/images/DietPi_ROCKPi4-ARMv8-Bookworm.img.xz.sha256"><u>SHA256</u></a>) (<a href="https://dietpi.com/downloads/images/DietPi_ROCKPi4-ARMv8-Bookworm.img.xz.asc"><u>Signature</u></a>)</div>
+								<div>
+									<a href="https://dietpi.com/downloads/images/DietPi_ROCKPi4-ARMv8-Bookworm.img.xz"><span>ROCK 4 Image:</span><i class="fa fa-download"></i><u>Download</u></a> (<a href="https://dietpi.com/downloads/images/DietPi_ROCKPi4-ARMv8-Bookworm.img.xz.sha256"><u>SHA256</u></a>) (<a href="https://dietpi.com/downloads/images/DietPi_ROCKPi4-ARMv8-Bookworm.img.xz.asc"><u>Signature</u></a>)
+									<br>This image supports the ROCK 4A/4B/4C Plus and non-Plus variants, as far as it as been tested.
+								</div>
+								<div>
+									<a href="https://dietpi.com/downloads/images/DietPi_ROCK4SE-ARMv8-Bookworm.img.xz"><span>ROCK 4 SE Image:</span><i class="fa fa-download"></i><u>Download</u></a> (<a href="https://dietpi.com/downloads/images/DietPi_ROCK4SE-ARMv8-Bookworm.img.xz.sha256"><u>SHA256</u></a>) (<a href="https://dietpi.com/downloads/images/DietPi_ROCK4SE-ARMv8-Bookworm.img.xz.asc"><u>Signature</u></a>)
+									<br>This image supports the ROCK 4 SE variant only.
+								</div>
 								<div><a href="https://dietpi.com/docs/install/" target="_blank" rel="noopener"><span>How to install / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
 								<div>
 									<span>Bullseye images:</span>
@@ -680,7 +703,7 @@
 							</div>
 							<p>Compared to other RK3399 SBCs, this one is small sized, like the Raspberry Pi.</p>
 						</div>
-						<div class="col-md-6"><img src="images/sbc_images/rockpi4.jpg" alt="ROCK Pi 4 photo" width="8" height="5" loading="lazy"></div>
+						<div class="col-md-6"><img src="images/sbc_images/rockpi4.jpg" alt="ROCK 4 photo" width="8" height="5" loading="lazy"></div>
 					</div>
 				</div>
 				<div id="zeropi" class="single-project">
@@ -1126,7 +1149,7 @@
 									<br>We provide images based on the older Debian Bullseye release as well, as not all software in our catalogue is compatible with Debian Bookworm yet. All info about this can be found <a href="https://dietpi.com/blog/?p=3128" target="_blank" rel="noopener">here</a>.
 								</div>
 							</div>
-							<p>Little brother of the ROCK Pi 4, headless but with voice detection engine, for IoT and voice applications.</p>
+							<p>Little brother of the ROCK 4, headless but with voice detection engine, for IoT and voice applications.</p>
 						</div>
 						<div class="col-md-6"><img src="images/sbc_images/rockpis.jpg" alt="ROCK Pi S photo" width="8" height="5" loading="lazy"></div>
 					</div>
@@ -1306,16 +1329,16 @@
 						<div class="col-md-6"><img src="images/sbc_images/nanopir4s.jpg" alt="NanoPi R4S photo" width="8" height="5" loading="lazy"></div>
 					</div>
 				</div>
-				<!-- NanoPi R5S/R5C -->
+				<!-- NanoPi R5S -->
 				<div id="nanopir5s" class="single-project">
-					<div class="row"><div class="col-md-12 project-title"><h3>NanoPi R5S/R5C</h3><span class="close"></span></div></div>
+					<div class="row"><div class="col-md-12 project-title"><h3>NanoPi R5S</h3><span class="close"></span></div></div>
 					<div class="row">
 						<div class="col-md-6 project-description">
 							<div class="project-info">
 								<div><span>CPU:</span>Rockchip RK3568 2.0 GHz | 4 cores | ARMv8</div>
 								<div><span>RAM:</span>2-4 GiB LPDDR4X</div>
-								<div><span>NET:</span>2x/1x 2.5 Gbit + 1x 1 Gbit Ethernet</div>
-								<div><span>Storage:</span>8-32 GiB eMMC (optional on R5C)</div>
+								<div><span>NET:</span>2x 2.5 Gbit + 1x 1 Gbit Ethernet</div>
+								<div><span>Storage:</span>8-16 GiB eMMC + M.2 NVMe socket</div>
 								<br>
 								<div><a href="https://dietpi.com/downloads/images/DietPi_NanoPiR5S-ARMv8-Bookworm.img.xz"><span>Download Image:</span><i class="fa fa-download"></i><u>Download</u></a> (<a href="https://dietpi.com/downloads/images/DietPi_NanoPiR5S-ARMv8-Bookworm.img.xz.sha256"><u>SHA256</u></a>) (<a href="https://dietpi.com/downloads/images/DietPi_NanoPiR5S-ARMv8-Bookworm.img.xz.asc"><u>Signature</u></a>)</div>
 								<div><a href="https://dietpi.com/docs/install/" target="_blank" rel="noopener"><span>How to install / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
@@ -1329,28 +1352,99 @@
 						<div class="col-md-6"><img src="images/sbc_images/nanopir5s.jpg" alt="NanoPi R5S photo" width="8" height="5" loading="lazy"></div>
 					</div>
 				</div>
-				<!-- NanoPi 6 series -->
-				<div id="nanopir6s" class="single-project">
-					<div class="row"><div class="col-md-12 project-title"><h3>NanoPi 6 series</h3><span class="close"></span></div></div>
+				<!-- NanoPi R5C -->
+				<div id="nanopir5c" class="single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>NanoPi R5C</h3><span class="close"></span></div></div>
 					<div class="row">
 						<div class="col-md-6 project-description">
 							<div class="project-info">
-								<div><span>CPU:</span>Rockchip RK3588 1.8/2.4 GHz | 8 cores | ARMv8</div>
-								<div><span>RAM:</span>4-16 GiB LPDDR4</div>
-								<div><span>USB:</span>USB 3.0 + USB 2.0</div>
-								<div><span>NET:</span>2x/1x 2.5 Gbit + 1x 1 Gbit Ethernet</div>
-								<div><span>Storage:</span>32 GiB eMMC (optional on R6C)</div>
+								<div><span>CPU:</span>Rockchip RK3568 2.0 GHz | 4 cores | ARMv8</div>
+								<div><span>RAM:</span>1-4 GiB LPDDR4X</div>
+								<div><span>NET:</span>2.5 Gbit + 1 Gbit Ethernet + M.2 WiFi socket</div>
+								<div><span>Storage:</span>8-32 GiB eMMC</div>
 								<br>
-								<div><a href="https://dietpi.com/downloads/images/DietPi_NanoPi6-ARMv8-Bookworm.img.xz"><span>Download Image:</span><i class="fa fa-download"></i><u>Download</u></a> (<a href="https://dietpi.com/downloads/images/DietPi_NanoPi6-ARMv8-Bookworm.img.xz.sha256"><u>SHA256</u></a>) (<a href="https://dietpi.com/downloads/images/DietPi_NanoPi6-ARMv8-Bookworm.img.xz.asc"><u>Signature</u></a>)</div>
+								<div><a href="https://dietpi.com/downloads/images/DietPi_NanoPiR5S-ARMv8-Bookworm.img.xz"><span>Download Image:</span><i class="fa fa-download"></i><u>Download</u></a> (<a href="https://dietpi.com/downloads/images/DietPi_NanoPiR5S-ARMv8-Bookworm.img.xz.sha256"><u>SHA256</u></a>) (<a href="https://dietpi.com/downloads/images/DietPi_NanoPiR5S-ARMv8-Bookworm.img.xz.asc"><u>Signature</u></a>)</div>
 								<div><a href="https://dietpi.com/docs/install/" target="_blank" rel="noopener"><span>How to install / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
 								<div>
 									<span>Bullseye images:</span>
 									<br>We provide images based on the older Debian Bullseye release as well, as not all software in our catalogue is compatible with Debian Bookworm yet. All info about this can be found <a href="https://dietpi.com/blog/?p=3128" target="_blank" rel="noopener">here</a>.
 								</div>
 							</div>
-							<p>The NanoPi R6S/R6C and NanoPC T6 are FriendlyELEC's new flagship SBC series, featuring the new Rockchip RK3588 SoC: A quad-core 4x Cortex-A76 @2.4 GHz + 4x Cortex A55 @1.8 GHz is making this the by far fastest SoC ever tested with DietPi.</p>
+							<p>A smaller variant of the FriendlyELEC NanoPi R5 series, with 2 Ethernet adapters and an M.2 E-key socket for WiFi/Bluetooth modules.</p>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/nanopir5c.jpg" alt="NanoPi R5C photo" width="8" height="5" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- NanoPi R6S -->
+				<div id="nanopir6s" class="single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>NanoPi R6S</h3><span class="close"></span></div></div>
+					<div class="row">
+						<div class="col-md-6 project-description">
+							<div class="project-info">
+								<div><span>CPU:</span>Rockchip RK3588 1.8/2.4 GHz | 8 cores | ARMv8</div>
+								<div><span>RAM:</span>8 GiB LPDDR4</div>
+								<div><span>USB:</span>USB 3.0 + USB 2.0</div>
+								<div><span>NET:</span>2x 2.5 Gbit + 1x 1 Gbit Ethernet</div>
+								<div><span>Storage:</span>32 GiB eMMC</div>
+								<br>
+								<div><a href="https://dietpi.com/downloads/images/DietPi_NanoPiR6S-ARMv8-Bookworm.img.xz"><span>Download Image:</span><i class="fa fa-download"></i><u>Download</u></a> (<a href="https://dietpi.com/downloads/images/DietPi_NanoPiR6S-ARMv8-Bookworm.img.xz.sha256"><u>SHA256</u></a>) (<a href="https://dietpi.com/downloads/images/DietPi_NanoPiR6S-ARMv8-Bookworm.img.xz.asc"><u>Signature</u></a>)</div>
+								<div><a href="https://dietpi.com/docs/install/" target="_blank" rel="noopener"><span>How to install / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
+								<div>
+									<span>Bullseye images:</span>
+									<br>We provide images based on the older Debian Bullseye release as well, as not all software in our catalogue is compatible with Debian Bookworm yet. All info about this can be found <a href="https://dietpi.com/blog/?p=3128" target="_blank" rel="noopener">here</a>.
+								</div>
+							</div>
+							<p>The NanoPi R6S is FriendlyELEC's new flagship SBC, featuring the new Rockchip RK3588 SoC: A quad-core 4x Cortex-A76 @2.4 GHz + 4x Cortex A55 @1.8 GHz is making this the by far fastest SoC ever tested with DietPi.</p>
 						</div>
 						<div class="col-md-6"><img src="images/sbc_images/nanopir6s.jpg" alt="NanoPi R6S photo" width="8" height="5" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- NanoPi R6C -->
+				<div id="nanopir6c" class="single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>NanoPi R6C</h3><span class="close"></span></div></div>
+					<div class="row">
+						<div class="col-md-6 project-description">
+							<div class="project-info">
+								<div><span>CPU:</span>Rockchip RK3588 1.8/2.4 GHz | 8 cores | ARMv8</div>
+								<div><span>RAM:</span>4-8 GiB LPDDR4</div>
+								<div><span>USB:</span>USB 3.0 + USB 2.0</div>
+								<div><span>NET:</span>1x 2.5 Gbit + 1x 1 Gbit Ethernet</div>
+								<div><span>Storage:</span>32 GiB eMMC (optional) + M.2 NVMe socket</div>
+								<br>
+								<div><a href="https://dietpi.com/downloads/images/DietPi_NanoPiR6C-ARMv8-Bookworm.img.xz"><span>Download Image:</span><i class="fa fa-download"></i><u>Download</u></a> (<a href="https://dietpi.com/downloads/images/DietPi_NanoPiR6C-ARMv8-Bookworm.img.xz.sha256"><u>SHA256</u></a>) (<a href="https://dietpi.com/downloads/images/DietPi_NanoPiR6C-ARMv8-Bookworm.img.xz.asc"><u>Signature</u></a>)</div>
+								<div><a href="https://dietpi.com/docs/install/" target="_blank" rel="noopener"><span>How to install / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
+								<div>
+									<span>Bullseye images:</span>
+									<br>We provide images based on the older Debian Bullseye release as well, as not all software in our catalogue is compatible with Debian Bookworm yet. All info about this can be found <a href="https://dietpi.com/blog/?p=3128" target="_blank" rel="noopener">here</a>.
+								</div>
+							</div>
+							<p>Another variant of the FriendlyELEC NanoPi R6 series, with 2 Ethernet adapters and an M.2 M-key socket for NVMe SSDs.</p>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/nanopir6c.jpg" alt="NanoPi R6C photo" width="8" height="5" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- NanoPC T6 -->
+				<div id="nanopct6" class="single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>NanoPC T6</h3><span class="close"></span></div></div>
+					<div class="row">
+						<div class="col-md-6 project-description">
+							<div class="project-info">
+								<div><span>CPU:</span>Rockchip RK3588 1.8/2.4 GHz | 8 cores | ARMv8</div>
+								<div><span>RAM:</span>4-16 GiB LPDDR4</div>
+								<div><span>USB:</span>1x USB 3.0 + 2x USB 2.0</div>
+								<div><span>NET:</span>2x 2.5 Gbit Ethernet + M.2 WiFi socket</div>
+								<div><span>Storage:</span>32-256 GiB eMMC  + M.2 NVMe socket</div>
+								<br>
+								<div><a href="https://dietpi.com/downloads/images/DietPi_NanoPCT6-ARMv8-Bookworm.img.xz"><span>Download Image:</span><i class="fa fa-download"></i><u>Download</u></a> (<a href="https://dietpi.com/downloads/images/DietPi_NanoPCT6-ARMv8-Bookworm.img.xz.sha256"><u>SHA256</u></a>) (<a href="https://dietpi.com/downloads/images/DietPi_NanoPCT6-ARMv8-Bookworm.img.xz.asc"><u>Signature</u></a>)</div>
+								<div><a href="https://dietpi.com/docs/install/" target="_blank" rel="noopener"><span>How to install / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
+								<div>
+									<span>Bullseye images:</span>
+									<br>We provide images based on the older Debian Bullseye release as well, as not all software in our catalogue is compatible with Debian Bookworm yet. All info about this can be found <a href="https://dietpi.com/blog/?p=3128" target="_blank" rel="noopener">here</a>.
+								</div>
+							</div>
+							<p>So far the largest variant of the NanoPi 6 series, with up to 16 GiB RAM, 256 GiB onboard eMMC, 3 USB-A ports, an M.2 M-key socket for NVMe SSDs, as well as an M.2 E-key socket for WiFi/Bluetooth modules. Like the R6C it has 2 Ethernet adapters, but both with 2.5 Gbit/s</p>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/nanopct6.jpg" alt="NanoPC T6 photo" width="8" height="5" loading="lazy"></div>
 					</div>
 				</div>
 				<!-- Pinebook Pro -->
@@ -1498,6 +1592,30 @@
 						<div class="col-md-6"><img src="images/sbc_images/rock5b.jpg" alt="ROCK 5B photo" width="8" height="5" loading="lazy"></div>
 					</div>
 				</div>
+				<!-- Orange Pi 3B -->
+				<div id="orangepi3b" class="single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>Orange Pi 3B</h3><span class="close"></span></div></div>
+					<div class="row">
+						<div class="col-md-6 project-description">
+							<div class="project-info">
+								<div><span>CPU:</span>Rockchip RK3566 2.0 GHz | 4 cores | ARMv8</div>
+								<div><span>RAM:</span>2-8 GiB LPDDR4</div>
+								<div><span>USB:</span>1x USB 3.0 + 3x USB 2.0</div>
+								<div><span>NET:</span>Gbit Ethernet + onboard WiFi 5/Bluetooth</div>
+								<div><span>Storage:</span>microSD, eMMC and M.2 2242 NVMe sockets</div>
+								<br>
+								<div><a href="https://dietpi.com/downloads/images/DietPi_OrangePi3B-ARMv8-Bookworm.img.xz"><span>Download Image:</span><i class="fa fa-download"></i><u>Download</u></a> (<a href="https://dietpi.com/downloads/images/DietPi_OrangePi3B-ARMv8-Bookworm.img.xz.sha256"><u>SHA256</u></a>) (<a href="https://dietpi.com/downloads/images/DietPi_OrangePi3B-ARMv8-Bookworm.img.xz.asc"><u>Signature</u></a>)</div>
+								<div><a href="https://dietpi.com/docs/install/" target="_blank" rel="noopener"><span>How to install / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
+								<div>
+									<span>Bullseye images:</span>
+									<br>We provide images based on the older Debian Bullseye release as well, as not all software in our catalogue is compatible with Debian Bookworm yet. All info about this can be found <a href="https://dietpi.com/blog/?p=3128" target="_blank" rel="noopener">here</a>.
+								</div>
+							</div>
+							<p>A smaller variant of the new Orange Pi series. The RK3566 SoC has less power than the RK3588 of the Orange Pi 5, but the SBC is quite flexible with 4 USB-A ports, onboard WiFi/BT, eMMC and M.2 M-key socket for NVMe SSDs up to 2242 factor</p>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/orangepi3b.jpg" alt="Orange Pi 3B photo" width="8" height="5" loading="lazy"></div>
+					</div>
+				</div>
 				<!-- Orange Pi 5 -->
 				<div id="orangepi5" class="single-project">
 					<div class="row"><div class="col-md-12 project-title"><h3>Orange Pi 5</h3><span class="close"></span></div></div>
@@ -1546,6 +1664,38 @@
 						<div class="col-md-6"><img src="images/sbc_images/orangepi5plus.jpg" alt="Orange Pi 5 Plus photo" width="8" height="5" loading="lazy"></div>
 					</div>
 				</div>
+				<!-- Orange Pi Zero 3 -->
+				<div id="orangepizero3" class="single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>Orange Pi Zero 3</h3><span class="close"></span></div></div>
+					<div class="row">
+						<div class="col-md-6 project-description">
+							<div class="project-info">
+								<div><span>CPU:</span>Allwinner H618 1.5 GHz | 4 cores | ARMv8</div>
+								<div><span>RAM:</span>1-4 GiB LPDDR4</div>
+								<div><span>USB:</span>1x USB 2.0</div>
+								<div><span>NET:</span>Gbit Ethernet + onboard WiFi 5/Bluetooth</div>
+								<div><span>Storage:</span>microSD</div>
+								<br>
+								<div>
+									<a href="https://dietpi.com/downloads/images/DietPi_OrangePiZero3-ARMv8-Bookworm.img.xz"><span>1/2/4 GB RAM Image:</span><i class="fa fa-download"></i><u>Download</u></a> (<a href="https://dietpi.com/downloads/images/DietPi_OrangePiZero3-ARMv8-Bookworm.img.xz.sha256"><u>SHA256</u></a>) (<a href="https://dietpi.com/downloads/images/DietPi_OrangePiZero3-ARMv8-Bookworm.img.xz.asc"><u>Signature</u></a>)
+									<br>This image supports only the Zero 3 variants with 1, 2 or 4 GiB RAM.
+								</div>
+								<div>
+									<a href="https://dietpi.com/downloads/images/DietPi_OrangePiZero3-1.5G-ARMv8-Bookworm.img.xz"><span>1.5 GB RAM Image:</span><i class="fa fa-download"></i><u>Download</u></a> (<a href="https://dietpi.com/downloads/images/DietPi_OrangePiZero3-1.5G-ARMv8-Bookworm.img.xz.sha256"><u>SHA256</u></a>) (<a href="https://dietpi.com/downloads/images/DietPi_OrangePiZero3-1.5G-ARMv8-Bookworm.img.xz.asc"><u>Signature</u></a>)
+									<br>This image supports only the Zero 3 variant with 1.5 GB RAM.
+									<br><b>IMPORTANT:</b> There is a bug in the bootloader of this variant, which lets the Ethernet adapter disappear on soft reboots. A power cycle is required to regain Ethernet connectivity. It is hence better suitable if you have physical access to the SBC, in case a reboot is required, or use WiFi for network connectivity.
+								</div>
+								<div><a href="https://dietpi.com/docs/install/" target="_blank" rel="noopener"><span>How to install / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
+								<div>
+									<span>Bullseye images:</span>
+									<br>We provide images based on the older Debian Bullseye release as well, as not all software in our catalogue is compatible with Debian Bookworm yet. All info about this can be found <a href="https://dietpi.com/blog/?p=3128" target="_blank" rel="noopener">here</a>.
+								</div>
+							</div>
+							<p>A smaller variant of the new Orange Pi series. The RK3566 SoC has less power than the RK3588 of the Orange Pi 5, but the SBC is quite flexible with 4 USB-A ports, onboard WiFi/BT, eMMC and M.2 M-key socket for NVMe SSDs up to 2242 factor</p>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/orangepizero3.jpg" alt="Orange Pi Zero 3 photo" width="8" height="5" loading="lazy"></div>
+					</div>
+				</div>
 				<!-- VisionFive 2 -->
 				<div id="visionfive2" class="single-project">
 					<div class="row"><div class="col-md-12 project-title"><h3>VisionFive 2 (experimental)</h3><span class="close"></span></div></div>
@@ -1586,6 +1736,13 @@
 							<img src="images/sbc_images/raspberrypi4.jpg" alt="Raspberry Pi 4 photo" width="8" height="5" loading="lazy">
 							<h3>Raspberry Pi 2/3/4</h3>
 							<p>BCM2710/2711 | 4 Cores | ARMv8</p>
+						</a>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix raspberrypi">
+						<a href="#downloadinfo" class="thumbnail" rel="#raspberrypi5">
+							<img src="images/sbc_images/raspberrypi5.jpg" alt="Raspberry Pi 5 photo" width="8" height="5" loading="lazy">
+							<h3>Raspberry Pi 5 (testing)</h3>
+							<p>BCM2712 | 4 Cores | ARMv8</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix odroid">
@@ -1688,8 +1845,8 @@
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix radxa">
 						<a href="#downloadinfo" class="thumbnail" rel="#rockpi4">
-							<img src="images/sbc_images/rockpi4.jpg" alt="ROCK Pi 4 photo" width="8" height="5" loading="lazy">
-							<h3>ROCK Pi 4</h3>
+							<img src="images/sbc_images/rockpi4.jpg" alt="ROCK 4 photo" width="8" height="5" loading="lazy">
+							<h3>ROCK 4</h3>
 							<p>RK3399 1.8GHz | 6 cores | ARMv8</p>
 						</a>
 					</div>
@@ -1729,6 +1886,13 @@
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix orangepi">
+						<a href="#downloadinfo" class="thumbnail" rel="#orangepi3b">
+							<img src="images/sbc_images/orangepi3b.jpg" alt="Orange Pi 3B photo" width="8" height="5" loading="lazy">
+							<h3>Orange Pi 3B</h3>
+							<p>RK3566 2.0GHz | 4 cores | ARMv8</p>
+						</a>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix orangepi">
 						<a href="#downloadinfo" class="thumbnail" rel="#orangepi5">
 							<img src="images/sbc_images/orange-pi-5.jpg" alt="Orange Pi 5 photo" width="8" height="5" loading="lazy">
 							<h3>Orange Pi 5</h3>
@@ -1740,6 +1904,13 @@
 							<img src="images/sbc_images/orangepi5plus.jpg" alt="Orange Pi 5 Plus photo" width="8" height="5" loading="lazy">
 							<h3>Orange Pi 5 Plus</h3>
 							<p>RK3588 2.4GHz | 8 cores | ARMv8</p>
+						</a>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix orangepi">
+						<a href="#downloadinfo" class="thumbnail" rel="#orangepizero3">
+							<img src="images/sbc_images/orangepizero3.jpg" alt="Orange Pi Zero 3 photo" width="8" height="5" loading="lazy">
+							<h3>Orange Pi Zero 3</h3>
+							<p>H618 1.5GHz | 4 cores | ARMv8</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix allo">
@@ -1801,14 +1972,35 @@
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix nanopi">
 						<a href="#downloadinfo" class="thumbnail" rel="#nanopir5s">
 							<img src="images/sbc_images/nanopir5s.jpg" alt="NanoPi R5S photo" width="8" height="5" loading="lazy">
-							<h3>NanoPi R5S/R5C</h3>
+							<h3>NanoPi R5S</h3>
+							<p>RK3568 2.0GHz | 4 cores | ARMv8</p>
+						</a>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix nanopi">
+						<a href="#downloadinfo" class="thumbnail" rel="#nanopir5c">
+							<img src="images/sbc_images/nanopir5c.jpg" alt="NanoPi R5C photo" width="8" height="5" loading="lazy">
+							<h3>NanoPi R5C</h3>
 							<p>RK3568 2.0GHz | 4 cores | ARMv8</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix nanopi">
 						<a href="#downloadinfo" class="thumbnail" rel="#nanopir6s">
 							<img src="images/sbc_images/nanopir6s.jpg" alt="NanoPi R6S photo" width="8" height="5" loading="lazy">
-							<h3>NanoPi 6 series</h3>
+							<h3>NanoPi R6S</h3>
+							<p>RK3588 2.4GHz | 8 cores | ARMv8</p>
+						</a>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix nanopi">
+						<a href="#downloadinfo" class="thumbnail" rel="#nanopir6c">
+							<img src="images/sbc_images/nanopir6c.jpg" alt="NanoPi R6C photo" width="8" height="5" loading="lazy">
+							<h3>NanoPi R6C</h3>
+							<p>RK3588 2.4GHz | 8 cores | ARMv8</p>
+						</a>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix nanopi">
+						<a href="#downloadinfo" class="thumbnail" rel="#nanopct6">
+							<img src="images/sbc_images/nanopct6.jpg" alt="NanoPC T6 photo" width="8" height="5" loading="lazy">
+							<h3>NanoPC T6</h3>
 							<p>RK3588 2.4GHz | 8 cores | ARMv8</p>
 						</a>
 					</div>
