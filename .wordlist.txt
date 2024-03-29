@@ -182,6 +182,7 @@ Kavita
 Kbit
 KiB
 klick
+KMS
 Kodi
 Koel
 Komga
