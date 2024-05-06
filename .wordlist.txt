@@ -165,6 +165,7 @@ ini
 IoT
 IPFS
 IPS
+IPVanish
 Jackett
 JDK
 Jellyfin
