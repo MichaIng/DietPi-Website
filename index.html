@@ -67,10 +67,10 @@
 				<svg class="triangle" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0h100l-50 100"/></svg>
 				<!-- Slide 1 -->
 				<div class="da-slide da-slide-current">
-					<h2>DietPi Beta v9.4 is ready</h2>
-					<h4>Please help testing our upcoming release</h4>
-					<p>Support added for Orange Pi 3 LTS and Zero 2W, as well as Radxa ZERO 3 and ROCK 4C Plus; M.2 WiFi module support for NanoPi R5C; Fixed IPVanish support in <code>dietpi-vpn</code></p>
-					<a class="da-link" href="https://github.com/MichaIng/DietPi/issues/7060" target="_blank" rel="noopener">All info</a>
+					<h2>DietPi v9.4 has been released</h2>
+					<h4>Check out all changes</h4>
+					<p>Support for Orange Pi 3 LTS, Zero 2W, Radxa ZERO 3, ROCK 4C Plus; Fixes for Orange Pi 5+ and Zero 3 1.5G RAM Ethernet; M.2 WiFi support for FriendlyELEC NanoPi R5C; CloudShell 2 LCD support for Odroid XU4</p>
+					<a class="da-link" href="https://dietpi.com/docs/releases/v9_4/" target="_blank" rel="noopener">Release notes</a>
 					<div class="da-img"><img class="img-fluid" src="images/dietpi-logo_360x360.png" alt="DietPi logo" width="300" height="300" loading="lazy"></div>
 				</div>
 				<!-- Slide 2 -->
@@ -1524,6 +1524,30 @@
 						<div class="col-md-6"><img src="images/sbc_images/radxazero.jpg" alt="Radxa Zero photo" width="8" height="5" loading="lazy"></div>
 					</div>
 				</div>
+				<!-- Radxa ZERO 3 -->
+				<div id="radxazero3" class="single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>Radxa ZERO 3</h3><span class="close"></span></div></div>
+					<div class="row">
+						<div class="col-md-6 project-description">
+							<div class="project-info">
+								<div><span>CPU:</span>Rockchip RK3566 1.6 GHz | 4 cores | ARMv8</div>
+								<div><span>RAM:</span>1 - 8 GiB LPDDR4</div>
+								<div><span>USB:</span>USB 2.0 OTG and power, USB 3.0 HOST</div>
+								<div><span>NET:</span>Gbit Ethernet (3E) or WiFi 6/Bluetooth (3W)</div>
+								<div><span>Storage:</span>microSD and 8 - 64 GiB eMMC on ZERO 3W</div>
+								<br>
+								<div><a href="https://dietpi.com/downloads/images/DietPi_RadxaZERO3-ARMv8-Bookworm.img.xz"><span>Download Image:</span><i class="fa fa-download"></i><u>Download</u></a> (<a href="https://dietpi.com/downloads/images/DietPi_RadxaZERO3-ARMv8-Bookworm.img.xz.sha256"><u>SHA256</u></a>) (<a href="https://dietpi.com/downloads/images/DietPi_RadxaZERO3-ARMv8-Bookworm.img.xz.asc"><u>Signature</u></a>)</div>
+								<div><a href="https://dietpi.com/docs/install/" target="_blank" rel="noopener"><span>How to install / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
+								<div>
+									<span>Bullseye images:</span>
+									<br>We provide images based on the older Debian Bullseye release as well, as not all software in our catalogue is compatible with Debian Bookworm yet. All info about this can be found <a href="https://dietpi.com/blog/?p=3128" target="_blank" rel="noopener">here</a>.
+								</div>
+							</div>
+							<p>The successor of the Radxa Zero, with faster SoC and larger RAM options. The ZERO 3E has no onboard WiFi and no eMMC, but an Ethernet adapter, with an optional PoE HAT available.</p>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/radxazero3.jpg" alt="Radxa ZERO 3 photo" width="8" height="5" loading="lazy"></div>
+					</div>
+				</div>
 				<!-- ROCK 3A -->
 				<div id="rock3a" class="single-project">
 					<div class="row"><div class="col-md-12 project-title"><h3>ROCK 3A</h3><span class="close"></span></div></div>
@@ -1594,6 +1618,30 @@
 							<p>Radxa's new flagship SBC, featuring the new Rockchip RK3588 SoC: A quad-core 4x Cortex-A76 @2.4 GHz + 4x Cortex A55 @1.8 GHz is making this the by far fastest SoC ever tested with DietPi.</p>
 						</div>
 						<div class="col-md-6"><img src="images/sbc_images/rock5b.jpg" alt="ROCK 5B photo" width="8" height="5" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- Orange Pi 3 LTS -->
+				<div id="orangepi3lts" class="single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>Orange Pi LTS</h3><span class="close"></span></div></div>
+					<div class="row">
+						<div class="col-md-6 project-description">
+							<div class="project-info">
+								<div><span>CPU:</span>Allwinner H6 Cortex-A53 1.8 GHz | 4 cores | ARMv8</div>
+								<div><span>RAM:</span>2 GiB LPDDR3</div>
+								<div><span>USB:</span>1x USB 3.0 + 2x USB 2.0</div>
+								<div><span>NET:</span>Gbit Ethernet + onboard WiFi 5/Bluetooth</div>
+								<div><span>Storage:</span>microSD and 8 GiB eMMC</div>
+								<br>
+								<div><a href="https://dietpi.com/downloads/images/DietPi_OrangePi3LTS-ARMv8-Bookworm.img.xz"><span>Download Image:</span><i class="fa fa-download"></i><u>Download</u></a> (<a href="https://dietpi.com/downloads/images/DietPi_OrangePi3LTS-ARMv8-Bookworm.img.xz.sha256"><u>SHA256</u></a>) (<a href="https://dietpi.com/downloads/images/DietPi_OrangePi3LTS-ARMv8-Bookworm.img.xz.asc"><u>Signature</u></a>)</div>
+								<div><a href="https://dietpi.com/docs/install/" target="_blank" rel="noopener"><span>How to install / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
+								<div>
+									<span>Bullseye images:</span>
+									<br>We provide images based on the older Debian Bullseye release as well, as not all software in our catalogue is compatible with Debian Bookworm yet. All info about this can be found <a href="https://dietpi.com/blog/?p=3128" target="_blank" rel="noopener">here</a>.
+								</div>
+							</div>
+							<p>A credit card sized SBC with older Allwinner H6 SoC. Since the similarly featured Orange Pi 3B is available with faster CPU, RAM and otherwise similar hardware features/aspects, is available for minimal surcharge, there is probably not really a reason to buy this anymore. But if you have one, we got you covered.</p>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/orangepi3lts.jpg" alt="Orange Pi LTS photo" width="8" height="5" loading="lazy"></div>
 					</div>
 				</div>
 				<!-- Orange Pi 3B -->
@@ -1680,24 +1728,40 @@
 								<div><span>NET:</span>Gbit Ethernet + onboard WiFi 5/Bluetooth</div>
 								<div><span>Storage:</span>microSD</div>
 								<br>
-								<div>
-									<a href="https://dietpi.com/downloads/images/DietPi_OrangePiZero3-ARMv8-Bookworm.img.xz"><span>1/2/4 GB RAM Image:</span><i class="fa fa-download"></i><u>Download</u></a> (<a href="https://dietpi.com/downloads/images/DietPi_OrangePiZero3-ARMv8-Bookworm.img.xz.sha256"><u>SHA256</u></a>) (<a href="https://dietpi.com/downloads/images/DietPi_OrangePiZero3-ARMv8-Bookworm.img.xz.asc"><u>Signature</u></a>)
-									<br>This image supports only the Zero 3 variants with 1, 2 or 4 GiB RAM.
-								</div>
-								<div>
-									<a href="https://dietpi.com/downloads/images/DietPi_OrangePiZero3-1.5G-ARMv8-Bookworm.img.xz"><span>1.5 GB RAM Image:</span><i class="fa fa-download"></i><u>Download</u></a> (<a href="https://dietpi.com/downloads/images/DietPi_OrangePiZero3-1.5G-ARMv8-Bookworm.img.xz.sha256"><u>SHA256</u></a>) (<a href="https://dietpi.com/downloads/images/DietPi_OrangePiZero3-1.5G-ARMv8-Bookworm.img.xz.asc"><u>Signature</u></a>)
-									<br>This image supports only the Zero 3 variant with 1.5 GB RAM.
-									<br><b>IMPORTANT:</b> There is a bug in the bootloader of this variant, which lets the Ethernet adapter disappear on soft reboots. A power cycle is required to regain Ethernet connectivity. It is hence better suitable if you have physical access to the SBC, in case a reboot is required, or use WiFi for network connectivity.
-								</div>
+								<div><a href="https://dietpi.com/downloads/images/DietPi_OrangePiZero3-ARMv8-Bookworm.img.xz"><span>1/2/4 GB RAM Image:</span><i class="fa fa-download"></i><u>Download</u></a> (<a href="https://dietpi.com/downloads/images/DietPi_OrangePiZero3-ARMv8-Bookworm.img.xz.sha256"><u>SHA256</u></a>) (<a href="https://dietpi.com/downloads/images/DietPi_OrangePiZero3-ARMv8-Bookworm.img.xz.asc"><u>Signature</u></a>)</div>
 								<div><a href="https://dietpi.com/docs/install/" target="_blank" rel="noopener"><span>How to install / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
 								<div>
 									<span>Bullseye images:</span>
 									<br>We provide images based on the older Debian Bullseye release as well, as not all software in our catalogue is compatible with Debian Bookworm yet. All info about this can be found <a href="https://dietpi.com/blog/?p=3128" target="_blank" rel="noopener">here</a>.
 								</div>
 							</div>
-							<p>A smaller variant of the new Orange Pi series. The RK3566 SoC has less power than the RK3588 of the Orange Pi 5, but the SBC is quite flexible with 4 USB-A ports, onboard WiFi/BT, eMMC and M.2 M-key socket for NVMe SSDs up to 2242 factor</p>
+							<p>A tiny SBC with onboard Ethernet and WiFi, based on the Allwinner H618 SoC. It is less powerful than the recent Rockchip SoCs, but more powerful than Raspberry Pi Zero 2W, and more flexible thanks to Ethernet and larger RAM sizes.</p>
 						</div>
 						<div class="col-md-6"><img src="images/sbc_images/orangepizero3.jpg" alt="Orange Pi Zero 3 photo" width="8" height="5" loading="lazy"></div>
+					</div>
+				</div>
+				<!-- Orange Pi Zero 2W -->
+				<div id="orangepizero2w" class="single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>Orange Pi Zero 2W</h3><span class="close"></span></div></div>
+					<div class="row">
+						<div class="col-md-6 project-description">
+							<div class="project-info">
+								<div><span>CPU:</span>Allwinner H618 1.5 GHz | 4 cores | ARMv8</div>
+								<div><span>RAM:</span>1-4 GiB LPDDR4</div>
+								<div><span>USB:</span>1x USB 2.0</div>
+								<div><span>NET:</span>Onboard WiFi 5/Bluetooth</div>
+								<div><span>Storage:</span>microSD</div>
+								<br>
+								<div><a href="https://dietpi.com/downloads/images/DietPi_OrangePiZero2W-ARMv8-Bookworm.img.xz"><span>1/2/4 GB RAM Image:</span><i class="fa fa-download"></i><u>Download</u></a> (<a href="https://dietpi.com/downloads/images/DietPi_OrangePiZero2W-ARMv8-Bookworm.img.xz.sha256"><u>SHA256</u></a>) (<a href="https://dietpi.com/downloads/images/DietPi_OrangePiZero2W-ARMv8-Bookworm.img.xz.asc"><u>Signature</u></a>)</div>
+								<div><a href="https://dietpi.com/docs/install/" target="_blank" rel="noopener"><span>How to install / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
+								<div>
+									<span>Bullseye images:</span>
+									<br>We provide images based on the older Debian Bullseye release as well, as not all software in our catalogue is compatible with Debian Bookworm yet. All info about this can be found <a href="https://dietpi.com/blog/?p=3128" target="_blank" rel="noopener">here</a>.
+								</div>
+							</div>
+							<p>A clone of the Zero 3, without Ethernet and a little different form factor.</p>
+						</div>
+						<div class="col-md-6"><img src="images/sbc_images/orangepizero2w.jpg" alt="Orange Pi Zero 2W photo" width="8" height="5" loading="lazy"></div>
 					</div>
 				</div>
 				<!-- VisionFive 2 -->
@@ -1898,6 +1962,13 @@
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix radxa">
+						<a href="#downloadinfo" class="thumbnail" rel="#radxazero3">
+							<img src="images/sbc_images/radxazero3.jpg" alt="Radxa ZERO 3 photo" width="8" height="5" loading="lazy">
+							<h3>Radxa ZERO 3</h3>
+							<p>K3566 1.6 GHz | 4 cores | ARMv8</p>
+						</a>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix radxa">
 						<a href="#downloadinfo" class="thumbnail" rel="#rock3a">
 							<img src="images/sbc_images/rock3a.jpg" alt="ROCK 3A photo" width="8" height="5" loading="lazy">
 							<h3>ROCK 3A</h3>
@@ -1916,6 +1987,13 @@
 							<img src="images/sbc_images/rock5a.jpg" alt="ROCK 5A photo" width="8" height="5" loading="lazy">
 							<h3>ROCK 5A</h3>
 							<p>RK3588 2.4GHz | 8 cores | ARMv8</p>
+						</a>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix orangepi">
+						<a href="#downloadinfo" class="thumbnail" rel="#orangepi3lts">
+							<img src="images/sbc_images/orangepi3lts.jpg" alt="Orange Pi 3 LTS photo" width="8" height="5" loading="lazy">
+							<h3>Orange Pi 3 LTS</h3>
+							<p>H6 1.8 GHz | 4 cores | ARMv8</p>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix orangepi">
@@ -1943,6 +2021,13 @@
 						<a href="#downloadinfo" class="thumbnail" rel="#orangepizero3">
 							<img src="images/sbc_images/orangepizero3.jpg" alt="Orange Pi Zero 3 photo" width="8" height="5" loading="lazy">
 							<h3>Orange Pi Zero 3</h3>
+							<p>H618 1.5GHz | 4 cores | ARMv8</p>
+						</a>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix orangepi">
+						<a href="#downloadinfo" class="thumbnail" rel="#orangepizero2w">
+							<img src="images/sbc_images/orangepizero2w.jpg" alt="Orange Pi Zero 2W photo" width="8" height="5" loading="lazy">
+							<h3>Orange Pi Zero 2W</h3>
 							<p>H618 1.5GHz | 4 cores | ARMv8</p>
 						</a>
 					</div>
