@@ -308,6 +308,7 @@ Pinebook
 PiSupply
 PiVPN
 Plex
+PoE
 Portainer
 pre
 ProFTPD
