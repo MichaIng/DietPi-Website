@@ -65,7 +65,9 @@
 				<div class="title">
 					<h1>DietPi OS stats & comparison</h1>
 					<p>See resource usage and performance stats of DietPi images, and compare those against other Debian-based distributions.</p>
-					<p>Further details about the compared values can be found in our <a href="https://dietpi.com/blog/?p=888" target="_blank" rel="noopener">blog post</a>.</p>
+					<h2>Note: This does not say that DietPi is better than other distributions, it does say that <b>Diet</b>Pi base images are lighter, being one of our major goals.</h2>
+					<p>We do believe in the benefits of shipping minimal base images, allowing a better overview of installed packages and available features, less disk I/O on APT upgrades, installing additional packages only on demand. However, this may not be important for everyone, and some may prefer to have more packages/features pre-installed, hence less need to install things afterwards. This is hence not a question of better/worse, but one of personal priorities and preferences, for the own Linux system use case.</p>
+					<p>Further details about the compared values, <i>though with outdated results</i>, can be found in our <a href="https://dietpi.com/blog/?p=888" target="_blank" rel="noopener">blog post</a>.</p>
 				</div>
 				<nav class="nav nav-pills" id="distrostats" style="display:none">
 					<button class="nav-link filter" data-filter="all">[All]</button>
@@ -87,9 +89,9 @@
 									<tr><td>Pre-installed packages</td><td><code>dpkg --get-selections | wc -l</code></td></tr>
 									<tr><td>Running processes</td><td><code>echo $(( $(pstree -Ta | wc -l) - 3 ))</code></td></tr>
 									<tr><td>Boot duration</td><td><code>systemd-analyze | mawk '{print $(NF-1)" "$NF;exit}'</code></td></tr>
-									<tr><td>Temporary files in RAM</td><td><code>findmnt -no FSTYPE /tmp</code></td></tr>
-									<tr><td>Logs in RAM</td><td><code>findmnt -no FSTYPE /var/log</code></td></tr>
-									<tr><td>SSH pre-installed</td><td><code>ss -tulpn | grep ':22'</code></td></tr>
+									<tr><td>Temporary files</td><td><code>findmnt -nM /tmp</code></td></tr>
+									<tr><td>Log files</td><td><code>findmnt -nM /var/log</code></td></tr>
+									<tr><td>SSH pre-installed</td><td><code>ss -tlpn | grep ':22'</code></td></tr>
 								</table>
 							</div>
 						</div>
@@ -100,20 +102,20 @@
 					<div class="row">
 						<div class="col-md-12 project-description">
 							<div class="project-info">
-								<h5>on Raspberry Pi 2</h5>
+								<h5>on Raspberry Pi Zero W at 2024-05-23</h5>
 								<table>
 									<tr><th>Stat</th><th>DietPi</th><th>DietPi/Raspberry Pi OS [%]</th><th>Raspberry Pi OS</th></tr>
-									<tr><td>RAM usage</td><td class="win">26Mi</td><td>72%</td><td class="los">36Mi</td></tr>
-									<tr><td>Running processes</td><td class="win">10</td><td>50%</td><td class="los">20</td></tr>
-									<tr><td>Disk usage</td><td class="win">596.2M</td><td>49%</td><td class="los">1.2G</td></tr>
-									<tr><td>Pre-installed packages</td><td class="win">223</td><td>47%</td><td class="los">475</td></tr>
-									<tr><td>Boot duration</td><td class="win">17.881s</td><td>73%</td><td class="los">24.553s</td></tr>
-									<tr><td>Temporary files in RAM</td><td class="win">Yes</td><td></td><td class="los">No</td></tr>
-									<tr><td>Logs in RAM</td><td class="win">Yes</td><td></td><td class="los">No</td></tr>
+									<tr><td>RAM usage</td><td class="win">32 MiB</td><td>36%</td><td class="los">90 MiB</td></tr>
+									<tr><td>Running processes</td><td class="win">9</td><td>43%</td><td class="los">21</td></tr>
+									<tr><td>Disk usage</td><td class="win">667 MiB</td><td>30%</td><td class="los">2206 MiB</td></tr>
+									<tr><td>Pre-installed packages</td><td class="win">223</td><td>36%</td><td class="los">612</td></tr>
+									<tr><td>Boot duration</td><td class="win">22.405s</td><td>49%</td><td class="los">45.650s</td></tr>
+									<tr><td>Temporary files</td><td class="win">RAM disk (tmpfs)</td><td></td><td class="los">rootfs</td></tr>
+									<tr><td>Log files</td><td class="win">RAM disk (tmpfs)</td><td></td><td class="los">rootfs</td></tr>
 									<tr><td>SSH pre-installed</td><td class="win">Yes</td><td></td><td class="los">Optional</td></tr>
-									<tr><td>Download size</td><td class="win">174.950.885 bytes</td><td>38%</td><td class="los">463.405.209 bytes</td></tr>
-									<tr><td>Image size</td><td class="win">1.071.456.256 bytes</td><td>57%</td><td class="los">1.866.465.280 bytes</td></tr>
-									<tr><td>Build date</td><td>2021-03-25</td><td></td><td>2021-01-11</td></tr>
+									<tr><td>Download size</td><td class="win">209 MiB</td><td>44%</td><td class="los">474 MiB</td></tr>
+									<tr><td>Image size</td><td class="win">896 MiB</td><td>37%</td><td class="los">2,424 MiB</td></tr>
+									<tr><td>Build date</td><td>2024-05-13</td><td></td><td>2024-03-15</td></tr>
 								</table>
 							</div>
 						</div>

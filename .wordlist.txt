@@ -404,6 +404,7 @@ th
 TigerVNC
 TLDR
 TLS
+tmpfs
 Tonido
 transcoding
 Trixie
