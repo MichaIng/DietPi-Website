@@ -344,6 +344,7 @@ Rockchip
 Rockchip's
 ROCKPro
 Roon
+rootfs
 RPC
 rpi
 RPi
@@ -424,6 +425,7 @@ upvote
 UrBackup
 Usenet
 userdata
+userland
 UTM
 UUID
 vaultwarden
@@ -473,3 +475,4 @@ yumiris
 ZeroPi
 ZeroTier
 zr
+zram
