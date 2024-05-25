@@ -64,8 +64,9 @@
 				<svg class="triangle" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0h100l-50 100"/></svg>
 				<div class="title">
 					<h1>DietPi OS stats & comparison</h1>
-					<p>See resource usage and performance stats of DietPi images, and compare those against other Debian-based distributions.</p>
+					<p>See resource usage and performance stats of DietPi images, compared to Debian-based lite/minimal/server images of other projects.</p>
 					<h2>Note: This does not say that DietPi is better than other distributions, it does say that <b>Diet</b>Pi base images are lighter, being one of our major goals.</h2>
+					<p>Furthermore, the OS images provided by other projects does not say much about the project itself. Others focus more on own build systems, kernel development, and/or hardware. We maintain own kernel sources only for a small number of SBCs, and otherwise rely on and benefit from kernel development done by other projects. Instead, we focus on userland development, our large library of ready-to-use software options, automated setups and lightweight base images.</p>
 					<p>We do believe in the benefits of shipping minimal base images, allowing a better overview of installed packages and available features, less disk I/O on APT upgrades, installing additional packages only on demand. However, this may not be important for everyone, and some may prefer to have more packages/features pre-installed, hence less need to install things afterwards. This is hence not a question of better/worse, but one of personal priorities and preferences, for the own Linux system use case.</p>
 					<p>Further details about the compared values, <i>though with outdated results</i>, can be found in our <a href="https://dietpi.com/blog/?p=888" target="_blank" rel="noopener">blog post</a>.</p>
 				</div>
@@ -102,7 +103,7 @@
 					<div class="row">
 						<div class="col-md-12 project-description">
 							<div class="project-info">
-								<h5>on Raspberry Pi Zero W at 2024-05-23</h5>
+								<h5>Bookworm on Raspberry Pi Zero W at 2024-05-23</h5>
 								<table>
 									<tr><th>Stat</th><th>DietPi</th><th>DietPi/Raspberry Pi OS [%]</th><th>Raspberry Pi OS</th></tr>
 									<tr><td>RAM usage</td><td class="win">32 MiB</td><td>36%</td><td class="los">90 MiB</td></tr>
@@ -112,7 +113,7 @@
 									<tr><td>Boot duration</td><td class="win">22.405s</td><td>49%</td><td class="los">45.650s</td></tr>
 									<tr><td>Temporary files</td><td class="win">RAM disk (tmpfs)</td><td></td><td class="los">rootfs</td></tr>
 									<tr><td>Log files</td><td class="win">RAM disk (tmpfs)</td><td></td><td class="los">rootfs</td></tr>
-									<tr><td>SSH pre-installed</td><td class="win">Yes</td><td></td><td class="los">Optional</td></tr>
+									<tr><td>SSH pre-installed</td><td class="win">Yes</td><td></td><td class="los">edit required</td></tr>
 									<tr><td>Download size</td><td class="win">209 MiB</td><td>44%</td><td class="los">474 MiB</td></tr>
 									<tr><td>Image size</td><td class="win">896 MiB</td><td>37%</td><td class="los">2424 MiB</td></tr>
 									<tr><td>Build date</td><td>2024-05-13</td><td></td><td>2024-03-15</td></tr>
@@ -126,7 +127,7 @@
 					<div class="row">
 						<div class="col-md-12 project-description">
 							<div class="project-info">
-								<h5>on Raspberry Pi 5 at 2024-05-25</h5>
+								<h5>Bookworm on Raspberry Pi 5 at 2024-05-25</h5>
 								<table>
 									<tr><th>Stat</th><th>DietPi</th><th>DietPi/Raspberry Pi OS [%]</th><th>Raspberry Pi OS</th></tr>
 									<tr><td>RAM usage</td><td class="win">118 MiB</td><td>67%</td><td class="los">177 MiB</td></tr>
@@ -136,7 +137,7 @@
 									<tr><td>Boot duration</td><td class="win">6.220s</td><td>46%</td><td class="los">13.497s</td></tr>
 									<tr><td>Temporary files</td><td class="win">RAM disk (tmpfs)</td><td></td><td class="los">rootfs</td></tr>
 									<tr><td>Log files</td><td class="win">RAM disk (tmpfs)</td><td></td><td class="los">rootfs</td></tr>
-									<tr><td>SSH pre-installed</td><td class="win">Yes</td><td></td><td class="los">Optional</td></tr>
+									<tr><td>SSH pre-installed</td><td class="win">Yes</td><td></td><td class="los">edit required</td></tr>
 									<tr><td>Download size</td><td class="win">178 MiB</td><td>43%</td><td class="los">414 MiB</td></tr>
 									<tr><td>Image size</td><td class="win">1024 MiB</td><td>39%</td><td class="los">2640 MiB</td></tr>
 									<tr><td>Build date</td><td>2024-05-13</td><td></td><td>2024-03-15</td></tr>
@@ -146,24 +147,24 @@
 					</div>
 				</div>
 				<div id="armbian1" class="single-project">
-					<div class="row"><div class="col-md-12 project-title"><h3>DietPi vs Armbian (server image)</h3><span class="close"></span></div></div>
+					<div class="row"><div class="col-md-12 project-title"><h3>DietPi vs Armbian (minimal)</h3><span class="close"></span></div></div>
 					<div class="row">
 						<div class="col-md-12 project-description">
 							<div class="project-info">
-								<h5>on NanoPi R2S</h5>
+								<h5>Bookworm on Odroid XU4 at 2024-05-25</h5>
 								<table>
 									<tr><th>Stat</th><th>DietPi</th><th>DietPi/Armbian [%]</th><th>Armbian</th></tr>
-									<tr><td>RAM usage</td><td class="win">60Mi</td><td>63%</td><td class="los">96Mi</td></tr>
-									<tr><td>Running processes</td><td class="win">11</td><td>44%</td><td class="los">25</td></tr>
-									<tr><td>Disk usage</td><td class="win">580 MiB</td><td>42%</td><td class="los">1379 MiB</td></tr>
-									<tr><td>Pre-installed packages</td><td class="win">225</td><td>48%</td><td class="los">466</td></tr>
-									<tr><td>Boot duration</td><td class="win">16.732s</td><td>95%</td><td class="los">17.546s</td></tr>
-									<tr><td>Temporary files in RAM</td><td>Yes</td><td></td><td>Yes</td></tr>
-									<tr><td>Logs in RAM</td><td class="win">Yes</td><td></td><td class="los">No</td></tr>
+									<tr><td>RAM usage</td><td class="win">120 MiB</td><td>80%</td><td class="los">150 MiB</td></tr>
+									<tr><td>Running processes</td><td class="win">9</td><td>47%</td><td class="los">19</td></tr>
+									<tr><td>Disk usage</td><td class="win">655 MiB</td><td>64%</td><td class="los">1021 MiB</td></tr>
+									<tr><td>Pre-installed packages</td><td class="win">210</td><td>65%</td><td class="los">324</td></tr>
+									<tr><td>Boot duration</td><td class="win">11.785s</td><td>63%</td><td class="los">18.854s</td></tr>
+									<tr><td>Temporary files</td><td>RAM disk (tmpfs)</td><td></td><td>RAM disk (tmpfs)</td></tr>
+									<tr><td>Logs files</td><td>RAM disk (tmpfs)</td><td></td><td>compressed RAM disk (zram)</td></tr>
 									<tr><td>SSH pre-installed</td><td>Yes</td><td></td><td>Yes</td></tr>
-									<tr><td>Download size</td><td class="win">132.148.481 bytes</td><td>34%</td><td class="los">389.250.660 bytes</td></tr>
-									<tr><td>Image size</td><td class="win">800.428.032 bytes</td><td>42%</td><td class="los">1.883.242.496 bytes</td></tr>
-									<tr><td>Build date</td><td>2021-04-02</td><td></td><td>2021-05-07</td></tr>
+									<tr><td>Download size</td><td class="win">190 MiB</td><td>67%</td><td class="los">285 MiB</td></tr>
+									<tr><td>Image size</td><td class="win">769 MiB</td><td>67%</td><td class="los">1140 MiB</td></tr>
+									<tr><td>Build date</td><td>2024-05-13</td><td></td><td>2024-05-24</td></tr>
 								</table>
 							</div>
 						</div>
