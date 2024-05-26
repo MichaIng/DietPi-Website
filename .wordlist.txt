@@ -65,6 +65,7 @@ DarkIce
 DDNS
 DDR
 de
+debootstraps
 deinstallation
 DHCP
 dialogs
@@ -262,6 +263,7 @@ natively
 Navidrome
 ncc
 Netdata
+netinst
 nm
 Nextcloud
 NFS

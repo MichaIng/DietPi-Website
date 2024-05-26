@@ -195,24 +195,26 @@
 					</div>
 				</div>
 				<div id="debian1" class="single-project">
-					<div class="row"><div class="col-md-12 project-title"><h3>DietPi vs Debian (server image)</h3><span class="close"></span></div></div>
+					<div class="row"><div class="col-md-12 project-title"><h3>DietPi vs Debian (netinst CD)</h3><span class="close"></span></div></div>
 					<div class="row">
 						<div class="col-md-12 project-description">
 							<div class="project-info">
-								<h5>on Odroid C4</h5>
+								<h5>Bookworm on x86_64 UEFI PC at 2024-05-26</h5>
+								<p>These images are hard to compare. Debian does not offer a server live image. Closest to compare is the Debian network installer CD ISO image, with the DietPi UEFI installer image. The Debian installer debootstraps a fresh Debian onto the target drive, which requires a lot of pre-configuration, manual formatting, and makes use of network access for additional and/or updated packages. The DietPi installer comes with a complete embedded DietPi live image, which does not need any pre-configuration. However, opposed to Debian, DietPi does updates and initial configuration on first boot and login.</p>
+								<p>In the Debian installer, everything was de-selected, but the SSH server and common system utilities, which is closest to what DietPi images ship with.
 								<table>
 									<tr><th>Stat</th><th>DietPi</th><th>DietPi/Debian [%]</th><th>Debian</th></tr>
-									<tr><td>RAM usage</td><td class="win">129Mi</td><td>96%</td><td class="los">134Mi</td></tr>
-									<tr><td>Running processes</td><td class="win">12</td><td>67%</td><td class="los">18</td></tr>
-									<tr><td>Disk usage</td><td class="win">521.9M</td><td>71%</td><td class="los">725.4M</td></tr>
-									<tr><td>Pre-installed packages</td><td class="win">216</td><td>94%</td><td class="los">231</td></tr>
-									<tr><td>Boot duration</td><td class="win">16.528s</td><td>24%</td><td class="los">1min 8.115s</td></tr>
-									<tr><td>Temporary files in RAM</td><td class="win">Yes</td><td></td><td class="los">No</td></tr>
-									<tr><td>Logs in RAM</td><td class="win">Yes</td><td></td><td class="los">No</td></tr>
-									<tr><td>SSH pre-installed</td><td>Yes</td><td></td><td>Yes</td></tr>
-									<tr><td>Download size</td><td class="los">161.822.824 bytes</td><td>135%</td><td class="win">119.896.092 bytes</td></tr>
-									<tr><td>Image size</td><td class="los">1.148.600.320 bytes</td><td>107%</td><td class="win">1.074.790.400 bytes</td></tr>
-									<tr><td>Build date</td><td>2021-01-08</td><td></td><td>2021-05-06</td></tr>
+									<tr><td>RAM usage</td><td class="win">304 MiB</td><td>85%</td><td class="los">357 MiB</td></tr>
+									<tr><td>Running processes</td><td class="win">9</td><td>53%</td><td class="los">17</td></tr>
+									<tr><td>Disk usage</td><td class="win">1056 MiB</td><td>59%</td><td class="los">1787 MiB</td></tr>
+									<tr><td>Pre-installed packages</td><td class="win">237</td><td>66%</td><td class="los">357</td></tr>
+									<tr><td>Boot duration</td><td class="los">15.216s</td><td>218%</td><td class="win">6.967s</td></tr>
+									<tr><td>Temporary files</td><td class="win">RAM disk (tmpfs)</td><td></td><td class="los">rootfs</td></tr>
+									<tr><td>Log files</td><td class="win">RAM disk (tmpfs)</td><td></td><td class="los">rootfs</td></tr>
+									<tr><td>SSH pre-installed</td><td class="win">Yes</td><td></td><td class="los">selection required</td></tr>
+									<tr><td>Download size</td><td class="los">650 MiB</td><td>135%</td><td class="win">629 MiB</td></tr>
+									<tr><td>ISO size</td><td class="los">677 MiB</td><td>107%</td><td class="win">629 MiB</td></tr>
+									<tr><td>Build date</td><td>2024-05-13</td><td></td><td>2024-02-10</td></tr>
 								</table>
 							</div>
 						</div>
