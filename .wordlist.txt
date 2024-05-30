@@ -65,6 +65,7 @@ DarkIce
 DDNS
 DDR
 de
+debootstraps
 deinstallation
 DHCP
 dialogs
@@ -262,6 +263,7 @@ natively
 Navidrome
 ncc
 Netdata
+netinst
 nm
 Nextcloud
 NFS
@@ -319,6 +321,8 @@ PVR
 Pydio
 pyenv
 qBittorrent
+qcow
+QEMU
 QuiteRSS
 Radarr
 Radxa
@@ -344,6 +348,7 @@ Rockchip
 Rockchip's
 ROCKPro
 Roon
+rootfs
 RPC
 rpi
 RPi
@@ -404,6 +409,7 @@ th
 TigerVNC
 TLDR
 TLS
+tmpfs
 Tonido
 transcoding
 Trixie
@@ -423,6 +429,7 @@ upvote
 UrBackup
 Usenet
 userdata
+userland
 UTM
 UUID
 vaultwarden
@@ -472,3 +479,4 @@ yumiris
 ZeroPi
 ZeroTier
 zr
+zram
