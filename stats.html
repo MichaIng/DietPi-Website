@@ -221,23 +221,26 @@
 					</div>
 				</div>
 				<div id="debian2" class="single-project">
-					<div class="row"><div class="col-md-12 project-title"><h3>DietPi vs Debian (server image)</h3><span class="close"></span></div></div>
+					<div class="row"><div class="col-md-12 project-title"><h3>DietPi vs Debian (QEMU qcow2)</h3><span class="close"></span></div></div>
 					<div class="row">
 						<div class="col-md-12 project-description">
 							<div class="project-info">
-								<h5>on x86_64 PC</h5>
+								<h5>Bookworm on x86_64 VM at 2024-05-30</h5>
+								<p>Tests were performed on a VirtualBox DietPi VM host with nested AMD-V, using <code>qemu-system-x86_64</code>.</p>
+								<p>The Debian local QEMU virtual machine image in qcow2 format was compared to the DietPi Proxmox image, which is in qcow2 format as well. We could have taken our generic VM image and compare it with the xz-compressed raw image of Debian, which is however not prominently listed on their download page. The content of all those images is identical, hence relevant is only that the disk format is the same.</p>
 								<table>
 									<tr><th>Stat</th><th>DietPi</th><th>DietPi/Debian [%]</th><th>Debian</th></tr>
-									<tr><td>RAM usage</td><td class="los">112Mi</td><td>103%</td><td class="win">109Mi</td></tr>
-									<tr><td>Running processes</td><td class="win">13</td><td>81%</td><td class="los">16</td></tr>
-									<tr><td>Disk usage</td><td class="win">755.2M</td><td>67%</td><td class="los">1.1G</td></tr>
-									<tr><td>Pre-installed packages</td><td class="win">237</td><td>72%</td><td class="los">328</td></tr>
-									<tr><td>Boot duration</td><td class="los">11.569s</td><td>374%</td><td class="win">3.090s</td></tr>
-									<tr><td>Temporary files in RAM</td><td class="win">Yes</td><td></td><td class="los">No</td></tr>
-									<tr><td>Logs in RAM</td><td class="win">Yes</td><td></td><td class="los">No</td></tr>
-									<tr><td>SSH pre-installed</td><td>Yes</td><td></td><td>Yes</td></tr>
-									<tr><td>Download size</td><td class="los">608.374.862 bytes</td><td>135%</td><td class="win">353.370.112 bytes</td></tr>
-									<tr><td>Build date</td><td>2020-09-17</td><td></td><td>2021-03-19</td></tr>
+									<tr><td>RAM usage</td><td class="win">165 MiB</td><td>87%</td><td class="los">190 MiB</td></tr>
+									<tr><td>Running processes</td><td class="win">8</td><td>57%</td><td class="los">14</td></tr>
+									<tr><td>Disk usage</td><td class="win">734 MiB</td><td>63%</td><td class="los">1156 MiB</td></tr>
+									<tr><td>Pre-installed packages</td><td class="win">209</td><td>74%</td><td class="los">283</td></tr>
+									<tr><td>Boot duration</td><td class="win">7.286s</td><td>72%</td><td class="los">10.072s</td></tr>
+									<tr><td>Temporary files</td><td class="win">RAM disk (tmpfs)</td><td></td><td class="los">rootfs</td></tr>
+									<tr><td>Log files</td><td class="win">RAM disk (tmpfs)</td><td></td><td class="los">rootfs</td></tr>
+									<tr><td>SSH pre-installed</td><td>Yes</td><td></td><td>No</td></tr>
+									<tr><td>Download size</td><td class="win">227 MiB</td><td>58%</td><td class="los">394 MiB</td></tr>
+									<tr><td>Image size</td><td class="win">242 MiB</td><td>61%</td><td class="los">394 MiB</td></tr>
+									<tr><td>Build date</td><td>2024-05-13</td><td></td><td>2024-05-07</td></tr>
 								</table>
 							</div>
 						</div>
