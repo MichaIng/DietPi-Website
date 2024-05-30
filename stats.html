@@ -85,7 +85,7 @@
 								<p>You may also run our <a href="https://github.com/MichaIng/hacks/blob/main/dietpi-distro_comparison" target="_blank" rel="noopener">comparison script</a> to test and print the values right on your system.</p>
 								<table>
 									<tr><th>Stat</th><th>Command</th></tr>
-									<tr><td>Disk usage</td><td><code>findmnt -no USED / # + /boot + /boot/efi</code></td></tr>
+									<tr><td>Disk usage</td><td><code>findmnt -no USED / # + /boot + /boot/efi + /boot/firmware</code></td></tr>
 									<tr><td>RAM usage</td><td><code>free -th | mawk '/^Total:/{print $3}'</code></td></tr>
 									<tr><td>Pre-installed packages</td><td><code>dpkg --get-selections | wc -l</code></td></tr>
 									<tr><td>Running processes</td><td><code>echo $(( $(pstree -Ta | wc -l) - 3 ))</code></td></tr>
@@ -182,7 +182,7 @@
 									<tr><td>Running processes</td><td class="win">8</td><td>42%</td><td class="los">19</td></tr>
 									<tr><td>Disk usage</td><td class="win">816 MiB</td><td>65%</td><td class="los">1259 MiB</td></tr>
 									<tr><td>Pre-installed packages</td><td class="win">211</td><td>65%</td><td class="los">324</td></tr>
-									<tr><td>Boot duration</td><td class="los">10.028s</td><td>84%</td><td class="win">12.005s</td></tr>
+									<tr><td>Boot duration</td><td class="win">10.028s</td><td>84%</td><td class="los">12.005s</td></tr>
 									<tr><td>Temporary files</td><td>RAM disk (tmpfs)</td><td></td><td>RAM disk (tmpfs)</td></tr>
 									<tr><td>Logs files</td><td>RAM disk (tmpfs)</td><td></td><td>compressed RAM disk (zram)</td></tr>
 									<tr><td>SSH pre-installed</td><td>Yes</td><td></td><td>Yes</td></tr>
@@ -237,7 +237,7 @@
 									<tr><td>Boot duration</td><td class="win">7.286s</td><td>72%</td><td class="los">10.072s</td></tr>
 									<tr><td>Temporary files</td><td class="win">RAM disk (tmpfs)</td><td></td><td class="los">rootfs</td></tr>
 									<tr><td>Log files</td><td class="win">RAM disk (tmpfs)</td><td></td><td class="los">rootfs</td></tr>
-									<tr><td>SSH pre-installed</td><td>Yes</td><td></td><td>No</td></tr>
+									<tr><td>SSH pre-installed</td><td class="win">Yes</td><td></td><td class="los">No</td></tr>
 									<tr><td>Download size</td><td class="win">227 MiB</td><td>58%</td><td class="los">394 MiB</td></tr>
 									<tr><td>Image size</td><td class="win">242 MiB</td><td>61%</td><td class="los">394 MiB</td></tr>
 									<tr><td>Build date</td><td>2024-05-13</td><td></td><td>2024-05-07</td></tr>
