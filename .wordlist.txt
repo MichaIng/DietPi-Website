@@ -321,6 +321,8 @@ PVR
 Pydio
 pyenv
 qBittorrent
+qcow
+QEMU
 QuiteRSS
 Radarr
 Radxa
