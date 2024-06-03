@@ -3,49 +3,39 @@ on: [pull_request, push]
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
+permissions: {}
 jobs:
   main:
     if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.owner.login != github.event.pull_request.base.repo.owner.login
     # https://github.com/actions/runner-images
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     env:
       HEAD_OWNER: ${{ github.event.pull_request.head.repo.owner.login }}
-    defaults:
-      run:
-        shell: sh
-        working-directory: /dev/shm
     steps:
     - name: Deploy DietPi-Website locally
       id: deploy
-      run: bash -c "$(curl -sSf "https://raw.githubusercontent.com/${HEAD_OWNER:-$GITHUB_REPOSITORY_OWNER}/DietPi-Website/${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}/deploy.bash")" bash .
+      run: bash <(curl -sSf "https://raw.githubusercontent.com/${HEAD_OWNER:-$GITHUB_REPOSITORY_OWNER}/DietPi-Website/${GITHUB_HEAD_REF:-$GITHUB_REF_NAME}/deploy.bash") .
     - name: Setup JRE for Nu Html Checker
-      # https://github.com/actions/setup-java/tags
       uses: actions/setup-java@v4
       with:
         distribution: 'temurin'
-        # https://github.com/adoptium
-        java-version: '19'
+        # https://github.com/orgs/adoptium/repositories?q=temurin*-binaries
+        java-version: '22'
         java-package: jre
         check-latest: true
     - name: Download Nu Html Checker
       run: curl -sSfLO 'https://github.com/validator/validator/releases/download/latest/vnu.jar'
     - name: Run Nu Html Checker to check HTML, CSS and SVG files
-      run: |
-        java -jar vnu.jar --verbose *.html
-        java -jar vnu.jar --css --verbose css/[!b][!o]*.css # Exclude bootstrap.min.css
-        java -jar vnu.jar --skip-non-svg --verbose .
+      run: find . -type f \( -name '*.html' -o -name '*.css' -o -name '*.svg' \) -exec java -jar vnu.jar --verbose --also-check-css --also-check-svg {} +
     - name: Check for obsolete image files
       if: always() && steps.deploy.outcome == 'success'
       run: |
         ec=0
-        while read -r line; do [ $line != ${line#images/dietpi-logo_} ] || grep -rq "$line" *.html || { ec=1; echo "ERROR: $line is not used"; }; done << _EOF_
-        $(find images/ -type f)
-        _EOF_
+        while read -r line; do [ $line != ${line#images/dietpi-logo_} ] || grep -rq "$line" *.html || { ec=1; echo "ERROR: $line is not used"; }; done < <(find images/ -type f)
         exit "$ec"
     - name: Setup Python for PySpelling
       id: python
       if: always() && steps.deploy.outcome == 'success'
-      # https://github.com/actions/setup-python/tags
       uses: actions/setup-python@v5
       with:
         python-version: '3.x'
@@ -68,4 +58,5 @@ jobs:
         tar xf lychee.tar.gz
     - name: Run lychee to check Markdown and HTML files
       if: always() && steps.lychee.outcome == 'success'
+      # twitter.com/DietPi_|www.patreon.com/DietPi: Network error: Forbidden
       run: ./lychee -En --cache --require-https --exclude '^https://(twitter.com/DietPi_|www.patreon.com/DietPi)$' --github-token '${{ secrets.GITHUB_TOKEN }}' -b '.' '**/*.md' '**/*.html'
