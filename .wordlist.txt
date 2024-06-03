@@ -107,10 +107,12 @@ Exynos
 facto
 fanless
 favicon
+FFmpeg
 FHS
 FileBrowser
 filesystem
 Flexbox
+Forgejo
 FuguHub
 daapd
 FOSS
