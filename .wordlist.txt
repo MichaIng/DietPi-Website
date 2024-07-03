@@ -381,6 +381,7 @@ sn
 Snapcast
 SoC
 SoCs
+soju
 Sonarr
 SOQuartz
 SPC
