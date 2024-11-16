@@ -81,8 +81,11 @@ fi
 # Main
 G_EXEC cd /tmp
 G_EXEC curl -sSfLO "https://github.com/$OWNER/DietPi-Website/archive/$BRANCH.tar.gz"
-G_EXEC tar xf "$BRANCH.tar.gz"
-G_EXEC rm "$BRANCH.tar.gz"
+# - Support forward slashes in branch name
+G_EXEC tar xf "${BRANCH##*/}.tar.gz"
+G_EXEC rm "${BRANCH##*/}.tar.gz"
+# - GitHub replaces forward slashes with dashes for dir names
+BRANCH=${BRANCH//\//-}
 G_EXEC cd "DietPi-Website-$BRANCH"
 # Cleanup
 [[ $GITHUB_ACTIONS ]] || G_EXEC rm -R README.md LICENSE deploy.bash .??*
