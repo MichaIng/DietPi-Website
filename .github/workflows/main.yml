@@ -54,9 +54,11 @@ jobs:
       id: lychee
       if: always() && steps.deploy.outcome == 'success'
       run: |
-        curl -sSfL "$(curl -sSfH 'Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' 'https://api.github.com/repos/lycheeverse/lychee/releases/latest' | mawk -F\" '/"browser_download_url.*x86_64-unknown-linux-musl\.tar\.gz"/{print $4;exit}')" -o lychee.tar.gz
+        # Workaround for broken local link checks in v0.17.0: https://github.com/lycheeverse/lychee/issues/1574
+        #curl -sSfL "$(curl -sSfH 'Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' 'https://api.github.com/repos/lycheeverse/lychee/releases/latest' | mawk -F\" '/"browser_download_url.*x86_64-unknown-linux-musl\.tar\.gz"/{print $4;exit}')" -o lychee.tar.gz
+        curl -sSfL 'https://github.com/lycheeverse/lychee/releases/download/lychee-v0.16.1/lychee-x86_64-unknown-linux-musl.tar.gz' -o lychee.tar.gz
         tar xf lychee.tar.gz
     - name: Run lychee to check Markdown and HTML files
       if: always() && steps.lychee.outcome == 'success'
       # twitter.com/DietPi_|www.patreon.com/DietPi: Network error: Forbidden
-      run: ./lychee -En --cache --require-https --exclude '^https://(twitter.com/DietPi_|www.patreon.com/DietPi)$' --github-token '${{ secrets.GITHUB_TOKEN }}' -b '.' '**/*.md' '**/*.html'
+      run: ./lychee -En --cache --require-https --include-fragments --exclude '^https://(twitter.com/DietPi_|www.patreon.com/DietPi)$' --github-token '${{ secrets.GITHUB_TOKEN }}' -b '.' '**/*.md' '**/*.html'
