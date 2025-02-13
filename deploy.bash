@@ -116,7 +116,7 @@ done
 # - Minify HTML: Override original file afterwards
 for i in ./*.html
 do
-	G_EXEC ./minify -o "${i%.html}.min.html" "$i"
+	G_EXEC ./minify --html-keep-document-tags -o "${i%.html}.min.html" "$i"
 	G_EXEC mv "${i%.html}.min.html" "$i"
 done
 G_EXEC rm minify
