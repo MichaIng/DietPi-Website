@@ -20,7 +20,7 @@ jobs:
       with:
         distribution: 'temurin'
         # https://github.com/orgs/adoptium/repositories?q=temurin*-binaries
-        java-version: '22'
+        java-version: '23'
         java-package: jre
         check-latest: true
     - name: Download Nu Html Checker
