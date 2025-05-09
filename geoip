@@ -1,4 +1,13 @@
 <?php
-$geoip = $_SERVER['HTTP_CF_CONNECTING_IP'];
-isset($_SERVER['HTTP_CF_IPCOUNTRY']) && ($_SERVER['HTTP_CF_IPCOUNTRY'] != 'XX') && $geoip .= ' ' . $_SERVER['HTTP_CF_IPCOUNTRY'];
-echo $geoip;
+if (isset($_SERVER['HTTP_CF_CONNECTING_IP'])) {
+	echo $_SERVER['HTTP_CF_CONNECTING_IP'];
+	isset($_SERVER['HTTP_CF_IPCOUNTRY']) && ($_SERVER['HTTP_CF_IPCOUNTRY'] != 'XX') && print " {$_SERVER['HTTP_CF_IPCOUNTRY']}";
+} else {
+	echo $_SERVER['REMOTE_ADDR'];
+	$reader = new MaxMind\Db\Reader('/mnt/dietpi_userdata/geoip-city-lite.mmdb');
+	$record = $reader->get($_SERVER['REMOTE_ADDR']);
+	$reader->close();
+	isset($record['city']) && print " {$record['city']['names']['en']}";
+	isset($record['subdivisions']) && ($record['subdivisions'][0]['names']['en'] != $record['city']['names']['en']) && print " {$record['subdivisions'][0]['names']['en']}";
+	isset($record['country']) && print " {$record['country']['names']['en']}";
+}
