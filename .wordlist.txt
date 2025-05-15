@@ -128,6 +128,7 @@ GiB
 Gitea
 github
 GlusterFS
+GmbH
 GMediaRender
 GNUstep
 Gogs
@@ -404,6 +405,7 @@ sudo
 Syncthing
 systemctl
 systemd
+SystemHaus
 Tailscale
 TasmoAdmin
 Tasmota
