@@ -253,7 +253,6 @@ MQTT
 MTA
 multiroom
 multithreading
-Mycroft
 MyHome
 myMPD
 myVirtualserver
