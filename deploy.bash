@@ -104,12 +104,14 @@ G_EXEC rm minify.tar.gz
 # - Minify JavaScript
 for i in js/*.js
 do
+	[[ $i == *'.min.js' ]] && continue
 	G_EXEC ./minify -o "${i%.js}.min.js" "$i"
 	G_EXEC rm "$i"
 done
 # - Minify CSS
 for i in css/*.css
 do
+	[[ $i == *'.min.css' ]] && continue
 	G_EXEC ./minify -o "${i%.css}.min.css" "$i"
 	G_EXEC rm "$i"
 done
