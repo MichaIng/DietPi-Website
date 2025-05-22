@@ -128,6 +128,7 @@ GiB
 Gitea
 github
 GlusterFS
+GmbH
 GMediaRender
 GNUstep
 Gogs
@@ -252,7 +253,6 @@ MQTT
 MTA
 multiroom
 multithreading
-Mycroft
 MyHome
 myMPD
 myVirtualserver
@@ -404,6 +404,7 @@ sudo
 Syncthing
 systemctl
 systemd
+SystemHaus
 Tailscale
 TasmoAdmin
 Tasmota
