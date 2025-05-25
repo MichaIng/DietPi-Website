@@ -34,6 +34,7 @@ blazingly
 Blynk
 bootable
 bootloader
+bootloaders
 BT
 Bticino
 BubbleUPnP
