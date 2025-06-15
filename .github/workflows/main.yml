@@ -1,5 +1,9 @@
 name: Build test and quality checks
-on: [pull_request, push]
+on:
+  pull_request:
+  push:
+    branches-ignore:
+    - main
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -7,7 +11,6 @@ permissions: {}
 jobs:
   main:
     if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.owner.login != github.event.pull_request.base.repo.owner.login
-    # https://github.com/actions/runner-images
     runs-on: ubuntu-24.04
     env:
       HEAD_OWNER: ${{ github.event.pull_request.head.repo.owner.login }}
@@ -18,9 +21,9 @@ jobs:
     - name: Setup JRE for Nu Html Checker
       uses: actions/setup-java@v4
       with:
-        distribution: 'temurin'
+        distribution: temurin
         # https://github.com/orgs/adoptium/repositories?q=temurin*-binaries
-        java-version: '23'
+        java-version: 24
         java-package: jre
         check-latest: true
     - name: Download Nu Html Checker
@@ -38,7 +41,7 @@ jobs:
       if: always() && steps.deploy.outcome == 'success'
       uses: actions/setup-python@v5
       with:
-        python-version: '3.x'
+        python-version: 3.x
         check-latest: true
     - name: Install PySpelling
       id: pyspelling
@@ -54,9 +57,9 @@ jobs:
       id: lychee
       if: always() && steps.deploy.outcome == 'success'
       run: |
-        curl -sSfL "$(curl -sSfH 'Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' 'https://api.github.com/repos/lycheeverse/lychee/releases/latest' | mawk -F\" '/"browser_download_url.*x86_64-unknown-linux-musl\.tar\.gz"/{print $4;exit}')" -o lychee.tar.gz
+        curl -sSfL "$(curl -sSfH 'Authorization: Bearer ${{ github.token }}' 'https://api.github.com/repos/lycheeverse/lychee/releases/latest' | mawk -F\" '/"browser_download_url.*x86_64-unknown-linux-musl\.tar\.gz"/{print $4;exit}')" -o lychee.tar.gz
         tar xf lychee.tar.gz
     - name: Run lychee to check Markdown and HTML files
       if: always() && steps.lychee.outcome == 'success'
       # x.com/DietPi_|www.patreon.com/DietPi: Network error: Forbidden
-      run: ./lychee -En --cache --require-https --include-fragments --exclude '^https://(x.com/DietPi_|www.patreon.com/DietPi)$' --github-token '${{ secrets.GITHUB_TOKEN }}' --root-dir "$PWD" '**/*.md' '**/*.html'
+      run: ./lychee -En --cache --require-https --include-fragments --exclude '^https://(x.com/DietPi_|www.patreon.com/DietPi)$' --github-token '${{ github.token }}' --root-dir "$PWD" '**/*.md' '**/*.html'
