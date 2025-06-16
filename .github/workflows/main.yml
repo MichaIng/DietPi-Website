@@ -62,5 +62,4 @@ jobs:
     - name: Run lychee to check Markdown and HTML files
       if: always() && steps.lychee.outcome == 'success'
       # x.com/DietPi_|www.patreon.com/DietPi: Network error: Forbidden
-      # --include-fragments: https://github.com/lycheeverse/lychee/issues/1709
-      run: ./lychee -En --cache --require-https --exclude '^https://(x.com/DietPi_|www.patreon.com/DietPi)$' --github-token '${{ github.token }}' --root-dir "$PWD" '**/*.md' '**/*.html'
+      run: ./lychee -Enm 2 --require-https --include-fragments --cache --exclude '^https://(x.com/DietPi_|www.patreon.com/DietPi)$' --github-token '${{ github.token }}' --root-dir "$PWD" '**/*.md' '**/*.html'
