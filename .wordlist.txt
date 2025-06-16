@@ -139,6 +139,7 @@ GPT
 gpu
 Grafana
 Graphberry
+GZDoom
 HACS
 HAProxy
 HATs
