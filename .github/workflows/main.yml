@@ -3,7 +3,7 @@ on:
   pull_request:
   push:
     branches-ignore:
-    - main
+    - master
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -62,4 +62,5 @@ jobs:
     - name: Run lychee to check Markdown and HTML files
       if: always() && steps.lychee.outcome == 'success'
       # x.com/DietPi_|www.patreon.com/DietPi: Network error: Forbidden
-      run: ./lychee -Enm 2 --require-https --include-fragments --cache --exclude '^https://(x.com/DietPi_|www.patreon.com/DietPi)$' --github-token '${{ github.token }}' --root-dir "$PWD" '**/*.md' '**/*.html'
+      # --include-fragments: https://github.com/lycheeverse/lychee/pull/1733
+      run: ./lychee -Enm 2 --require-https --cache --exclude '^https://(x.com/DietPi_|www.patreon.com/DietPi)$' --github-token '${{ github.token }}' --root-dir "$PWD" '**/*.md' '**/*.html'
