@@ -1,5 +1,6 @@
 ActivityPub
 AdGuard
+Adoptium
 AirPlay
 Airsonic
 AIY
@@ -412,6 +413,7 @@ TasmoAdmin
 Tasmota
 Tautulli
 TCP
+Temurin
 th
 TigerVNC
 TLDR
