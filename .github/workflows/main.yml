@@ -19,7 +19,7 @@ jobs:
       id: deploy
       run: bash <(curl -sSf "https://raw.githubusercontent.com/${HEAD_OWNER:-$GITHUB_REPOSITORY_OWNER}/DietPi-Website/${GITHUB_HEAD_REF:-$GITHUB_REF_NAME}/deploy.bash") .
     - name: Setup JRE for Nu Html Checker
-      uses: actions/setup-java@v4
+      uses: actions/setup-java@v5
       with:
         distribution: temurin
         # https://github.com/orgs/adoptium/repositories?q=temurin*-binaries
