@@ -115,6 +115,7 @@ FileBrowser
 filesystem
 Flexbox
 Forgejo
+Forky
 FuguHub
 daapd
 FOSS
