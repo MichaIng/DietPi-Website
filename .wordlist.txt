@@ -102,6 +102,7 @@ Emby
 eMMC
 EmonPi
 env
+EOL
 EPL
 ESXi
 exFAT
