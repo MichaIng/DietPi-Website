@@ -38,6 +38,7 @@ bootloader
 bootloaders
 BT
 Bticino
+Btrfs
 BubbleUPnP
 Bugreport
 CalDAV
@@ -127,6 +128,7 @@ FriendlyELEC
 FriendlyELEC's
 frontend
 frp
+FS
 Gbit
 GiB
 Gitea
