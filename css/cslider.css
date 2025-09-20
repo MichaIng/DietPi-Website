@@ -151,16 +151,14 @@
 
 @media (max-width: 575px) {
 	.da-slide h2 {
-		font-size: 22px;
+		font-size: 25px;
 	}
-	.da-slide h4 {
-		top: 90px;
-		font-size: 18px;
-		width: 80%;
-	}
-	.da-slide .da-img,
-	.da-slide .da-link {
+	.da-slide h4,
+	.da-slide .da-img {
 		display: none;
+	}
+	.da-slide .da-link {
+		top: 90px;
 	}
 }
 
