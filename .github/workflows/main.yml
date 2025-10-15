@@ -34,7 +34,7 @@ jobs:
       if: always() && steps.deploy.outcome == 'success'
       run: |
         ec=0
-        while read -r line; do [ $line != ${line#images/dietpi-logo_} ] || grep -rq "$line" *.html || { ec=1; echo "ERROR: $line is not used"; }; done < <(find images/ -type f)
+        while read -r line; do [[ $line == 'images/dietpi-logo_'* ]] || grep -q "$line" *.html || { ec=1; echo "ERROR: $line is not used"; }; done < <(find images/ -type f)
         exit "$ec"
     - name: Setup Python for PySpelling
       id: python
@@ -57,7 +57,7 @@ jobs:
       id: lychee
       if: always() && steps.deploy.outcome == 'success'
       run: |
-        curl -sSfL "$(curl -sSfH 'Authorization: Bearer ${{ github.token }}' 'https://api.github.com/repos/lycheeverse/lychee/releases/latest' | mawk -F\" '/"browser_download_url.*x86_64-unknown-linux-musl\.tar\.gz"/{print $4;exit}')" -o lychee.tar.gz
+        curl -sSfLo lychee.tar.gz "$(curl -sSfH 'Authorization: Bearer ${{ github.token }}' 'https://api.github.com/repos/lycheeverse/lychee/releases/latest' | mawk -F\" '/^ *"browser_download_url": ".*x86_64-unknown-linux-gnu\.tar\.gz"$/{print $4;exit}')"
         tar xf lychee.tar.gz
     - name: Run lychee to check Markdown and HTML files
       if: always() && steps.lychee.outcome == 'success'
