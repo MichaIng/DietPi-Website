@@ -69,6 +69,10 @@
 	width: 30%;
 }
 
+.da-slide .da-img img {
+	border-radius: 10px;
+}
+
 .da-arrows span {
 	position: absolute;
 	top: 0;
