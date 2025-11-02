@@ -289,6 +289,7 @@ NVMe
 NZB
 NZBGet
 occ
+octa
 OctoPrint
 Odroid
 Odroids
@@ -436,6 +437,7 @@ UART
 Ubooquity
 UDP
 UEFI
+UFS
 UI
 Unarchiver
 upgradable
