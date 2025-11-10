@@ -30,6 +30,7 @@ BCM
 Beelink
 benchmarked
 Bing
+BirdNET
 Bitcoin
 Bitwarden
 blazingly
