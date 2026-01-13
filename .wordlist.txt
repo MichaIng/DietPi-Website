@@ -204,6 +204,7 @@ Komga
 kickstart
 kickstarted
 Kubernetes
+Kuma
 Laravel
 LASP
 LazyLibrarian
@@ -444,6 +445,7 @@ UI
 Unarchiver
 upgradable
 UPnP
+Uptime
 upvote
 UrBackup
 Usenet
