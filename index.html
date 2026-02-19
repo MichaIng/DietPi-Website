@@ -207,10 +207,14 @@
 				<svg class="triangle" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0h100l-50 100"/></svg>
 				<div class="title">
 					<h1>Download</h1>
-					<p>Give your single-board computer lightweight justice</p>
+                    <p>Just click on the tile of the desired hardware below to open a dialog for the image download.</p>
+    				<p>Default login credentials are: username: <b>root</b> password: <b>dietpi</b></p>
+                    <p>
+                        Per default, we provide images in <strong>Debian 13</strong> ("stable", aka <strong>Trixie</strong>) which should be the preferred version. <br>
+                        In case that Debian 12 (aka <strong>Bookworm</strong>) or Debian 14 (aka <strong>Forky</strong>) is needed, use the button "All image downloads".
+                    </p>
 					<a href="https://dietpi.com/survey/#benchmark" class="button" target="_blank" rel="noopener">View DietPi-Benchmark scores for all devices</a>
-					<a href="https://dietpi.com/downloads/images/" class="button" target="_blank" rel="noopener">All image downloads incl. Debian 12 Bookworm</a>
-					<p>username: <b>root</b> password: <b>dietpi</b></p>
+					<a href="https://dietpi.com/downloads/images/" class="button" target="_blank" rel="noopener">All image downloads (stable, oldstable, testing)</a>
 				</div>
 				<nav class="nav nav-pills" id="downloadinfo" style="display:none">
 					<button class="nav-link filter" data-filter="all">[All]</button>
@@ -1676,7 +1680,7 @@
 				</div>
 				<!-- VisionFive 2 -->
 				<div id="visionfive2" class="single-project">
-					<div class="row"><div class="col-md-12 project-title"><h3>VisionFive 2 (experimental)</h3><span class="close"></span></div></div>
+					<div class="row"><div class="col-md-12 project-title"><h3>VisionFive 2</h3><span class="close"></span></div></div>
 					<div class="row">
 						<div class="col-md-6 project-description">
 							<div class="project-info">
@@ -1690,14 +1694,14 @@
 								<div><a href="https://dietpi.com/blog/?p=2629" target="_blank" rel="noopener"><span>How to install / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
 								<div><a href="https://github.com/MichaIng/DietPi/issues/6212" target="_blank" rel="noopener"><span>Testing feedback:</span><i class="fa fa-book"></i><u>View</u></a></div>
 							</div>
-							<p>A first experimental DietPi RISC-V image for the StarFive VisionFive 2 SBC. Please read the instructions given in our blog post linked above. Note that this is at best alpha state on all levels, DietPi, Debian and Linux.</p>
+							<p>Our image requires a not too old bootloader on the board's SPI storage. If it does not boot OOTB, please read our blog post linked above, about hot to update the bootloader.</p>
 						</div>
 						<div class="col-md-6"><img src="images/sbc_images/visionfive2.jpg" alt="VisionFive 2 photo" width="8" height="5" loading="lazy"></div>
 					</div>
 				</div>
 				<!-- Star64 -->
 				<div id="star64" class="single-project">
-					<div class="row"><div class="col-md-12 project-title"><h3>Star64 (experimental)</h3><span class="close"></span></div></div>
+					<div class="row"><div class="col-md-12 project-title"><h3>Star64</h3><span class="close"></span></div></div>
 					<div class="row">
 						<div class="col-md-6 project-description">
 							<div class="project-info">
@@ -1711,7 +1715,7 @@
 								<div><a href="https://dietpi.com/blog/?p=2629" target="_blank" rel="noopener"><span>How to install / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
 								<div><a href="https://github.com/MichaIng/DietPi/issues/6212" target="_blank" rel="noopener"><span>Testing feedback:</span><i class="fa fa-book"></i><u>View</u></a></div>
 							</div>
-							<p>A first experimental DietPi RISC-V image for the PINE64 Star64 SBC. Please read the instructions given in our blog post linked above. Note that this is at best alpha state on all levels, DietPi, Debian and Linux.</p>
+							<p>Our image requires a not too old bootloader on the board's SPI storage. If it does not boot OOTB, please read our blog post linked above, about hot to update the bootloader.</p>
 						</div>
 						<div class="col-md-6"><img src="images/sbc_images/star64.jpg" alt="Star64 photo" width="8" height="5" loading="lazy"></div>
 					</div>
@@ -1853,7 +1857,7 @@
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix pine riscv">
 						<a href="#downloadinfo" class="thumbnail" rel="#star64">
 							<img src="images/sbc_images/star64.jpg" alt="Star64 photo" width="8" height="5" loading="lazy">
-							<h3>Star64 (experimental)</h3>
+							<h3>Star64</h3>
 							<p>JH7110 1.5 GHz | 4 cores | RISC-V</p>
 						</a>
 					</div>
@@ -2196,7 +2200,7 @@
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix riscv">
 						<a href="#downloadinfo" class="thumbnail" rel="#visionfive2">
 							<img src="images/sbc_images/visionfive2.jpg" alt="VisionFive 2 photo" width="8" height="5" loading="lazy">
-							<h3>VisionFive 2 (experimental)</h3>
+							<h3>VisionFive 2</h3>
 							<p>JH7110 1.5 GHz | 4 cores | RISC-V</p>
 						</a>
 					</div>
