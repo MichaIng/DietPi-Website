@@ -482,6 +482,7 @@ webpage
 webserver
 webui
 Whiptail
+WhoDB
 Widevine
 wifi
 WireGuard
