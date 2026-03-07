@@ -230,6 +230,7 @@ a:active {
 }
 .thumbnail img[src$=".svg"] {
 	padding: 0 3%;
+	object-fit: contain;
 }
 .thumbnail h3,
 .thumbnail p {
