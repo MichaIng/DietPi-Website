@@ -89,6 +89,7 @@
 					<button class="nav-link filter" data-filter=".Social">Social & Search</button>
 					<button class="nav-link filter" data-filter=".SSH">SSH Servers</button>
 					<button class="nav-link filter" data-filter=".Security">System Security</button>
+					<button class="nav-link filter" data-filter=".SystemSoftware">System Software</button>
 					<button class="nav-link filter" data-filter=".Stats">System Stats & Management</button>
 					<button class="nav-link filter" data-filter=".VPNServer">VPN</button>
 					<button class="nav-link filter" data-filter=".WebserverStacks">Web Development</button>
@@ -993,24 +994,6 @@
 								<div><span>Cons:</span>TBA</div>
 							</div>
 							<p>Web interface and surveillance for your RPi/USB camera. Mainly focused towards motion detection usage</p>
-						</div>
-					</div>
-				</div>
-				<div id="owncloud" class="row single-project">
-					<div class="col-md-4"><a href="images/dietpi-software/owncloud_2.jpg" target="_blank" rel="noopener"><img src="images/dietpi-software/owncloud_1.jpg" alt="ownCloud GUI screenshot" loading="lazy"></a></div>
-					<div class="col-md-8">
-						<div class="project-description">
-							<div class="project-title clearfix">
-								<h3>ownCloud</h3>
-								<span class="close"></span>
-							</div>
-							<div class="project-info">
-								<div><a href="https://dietpi.com/docs/software/cloud/#owncloud" target="_blank" rel="noopener"><span>How to Setup / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
-								<br>
-								<div><span>Pros:</span>Private cloud/storage that YOU control.</div>
-								<div><span>Cons:</span>TBA</div>
-							</div>
-							<p>Your very own personal cloud based backup/data storage system (e.g.: Dropbox) with ownCloud.</p>
 						</div>
 					</div>
 				</div>
@@ -3088,6 +3071,21 @@
 						</div>
 					</div>
 				</div>
+				<div id="owncloud-infinite-scale" class="row single-project">
+					<div class="col-md-4"><a href="images/dietpi-software/owncloud-logo.svg" target="_blank" rel="noopener"><img src="images/dietpi-software/owncloud-logo.svg" alt="ownCloud logo" loading="lazy"></a></div>
+					<div class="col-md-8">
+						<div class="project-description">
+							<div class="project-title clearfix">
+								<h3>ownCloud Infinite Scale</h3>
+								<span class="close"></span>
+							</div>
+							<div class="project-info">
+								<div><a href="https://dietpi.com/docs/software/cloud/#owncloud-infinite-scale" target="_blank" rel="noopener"><span>How to Setup / Details:</span><i class="fa fa-book"></i><u>View</u></a></div>
+							</div>
+							<p>New file sync &amp; share platform for your data management</p>
+						</div>
+					</div>
+				</div>
 				<div id="whodb" class="row single-project">
 					<div class="col-md-4"><a href="images/dietpi-software/whodb-logo.svg" target="_blank" rel="noopener"><img src="images/dietpi-software/whodb-logo.svg" alt="WhoDB logo" loading="lazy"></a></div>
 					<div class="col-md-8">
@@ -3886,13 +3884,6 @@
 					</div>
 					<!-- Cloud & Backup -->
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Cloud">
-						<a href="#softwareinfo" class="thumbnail" rel="#owncloud">
-							<img src="images/dietpi-software/owncloud_0.jpg" alt="ownCloud logo" width="8" height="5" loading="lazy">
-							<h3>ownCloud</h3>
-							<p>Personal cloud backup/data system</p>
-						</a>
-					</div>
-					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Cloud">
 						<a href="#softwareinfo" class="thumbnail" rel="#nextcloud">
 							<img src="images/dietpi-software/nextcloud_0.jpg" alt="Nextcloud logo" width="8" height="5" loading="lazy">
 							<h3>Nextcloud</h3>
@@ -3981,6 +3972,13 @@
 							<img src="images/dietpi-software/restic-logo.png" alt="Restic logo" style="object-fit: contain;" width="8" height="5" loading="lazy">
 							<h3>Restic</h3>
 							<p>Secure command-line backup program</p>
+						</a>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix Cloud">
+						<a href="#softwareinfo" class="thumbnail" rel="#owncloud-infinite-scale">
+							<img src="images/dietpi-software/owncloud-logo.svg" alt="ownCloud Infinite Scale logo" width="8" height="5" loading="lazy">
+							<h3>ownCloud Infinite Scale</h3>
+							<p>File sync &amp; share platform</p>
 						</a>
 					</div>
 					<!-- Social & Search -->
@@ -4500,7 +4498,8 @@
 							<p>Feature-rich SSH server</p>
 						</a>
 					</div>
-					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix SSH">
+					<!-- System Software -->
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix SystemSoftware">
 						<a href="#softwareinfo" class="thumbnail" rel="#fish">
 							<img src="images/dietpi-software/dietpi-software-system-fish.png" alt="fish shell logo" style="object-fit: contain;" width="8" height="5" loading="lazy">
 							<h3>fish</h3>
