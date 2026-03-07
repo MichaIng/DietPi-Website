@@ -131,6 +131,7 @@ FriendlyELEC's
 frontend
 frp
 FS
+GameStream
 Gbit
 GiB
 Gitea
@@ -252,6 +253,7 @@ MJPEG
 mjpg
 MkDocs
 MMAL
+Modder
 motionEye
 mnt
 Mopidy
