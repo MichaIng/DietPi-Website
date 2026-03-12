@@ -227,6 +227,7 @@ LTS
 LVM
 LXDE
 LXQt
+Lyrion
 maarten
 macOS
 mangas
