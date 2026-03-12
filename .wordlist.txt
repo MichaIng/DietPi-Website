@@ -131,6 +131,7 @@ FriendlyELEC's
 frontend
 frp
 FS
+GameStream
 Gbit
 GiB
 Gitea
@@ -226,6 +227,7 @@ LTS
 LVM
 LXDE
 LXQt
+Lyrion
 maarten
 macOS
 mangas
@@ -252,6 +254,7 @@ MJPEG
 mjpg
 MkDocs
 MMAL
+Modder
 motionEye
 mnt
 Mopidy

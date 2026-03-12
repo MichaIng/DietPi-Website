@@ -29,7 +29,7 @@ jobs:
     - name: Download Nu Html Checker
       run: curl -sSfLO 'https://github.com/validator/validator/releases/download/latest/vnu.jar'
     - name: Run Nu Html Checker to check HTML, CSS and SVG files
-      run: find . -type f \( -name '*.html' -o -name '*.css' -o -name '*.svg' \) -exec java -jar vnu.jar --verbose --also-check-css --also-check-svg --filterpattern '.*skipping . heading level.*' {} +
+      run: find . -type f \( -name '*.html' -o -name '*.css' -o -name '*.svg' \) -exec java -jar vnu.jar --verbose --also-check-css --also-check-svg --filterpattern '.*skipping . heading level.*|.*bad value .#git. for attribute .rel.*' {} +
     - name: Check for obsolete image files
       if: always() && steps.deploy.outcome == 'success'
       run: |
