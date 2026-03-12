@@ -227,10 +227,10 @@ a:active {
 	height: auto;
 	aspect-ratio: 8/5;
 	background-color: #ffffff;
+	object-fit: contain;
 }
 .thumbnail img[src$=".svg"] {
 	padding: 0 3%;
-	object-fit: contain;
 }
 .thumbnail h3,
 .thumbnail p {
