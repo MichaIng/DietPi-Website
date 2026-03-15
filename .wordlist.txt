@@ -131,6 +131,7 @@ FriendlyELEC's
 frontend
 frp
 FS
+GameStream
 Gbit
 GiB
 Gitea
@@ -173,6 +174,7 @@ IceCast
 ICMP
 Imager
 img
+Immich
 InfluxDB
 ini
 IoT
@@ -226,6 +228,7 @@ LTS
 LVM
 LXDE
 LXQt
+Lyrion
 maarten
 macOS
 mangas
@@ -252,6 +255,7 @@ MJPEG
 mjpg
 MkDocs
 MMAL
+Modder
 motionEye
 mnt
 Mopidy
