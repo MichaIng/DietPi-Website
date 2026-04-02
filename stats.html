@@ -103,12 +103,12 @@
 					<div class="row">
 						<div class="col-md-12 project-description">
 							<div class="project-info">
-								<h5>2026-03-31</h5>
+								<h5>Trixie-based 32-bit images tested on 2026-03-31</h5>
 								<table>
 									<tr><th>Stat</th><th>DietPi</th><th>DietPi/Raspberry Pi OS Lite [%]</th><th>Raspberry Pi OS Lite</th></tr>
 									<tr><td>RAM usage</td><td class="win">42 MiB</td><td>44%</td><td class="los">96 MiB</td></tr>
 									<tr><td>Running processes</td><td class="win">9</td><td>38%</td><td class="los">24</td></tr>
-									<tr><td>Disk usage</td><td class="win">702 MiB</td><td>24%</td><td class="los">2890 MiB</td></tr>
+									<tr><td>Disk usage</td><td class="win">702 MiB</td><td>30%</td><td class="los">2378 MiB</td></tr>
 									<tr><td>Pre-installed packages</td><td class="win">215</td><td>32%</td><td class="los">664</td></tr>
 									<tr><td>Boot duration</td><td class="win">27.834s</td><td>22%</td><td class="los">125.217s</td></tr>
 									<tr><td>Temporary files</td><td>RAM disk (tmpfs)</td><td></td><td>RAM disk (tmpfs)</td></tr>
@@ -122,25 +122,25 @@
 						</div>
 					</div>
 				</div>
-				<div id="raspberrypios2" class="single-project">
-					<div class="row"><div class="col-md-12 project-title"><h3>DietPi vs Raspberry Pi OS Lite (64-bit)</h3><span class="close"></span></div></div>
+				<div id="raspberrypi5" class="single-project">
+					<div class="row"><div class="col-md-12 project-title"><h3>Raspberry Pi 5</h3><span class="close"></span></div></div>
 					<div class="row">
 						<div class="col-md-12 project-description">
 							<div class="project-info">
-								<h5>Bookworm on Raspberry Pi 5 at 2024-05-25</h5>
+								<h5>Trixie-based 64-bit images tested on 2025-04-02</h5>
 								<table>
-									<tr><th>Stat</th><th>DietPi</th><th>DietPi/Raspberry Pi OS [%]</th><th>Raspberry Pi OS</th></tr>
-									<tr><td>RAM usage</td><td class="win">118 MiB</td><td>67%</td><td class="los">177 MiB</td></tr>
-									<tr><td>Running processes</td><td class="win">9</td><td>41%</td><td class="los">22</td></tr>
-									<tr><td>Disk usage</td><td class="win">882 MiB</td><td>40%</td><td class="los">2197 MiB</td></tr>
-									<tr><td>Pre-installed packages</td><td class="win">255</td><td>43%</td><td class="los">596</td></tr>
-									<tr><td>Boot duration</td><td class="win">6.220s</td><td>46%</td><td class="los">13.497s</td></tr>
-									<tr><td>Temporary files</td><td class="win">RAM disk (tmpfs)</td><td></td><td class="los">rootfs</td></tr>
-									<tr><td>Log files</td><td class="win">RAM disk (tmpfs)</td><td></td><td class="los">rootfs</td></tr>
-									<tr><td>SSH pre-installed</td><td class="win">Yes</td><td></td><td class="los">edit required</td></tr>
-									<tr><td>Download size</td><td class="win">178 MiB</td><td>43%</td><td class="los">414 MiB</td></tr>
-									<tr><td>Image size</td><td class="win">1024 MiB</td><td>39%</td><td class="los">2640 MiB</td></tr>
-									<tr><td>Build date</td><td>2024-05-13</td><td></td><td>2024-03-15</td></tr>
+									<tr><th>Stat</th><th>DietPi</th><th>Armbian minimal</th><th>Raspberry Pi OS Lite</th></tr>
+									<tr><td>RAM usage</td><td>152 MiB</td><td>186 MiB</td><td>240 MiB</td></tr>
+									<tr><td>Running processes</td><td>9</td><td>21</td><td>24</td></tr>
+									<tr><td>Disk usage</td><td>895 MiB</td><td>1148 MiB</td><td>2639 MiB</td></tr>
+									<tr><td>Pre-installed packages</td><td>252</td><td>315</td><td>658</td></tr>
+									<tr><td>Boot duration</td><td>2.768s</td><td>5.224s</td><td>15.836s</td></tr>
+									<tr><td>Temporary files</td><td>RAM disk (tmpfs)</td>RAM disk (tmpfs)<td></td><td>RAM disk (tmpfs)</td></tr>
+									<tr><td>Log files</td><td>RAM disk (tmpfs)</td>Compressed RAM disk (zram)<td></td><td>rootfs</td></tr>
+									<tr><td>SSH pre-installed</td><td>Yes</td><td></td>Yes<td>edit required</td></tr>
+									<tr><td>Download size</td><td>183 MiB</td><td>213 MiB</td><td>487 MiB</td></tr>
+									<tr><td>Image size</td><td>1095 MiB</td><td>1832 MiB</td><td>2848 MiB</td></tr>
+									<tr><td>Build date</td><td>2026-03-31</td><td>2026-02-09</td><td>2025-12-04</td></tr>
 								</table>
 							</div>
 						</div>
@@ -261,10 +261,9 @@
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix raspberrypi">
-						<a href="#distrostats" class="thumbnail" rel="#raspberrypios2">
+						<a href="#distrostats" class="thumbnail" rel="#raspberrypi5">
 							<img src="images/stats/raspberrypi.svg" alt="Raspberry Pi logo" width="8" height="5" loading="lazy">
-							<h3>Raspberry Pi OS Lite</h3>
-							<p>on Raspberry Pi 5 (64-bit)</p>
+							<h3>Raspberry Pi 5</h3>
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-3 col-md-4 col-6 mix armbian">
