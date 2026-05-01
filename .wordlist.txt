@@ -84,6 +84,7 @@ distro
 DistroWatch
 DIY
 dl
+dlp
 DL
 DLNA
 DNS
@@ -503,9 +504,10 @@ YaCy
 ympd
 youtube
 YouTube
+yt-dlp
+yt
 yumiris
 ZeroPi
 ZeroTier
 zr
 zram
-yt-dlp
