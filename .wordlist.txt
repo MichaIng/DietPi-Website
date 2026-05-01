@@ -508,3 +508,4 @@ ZeroPi
 ZeroTier
 zr
 zram
+yt-dlp
