@@ -57,8 +57,8 @@ jobs:
       id: lychee
       if: always() && steps.deploy.outcome == 'success'
       run: |
-        curl -sSfLo lychee.tar.gz "$(curl -sSfH 'Authorization: Bearer ${{ github.token }}' 'https://api.github.com/repos/lycheeverse/lychee/releases/latest' | mawk -F\" '/^ *"browser_download_url": ".*x86_64-unknown-linux-gnu\.tar\.gz"$/{print $4;exit}')"
-        tar xf lychee.tar.gz lychee
+        curl -sSfLo lychee.tar.gz "$(curl -sSfH 'Authorization: Bearer ${{ github.token }}' 'https://api.github.com/repos/lycheeverse/lychee/releases/latest' | grep -Po '"browser_download_url": *"\K[^"]*/lychee-x86_64-unknown-linux-gnu\.tar\.gz(?=")')"
+        tar xf lychee.tar.gz --strip-components=1 lychee-x86_64-unknown-linux-gnu/lychee
     - name: Run lychee to check Markdown and HTML files
       if: always() && steps.lychee.outcome == 'success'
       # x.com/DietPi_|www.patreon.com/DietPi: Network error: Forbidden
