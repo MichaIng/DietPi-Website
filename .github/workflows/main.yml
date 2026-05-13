@@ -23,13 +23,13 @@ jobs:
       with:
         distribution: temurin
         # https://github.com/orgs/adoptium/repositories?q=temurin*-binaries
-        java-version: 24
+        java-version: 26
         java-package: jre
         check-latest: true
     - name: Download Nu Html Checker
       run: curl -sSfLO 'https://github.com/validator/validator/releases/download/latest/vnu.jar'
     - name: Run Nu Html Checker to check HTML, CSS and SVG files
-      run: find . -type f \( -name '*.html' -o -name '*.css' -o -name '*.svg' \) -exec java -jar vnu.jar --verbose --also-check-css --also-check-svg --filterpattern '.*skipping . heading level.*|.*bad value .#git. for attribute .rel.*' {} +
+      run: find . -type f \( -name '*.html' -o -name '*.css' -o -name '*.svg' \) ! -name 'bootstrap.min.css' -exec java -jar vnu.jar --verbose --also-check-css --also-check-svg --filterpattern '.*(skipping . heading level|bad value .#git. for attribute .rel).*' {} +
     - name: Check for obsolete image files
       if: always() && steps.deploy.outcome == 'success'
       run: |
@@ -43,15 +43,15 @@ jobs:
       with:
         python-version: 3.x
         check-latest: true
-    - name: Install PySpelling
-      id: pyspelling
+        pip-install: pyspelling
+    - name: Install Aspell for PySpelling
+      id: aspell
       if: always() && steps.python.outcome == 'success'
       run: |
-        { pip3 install -U pip setuptools wheel; pip3 install -U pyspelling; } &
         sudo apt-get -q update
         sudo apt-get -qq --no-install-recommends install aspell-en
     - name: Run PySpelling to check HTML files
-      if: always() && steps.pyspelling.outcome == 'success'
+      if: always() && steps.aspell.outcome == 'success'
       run: pyspelling -vc .spellcheck.yml
     - name: Download lychee
       id: lychee
