@@ -62,22 +62,22 @@
 	window.dispatchEvent(new Event('scroll'));
 
 	// Initialise MixItUp for animated portfolio tile filtering if loaded
-    if (typeof mixitup === 'function') {
-        mixitup('div.mixitup', {
-            controls: { scope: 'local' },
-            callbacks: {
-                // Close open portfolio project when resorting
-                'onMixStart': function () {
-                    for (let x of singleProjects) {
-                        if (x.clientHeight) {
-                            x.style.height = '0';
-                            x.classList.add('hidden');
-                        }
-                    }
-                }
-            }
-        });
-    }
+	if (typeof mixitup === 'function') {
+		mixitup('div.mixitup', {
+			controls: { scope: 'local' },
+			callbacks: {
+				// Close open portfolio project when resorting
+				'onMixStart': function () {
+					for (let x of singleProjects) {
+						if (x.clientHeight) {
+							x.style.height = '0';
+							x.classList.add('hidden');
+						}
+					}
+				}
+			}
+		});
+	}
 
 	// Show or hide portfolio description on click
 	for (let x of document.querySelectorAll('.close, .thumbnail')) {
