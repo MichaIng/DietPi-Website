@@ -39,19 +39,19 @@ jobs:
     - name: Setup Python for PySpelling
       id: python
       if: always() && steps.deploy.outcome == 'success'
-      uses: actions/setup-python@v6
+      uses: actions/setup-python@v7
       with:
         python-version: 3.x
         check-latest: true
-        pip-install: pyspelling
-    - name: Install Aspell for PySpelling
-      id: aspell
+    - name: Install PySpelling
+      id: pyspelling
       if: always() && steps.python.outcome == 'success'
       run: |
+        pip install -U pyspelling &
         sudo apt-get -q update
         sudo apt-get -qq --no-install-recommends install aspell-en
     - name: Run PySpelling to check HTML files
-      if: always() && steps.aspell.outcome == 'success'
+      if: always() && steps.pyspelling.outcome == 'success'
       run: pyspelling -vc .spellcheck.yml
     - name: Download lychee
       id: lychee
