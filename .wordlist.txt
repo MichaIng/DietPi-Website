@@ -81,6 +81,7 @@ DiogoAbu
 diskimager
 DispmanX
 distro
+distros
 DistroWatch
 DIY
 dl
@@ -461,6 +462,7 @@ UTM
 UUID
 uv
 vaultwarden
+VHDX
 VirtualBox
 VirtualHere
 virtualised
