@@ -22,10 +22,8 @@ jobs:
       uses: actions/setup-java@v6
       with:
         distribution: temurin
-        # https://github.com/orgs/adoptium/repositories?q=temurin*-binaries
-        java-version: 26
+        java-version: latest
         java-package: jre
-        check-latest: true
     - name: Download Nu Html Checker
       run: curl -sSfLO 'https://github.com/validator/validator/releases/download/latest/vnu.jar'
     - name: Run Nu Html Checker to check HTML, CSS and SVG files
@@ -42,7 +40,6 @@ jobs:
       uses: actions/setup-python@v7
       with:
         python-version: 3.x
-        check-latest: true
     - name: Install PySpelling
       id: pyspelling
       if: always() && steps.python.outcome == 'success'
@@ -50,6 +47,7 @@ jobs:
         pip install -U pyspelling &
         sudo apt-get -q update
         sudo apt-get -qq --no-install-recommends install aspell-en
+        wait
     - name: Run PySpelling to check HTML files
       if: always() && steps.pyspelling.outcome == 'success'
       run: pyspelling -vc .spellcheck.yml
@@ -62,5 +60,4 @@ jobs:
     - name: Run lychee to check Markdown and HTML files
       if: always() && steps.lychee.outcome == 'success'
       # x.com/DietPi_|www.patreon.com/DietPi: Network error: Forbidden
-      # --include-fragments: https://github.com/lycheeverse/lychee/pull/1733
-      run: ./lychee -Enm 2 --require-https --cache --exclude '^https://(x.com/DietPi_|www.patreon.com/DietPi)$' --github-token '${{ github.token }}' --root-dir "$PWD" '**/*.md' '**/*.html'
+      run: ./lychee -Enm 2 --require-https --include-fragments --index-files 'index.html' --exclude '^https://(x.com/DietPi_|www.patreon.com/DietPi)$' --root-dir "$PWD" '**/*.md' '**/*.html'
