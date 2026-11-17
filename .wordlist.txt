@@ -459,7 +459,7 @@ UI
 Unarchiver
 upgradable
 UPnP
-Uptime
+uptime
 upvote
 UrBackup
 Usenet

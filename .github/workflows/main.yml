@@ -60,4 +60,5 @@ jobs:
     - name: Run lychee to check Markdown and HTML files
       if: always() && steps.lychee.outcome == 'success'
       # x.com/DietPi_|www.patreon.com/DietPi: Network error: Forbidden
-      run: ./lychee -Enm 2 --require-https --include-fragments --index-files 'index.html' --exclude '^https://(x.com/DietPi_|www.patreon.com/DietPi)$' --root-dir "$PWD" '**/*.md' '**/*.html'
+      # www.paypal.com/donate: 403
+      run: ./lychee -Enm 2 --require-https --include-fragments --index-files 'index.html' --exclude '^https://(x.com/DietPi_$|www.patreon.com/DietPi$|www.paypal.com/donate)' --root-dir "$PWD" '**/*.md' '**/*.html'
