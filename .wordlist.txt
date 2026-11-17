@@ -1,3 +1,4 @@
+ACPI
 ActivityPub
 AdGuard
 Adoptium
@@ -49,6 +50,7 @@ CAVA
 changelog
 Certbot
 CIFS
+CIX
 CLI
 Clonezilla
 Cloudflare
@@ -65,6 +67,7 @@ CSM
 Cuberite
 customisable
 DAC
+Daemonless
 DarkBetter
 DarkIce
 DDNS
@@ -284,12 +287,14 @@ Navidrome
 ncc
 Netdata
 netinst
+ngx
 nm
 Nextcloud
 NFS
 Nginx
 NoMachine
 NordVPN
+NPU
 NTFS
 NUC
 Nukkit
@@ -332,6 +337,7 @@ Pinebook
 PiSupply
 PiVPN
 Plex
+Podman
 PoE
 Portainer
 pre
@@ -403,6 +409,7 @@ Snapcast
 SoC
 SoCs
 soju
+SolidPing
 Sonarr
 SOQuartz
 SPC
@@ -510,6 +517,7 @@ YouTube
 yt-dlp
 yt
 yumiris
+Yuvomi
 ZeroPi
 ZeroTier
 zr
